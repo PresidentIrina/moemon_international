@@ -3,6 +3,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 {
 #endif
 
+#include "config/pokemon.h"
+
 #if P_FAMILY_CHIKORITA
     [SPECIES_CHIKORITA] =
     {
@@ -16,7 +18,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 64,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -65,7 +67,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 142,
         .evYield_Defense = 1,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -114,7 +116,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 236,
         .evYield_Defense = 1,
         .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -165,7 +167,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 62,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -181,7 +183,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "It flares flames from its back to protect\n"
             "itself. The fire burns vigorously if the\n"
-            "Pokémon is angry. When it is tired,\n"
+            "Moémon is angry. When it is tired,\n"
             "it sputters with incomplete combustion."),
         .pokemonScale = 539,
         .pokemonOffset = 21,
@@ -214,7 +216,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 142,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -255,7 +257,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,                                                \
         .expYield = 240,                                                \
         .evYield_SpAttack = 3,                                          \
-        .genderRatio = PERCENT_FEMALE(12.5),                            \
+        .genderRatio = PERCENT_FEMALE(95),                            \
         .eggCycles = 20,                                                \
         .friendship = STANDARD_FRIENDSHIP,                              \
         .growthRate = GROWTH_MEDIUM_SLOW,                               \
@@ -355,7 +357,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 63,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -404,7 +406,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 142,
         .evYield_Attack = 1,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -454,7 +456,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 239,
         .evYield_Attack = 2,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -504,7 +506,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 255,
         .expYield = 43,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -552,7 +554,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 90,
         .expYield = 145,
         .evYield_Speed = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -601,7 +603,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 255,
         .expYield = 52,
         .evYield_HP = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -649,7 +651,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 90,
         .expYield = 158,
         .evYield_HP = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -698,7 +700,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 255,
         .expYield = 53,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -748,7 +750,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 90,
         .expYield = 137,
         .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -800,7 +802,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 255,
         .expYield = 50,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -848,7 +850,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 90,
         .expYield = 140,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -898,7 +900,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 66,
         .evYield_HP = 1,
         .itemRare = ITEM_DEEP_SEA_SCALE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -947,7 +949,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 161,
         .evYield_HP = 2,
         .itemRare = ITEM_DEEP_SEA_SCALE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -963,7 +965,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "The light-emitting orbs on its back are\n"
             "very bright. They are formed from a part of\n"
-            "its dorsal fin. This Pokémon illuminates\n"
+            "its dorsal fin. This Moémon illuminates\n"
             "the inky darkness of deep seas."),
         .pokemonScale = 269,
         .pokemonOffset = 6,
@@ -998,7 +1000,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 190,
         .expYield = 49,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -1014,7 +1016,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "As its energy, it uses the feelings of\n"
             "compassion and pleasure exuded by\n"
-            "people and Pokémon. It stores up happy\n"
+            "people and Moémon. It stores up happy\n"
             "feelings in its shell, then shares them out."),
         .pokemonScale = 507,
         .pokemonOffset = 23,
@@ -1046,7 +1048,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 75,
         .expYield = 142,
         .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -1060,7 +1062,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 32,
         .description = COMPOUND_STRING(
-            "It is said to be a Pokémon that brings good\n"
+            "It is said to be a Moémon that brings good\n"
             "fortune. When it spots someone who is pure\n"
             "of heart, a Togetic appears and shares its\n"
             "happiness with that person."),
@@ -1100,7 +1102,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 245,
         .evYield_SpAttack = 2,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -1152,7 +1154,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 190,
         .expYield = 64,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -1202,7 +1204,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 165,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -1252,7 +1254,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 235,
         .expYield = 56,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1301,7 +1303,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 120,
         .expYield = 128,
         .evYield_SpAttack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1340,7 +1342,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #define AMPHAROS_MISC_INFO                                  \
         .catchRate = 45,                                    \
         .evYield_SpAttack = 3,                              \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_SLOW,                   \
@@ -1496,7 +1498,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 190,
         .expYield = 88,
         .evYield_HP = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -1548,7 +1550,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 75,
         .expYield = 189,
         .evYield_HP = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -1598,7 +1600,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 255,
         .expYield = 58,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -1647,7 +1649,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 65,
         .expYield = 144,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -1698,7 +1700,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 255,
         .expYield = 50,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1712,7 +1714,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 4,
         .weight = 5,
         .description = COMPOUND_STRING(
-            "This Pokémon drifts and floats with the\n"
+            "This Moémon drifts and floats with the\n"
             "wind. If it senses the approach of strong\n"
             "winds, a Hoppip links leaves with others\n"
             "to prepare against being blown away."),
@@ -1747,7 +1749,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 120,
         .expYield = 119,
         .evYield_Speed = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1796,7 +1798,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 207,
         .evYield_Speed = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1812,7 +1814,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "Jumpluff ride warm southern winds to\n"
             "cross the sea and fly to foreign lands.\n"
-            "This Pokémon lands when it encounters\n"
+            "This Moémon lands when it encounters\n"
             "cold air while it is floating."),
         .pokemonScale = 418,
         .pokemonOffset = -4,
@@ -1846,7 +1848,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 72,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -1897,7 +1899,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 169,
         .evYield_Speed = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = 100,
         .growthRate = GROWTH_FAST,
@@ -1949,7 +1951,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 235,
         .expYield = 36,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1997,7 +1999,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 120,
         .expYield = 149,
         .evYield_SpAttack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -2047,7 +2049,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 78,
         .evYield_Speed = 1,
         .itemRare = ITEM_WIDE_LENS,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -2098,7 +2100,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 180,
         .evYield_Attack = 2,
         .itemRare = ITEM_WIDE_LENS,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -2112,7 +2114,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 19,
         .weight = 515,
         .description = COMPOUND_STRING(
-            "This six-legged Pokémon is easily capable\n"
+            "This six-legged Moémon is easily capable\n"
             "of transporting an adult in flight. It is\n"
             "adept at biting apart foes while flying\n"
             "by at high speed."),
@@ -2147,7 +2149,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 255,                                                       \
         .expYield = 42,                                                         \
         .evYield_HP = 1,                                                        \
-        .genderRatio = PERCENT_FEMALE(50),                                      \
+        .genderRatio = PERCENT_FEMALE(95),                                      \
         .eggCycles = 20,                                                        \
         .friendship = STANDARD_FRIENDSHIP,                                      \
         .growthRate = GROWTH_MEDIUM_FAST,                                       \
@@ -2203,7 +2205,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 90,
         .expYield = 151,
         .evYield_HP = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -2253,7 +2255,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "After losing a territorial struggle,\n"
             "Wooper began living on land.\n"
-            "The Pokémon changed over time, developing\n"
+            "The Moémon changed over time, developing\n"
             "a poisonous film to protect its body."),
         FRONT_PIC(WooperPaldean, 40, 32),
         .frontPicYOffset = 16,
@@ -2280,7 +2282,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 90,
         .expYield = 151,
         .evYield_HP = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -2294,7 +2296,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 18,
         .weight = 2230,
         .description = COMPOUND_STRING(
-            "When attacked, this Pokémon will\n"
+            "When attacked, this Moémon will\n"
             "retaliate by sticking thick spines out\n"
             "from its body. It's a risky move\n"
             "that puts everything on the line."),
@@ -2330,7 +2332,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 30,
         .expYield = 81,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -2382,7 +2384,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 30,
         .expYield = 177,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -2432,7 +2434,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 87,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = 35,
         .growthRate = GROWTH_FAST,
@@ -2483,7 +2485,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 173,
         .evYield_SpAttack = 1,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = 35,
         .growthRate = GROWTH_FAST,
@@ -2820,7 +2822,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 125,
         .expYield = 52,
         .evYield_HP = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -2870,7 +2872,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 142,
         .evYield_HP = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -2924,7 +2926,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 60,
         .expYield = 159,
         .evYield_SpAttack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -2975,7 +2977,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 260,
         .evYield_HP = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -2991,7 +2993,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "Now that the brain waves from the\n"
             "head and tail are synced up, the\n"
-            "psychic power of this Pokémon is 10\n"
+            "psychic power of this Moémon is 10\n"
             "times stronger than Girafarig's."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -3025,7 +3027,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 190,
         .expYield = 58,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3073,7 +3075,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 75,
         .expYield = 163,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3122,7 +3124,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 190,
         .expYield = 145,
         .evYield_HP = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3137,7 +3139,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .weight = 140,
         .description = COMPOUND_STRING(
             "Its drill-tipped tail is used to burrow into\n"
-            "the ground backwards. This Pokémon is\n"
+            "the ground backwards. This Moémon is\n"
             "known to make its nest in complex shapes\n"
             "deep under the ground."),
         .pokemonScale = 316,
@@ -3172,7 +3174,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,                                                            \
         .expYield = 182,                                                            \
         .evYield_HP = 2,                                                            \
-        .genderRatio = PERCENT_FEMALE(50),                                          \
+        .genderRatio = PERCENT_FEMALE(95),                                          \
         .eggCycles = 20,                                                            \
         .friendship = STANDARD_FRIENDSHIP,                                          \
         .growthRate = GROWTH_MEDIUM_FAST,                                           \
@@ -3206,7 +3208,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 36,
         .weight = 392,
         .description = COMPOUND_STRING(
-            "This Pokémon uses its hard tail to\n"
+            "This Moémon uses its hard tail to\n"
             "make its nest by boring holes into\n"
             "bedrock deep underground. The nest\n"
             "can reach lengths of over six miles."),
@@ -3221,7 +3223,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "A recent study uncovered that the\n"
             "number of segments a\n"
             "Dudunsparce's body has is determined by the\n"
-            "Pokémon's genes."),
+            "Moémon's genes."),
     },
 #endif //P_GEN_9_CROSS_EVOS
 #endif //P_FAMILY_DUNSPARCE
@@ -3239,7 +3241,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 60,
         .expYield = 86,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3292,7 +3294,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 30,
         .expYield = 179,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3362,7 +3364,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .weight = 78,
         .description = COMPOUND_STRING(
             "By baring its fangs and making a scary\n"
-            "face, it sends smaller Pokémon scurrying\n"
+            "face, it sends smaller Moémon scurrying\n"
             "in terror. The Snubbull does seem a\n"
             "little sad at making its foes flee."),
         .pokemonScale = 465,
@@ -3447,7 +3449,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 88,                                                                 \
         .evYield_Attack = 1,                                                            \
         .itemRare = ITEM_POISON_BARB,                                                   \
-        .genderRatio = PERCENT_FEMALE(50),                                              \
+        .genderRatio = PERCENT_FEMALE(95),                                              \
         .eggCycles = 20,                                                                \
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .growthRate = GROWTH_MEDIUM_FAST,                                               \
@@ -3497,7 +3499,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .bodyColor = BODY_COLOR_BLACK,
         .description = COMPOUND_STRING(
             "A form of Qwilfish from the distant past.\n"
-            "Fishers detest this troublesome Pokémon\n"
+            "Fishers detest this troublesome Moémon\n"
             "because it sprays poison from its spines,\n"
             "getting it everywhere."),
         FRONT_PIC(QwilfishHisuian, 48, 40),
@@ -3527,7 +3529,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 179,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3580,7 +3582,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .evYield_SpDefense = 1,
         .itemCommon = ITEM_BERRY_JUICE,
         .itemRare = ITEM_BERRY_JUICE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3621,7 +3623,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .types = { TYPE_BUG, TYPE_FIGHTING },               \
         .catchRate = 45,                                    \
         .evYield_Attack = 2,                                \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 25,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_SLOW,                          \
@@ -3721,7 +3723,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 86,                                     \
         .evYield_Speed = 1,                                 \
         .itemRare = ITEM_QUICK_CLAW,                        \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = 35,                                   \
         .growthRate = GROWTH_MEDIUM_SLOW,                   \
@@ -3782,7 +3784,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .evYield_Attack = 1,
         .evYield_Speed = 1,
         .itemRare = ITEM_QUICK_CLAW,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3862,7 +3864,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 20,
         .expYield = 102,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3912,7 +3914,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 120,
         .expYield = 66,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3961,7 +3963,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 60,
         .expYield = 175,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4026,7 +4028,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpDefense = 80,
         .catchRate = 20,
         .evYield_Attack = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .abilities = { ABILITY_GUTS, ABILITY_BULLETPROOF, ABILITY_UNNERVE },
         .height = 24,
         .weight = 2900,
@@ -4062,7 +4064,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpDefense = 65,
         .catchRate = 5,
         .evYield_SpAttack = 3,
-        .genderRatio = MON_MALE,
+        .genderRatio = MON_FEMALE,
         .abilities = { ABILITY_MINDS_EYE, ABILITY_NONE },
         .height = 27,
         .weight = 3330,
@@ -4103,7 +4105,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 190,
         .expYield = 50,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4117,7 +4119,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 7,
         .weight = 350,
         .description = COMPOUND_STRING(
-            "It is a species of Pokémon that lives in\n"
+            "It is a species of Moémon that lives in\n"
             "volcanic areas. If its body cools, its skin\n"
             "hardens and immobilizes it. To avoid that,\n"
             "it sleeps near magma."),
@@ -4151,7 +4153,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 75,
         .expYield = 151,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4201,7 +4203,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 225,
         .expYield = 50,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -4250,7 +4252,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 158,
         .evYield_HP = 1,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -4301,7 +4303,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 50,
         .expYield = 239,
         .evYield_Attack = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -4317,7 +4319,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "A frozen Mamoswine was dug from ice\n"
             "dating back 10,000 years. It woke up to\n"
-            "much amazement. This Pokémon has been\n"
+            "much amazement. This Moémon has been\n"
             "around for a long, long, long time."),
         .pokemonScale = 257,
         .pokemonOffset = 6,
@@ -4458,7 +4460,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "Its shell is overflowing with its\n"
             "heightened otherworldly energy. The\n"
             "ectoplasm serves as protection for this\n"
-            "Pokémon's core spirit."),
+            "Moémon's core spirit."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4491,7 +4493,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 190,
         .expYield = 60,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4540,7 +4542,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 168,
         .evYield_Attack = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4592,7 +4594,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 116,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -4642,7 +4644,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 25,
         .expYield = 69,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -4691,7 +4693,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 25,
         .expYield = 170,
         .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -4742,7 +4744,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 163,
         .evYield_Defense = 2,
         .itemRare = ITEM_METAL_COAT,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -4756,7 +4758,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 17,
         .weight = 505,
         .description = COMPOUND_STRING(
-            "A Pokémon that has a body and wings of\n"
+            "A Moémon that has a body and wings of\n"
             "steel. People in the past used feathers\n"
             "fallen from Skarmory to make swords and\n"
             "knives."),
@@ -4791,7 +4793,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 120,
         .expYield = 66,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
@@ -4807,7 +4809,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "Houndour communicate with each other\n"
             "using a variety of cries to corner their\n"
-            "prey. This Pokémon's remarkable teamwork\n"
+            "prey. This Moémon's remarkable teamwork\n"
             "is simply unparalleled."),
         .pokemonScale = 393,
         .pokemonOffset = 16,
@@ -4831,7 +4833,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .types = { TYPE_DARK, TYPE_FIRE },                  \
         .catchRate = 45,                                    \
         .evYield_SpAttack = 2,                              \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = 35,                                   \
         .growthRate = GROWTH_SLOW,                          \
@@ -4931,7 +4933,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 120,
         .expYield = 66,
         .evYield_HP = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4980,7 +4982,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 175,
         .evYield_Attack = 1,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -5031,7 +5033,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 163,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -5047,7 +5049,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "Stantler's magnificent antlers were\n"
             "once traded at high prices as works of art.\n"
-            "As a result, this Pokémon was hunted\n"
+            "As a result, this Moémon was hunted\n"
             "close to extinction."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
@@ -5081,7 +5083,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 263,
         .evYield_Attack = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -5131,7 +5133,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 88,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
@@ -5148,7 +5150,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
             "A Smeargle marks its territory using a\n"
             "fluid that leaks out from the tip of its\n"
             "tail. About 5,000 different marks left by\n"
-            "this Pokémon have been found."),
+            "this Moémon have been found."),
         .pokemonScale = 287,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -5396,7 +5398,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 60,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 40,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
@@ -5444,7 +5446,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 45,
         .expYield = 144,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 40,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
@@ -5484,7 +5486,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .types = { TYPE_ROCK, TYPE_DARK },                      \
         .catchRate = 45,                                        \
         .evYield_Attack = 3,                                    \
-        .genderRatio = PERCENT_FEMALE(50),                      \
+        .genderRatio = PERCENT_FEMALE(95),                      \
         .eggCycles = 40,                                        \
         .friendship = 35,                                       \
         .growthRate = GROWTH_SLOW,                              \
@@ -5550,7 +5552,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .weight = 2550,
         .description = COMPOUND_STRING(
             "Due to the colossal power poured into it,\n"
-            "this Pokémon's back split right open. Its\n"
+            "this Moémon's back split right open. Its\n"
             "destructive instincts are the only thing\n"
             "keeping it moving."),
         .pokemonScale = 256,
@@ -5706,7 +5708,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 50,
         .description = COMPOUND_STRING(
-            "This Pokémon came from the future by\n"
+            "This Moémon came from the future by\n"
             "crossing over time. It is thought that so\n"
             "long as Celebi appears, a bright and\n"
             "shining future awaits us."),

@@ -1,6 +1,9 @@
 #ifndef GUARD_CONFIG_POKEMON_H
 #define GUARD_CONFIG_POKEMON_H
 
+//NSFW Content TRUE/FALSE [Affects Sprites, Dex Entries, and (Soon) Story Events]
+#define NSFW_CONTENT                TRUE //Single TRUE/FALSE block for ease of use (Should be set to false for public release)
+
 // Species data settings
 #define P_UPDATED_TYPES             GEN_LATEST  // Since Gen 6, several Pokémon were changed to be partially or fully Fairy type.
 #define P_UPDATED_STATS             GEN_LATEST  // Since Gen 6, Pokémon stats are updated with each passing generation.

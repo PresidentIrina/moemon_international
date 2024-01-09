@@ -1,35 +1,36 @@
 #include "constants/abilities.h"
+#include "config/pokemon.h"
 
 // Shared Pokédex entries
 const u8 gPichuPokedexText[] = _(
-    "It is still inept at retaining electricity.\n"
-    "When it is startled, it discharges power\n"
-    "accidentally. It gets better at holding\n"
-    "power as it grows older.");
+    "Her powers over electricity are very\n"
+    "strong. Her control over it is poor,\n"
+    "and she often shocks herself.\n"
+    "");
 
 const u8 gPikachuPokedexText[] = _(
-    "It stores electricity in the electric sacs\n"
-    "on its cheeks. When it releases pent-up\n"
-    "energy in a burst, the electric power is\n"
-    "equal to a lightning bolt.");
+    "Pikachu's popularity reaches all corners\n"
+    "of the Moémon world. Trainers who attempt\n"
+    "to touch her are greeted with a shock.\n"
+    "");
 
 const u8 gUnownPokedexText[] = _(
-    "This Pokémon is shaped like ancient text\n"
-    "characters. Although research is ongoing,\n"
-    "it is a mystery as to which came first,\n"
-    "the ancient writings or the various Unown.");
+    "Strange apparitions from ancient ruins.\n"
+    "The relics held by them appear to be\n"
+    "sentient and may carry a deeper meaning.\n"
+    "");
 
 const u8 gDeoxysNormalPokedexText[] = _(
-    "Deoxys emerged from a virus that came\n"
-    "from space. It is highly intelligent and\n"
-    "can shoot lasers from the crystalline\n"
-    "organ on its chest.");
+    "A being from another galaxy, Deoxys'\n"
+    "unstable DNA composition causes her\n"
+    "to undergo radical mutations regularly.\n"
+    "");
 
 const u8 gArceusPokedexText[] = _(
-    "It is told in mythology that this Pokémon\n"
-    "emerged from an egg and shaped all there\n"
-    "is in this world, before the universe\n"
-    "even existed.");
+    "Arceus is the Goddess of this universe.\n"
+    "She created all there is, including the\n"
+    "various Moémon across the world. She\n"
+    "is why Moémon innately desire battle.");
 
 const u8 gGenesectPokedexText[] = _(
     "Over 300 million years ago, it was\n"
@@ -339,4 +340,321 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .allPerfectIVs = TRUE,
     },
     */
+ //Moemon International
+    [SPECIES_VALKYRIE] =
+    {
+        .baseHP        = 70, //-->90-->110
+        .baseAttack    = 60, //-->70-->80
+        .baseDefense   = 40, //-->50-->60
+        .baseSpeed     = 90, //-->110-->130
+        .baseSpAttack  = 80, //-->100-->120
+        .baseSpDefense = 60, //-->80-->100
+        .types = { TYPE_STEEL, TYPE_FLYING},
+        .catchRate = 45,
+        .expYield = 270,
+        .evYield_Speed     = 2,
+        .evYield_SpAttack  = 1,
+        .itemCommon = ITEM_HEAVY_DUTY_BOOTS,
+        .itemRare = ITEM_HEAVY_DUTY_BOOTS,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING},
+        .abilities = {ABILITY_BEYOND_MACH_THREE, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("Valkyrie"),
+        .cryId = CRY_VALKYRIE,
+        .natDexNum = NATIONAL_DEX_VALKYRIE,
+        .categoryName = _("Fast Bomber"),
+        .height = 19,
+        .weight = 850,
+        .description = COMPOUND_STRING(
+            "An artificial Moémon created by the IP\n"
+            "Moémon Research Lab. She is designed after\n"
+            "a vehicle from another world, capable of\n"
+            "incredibly fast speeds."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(Valkyrie, 64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_Valkyrie,
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = 0,
+        BACK_PIC(Valkyrie, 64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_JOLT_RIGHT,
+        PALETTES(Valkyrie),
+        ICON(Valkyrie, 5),
+        .footprint = gMonFootprint_Valkyrie,
+        LEARNSETS(Valkyrie),
+        .allPerfectIVs = TRUE,
+    },
+
+    [SPECIES_FLAK88] =
+    {
+        .baseHP        = 70, //-->90-->110
+        .baseAttack    = 50, //-->60-->70
+        .baseDefense   = 80, //-->100-->120
+        .baseSpeed     = 30, //-->40-->50
+        .baseSpAttack  = 100, //-->120-->140
+        .baseSpDefense = 70, //-->90-->110
+        .types = { TYPE_STEEL, TYPE_GROUND},
+        .catchRate = 45,
+        .expYield = 270,
+        .evYield_SpAttack     = 2,
+        .evYield_SpDefense  = 1,
+        .itemCommon = ITEM_METAL_COAT,
+        .itemRare = ITEM_METAL_COAT,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MINERAL},
+        .abilities = {ABILITY_ANTI_AIRCRAFT, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Flak 88"),
+        .cryId = CRY_FLAK88,
+        .natDexNum = NATIONAL_DEX_FLAK88,
+        .categoryName = _("AA Gun"),
+        .height = 17,
+        .weight = 750,
+        .description = COMPOUND_STRING(
+            "An artificial Moémon created by the IP\n"
+            "Moémon Research Lab. She is designed after\n"
+            "a vehicle from another world, capable of\n"
+            "incredibly powerful attacks with her cannon."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(Flak88, 64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_Flak88,
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = 0,
+        BACK_PIC(Flak88, 64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_JOLT_RIGHT,
+        PALETTES(Flak88),
+        ICON(Flak88, 5),
+        .footprint = gMonFootprint_Flak88,
+        LEARNSETS(Flak88),
+        .allPerfectIVs = TRUE,
+    },
+
+    [SPECIES_RYUUHOU] =
+    {
+        .baseHP        = 70, //-->90-->110
+        .baseAttack    = 50, //-->60-->70
+        .baseDefense   = 70, //-->90-->110
+        .baseSpeed     = 60, //-->70-->80
+        .baseSpAttack  = 80, //-->100-->120
+        .baseSpDefense = 70, //-->90-->110
+        .types = { TYPE_STEEL, TYPE_WATER},
+        .catchRate = 45,
+        .expYield = 270,
+        .evYield_SpDefense     = 2,
+        .evYield_SpAttack  = 1,
+        .itemCommon = ITEM_METAL_COAT,
+        .itemRare = ITEM_METAL_COAT,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_3},
+        .abilities = {ABILITY_NAVAL_SUPREMACY, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Ryuuhou"),
+        .cryId = CRY_RYUUHOU,
+        .natDexNum = NATIONAL_DEX_RYUUHOU,
+        .categoryName = _("Carrier"),
+        .height = 18,
+        .weight = 700,
+        .description = COMPOUND_STRING(
+            "An artificial Moémon created by the IP\n"
+            "Moémon Research Lab. She is designed after\n"
+            "a vehicle from another world, capable of\n"
+            "incredibly fast speeds."),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(Ryuuhou, 64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_Ryuuhou,
+        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .enemyMonElevation = 0,
+        BACK_PIC(Ryuuhou, 64, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_JOLT_RIGHT,
+        PALETTES(Ryuuhou),
+        ICON(Ryuuhou, 5),
+        .footprint = gMonFootprint_Ryuuhou,
+        LEARNSETS(Ryuuhou),
+        .allPerfectIVs = TRUE,
+    },
+
+    [SPECIES_TENTACRUEL_AQUA] =
+    {
+        .baseHP        = 80,
+        .baseAttack    = 70,
+        .baseDefense   = 65,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 120,
+        .types = { TYPE_WATER, TYPE_DARK },
+        .catchRate = 60,
+        .expYield = 180,
+        .evYield_SpDefense = 2,
+        .itemRare = ITEM_POISON_BARB,
+        .genderRatio = PERCENT_FEMALE(95),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = { EGG_GROUP_WATER_3, EGG_GROUP_WATER_3 },
+        .abilities = { ABILITY_STAKEOUT, ABILITY_LIQUID_OOZE, ABILITY_CLEAR_BODY },
+        .bodyColor = BODY_COLOR_BLACK,
+        .speciesName = _("Tentacruel"),
+        .cryId = CRY_TENTACRUEL,
+        .natDexNum = NATIONAL_DEX_TENTACRUEL_AQUA,
+        .categoryName = _("Man o' War"),
+        .height = 18,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "Tentacruel tends towards deeper waters,\n"
+            "snaring food in her hair. She drifts on\n"
+            "currents after depleting food supplies.\n"
+            ""),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 312,
+        .trainerOffset = 1,
+        FRONT_PIC(Tentacruel_Aqua, 64, 56),
+        .frontPicYOffset = 4,
+        .frontAnimFrames = sAnims_Tentacruel,
+        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
+        BACK_PIC(Tentacruel_Aqua, 64, 48),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        PALETTES(Tentacruel_Aqua),
+        ICON(Tentacruel, 0),
+        .footprint = gMonFootprint_Tentacruel,
+        LEARNSETS(Tentacruel),
+    },
+
+    [SPECIES_ESCAVALIERSUMMER] =
+    {
+        .baseHP        = 70,
+        .baseAttack    = 135,
+        .baseDefense   = 105,
+        .baseSpeed     = 20,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 105,
+        .types = { TYPE_BUG, TYPE_STEEL},
+        .catchRate = 75,
+        .expYield = 173,
+        .evYield_Attack    = 2,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG},
+        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_SHELL_ARMOR, ABILITY_OVERCOAT},
+        .bodyColor = BODY_COLOR_GRAY,
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_GARCHOMPBUNNY] =
+    {
+        .baseHP        = 108,
+        .baseAttack    = 140,
+        .baseDefense   = 85,
+        .baseSpeed     = 112,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 75,
+        .types = { TYPE_DRAGON, TYPE_GROUND},
+        .catchRate = 45,
+        .expYield = 270,
+        .evYield_Attack    = 3,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 40,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON},
+        .abilities = {ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN},
+        .bodyColor = BODY_COLOR_BLUE,
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_COBALIONBUNNY] =
+    {
+        .baseHP        = 91,
+        .baseAttack    = 100,
+        .baseDefense   = 119,
+        .baseSpeed     = 118,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 62,
+        .types = { TYPE_STEEL, TYPE_FIGHTING},
+        .catchRate = 3,
+        .expYield = 261,
+        .evYield_Speed   = 3,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 80,
+        .friendship = 35,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
+        .abilities = {ABILITY_SPEED_BOOST, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_BLUE,
+        .noFlip = FALSE,
+        .flags = SPECIES_FLAG_LEGENDARY,
+    },
+
+    [SPECIES_TERRAKIONBUNNY] =
+    {
+        .baseHP        = 91,
+        .baseAttack    = 139,
+        .baseDefense   = 80,
+        .baseSpeed     = 118,
+        .baseSpAttack  = 82,
+        .baseSpDefense = 80,
+        .types = { TYPE_ROCK, TYPE_FIGHTING},
+        .catchRate = 3,
+        .expYield = 261,
+        .evYield_Speed    = 3,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 80,
+        .friendship = 35,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
+        .abilities = {ABILITY_SPEED_BOOST, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_GRAY,
+        .noFlip = FALSE,
+        .flags = SPECIES_FLAG_LEGENDARY,
+    },
+
+    [SPECIES_VIRIZIONBUNNY] =
+    {
+        .baseHP        = 91,
+        .baseAttack    = 100,
+        .baseDefense   = 62,
+        .baseSpeed     = 118,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 119,
+        .types = { TYPE_GRASS, TYPE_FIGHTING},
+        .catchRate = 3,
+        .expYield = 261,
+        .evYield_Speed = 3,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 80,
+        .friendship = 35,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
+        .abilities = {ABILITY_SPEED_BOOST, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_GREEN,
+        .noFlip = FALSE,
+        .flags = SPECIES_FLAG_LEGENDARY,
+    },
 };

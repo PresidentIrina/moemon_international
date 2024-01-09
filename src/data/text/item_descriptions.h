@@ -3993,3 +3993,39 @@ static const u8 sGlimmeringCharmDesc[] = _(
     "A charm that will\n"
     "raise the shards\n"
     "from Tera Raids.");
+
+// HM Items [Moemon International]
+static const u8 sSurfboardDesc[] = _(
+	"This flat board\n"
+    "is shaped for\n"
+    "riding waves.");
+
+static const u8 sAxeDesc[] = _(
+	"A small cutting\n"
+    "instrument best for\n"
+    "clearing bushes.");
+
+static const u8 sHammerDesc[] = _(
+	"A large, heavy\n"
+    "hammer. It may can\n"
+    "smash rocks.");
+
+static const u8 sDivingSuitDesc[] = _(
+	"A small device that\n"
+    "recycles air while\n"
+    "underwater.");
+
+static const u8 sLanternDesc[] = _(
+	"A bright lantern\n"
+    "that can light dark\n"
+    "caves.");
+
+static const u8 sPowerGloveDesc[] = _(
+	"A special glove\n"
+    "that can slam\n"
+    "heavy rocks forward.");
+
+static const u8 sFlyingToolDesc[] = _(
+	"A special tool\n"
+    "that can call\n"
+    "for a flying Moémon.");

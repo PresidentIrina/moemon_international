@@ -3,6 +3,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 {
 #endif
 
+#include "config/pokemon.h"
+
 #if P_FAMILY_BULBASAUR
     [SPECIES_BULBASAUR] =
     {
@@ -16,7 +18,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 64,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -27,13 +29,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_BULBASAUR,
         .natDexNum = NATIONAL_DEX_BULBASAUR,
         .categoryName = _("Seed"),
-        .height = 7,
+        .height = 9,
         .weight = 69,
         .description = COMPOUND_STRING(
-            "Bulbasaur can be seen napping in bright\n"
-            "sunlight. There is a seed on its back.\n"
-            "By soaking up the sun's rays, the seed\n"
-            "grows progressively larger."),
+            "She carries a large collection of seeds\n"
+            "for planting, but she ends up eating\n"
+            "most of them.\n"
+            ""),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -65,7 +67,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 142,
         .evYield_SpAttack = 1,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -76,13 +78,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_IVYSAUR,
         .natDexNum = NATIONAL_DEX_IVYSAUR,
         .categoryName = _("Seed"),
-        .height = 10,
+        .height = 15,
         .weight = 130,
         .description = COMPOUND_STRING(
-            "To support its bulb, Ivysaur's legs\n"
-            "grow sturdy. If it spends more time lying in\n"
-            "the sunlight, the bud will soon bloom into\n"
-            "a large flower."),
+            "Ivysaur likes to act tough, but\n"
+            "she's actually quite sweet and\n"
+            "caring deep down. She helps run a daycare\n"
+            "for Grass-type Moémon."),
         .pokemonScale = 335,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -101,23 +103,23 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_VENUSAUR}),
     },
 
-#define VENUSAUR_MISC_INFO                                                  \
-        .types = { TYPE_GRASS, TYPE_POISON },                               \
-        .catchRate = 45,                                                    \
-        .evYield_SpAttack = 2,                                              \
-        .evYield_SpDefense = 1,                                             \
-        .genderRatio = PERCENT_FEMALE(12.5),                                \
-        .eggCycles = 20,                                                    \
-        .friendship = STANDARD_FRIENDSHIP,                                  \
-        .growthRate = GROWTH_MEDIUM_SLOW,                                   \
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },                \
-        .bodyColor = BODY_COLOR_GREEN,                                      \
-        .speciesName = _("Venusaur"),                                       \
-        .natDexNum = NATIONAL_DEX_VENUSAUR,                                 \
-        .categoryName = _("Seed"),                                          \
-        .footprint = gMonFootprint_Venusaur,                                \
-        LEARNSETS(Venusaur),                                                \
-        .formSpeciesIdTable = sVenusaurFormSpeciesIdTable,                  \
+#define VENUSAUR_MISC_INFO                                                              \
+        .types = { TYPE_GRASS, TYPE_POISON },                                           \
+        .catchRate = 45,                                                                \
+        .evYield_SpAttack = 2,                                                          \
+        .evYield_SpDefense = 1,                                                         \
+        .genderRatio = PERCENT_FEMALE(95),                                              \
+        .eggCycles = 20,                                                                \
+        .friendship = STANDARD_FRIENDSHIP,                                              \
+        .growthRate = GROWTH_MEDIUM_SLOW,                                               \
+        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },                            \
+        .bodyColor = BODY_COLOR_GREEN,                                                  \
+        .speciesName = _("Venusaur"),                                                   \
+        .natDexNum = NATIONAL_DEX_VENUSAUR,                                             \
+        .categoryName = _("Seed"),                                                      \
+        .footprint = gMonFootprint_Venusaur,                                            \
+        LEARNSETS(Venusaur),                                                            \
+        .formSpeciesIdTable = sVenusaurFormSpeciesIdTable,                              \
         .formChangeTable = sVenusaurFormChangeTable
 
     [SPECIES_VENUSAUR] =
@@ -132,13 +134,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 236,
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .cryId = CRY_VENUSAUR,
-        .height = 20,
+        .height = 18,
         .weight = 1000,
         .description = COMPOUND_STRING(
-            "Venusaur's flower is said to take on vivid\n"
-            "colors if it gets plenty of nutrition and\n"
-            "sunlight. The flower's aroma soothes the\n"
-            "emotions of people."),
+            "Venusaur's motherly attitude makes quite\n"
+            "the contrast with how she acted in\n"
+            "the past. Her grove is a safe haven for\n"
+            "young Moémon."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
@@ -154,6 +156,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_H_SHAKE,
         PALETTES(Venusaur),
         ICON(Venusaur, 4),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_LEAF_STONE, SPECIES_VENUSAUR_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -169,12 +172,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 281,
         .abilities = { ABILITY_THICK_FAT, ABILITY_THICK_FAT, ABILITY_THICK_FAT },
         .cryId = CRY_VENUSAUR_MEGA,
-        .height = 24,
+        .height = 18,
         .weight = 1555,
         .description = COMPOUND_STRING(
-            "In order to support its flower, which\n"
-            "has grown larger due to Mega Evolution,\n"
-            "its back and legs have become stronger."),
+            "After Mega Evolution, Venusaur is able\n"
+            "to use her flower to spread spores that\n"
+            "calm those around her"),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
@@ -243,7 +246,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 62,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -254,13 +257,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CHARMANDER,
         .natDexNum = NATIONAL_DEX_CHARMANDER,
         .categoryName = _("Lizard"),
-        .height = 6,
+        .height = 9,
         .weight = 85,
         .description = COMPOUND_STRING(
-            "The flame that burns at the tip of its\n"
-            "tail is an indication of its emotions.\n"
-            "The flame wavers when Charmander is\n"
-            "happy, and blazes when it is enraged."),
+            "Were her flame to go out, she would\n"
+            "weaken greatly. She won't attack unless\n"
+            "provoked.\n"
+            ""),
         .pokemonScale = 444,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -292,7 +295,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 142,
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -303,13 +306,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CHARMELEON,
         .natDexNum = NATIONAL_DEX_CHARMELEON,
         .categoryName = _("Flame"),
-        .height = 11,
+        .height = 15,
         .weight = 190,
         .description = COMPOUND_STRING(
-            "Without pity, its sharp claws destroy foes.\n"
-            "If it encounters a strong enemy, it\n"
-            "becomes agitated, and the flame on its\n"
-            "tail flares with a bluish white color."),
+            "Her flame becomes more intense\n"
+            "depending on her temperament.\n"
+            "When Charmeleon's temper gets the best\n"
+            "of her, she tends to lash out."),
         .pokemonScale = 302,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -328,20 +331,20 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_CHARIZARD}),
     },
 
-#define CHARIZARD_MISC_INFO                                             \
-        .catchRate = 45,                                                \
-        .evYield_SpAttack = 3,                                          \
-        .genderRatio = PERCENT_FEMALE(12.5),                            \
-        .eggCycles = 20,                                                \
-        .friendship = STANDARD_FRIENDSHIP,                              \
-        .growthRate = GROWTH_MEDIUM_SLOW,                               \
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON },           \
-        .speciesName = _("Charizard"),                                  \
-        .natDexNum = NATIONAL_DEX_CHARIZARD,                            \
-        .categoryName = _("Flame"),                                     \
-        .footprint = gMonFootprint_Charizard,                           \
-        LEARNSETS(Charizard),                                           \
-        .formSpeciesIdTable = sCharizardFormSpeciesIdTable,             \
+#define CHARIZARD_MISC_INFO                                                             \
+        .catchRate = 45,                                                                \
+        .evYield_SpAttack = 3,                                                          \
+        .genderRatio = PERCENT_FEMALE(95),                                              \
+        .eggCycles = 20,                                                                \
+        .friendship = STANDARD_FRIENDSHIP,                                              \
+        .growthRate = GROWTH_MEDIUM_SLOW,                                               \
+        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON },                           \
+        .speciesName = _("Charizard"),                                                  \
+        .natDexNum = NATIONAL_DEX_CHARIZARD,                                            \
+        .categoryName = _("Flame"),                                                     \
+        .footprint = gMonFootprint_Charizard,                                           \
+        LEARNSETS(Charizard),                                                           \
+        .formSpeciesIdTable = sCharizardFormSpeciesIdTable,                             \
         .formChangeTable = sCharizardFormChangeTable
 
     [SPECIES_CHARIZARD] =
@@ -358,13 +361,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_RED,
         .cryId = CRY_CHARIZARD,
-        .height = 17,
+        .height = 18,
         .weight = 905,
         .description = COMPOUND_STRING(
-            "A Charizard flies about in search of\n"
-            "strong opponents. It breathes intense\n"
-            "flames that can melt any material. However,\n"
-            "it will never torch a weaker foe."),
+            "With her newly grown wings, she soars\n"
+            "through the sky to search for treasure.\n"
+            "She's a treasure hunter's greatest\n"
+            "companion."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
@@ -378,6 +381,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_RED,
         PALETTES(Charizard),
         ICON(Charizard, 0),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_FIRE_STONE, SPECIES_CHARIZARD_MEGA_X},
+                                {EVO_ITEM, ITEM_SUN_STONE, SPECIES_CHARIZARD_MEGA_Y}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -395,12 +400,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS },
         .bodyColor = BODY_COLOR_BLACK,
         .cryId = CRY_CHARIZARD_MEGA_X,
-        .height = 17,
+        .height = 18,
         .weight = 1105,
         .description = COMPOUND_STRING(
-            "The overwhelming power that fills its\n"
-            "entire body causes it to turn black\n"
-            "and creates intense blue flames."),
+            "The overwhelming power that fills her\n"
+            "entire body causes her flames to turn\n"
+            "blue. She thinks black looks better\n"
+            "with her new flames rather than red."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 302,
@@ -431,11 +437,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_DROUGHT, ABILITY_DROUGHT, ABILITY_DROUGHT },
         .bodyColor = BODY_COLOR_RED,
         .cryId = CRY_CHARIZARD_MEGA_Y,
-        .height = 17,
+        .height = 18,
         .weight = 1005,
         .description = COMPOUND_STRING(
-            "Its bond with its Trainer is the source\n"
-            "of its power. It boasts speed and\n"
+            "Her bond with her Trainer is the source\n"
+            "of her power. She boasts speed and\n"
             "maneuverability greater than that of a\n"
             "jet fighter."),
         .pokemonScale = 256,
@@ -508,7 +514,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 63,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -519,13 +525,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_SQUIRTLE,
         .natDexNum = NATIONAL_DEX_SQUIRTLE,
         .categoryName = _("Tiny Turtle"),
-        .height = 5,
+        .height = 9,
         .weight = 90,
         .description = COMPOUND_STRING(
-            "Its shell is not just for protection.\n"
-            "Its rounded shape and the grooves on its\n"
-            "surface minimize resistance in water,\n"
-            "enabling Squirtle to swim at high speeds."),
+            "Squirtle is always blowing bubbles.\n"
+            "She keeps practicing, dreaming of the\n"
+            "day she is able to spout enormous\n"
+            "geysers."),
         .pokemonScale = 412,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -557,7 +563,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 142,
         .evYield_Defense = 1,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -568,13 +574,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_WARTORTLE,
         .natDexNum = NATIONAL_DEX_WARTORTLE,
         .categoryName = _("Turtle"),
-        .height = 10,
+        .height = 15,
         .weight = 225,
         .description = COMPOUND_STRING(
-            "Its large tail is covered with rich, thick\n"
-            "fur that deepens in color with age.\n"
-            "The scratches on its shell are evidence\n"
-            "of this Pokémon's toughness in battle."),
+            "Wartortle's tail has the consistency of\n"
+            "seafoam. Farmers believe that touching\n"
+            "it ends droughts.\n"
+            ""),
         .pokemonScale = 332,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -593,22 +599,22 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_BLASTOISE}),
     },
 
-#define BLASTOISE_MISC_INFO                                             \
-        .types = { TYPE_WATER, TYPE_WATER },                            \
-        .catchRate = 45,                                                \
-        .evYield_SpDefense = 3,                                         \
-        .genderRatio = PERCENT_FEMALE(12.5),                            \
-        .eggCycles = 20,                                                \
-        .friendship = STANDARD_FRIENDSHIP,                              \
-        .growthRate = GROWTH_MEDIUM_SLOW,                               \
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },          \
-        .bodyColor = BODY_COLOR_BLUE,                                   \
-        .speciesName = _("Blastoise"),                                  \
-        .natDexNum = NATIONAL_DEX_BLASTOISE,                            \
-        .categoryName = _("Shellfish"),                                 \
-        .footprint = gMonFootprint_Blastoise,                           \
-        LEARNSETS(Blastoise),                                           \
-        .formSpeciesIdTable = sBlastoiseFormSpeciesIdTable,             \
+#define BLASTOISE_MISC_INFO                                                             \
+        .types = { TYPE_WATER, TYPE_WATER },                                            \
+        .catchRate = 45,                                                                \
+        .evYield_SpDefense = 3,                                                         \
+        .genderRatio = PERCENT_FEMALE(95),                                              \
+        .eggCycles = 20,                                                                \
+        .friendship = STANDARD_FRIENDSHIP,                                              \
+        .growthRate = GROWTH_MEDIUM_SLOW,                                               \
+        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },                          \
+        .bodyColor = BODY_COLOR_BLUE,                                                   \
+        .speciesName = _("Blastoise"),                                                  \
+        .natDexNum = NATIONAL_DEX_BLASTOISE,                                            \
+        .categoryName = _("Shellfish"),                                                 \
+        .footprint = gMonFootprint_Blastoise,                                           \
+        LEARNSETS(Blastoise),                                                           \
+        .formSpeciesIdTable = sBlastoiseFormSpeciesIdTable,                             \
         .formChangeTable = sBlastoiseFormChangeTable
 
     [SPECIES_BLASTOISE] =
@@ -623,13 +629,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 239,
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_RAIN_DISH },
         .cryId = CRY_BLASTOISE,
-        .height = 16,
+        .height = 18,
         .weight = 855,
         .description = COMPOUND_STRING(
-            "The waterspouts that protrude from its\n"
-            "shell are highly accurate. Their bullets of\n"
-            "water can precisely nail tin cans from\n"
-            "a distance of over 160 feet."),
+            "This powerful Moémon carries two large\n"
+            "cannons that pressurize her water\n"
+            "to give it more force. At full power, her\n"
+            "water can bore through a mountain."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 293,
@@ -644,6 +650,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(Blastoise),
         ICON(Blastoise, 2),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_WATER_STONE, SPECIES_BLASTOISE_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -659,12 +666,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 284,
         .abilities = { ABILITY_MEGA_LAUNCHER, ABILITY_MEGA_LAUNCHER, ABILITY_MEGA_LAUNCHER },
         .cryId = CRY_BLASTOISE_MEGA,
-        .height = 16,
+        .height = 18,
         .weight = 1011,
         .description = COMPOUND_STRING(
-            "The cannon on its back is as powerful\n"
-            "as a tank gun. Its tough legs and back\n"
-            "enable it to withstand the recoil from\n"
+            "Her improved cannon is as powerful\n"
+            "as a tank's. Her tough legs and back\n"
+            "enable her to withstand the recoil from\n"
             "firing the cannon."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
@@ -734,7 +741,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 255,
         .expYield = 39,
         .evYield_HP = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -745,13 +752,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CATERPIE,
         .natDexNum = NATIONAL_DEX_CATERPIE,
         .categoryName = _("Worm"),
-        .height = 3,
+        .height = 9,
         .weight = 29,
         .description = COMPOUND_STRING(
-            "Its voracious appetite compels it to\n"
-            "devour leaves bigger than itself without\n"
-            "hesitation. It releases a terribly strong\n"
-            "odor from its antennae."),
+            "A young child with dreams of one day\n"
+            "learning to fly. She's afraid of\n"
+            "everything, but her friend Weedle\n"
+            "protects her from danger."),
         .pokemonScale = 549,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -782,7 +789,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 120,
         .expYield = 72,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -793,13 +800,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_METAPOD,
         .natDexNum = NATIONAL_DEX_METAPOD,
         .categoryName = _("Cocoon"),
-        .height = 7,
+        .height = 15,
         .weight = 99,
         .description = COMPOUND_STRING(
-            "Its shell is as hard as an iron slab.\n"
-            "A Metapod does not move very much\n"
-            "because it is preparing its soft innards\n"
-            "for evolution inside the shell."),
+            "Metapod believes the key to\n"
+            "achieving her dreams of flight is tons\n"
+            "of rest.\n"
+            ""),
         .pokemonScale = 350,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -831,7 +838,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_SpAttack = 2,                                                      \
         .evYield_SpDefense = 1,                                                     \
         .itemRare = ITEM_SILVER_POWDER,                                             \
-        .genderRatio = PERCENT_FEMALE(50),                                          \
+        .genderRatio = PERCENT_FEMALE(95),                                          \
         .eggCycles = 15,                                                            \
         .friendship = STANDARD_FRIENDSHIP,                                          \
         .growthRate = GROWTH_MEDIUM_FAST,                                           \
@@ -850,13 +857,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_BUTTERFREE] =
     {
         BUTTERFREE_MISC_INFO,
-        .height = 11,
+        .height = 18,
         .weight = 320,
         .description = COMPOUND_STRING(
-            "It has a superior ability to search for\n"
-            "delicious honey from flowers. It can seek,\n"
-            "extract, and carry honey from flowers\n"
-            "blooming over six miles away."),
+            "Butterfree's patience finally paid\n"
+            "off, and she was rewarded with\n"
+            "flight and beauty. The dust from her\n"
+            "wings has many strange properties."),
         .pokemonScale = 312,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -918,7 +925,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 255,
         .expYield = 39,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -929,13 +936,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_WEEDLE,
         .natDexNum = NATIONAL_DEX_WEEDLE,
         .categoryName = _("Hairy Bug"),
-        .height = 3,
+        .height = 9,
         .weight = 32,
         .description = COMPOUND_STRING(
-            "A Weedle has an extremely acute sense\n"
-            "of smell. It distinguishes its favorite\n"
-            "kinds of leaves from those it dislikes by\n"
-            "sniffing with its big red nose."),
+            "Weedle wants to grow strong enough to\n"
+            "protect Caterpie, her best friend. She\n"
+            "can pass venom through the tip of her\n"
+            "hair to ward off Flying-type Moémon."),
         .pokemonScale = 455,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -967,7 +974,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 120,
         .expYield = 72,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -978,13 +985,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_KAKUNA,
         .natDexNum = NATIONAL_DEX_KAKUNA,
         .categoryName = _("Cocoon"),
-        .height = 6,
+        .height = 15,
         .weight = 100,
         .description = COMPOUND_STRING(
-            "It remains virtually immobile while it\n"
-            "clings to a tree. However, on the inside,\n"
-            "it busily prepares for evolution. This is\n"
-            "evident from how hot its shell becomes."),
+            "Kakuna believes the best offense is\n"
+            "a good defense. By remaining still, she\n"
+            "acts as a shield for groups of Caterpie.\n"
+            ""),
         .pokemonScale = 424,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1012,7 +1019,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Attack = 2,                                \
         .evYield_SpDefense = 1,                             \
         .itemRare = ITEM_POISON_BARB,                       \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 15,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
@@ -1038,13 +1045,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 178,
         .abilities = { ABILITY_SWARM, ABILITY_NONE, ABILITY_SNIPER },
         .cryId = CRY_BEEDRILL,
-        .height = 10,
+        .height = 18,
         .weight = 295,
         .description = COMPOUND_STRING(
-            "A Beedrill is extremely territorial.\n"
-            "For safety reasons, no one should ever\n"
-            "approach its nest. If angered, they will\n"
-            "attack in a swarm."),
+            "Beedrill leaps to defend groups of\n"
+            "Butterfree from harm, but doesn't seem to\n"
+            "realize that her help is unneeded.\n"
+            ""),
         .pokemonScale = 366,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -1059,6 +1066,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_H_VIBRATE,
         PALETTES(Beedrill),
         ICON(Beedrill, 2),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SILVER_POWDER, SPECIES_BEEDRILL_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -1074,13 +1082,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 223,
         .abilities = { ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY },
         .cryId = CRY_BEEDRILL_MEGA,
-        .height = 14,
+        .height = 18,
         .weight = 405,
         .description = COMPOUND_STRING(
-            "Its legs have become poison stingers.\n"
-            "It stabs its prey repeatedly with the\n"
-            "stingers on its limbs, dealing the final\n"
-            "blow with the stinger on its rear."),
+            "Butterfree may not need Beedrill's help,\n"
+            "but that doesn't mean others don't.\n"
+            "She has trained to become even faster\n"
+            "to help Moemon in need."),
         .pokemonScale = 366,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -1113,7 +1121,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 255,
         .expYield = 50,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1124,13 +1132,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PIDGEY,
         .natDexNum = NATIONAL_DEX_PIDGEY,
         .categoryName = _("Tiny Bird"),
-        .height = 3,
+        .height = 9,
         .weight = 18,
         .description = COMPOUND_STRING(
-            "It has an extremely sharp sense of\n"
-            "direction. It can unerringly return home to\n"
-            "its nest, however far it may be removed\n"
-            "from its familiar surroundings."),
+            "Pidgey tends to fly in flocks. She enjoys\n"
+            "bringing people items just to\n"
+            "save them the trouble.\n"
+            ""),
         .pokemonScale = 508,
         .pokemonOffset = -3,
         .trainerScale = 256,
@@ -1161,7 +1169,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 120,
         .expYield = 122,
         .evYield_Speed = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -1172,13 +1180,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PIDGEOTTO,
         .natDexNum = NATIONAL_DEX_PIDGEOTTO,
         .categoryName = _("Bird"),
-        .height = 11,
+        .height = 15,
         .weight = 300,
         .description = COMPOUND_STRING(
-            "This Pokémon flies around, patrolling its\n"
-            "large territory. If its living space is\n"
-            "violated, it shows no mercy in thoroughly\n"
-            "punishing the foe with its sharp claws."),
+            "She enjoys racing with other Moémon\n"
+            "for sport. Her vision is impeccable, and\n"
+            "she can spot food from a mile away.\n"
+            ""),
         .pokemonScale = 331,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -1200,22 +1208,22 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #define PIDGEOT_SPEED (P_UPDATED_STATS >= GEN_6 ? 101 : 91)
 
-#define PIDGEOT_MISC_INFO                                   \
-        .types = { TYPE_NORMAL, TYPE_FLYING },              \
-        .catchRate = 45,                                    \
-        .evYield_Speed = 3,                                 \
-        .genderRatio = PERCENT_FEMALE(50),                  \
-        .eggCycles = 15,                                    \
-        .friendship = STANDARD_FRIENDSHIP,                  \
-        .growthRate = GROWTH_MEDIUM_SLOW,                   \
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },\
-        .bodyColor = BODY_COLOR_BROWN,                      \
-        .speciesName = _("Pidgeot"),                        \
-        .natDexNum = NATIONAL_DEX_PIDGEOT,                  \
-        .categoryName = _("Bird"),                          \
-        .footprint = gMonFootprint_Pidgeot,                 \
-        LEARNSETS(Pidgeot),                                 \
-        .formSpeciesIdTable = sPidgeotFormSpeciesIdTable,   \
+#define PIDGEOT_MISC_INFO                                                           \
+        .types = { TYPE_NORMAL, TYPE_FLYING },                                      \
+        .catchRate = 45,                                                            \
+        .evYield_Speed = 3,                                                         \
+        .genderRatio = PERCENT_FEMALE(95),                                          \
+        .eggCycles = 15,                                                            \
+        .friendship = STANDARD_FRIENDSHIP,                                          \
+        .growthRate = GROWTH_MEDIUM_SLOW,                                           \
+        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },                        \
+        .bodyColor = BODY_COLOR_BROWN,                                              \
+        .speciesName = _("Pidgeot"),                                                \
+        .natDexNum = NATIONAL_DEX_PIDGEOT,                                          \
+        .categoryName = _("Bird"),                                                  \
+        .footprint = gMonFootprint_Pidgeot,                                         \
+        LEARNSETS(Pidgeot),                                                         \
+        .formSpeciesIdTable = sPidgeotFormSpeciesIdTable,                           \
         .formChangeTable = sPidgeotFormChangeTable
 
     [SPECIES_PIDGEOT] =
@@ -1230,13 +1238,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 216,
         .abilities = { ABILITY_KEEN_EYE, ABILITY_TANGLED_FEET, ABILITY_BIG_PECKS },
         .cryId = CRY_PIDGEOT,
-        .height = 15,
+        .height = 18,
         .weight = 395,
         .description = COMPOUND_STRING(
-            "This Pokémon has gorgeous, glossy\n"
-            "feathers. Many Trainers are so captivated\n"
-            "by the beautiful feathers on its head that\n"
-            "they choose Pidgeot as their Pokémon."),
+            "Years of racing have toned her wings. She\n"
+            "has great pride in her speed, and she's\n"
+            "been recorded breaking Mach 2.\n"
+            ""),
         .pokemonScale = 269,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -1251,6 +1259,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
         PALETTES(Pidgeot),
         ICON(Pidgeot, 0),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SHARP_BEAK, SPECIES_PIDGEOT_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -1266,11 +1275,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 261,
         .abilities = { ABILITY_NO_GUARD, ABILITY_NO_GUARD, ABILITY_NO_GUARD },
         .cryId = CRY_PIDGEOT_MEGA,
-        .height = 22,
+        .height = 18,
         .weight = 505,
         .description = COMPOUND_STRING(
-            "With its muscular strength now greatly\n"
-            "increased, it can fly continuously\n"
+            "With her muscular stamina now greatly\n"
+            "increased, she can fly continuously\n"
             "for two weeks without resting."),
         .pokemonScale = 269,
         .pokemonOffset = 0,
@@ -1293,7 +1302,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 
 #if P_FAMILY_RATTATA
 #define RATTATA_FAMILY_MISC_INFO                            \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 15,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
@@ -1324,7 +1333,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_RATICATE,              \
         .natDexNum = NATIONAL_DEX_RATICATE, \
         .categoryName = _("Mouse"),         \
-        .height = 7,                        \
+        .height = 15,                        \
         .footprint = gMonFootprint_Raticate,\
         .formSpeciesIdTable = sRaticateFormSpeciesIdTable
 
@@ -1335,13 +1344,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .abilities = { ABILITY_RUN_AWAY, ABILITY_GUTS, ABILITY_HUSTLE },
         .bodyColor = BODY_COLOR_PURPLE,
-        .height = 3,
+        .height = 9,
         .weight = 35,
         .description = COMPOUND_STRING(
-            "A Rattata is cautious in the extreme.\n"
-            "Even while it is asleep, it constantly\n"
-            "moves its ears and listens for danger.\n"
-            "It will make its nest anywhere."),
+            "Many people find her annoying due\n"
+            "to her very high-pitched voice and\n"
+            "tendency to chew clothing.\n"
+            ""),
         .pokemonScale = 481,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -1376,10 +1385,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_BROWN,
         .weight = 185,
         .description = COMPOUND_STRING(
-            "A Raticate's sturdy fangs grow steadily.\n"
-            "To keep them ground down, it gnaws on\n"
-            "rocks and logs. It may even chew on the\n"
-            "walls of houses."),
+            "She can modify clothes with her teeth\n"
+            "skillfully. It's probably better to wash\n"
+            "them afterwards, though.\n"
+            ""),
         .pokemonScale = 459,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -1407,7 +1416,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_PECHA_BERRY,
         .abilities = { ABILITY_GLUTTONY, ABILITY_HUSTLE, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_BLACK,
-        .height = 3,
+        .height = 9,
         .weight = 38,
         .description = COMPOUND_STRING(
             "With its incisors, it gnaws through doors\n"
@@ -1485,7 +1494,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 52,
         .evYield_Speed = 1,
         .itemRare = ITEM_SHARP_BEAK,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -1496,13 +1505,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_SPEAROW,
         .natDexNum = NATIONAL_DEX_SPEAROW,
         .categoryName = _("Tiny Bird"),
-        .height = 3,
+        .height = 9,
         .weight = 20,
         .description = COMPOUND_STRING(
-            "Its loud cry can be heard over half a mile\n"
-            "away. If its high, keening cry is heard\n"
-            "echoing all around, it is a sign that they\n"
-            "are warning each other of danger."),
+            "While inept at flying high due to her\n"
+            "small wings, she agressively defends\n"
+            "her territory and friends.\n"
+            ""),
         .pokemonScale = 571,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -1534,7 +1543,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 155,
         .evYield_Speed = 2,
         .itemRare = ITEM_SHARP_BEAK,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -1545,13 +1554,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_FEAROW,
         .natDexNum = NATIONAL_DEX_FEAROW,
         .categoryName = _("Beak"),
-        .height = 12,
+        .height = 18,
         .weight = 380,
         .description = COMPOUND_STRING(
-            "Its long neck and elongated beak are\n"
-            "ideal for catching prey in soil or water.\n"
-            "It deftly moves this extended and skinny\n"
-            "beak to pluck prey."),
+            "Donning new magnificent wings, Fearow\n"
+            "can fly all day without rest, much to\n"
+            "Pidgeotto's excitement.\n"
+            ""),
         .pokemonScale = 278,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -1585,7 +1594,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 255,
         .expYield = 58,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -1596,13 +1605,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_EKANS,
         .natDexNum = NATIONAL_DEX_EKANS,
         .categoryName = _("Snake"),
-        .height = 20,
+        .height = 9,
         .weight = 69,
         .description = COMPOUND_STRING(
-            "An Ekans curls itself up in a spiral while\n"
-            "it rests. This position allows it to quickly\n"
-            "respond to an enemy from any direction\n"
-            "with a threat from its upraised head."),
+            "Travelers say that Ekans uses her\n"
+            "charm and looks to lure in Trainers,\n"
+            "but she is more likely to coil up and\n"
+            "hide when approached."),
         .pokemonScale = 298,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -1634,7 +1643,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 90,
         .expYield = 157,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -1645,13 +1654,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_ARBOK,
         .natDexNum = NATIONAL_DEX_ARBOK,
         .categoryName = _("Cobra"),
-        .height = 35,
+        .height = 18,
         .weight = 650,
         .description = COMPOUND_STRING(
-            "This Pokémon has a terrifically strong\n"
-            "constricting power. It can even flatten\n"
-            "steel oil drums. Once it wraps its body\n"
-            "around its foe, escaping is impossible."),
+            "Arbok coils around her prey, slowly\n"
+            "choking the life out of them. She seems\n"
+            "to take pleasure in their fear.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 296,
@@ -1683,7 +1692,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 190,                                                               \
         .expYield = 41,                                                                 \
         .evYield_Speed = 1,                                                             \
-        .genderRatio = PERCENT_FEMALE(50),                                              \
+        .genderRatio = PERCENT_FEMALE(95),                                              \
         .eggCycles = 10,                                                                \
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .growthRate = GROWTH_MEDIUM_FAST,                                               \
@@ -1694,7 +1703,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PICHU,                                                             \
         .natDexNum = NATIONAL_DEX_PICHU,                                                \
         .categoryName = _("Tiny Mouse"),                                                \
-        .height = 3,                                                                    \
+        .height = 6,                                                                    \
         .weight = 20,                                                                   \
         .description = gPichuPokedexText,                                               \
         .pokemonScale = 508,                                                            \
@@ -1762,7 +1771,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .formSpeciesIdTable = sPikachuFormSpeciesIdTable
 
 #define PIKACHU_REGULAR_SIZE_INFO   \
-        .height = 4,                \
+        .height = 15,                \
         .weight = 60,               \
         .pokemonScale = 479,        \
         .pokemonOffset = 19,        \
@@ -1773,7 +1782,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         PIKACHU_MISC_INFO,
         PIKACHU_REGULAR_SIZE_INFO,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },
         .description = gPikachuPokedexText,
         FRONT_PIC(Pikachu, 48, 48),
@@ -1897,7 +1906,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define PIKACHU_CAP_MISC_INFO                                       \
     PIKACHU_MISC_INFO,                                              \
     PIKACHU_REGULAR_SIZE_INFO,                                      \
-    .genderRatio = MON_MALE,                                        \
+    .genderRatio = MON_FEMALE,                                        \
     .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED }
 
     [SPECIES_PIKACHU_ORIGINAL_CAP] =
@@ -2060,7 +2069,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_PIKACHU_GIGANTAMAX] =
     {
         PIKACHU_MISC_INFO,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },
         .height = 210,
         .weight = 0,
@@ -2093,7 +2102,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 75,                                    \
         .expYield = 218,                                    \
         .evYield_Speed = 3,                                 \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 10,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
@@ -2117,13 +2126,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_ELECTRIC, TYPE_ELECTRIC },
         .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_LIGHTNING_ROD },
         .bodyColor = BODY_COLOR_YELLOW,
-        .height = 8,
+        .height = 18,
         .weight = 300,
         .description = COMPOUND_STRING(
-            "If it stores too much electricity, its\n"
-            "behavior turns aggressive. To avoid this,\n"
-            "it occasionally discharges excess energy\n"
-            "and calms itself down."),
+            "When Raichu can't let out her built up\n"
+            "electric energy, she becomes very\n"
+            "antsy, unable to hold still.\n"
+            ""),
         .pokemonScale = 426,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2158,10 +2167,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 7,
         .weight = 210,
         .description = COMPOUND_STRING(
-            "It uses psychokinesis to control\n"
-            "electricity. It focuses psychic energy\n"
-            "into its tail and rides it like it's surfing.\n"
-            "Another name for this Pokémon is 'hodad'."),
+            "She uses psychokinesis to control\n"
+            "electricity. She focuses psychic energy\n"
+            "into her tail and rides it like she's surfing.\n"
+            "Another name for this Moémon is 'hodad'."),
         .pokemonScale = 426,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -2184,7 +2193,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_SANDSHREW
 #define SANDSHREW_FAMILY_MISC_INFO                          \
         .itemRare = ITEM_GRIP_CLAW,                         \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
@@ -2226,13 +2235,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_GROUND, TYPE_GROUND },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_SAND_RUSH },
         .bodyColor = BODY_COLOR_YELLOW,
-        .height = 6,
+        .height = 9,
         .weight = 120,
         .description = COMPOUND_STRING(
-            "When it curls up in a ball, it can make any\n"
-            "attack bounce off harmlessly. Its hide has\n"
-            "turned tough and solid as a result of\n"
-            "living in the desert."),
+            "Sandshrew likes to bury herself in sand.\n"
+            "When scared, she is known to curl up\n"
+            "into a ball. Groups of Sandshrew\n"
+            "participate in downhill dune races."),
         .pokemonScale = 365,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -2262,13 +2271,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_GROUND, TYPE_GROUND },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_SAND_RUSH },
         .bodyColor = BODY_COLOR_YELLOW,
-        .height = 10,
+        .height = 18,
         .weight = 295,
         .description = COMPOUND_STRING(
-            "It curls up in a ball to protect itself from\n"
-            "enemy attacks. It also curls up to prevent\n"
-            "heatstroke during the daytime when\n"
-            "temperatures rise sharply."),
+            "Sandslash's sharp nails make her a force\n"
+            "to be reckoned with. Her spiky hair\n"
+            "is difficult for Trainers to style.\n"
+            ""),
         .pokemonScale = 341,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -2298,13 +2307,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_ICE, TYPE_STEEL },
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SLUSH_RUSH },
         .bodyColor = BODY_COLOR_BLUE,
-        .height = 7,
+        .height = 9,
         .weight = 400,
         .description = COMPOUND_STRING(
             "Life on mountains covered with deep snow\n"
-            "has granted this Pokémon a body of ice\n"
+            "has granted this Moémon a body of ice\n"
             "that's as hard as steel.\n"
-            "Predators go after its soft belly."),
+            "Predators go after her soft belly."),
         .pokemonScale = 365,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -2335,13 +2344,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_ICE, TYPE_STEEL },
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SLUSH_RUSH },
         .bodyColor = BODY_COLOR_BLUE,
-        .height = 12,
+        .height = 18,
         .weight = 550,
         .description = COMPOUND_STRING(
-            "It uses large, hooked claws to cut a path\n"
-            "through deep snow as it runs.\n"
-            "On snowy mountains, this Sandslash\n"
-            "is faster than any other Pokémon."),
+            "She uses large, hooked claws to cut a path\n"
+            "through deep snow as she runs.\n"
+            "On snowy mountains, Sandslash\n"
+            "is faster than any other Moémon."),
         .pokemonScale = 341,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -2385,13 +2394,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_NIDORAN_F,
         .natDexNum = NATIONAL_DEX_NIDORAN_F,
         .categoryName = _("Poison Pin"),
-        .height = 4,
+        .height = 9,
         .weight = 70,
         .description = COMPOUND_STRING(
-            "Its highly toxic barbs are thought to have\n"
-            "developed as protection for this small-\n"
-            "bodied Pokémon. When enraged, it releases\n"
-            "a horrible toxin from its horn."),
+            "She gets embarassed when perceived as\n"
+            "girly, so she'll spend most of her time\n"
+            "playing swords with NidoranM.\n"
+            ""),
         .pokemonScale = 488,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -2434,13 +2443,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_NIDORINA,
         .natDexNum = NATIONAL_DEX_NIDORINA,
         .categoryName = _("Poison Pin"),
-        .height = 8,
+        .height = 15,
         .weight = 200,
         .description = COMPOUND_STRING(
-            "When it is with its friends or\n"
-            "family, its barbs are tucked away to\n"
-            "prevent injury. It appears to become\n"
-            "nervous if separated from the others."),
+            "She's grown up, but remains a tomboy.\n"
+            "She gets ornery when Trainers call\n"
+            "her cute and doesn't get along well\n"
+            "with other girls."),
         .pokemonScale = 381,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -2482,13 +2491,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_NIDOQUEEN,
         .natDexNum = NATIONAL_DEX_NIDOQUEEN,
         .categoryName = _("Drill"),
-        .height = 13,
+        .height = 18,
         .weight = 600,
         .description = COMPOUND_STRING(
-            "It is adept at sending foes flying with\n"
-            "harsh tackles using its tough, scaly body.\n"
-            "This Pokémon is at its strongest when\n"
-            "it is defending its young."),
+            "She serves as the mother to the Nidoran.\n"
+            "She's aware of Nidoking's feelings, but\n"
+            "doesn't reciprocate them.\n"
+            ""),
         .pokemonScale = 293,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -2529,13 +2538,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_NIDORAN_M,
         .natDexNum = NATIONAL_DEX_NIDORAN_M,
         .categoryName = _("Poison Pin"),
-        .height = 5,
+        .height = 9,
         .weight = 90,
         .description = COMPOUND_STRING(
-            "The male Nidoran has developed muscles\n"
-            "that freely move its ears in any direction.\n"
-            "Even the slightest sound does not escape\n"
-            "this Pokémon's notice."),
+            "He is known for playing very rough.\n"
+            "Without knowing why, he likes being\n"
+            "around NidoranF best.\n"
+            ""),
         .pokemonScale = 511,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -2577,13 +2586,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_NIDORINO,
         .natDexNum = NATIONAL_DEX_NIDORINO,
         .categoryName = _("Poison Pin"),
-        .height = 9,
+        .height = 15,
         .weight = 195,
         .description = COMPOUND_STRING(
-            "Its horn is harder than a diamond.\n"
-            "If it senses a hostile presence, all the\n"
-            "barbs on its back bristle up at once, and it\n"
-            "challenges the foe with all its might."),
+            "Nidorino is calmer than he appears\n"
+            "but shows off when around\n"
+            "his friend Nidorina.\n"
+            ""),
         .pokemonScale = 408,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -2625,13 +2634,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_NIDOKING,
         .natDexNum = NATIONAL_DEX_NIDOKING,
         .categoryName = _("Drill"),
-        .height = 14,
+        .height = 18,
         .weight = 620,
         .description = COMPOUND_STRING(
-            "A Nidoking's thick tail packs enormously\n"
-            "destructive power capable of toppling\n"
-            "a metal transmission tower. Once it goes\n"
-            "on a rampage, there is no stopping it."),
+            "Nidoking has honed his strength in order\n"
+            "to protect his family. He's intimidating,\n"
+            "but has a soft spot for Nidoqueen.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -2684,13 +2693,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CLEFFA,
         .natDexNum = NATIONAL_DEX_CLEFFA,
         .categoryName = _("Star Shape"),
-        .height = 3,
+        .height = 6,
         .weight = 30,
         .description = COMPOUND_STRING(
-            "On nights with many shooting stars,\n"
-            "Cleffa can be seen dancing in a ring.\n"
-            "They dance until daybreak, when they\n"
-            "quench their thirst with the morning dew."),
+            "Cleffa loves stars, space, and Moon\n"
+            "Stones. Unsurprisingly, her favourite\n"
+            "Moémon is Minior.\n"
+            ""),
         .pokemonScale = 462,
         .pokemonOffset = 23,
         .trainerScale = 256,
@@ -2735,13 +2744,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CLEFAIRY,
         .natDexNum = NATIONAL_DEX_CLEFAIRY,
         .categoryName = _("Fairy"),
-        .height = 6,
+        .height = 9,
         .weight = 75,
         .description = COMPOUND_STRING(
-            "On every night of a full moon, they come\n"
-            "out to play. When dawn arrives, the tired\n"
-            "Clefairy go to sleep nestled up against\n"
-            "each other in deep and quiet mountains."),
+            "She dedicates herself to her study of\n"
+            "everything outer space. She dreams of\n"
+            "someday travelling to distant stars.\n"
+            ""),
         .pokemonScale = 441,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -2785,13 +2794,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CLEFABLE,
         .natDexNum = NATIONAL_DEX_CLEFABLE,
         .categoryName = _("Fairy"),
-        .height = 13,
+        .height = 18,
         .weight = 400,
         .description = COMPOUND_STRING(
-            "A Clefable uses its wings to skip lightly \n"
-            "as if it were flying. Its bouncy step\n"
-            "lets it even walk on water. On quiet,\n"
-            "moonlit nights, it strolls on lakes."),
+            "Clefable spends hours each day attempting\n"
+            "to build vehicles capable of bringing\n"
+            "her to the moon. She hosts odd rituals\n"
+            "during full moons."),
         .pokemonScale = 256,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -2832,7 +2841,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_VULPIX,                            \
         .natDexNum = NATIONAL_DEX_VULPIX,               \
         .categoryName = _("Fox"),                       \
-        .height = 6,                                    \
+        .height = 9,                                    \
         .weight = 99,                                   \
         .pokemonScale = 542,                            \
         .pokemonOffset = 19,                            \
@@ -2851,7 +2860,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_NINETALES,                             \
         .natDexNum = NATIONAL_DEX_NINETALES,                \
         .categoryName = _("Fox"),                           \
-        .height = 11,                                       \
+        .height = 18,                                       \
         .weight = 199,                                      \
         .pokemonScale = 339,                                \
         .pokemonOffset = 10,                                \
@@ -2869,10 +2878,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_DROUGHT },
         .bodyColor = BODY_COLOR_BROWN,
         .description = COMPOUND_STRING(
-            "It can freely control fire, making fiery\n"
-            "orbs fly like will-o'-the-wisps. Just\n"
-            "before evolution, its six tails grow hot \n"
-            "as if on fire."),
+            "Vulpix is obsessed with being tidy. It is\n"
+            "said that spirits tend towards homes\n"
+            "cleaned by her.\n"
+            ""),
         FRONT_PIC(Vulpix, 56, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = sAnims_Vulpix,
@@ -2900,10 +2909,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_DROUGHT },
         .bodyColor = BODY_COLOR_YELLOW,
         .description = COMPOUND_STRING(
-            "It has long been said that each of the\n"
-            "nine tails embody an enchanted power.\n"
-            "A long-lived Ninetales will have fur that\n"
-            "shines like gold."),
+            "Trainers that cross Ninetales claim to\n"
+            "be cursed, but others claim that a\n"
+            "loyal Ninetales can ward off bad spirits.\n"
+            ""),
         FRONT_PIC(Ninetales, 64, 64),
         .frontPicYOffset = 3,
         .frontAnimFrames = sAnims_Ninetales,
@@ -2926,9 +2935,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_BLUE,
         .description = COMPOUND_STRING(
             "They live together in a skulk, helping\n"
-            "one another. In hot weather, this Pokémon\n"
+            "one another. In hot weather, this Moémon\n"
             "makes ice shards with its six tails and\n"
-            "sprays them around to cool itself off."),
+            "sprays them around to cool herself off."),
         FRONT_PIC(VulpixAlolan, 48, 48),
         .frontPicYOffset = 10,
         .frontAnimFrames = sAnims_VulpixAlolan,
@@ -2957,9 +2966,9 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_SNOW_WARNING },
         .bodyColor = BODY_COLOR_BLUE,
         .description = COMPOUND_STRING(
-            "While it will guide travelers who get lost\n"
+            "While she will guide travelers who get lost\n"
             "on a snowy mountain down to the\n"
-            "mountain's base, it won't forgive anyone\n"
+            "mountain's base, she won't forgive anyone\n"
             "who harms nature."),
         FRONT_PIC(NinetalesAlolan, 64, 64),
         .frontPicYOffset = 1,
@@ -3008,13 +3017,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_IGGLYBUFF,
         .natDexNum = NATIONAL_DEX_IGGLYBUFF,
         .categoryName = _("Balloon"),
-        .height = 3,
+        .height = 6,
         .weight = 10,
         .description = COMPOUND_STRING(
-            "Its soft and pliable body is very bouncy.\n"
-            "When it sings continuously with all its\n"
-            "might, its body steadily turns a deepening\n"
-            "pink color."),
+            "Igglybuff loves singing, but she can't\n"
+            "hit high notes. Her attempts often leave\n"
+            "her with a sore throat.\n"
+            ""),
         .pokemonScale = 457,
         .pokemonOffset = -1,
         .trainerScale = 256,
@@ -3059,13 +3068,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_JIGGLYPUFF,
         .natDexNum = NATIONAL_DEX_JIGGLYPUFF,
         .categoryName = _("Balloon"),
-        .height = 5,
+        .height = 9,
         .weight = 55,
         .description = COMPOUND_STRING(
-            "Nothing can avoid falling asleep hearing a\n"
-            "Jigglypuff's song. The sound waves of its\n"
-            "singing voice match the brain waves of\n"
-            "someone in a deep sleep."),
+            "A Moémon with dreams of becoming a\n"
+            "pop idol. Her songs are cutesy and\n"
+            "very catchy.\n"
+            ""),
         .pokemonScale = 433,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -3109,13 +3118,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_WIGGLYTUFF,
         .natDexNum = NATIONAL_DEX_WIGGLYTUFF,
         .categoryName = _("Balloon"),
-        .height = 10,
+        .height = 18,
         .weight = 120,
         .description = COMPOUND_STRING(
-            "Its fur is the ultimate in luxuriousness.\n"
-            "Sleeping alongside a Wigglytuff is simply\n"
-            "divine. Its body expands seemingly without\n"
-            "end when it inhales."),
+            "Wigglytuff is the most popular singer in\n"
+            "Kanto. Trainers come from as far as\n"
+            "Unova to see her perform.\n"
+            ""),
         .pokemonScale = 328,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -3147,7 +3156,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 255,
         .expYield = 49,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3158,13 +3167,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_ZUBAT,
         .natDexNum = NATIONAL_DEX_ZUBAT,
         .categoryName = _("Bat"),
-        .height = 8,
+        .height = 9,
         .weight = 75,
         .description = COMPOUND_STRING(
-            "While living in pitch-black caverns, their\n"
-            "eyes gradually grew shut and deprived\n"
-            "them of vision. They use ultrasonic waves\n"
-            "to detect obstacles."),
+            "Zubat's shyness leads her to hide in\n"
+            "caves to avoid interaction. Her eyes\n"
+            "have weakened from constant darkness,\n"
+            "so she instead navigates by sound."),
         .pokemonScale = 362,
         .pokemonOffset = -5,
         .trainerScale = 256,
@@ -3198,7 +3207,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 90,
         .expYield = 159,
         .evYield_Speed = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3209,13 +3218,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_GOLBAT,
         .natDexNum = NATIONAL_DEX_GOLBAT,
         .categoryName = _("Bat"),
-        .height = 16,
+        .height = 15,
         .weight = 550,
         .description = COMPOUND_STRING(
-            "Its fangs easily puncture even thick\n"
-            "animal hide. It loves to feast on the blood\n"
-            "of people and Pokémon. It flits about in\n"
-            "darkness and strikes from behind."),
+            "Having grown out of her asocial attitude,\n"
+            "Golbat is consntantly seeking attention.\n"
+            "Her screeches keep Trainers up at night.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -3250,7 +3259,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 90,
         .expYield = 241,
         .evYield_Speed = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3264,10 +3273,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 18,
         .weight = 750,
         .description = COMPOUND_STRING(
-            "Over the course of evolution, its hind legs\n"
-            "turned into wings. By alternately resting\n"
-            "its front and rear wings, it can fly all day\n"
-            "without having to stop."),
+            "Crobat's strong wings mean she rarely has\n"
+            "to land. Due to this, she trips often\n"
+            "when forced to walk.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 281,
@@ -3302,7 +3311,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 64,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_ABSORB_BULB,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3313,13 +3322,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_ODDISH,
         .natDexNum = NATIONAL_DEX_ODDISH,
         .categoryName = _("Weed"),
-        .height = 5,
+        .height = 9,
         .weight = 54,
         .description = COMPOUND_STRING(
-            "This Pokémon grows by absorbing moonlight.\n"
-            "During the daytime, it buries itself in the\n"
-            "ground, leaving only its leaves exposed to\n"
-            "avoid detection by its enemies."),
+            "This childish Moémon likes to play\n"
+            "pranks on travelers by jumping out\n"
+            "of tall grass.\n"
+            ""),
         .pokemonScale = 423,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -3351,7 +3360,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 138,
         .evYield_SpAttack = 2,
         .itemRare = ITEM_ABSORB_BULB,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3362,13 +3371,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_GLOOM,
         .natDexNum = NATIONAL_DEX_GLOOM,
         .categoryName = _("Weed"),
-        .height = 8,
+        .height = 15,
         .weight = 86,
         .description = COMPOUND_STRING(
-            "A horribly noxious honey drools from its\n"
-            "mouth. One whiff of the honey can result\n"
-            "in memory loss. Some fans are said to\n"
-            "enjoy this overwhelming stink, however."),
+            "Gloom is a very absent-minded Moémon who\n"
+            "tends to drool when lost in thought.\n"
+            "Munchlax are drawn to her honey-sweet\n"
+            "aroma."),
         .pokemonScale = 329,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -3403,7 +3412,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 221,
         .evYield_SpAttack = 3,
         .itemRare = ITEM_ABSORB_BULB,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3414,13 +3423,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_VILEPLUME,
         .natDexNum = NATIONAL_DEX_VILEPLUME,
         .categoryName = _("Flower"),
-        .height = 12,
+        .height = 18,
         .weight = 186,
         .description = COMPOUND_STRING(
-            "In seasons when it produces more pollen,\n"
-            "the air around a Vileplume turns yellow\n"
-            "with the powder as it walks. The pollen is\n"
-            "highly toxic and causes paralysis."),
+            "Vileplume is an enemy to those with\n"
+            "allergies. One twirl of her umbrella can\n"
+            "spread pollen for miles.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -3454,7 +3463,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 221,
         .evYield_SpDefense = 3,
         .itemRare = ITEM_ABSORB_BULB,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -3465,13 +3474,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_BELLOSSOM,
         .natDexNum = NATIONAL_DEX_BELLOSSOM,
         .categoryName = _("Flower"),
-        .height = 4,
+        .height = 18,
         .weight = 58,
         .description = COMPOUND_STRING(
-            "Its flower petals deepen in color through\n"
-            "exposure to sunlight. When cloudy weather\n"
-            "persists, it does a dance that is thought\n"
-            "to be a ritual for summoning the sun."),
+            "It is said that Bellossom's dance has the\n"
+            "power to summon the sun when she\n"
+            "gives it her all.\n"
+            ""),
         .pokemonScale = 472,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -3506,7 +3515,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Attack = 1,
         .itemCommon = ITEM_TINY_MUSHROOM,
         .itemRare = ITEM_BIG_MUSHROOM,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3517,13 +3526,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PARAS,
         .natDexNum = NATIONAL_DEX_PARAS,
         .categoryName = _("Mushroom"),
-        .height = 3,
+        .height = 9,
         .weight = 54,
         .description = COMPOUND_STRING(
-            "A Paras has parasitic tochukaso\n"
-            "mushrooms growing on its back. They grow\n"
-            "by drawing nutrients from the host. They\n"
-            "are valued as a medicine for long life."),
+            "She has a hobby of creating various\n"
+            "mushroom-based dishes. She can always\n"
+            "be found in forests scrounging for\n"
+            "ingredients."),
         .pokemonScale = 593,
         .pokemonOffset = 22,
         .trainerScale = 256,
@@ -3558,7 +3567,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Defense = 1,
         .itemCommon = ITEM_TINY_MUSHROOM,
         .itemRare = ITEM_BIG_MUSHROOM,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3569,13 +3578,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PARASECT,
         .natDexNum = NATIONAL_DEX_PARASECT,
         .categoryName = _("Mushroom"),
-        .height = 10,
+        .height = 18,
         .weight = 295,
         .description = COMPOUND_STRING(
-            "Parasect are known to infest the roots of\n"
-            "large trees en masse and drain nutrients.\n"
-            "When an infested tree dies, they move\n"
-            "onto another tree all at once."),
+            "If given a chance, she'll talk for hours\n"
+            "about the many types of fungi she comes\n"
+            "across. She uses them for various\n"
+            "medicines and dishes."),
         .pokemonScale = 307,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -3608,7 +3617,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 190,
         .expYield = 61,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3619,13 +3628,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_VENONAT,
         .natDexNum = NATIONAL_DEX_VENONAT,
         .categoryName = _("Insect"),
-        .height = 10,
+        .height = 9,
         .weight = 300,
         .description = COMPOUND_STRING(
-            "Its coat of thin, stiff hair that covers\n"
-            "its entire body is said to have evolved\n"
-            "for protection. Its large eyes never fail\n"
-            "to spot even miniscule prey."),
+            "A nocturnal Moémon. Her unkempt hair is\n"
+            "known to cause sickness. She often stays\n"
+            "up late finding bugs for her collection.\n"
+            ""),
         .pokemonScale = 360,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -3659,7 +3668,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Speed = 1,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_SHED_SHELL,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -3670,13 +3679,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_VENOMOTH,
         .natDexNum = NATIONAL_DEX_VENOMOTH,
         .categoryName = _("Poison Moth"),
-        .height = 15,
+        .height = 18,
         .weight = 125,
         .description = COMPOUND_STRING(
-            "Venomoth are nocturnal--they are only\n"
-            "active at night. Their favorite prey are\n"
-            "insects that gather around streetlights,\n"
-            "attracted by the light in the darkness."),
+            "A maiden of the forest. She's found\n"
+            "mostly at dusk and can create\n"
+            "poisonous winds with a single flap of\n"
+            "her wings."),
         .pokemonScale = 285,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -3699,7 +3708,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_DIGLETT
 #define DIGLETT_FAMILY_MISC_INFO                            \
         .itemRare = ITEM_SOFT_SAND,                         \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
@@ -3714,7 +3723,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_DIGLETT,                               \
         .natDexNum = NATIONAL_DEX_DIGLETT,                  \
         .categoryName = _("Mole"),                          \
-        .height = 2,                                        \
+        .height = 9,                                        \
         .pokemonScale = 833,                                \
         .pokemonOffset = 25,                                \
         .trainerScale = 256,                                \
@@ -3731,7 +3740,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_DUGTRIO,               \
         .natDexNum = NATIONAL_DEX_DUGTRIO,  \
         .categoryName = _("Mole"),          \
-        .height = 7,                        \
+        .height = 18,                       \
         .pokemonScale = 406,                \
         .pokemonOffset = 18,                \
         .trainerScale = 256,                \
@@ -3753,10 +3762,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_SAND_VEIL, ABILITY_ARENA_TRAP, ABILITY_SAND_FORCE },
         .weight = 8,
         .description = COMPOUND_STRING(
-            "Diglett are raised in most farms.\n"
-            "The reason is simple--wherever they\n"
-            "burrow, the soil is left perfectly tilled\n"
-            "for growing delicious crops."),
+            "She struggles with her shyness toward\n"
+            "other Moémon, but opens up around\n"
+            "other Diglett.\n"
+            ""),
         FRONT_PIC(Diglett, 32, 32),
         .frontPicYOffset = 17,
         .frontAnimFrames = sAnims_Diglett,
@@ -3784,10 +3793,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_SAND_VEIL, ABILITY_ARENA_TRAP, ABILITY_SAND_FORCE },
         .weight = 333,
         .description = COMPOUND_STRING(
-            "Because the triplets originally split from\n"
-            "one body, they think exactly alike.\n"
-            "They work cooperatively to burrow\n"
-            "endlessly through the ground."),
+            "Dugtrio's puppets are actually used\n"
+            "to teach and organize Diglett for large\n"
+            "digging operations.\n"
+            ""),
         FRONT_PIC(Dugtrio, 48, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = sAnims_Dugtrio,
@@ -3813,7 +3822,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 45,
         .types = { TYPE_GROUND, TYPE_STEEL },
         .abilities = { ABILITY_SAND_VEIL, ABILITY_TANGLING_HAIR, ABILITY_SAND_FORCE },
-        .weight = 10,
+        .weight = 9,
         .description = COMPOUND_STRING(
             "The metal-rich geology of its habitat\n"
             "caused it to develop steel whiskers on its\n"
@@ -3870,7 +3879,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define MEOWTH_MISC_INFO                                                    \
         .catchRate = 255,                                                   \
         .expYield = 58,                                                     \
-        .genderRatio = PERCENT_FEMALE(50),                                  \
+        .genderRatio = PERCENT_FEMALE(95),                                  \
         .eggCycles = 20,                                                    \
         .friendship = STANDARD_FRIENDSHIP,                                  \
         .growthRate = GROWTH_MEDIUM_FAST,                                   \
@@ -3887,7 +3896,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 154,                                    \
         .evYield_Speed = 2,                                 \
         .itemRare = ITEM_QUICK_CLAW,                        \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
@@ -3913,13 +3922,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_QUICK_CLAW,
         .abilities = { ABILITY_PICKUP, ABILITY_TECHNICIAN, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .height = 4,
+        .height = 9,
         .weight = 42,
         .description = COMPOUND_STRING(
-            "Meowth withdraw their sharp claws into\n"
-            "their paws to silently sneak about.\n"
-            "For some reason, this Pokémon loves\n"
-            "shiny coins that glitter with light."),
+            "Shops leave out treats to attract Meowth\n"
+            "hoping she will bring in customers.\n"
+            "Rumor has it that she brings good luck.\n"
+            ""),
         .pokemonScale = 480,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -3951,13 +3960,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .abilities = { ABILITY_LIMBER, ABILITY_TECHNICIAN, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_YELLOW,
-        .height = 10,
+        .height = 18,
         .weight = 320,
         .description = COMPOUND_STRING(
-            "A Persian's six bold whiskers sense air\n"
-            "movements to determine what is in its\n"
-            "vicinity. It becomes docile if grabbed\n"
-            "by the whiskers."),
+            "Her cat-like reflexes are quite adapted\n"
+            "for high-speed battles, although she\n"
+            "would rather nap in the sun.\n"
+            ""),
         .pokemonScale = 320,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -3990,7 +3999,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_QUICK_CLAW,
         .abilities = { ABILITY_PICKUP, ABILITY_TECHNICIAN, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_GRAY,
-        .height = 4,
+        .height = 9,
         .weight = 42,
         .description = COMPOUND_STRING(
             "It's accustomed to luxury because it used\n"
@@ -4027,7 +4036,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_DARK, TYPE_DARK },
         .abilities = { ABILITY_FUR_COAT, ABILITY_TECHNICIAN, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_GRAY,
-        .height = 11,
+        .height = 18,
         .weight = 330,
         .description = COMPOUND_STRING(
             "It looks down on everyone other than\n"
@@ -4103,7 +4112,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 90,
         .expYield = 154,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4118,7 +4127,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 280,
         .description = COMPOUND_STRING(
             "What appears to be an iron helmet is\n"
-            "actually hardened hair. This Pokémon\n"
+            "actually hardened hair. This Moémon\n"
             "lives for the thrill of battle."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
@@ -4193,7 +4202,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 190,
         .expYield = 64,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4204,13 +4213,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PSYDUCK,
         .natDexNum = NATIONAL_DEX_PSYDUCK,
         .categoryName = _("Duck"),
-        .height = 8,
+        .height = 9,
         .weight = 196,
         .description = COMPOUND_STRING(
-            "When its headache intensifies, it starts\n"
-            "using strange powers. However, it has no\n"
-            "recollection of its powers, so it always\n"
-            "looks befuddled and bewildered."),
+            "A Moémon with frightening psychic\n"
+            "abilities. However, she can never\n"
+            "remember how to use them.\n"
+            ""),
         .pokemonScale = 369,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -4241,7 +4250,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 75,
         .expYield = 175,
         .evYield_SpAttack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4252,13 +4261,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_GOLDUCK,
         .natDexNum = NATIONAL_DEX_GOLDUCK,
         .categoryName = _("Duck"),
-        .height = 17,
+        .height = 18,
         .weight = 766,
         .description = COMPOUND_STRING(
-            "A Golduck is an adept swimmer.\n"
-            "It sometimes joins competitive swimmers\n"
-            "in training. It uses psychic powers when\n"
-            "its forehead shimmers with light."),
+            "She's normally found in rainy areas.\n"
+            "Few Moémon can keep up with her\n"
+            "speed while swimming.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 273,
@@ -4290,7 +4299,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 190,
         .expYield = 61,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4301,13 +4310,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_MANKEY,
         .natDexNum = NATIONAL_DEX_MANKEY,
         .categoryName = _("Pig Monkey"),
-        .height = 5,
+        .height = 9,
         .weight = 280,
         .description = COMPOUND_STRING(
-            "When it starts shaking and its nasal\n"
-            "breathing turns rough, it's a sure sign\n"
-            "of anger. However, since this happens\n"
-            "instantly, there is no time to flee."),
+            "Mankey's tomboyish attitude causes\n"
+            "her to frequently pick fights.\n"
+            "She's still working on her anger issues.\n"
+            ""),
         .pokemonScale = 404,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -4339,7 +4348,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 75,
         .expYield = 159,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4350,13 +4359,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PRIMEAPE,
         .natDexNum = NATIONAL_DEX_PRIMEAPE,
         .categoryName = _("Pig Monkey"),
-        .height = 10,
+        .height = 18,
         .weight = 320,
         .description = COMPOUND_STRING(
-            "When it becomes furious, its blood\n"
-            "circulation becomes more robust, and\n"
-            "its muscles are made stronger. But it\n"
-            "also becomes much less intelligent."),
+            "Primeape seeks arguments just to stave\n"
+            "off boredom. Once an argument has\n"
+            "started her stubbornness won't allow her\n"
+            "to back out."),
         .pokemonScale = 326,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -4388,7 +4397,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 268,
         .evYield_Attack = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -4399,13 +4408,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_ANNIHILAPE,
         .natDexNum = NATIONAL_DEX_ANNIHILAPE,
         .categoryName = _("Rage Monkey"),
-        .height = 12,
+        .height = 18,
         .weight = 560,
         .description = COMPOUND_STRING(
-            "When its anger rose beyond a\n"
-            "critical point, this Pokémon gained power\n"
+            "When her anger rose beyond a\n"
+            "critical point, Annihilape gained power\n"
             "that is unfettered by the limits of\n"
-            "its physical body."),
+            "her physical body."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -4469,13 +4478,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_FIRE, TYPE_FIRE },
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_JUSTIFIED },
         .categoryName = _("Puppy"),
-        .height = 7,
+        .height = 9,
         .weight = 190,
         .description = COMPOUND_STRING(
-            "Its superb sense of smell ensures that\n"
-            "this Pokémon won't forget any scent,\n"
-            "no matter what. It uses its sense of smell\n"
-            "to detect the emotions of others."),
+            "Growlithe is very loyal to her\n"
+            "Trainer. She'll follow any command\n"
+            "to the best of her ability.\n"
+            ""),
         .pokemonScale = 346,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -4505,13 +4514,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 80,
         .types = { TYPE_FIRE, TYPE_FIRE },
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_JUSTIFIED },
-        .height = 19,
+        .height = 18,
         .weight = 1550,
         .description = COMPOUND_STRING(
-            "This fleet-footed Pokémon is said to run\n"
-            "over 6,200 miles in a single day and night.\n"
-            "The fire that blazes wildly within its body\n"
-            "is its source of power."),
+            "Arcanine's beauty and vitality is\n"
+            "recognized as legendary, even if she\n"
+            "is far too humble to admit it.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 312,
@@ -4542,7 +4551,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_FIRE, TYPE_ROCK },
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_ROCK_HEAD },
         .categoryName = _("Scout"),
-        .height = 8,
+        .height = 9,
         .weight = 227,
         .description = COMPOUND_STRING(
             "They patrol their territory in pairs.\n"
@@ -4578,7 +4587,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 80,
         .types = { TYPE_FIRE, TYPE_ROCK },
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FLASH_FIRE, ABILITY_ROCK_HEAD },
-        .height = 20,
+        .height = 18,
         .weight = 1680,
         .description = COMPOUND_STRING(
             "Snaps at its foes with fangs cloaked in\n"
@@ -4617,7 +4626,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 255,
         .expYield = 60,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -4629,13 +4638,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_POLIWAG,
         .natDexNum = NATIONAL_DEX_POLIWAG,
         .categoryName = _("Tadpole"),
-        .height = 6,
+        .height = 9,
         .weight = 124,
         .description = COMPOUND_STRING(
-            "It is possible to see this Pokémon's spiral\n"
-            "innards right through its thin skin.\n"
-            "However, the skin is also very flexible.\n"
-            "Even sharp fangs bounce right off it."),
+            "She struggles with walking and\n"
+            "falls down often. While she may seem\n"
+            "clumsy, she swims like a pro.\n"
+            ""),
         .pokemonScale = 369,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -4667,7 +4676,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 135,
         .evYield_Speed = 2,
         .itemRare = ITEM_KINGS_ROCK,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -4679,13 +4688,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_POLIWHIRL,
         .natDexNum = NATIONAL_DEX_POLIWHIRL,
         .categoryName = _("Tadpole"),
-        .height = 10,
+        .height = 15,
         .weight = 200,
         .description = COMPOUND_STRING(
-            "Its body surface is always wet and slick\n"
-            "with an oily fluid. Because of this greasy\n"
-            "covering, it can easily slip and slide out\n"
-            "of the clutches of any enemy in battle."),
+            "While she has finally mastered walking,\n"
+            "Poliwhirl still prefers to spend her days\n"
+            "playing in the water.\n"
+            ""),
         .pokemonScale = 288,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -4720,7 +4729,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 230,
         .evYield_Defense = 3,
         .itemRare = ITEM_KINGS_ROCK,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -4732,13 +4741,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_POLIWRATH,
         .natDexNum = NATIONAL_DEX_POLIWRATH,
         .categoryName = _("Tadpole"),
-        .height = 13,
+        .height = 18,
         .weight = 540,
         .description = COMPOUND_STRING(
-            "Its highly developed muscles never grow\n"
-            "fatigued, however much it exercises.\n"
-            "This Pokémon can swim back and forth\n"
-            "across the Pacific Ocean without effort."),
+            "Swimming has made this Moémon\n"
+            "absurdly powerful. She can out-swim\n"
+            "Trainers at even an Olympic level.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 256,
@@ -4770,7 +4779,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 225,
         .evYield_SpDefense = 3,
         .itemRare = ITEM_KINGS_ROCK,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -4782,13 +4791,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_POLITOED,
         .natDexNum = NATIONAL_DEX_POLITOED,
         .categoryName = _("Frog"),
-        .height = 11,
+        .height = 18,
         .weight = 339,
         .description = COMPOUND_STRING(
-            "The curled hair on its head proves its\n"
-            "status as a king. It is said that the\n"
-            "longer and curlier the hair, the more\n"
-            "respect it earns from its peers."),
+            "The strange singing of Politoed draws in\n"
+            "crowds of Poliwag and Poliwhirl. She\n"
+            "wears her hat like a crown.\n"
+            ""),
         .pokemonScale = 289,
         .pokemonOffset = 6,
         .trainerScale = 256,
@@ -4839,10 +4848,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 9,
         .weight = 195,
         .description = COMPOUND_STRING(
-            "A Pokémon that sleeps 18 hours a day.\n"
-            "Observation revealed that it uses\n"
-            "Teleport to change its location once\n"
-            "every hour."),
+            "Although young, her intelligence rivals\n"
+            "that of human scholars. She sleeps 20\n"
+            "hours a day to help preserve brain power.\n"
+            ""),
         .pokemonScale = 363,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -4886,13 +4895,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_KADABRA,
         .natDexNum = NATIONAL_DEX_KADABRA,
         .categoryName = _("Psi"),
-        .height = 13,
+        .height = 15,
         .weight = 565,
         .description = COMPOUND_STRING(
-            "It is rumored that a boy with psychic\n"
-            "abilities suddenly transformed into\n"
-            "Kadabra while he was assisting research\n"
-            "into extrasensory powers."),
+            "Training her brain constantly, Kadabra\n"
+            "is learning to increase her powers via\n"
+            "channeling them through objects.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -4947,13 +4956,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 225,
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_INNER_FOCUS, ABILITY_MAGIC_GUARD },
         .cryId = CRY_ALAKAZAM,
-        .height = 15,
+        .height = 18,
         .weight = 480,
         .description = COMPOUND_STRING(
-            "While it has strong psychic abilities and\n"
-            "high intelligence, an Alakazam's muscles\n"
-            "are very weak. It uses psychic power to\n"
-            "move its body."),
+            "Alakazam is known as the smartest\n"
+            "of all Moémon. She can solve complex\n"
+            "equations faster than a supercomputer.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -4969,6 +4978,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .backAnimId = BACK_ANIM_GROW_STUTTER,
         PALETTES(Alakazam),
         ICON(Alakazam, 2),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_TWISTED_SPOON, SPECIES_ALAKAZAM_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -4984,12 +4994,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 270,
         .abilities = { ABILITY_TRACE, ABILITY_TRACE, ABILITY_TRACE },
         .cryId = CRY_ALAKAZAM_MEGA,
-        .height = 12,
+        .height = 18,
         .weight = 480,
         .description = COMPOUND_STRING(
-            "Having traded away its muscles, Alakazam's\n"
-            "true power has been unleashed. With its\n"
-            "psychic powers, it can foresee all things."),
+            "Having trained her mind fully, Alakazam's\n"
+            "true power has been unleashed. With her\n"
+            "psychic powers, she can foresee all things."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -5034,13 +5044,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_MACHOP,
         .natDexNum = NATIONAL_DEX_MACHOP,
         .categoryName = _("Superpower"),
-        .height = 8,
+        .height = 9,
         .weight = 195,
         .description = COMPOUND_STRING(
-            "It continually undertakes strenuous\n"
-            "training to master all forms of martial\n"
-            "arts. Its strength lets it easily hoist\n"
-            "a sumo wrestler onto its shoulders."),
+            "Machop studied mixed martial arts at\n"
+            "an early age. In spite of her size, she\n"
+            "outlifts professional bodybuilders.\n"
+            ""),
         .pokemonScale = 342,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -5087,10 +5097,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 15,
         .weight = 705,
         .description = COMPOUND_STRING(
-            "A belt is worn by a Machoke to keep its\n"
-            "overwhelming power under control.\n"
-            "Because it is so dangerous, no one has\n"
-            "ever removed the belt."),
+            "Machoke seems arrogant because of\n"
+            "her pride but only uses her strength to\n"
+            "protect those in need.\n"
+            ""),
         .pokemonScale = 323,
         .pokemonOffset = 9,
         .trainerScale = 257,
@@ -5141,13 +5151,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_MACHAMP] =
     {
         MACHAMP_MISC_INFO,
-        .height = 16,
+        .height = 18,
         .weight = 1300,
         .description = COMPOUND_STRING(
-            "It is impossible to defend against punches\n"
-            "and chops doled out by its four arms.\n"
-            "Its fighting spirit flares up when it faces\n"
-            "a tough opponent."),
+            "She often holds contests of strength for\n"
+            "others. She is accused of being prideful,\n"
+            "but just wants to be an inspiration to\n"
+            "young Moémon who look up to her."),
         .pokemonScale = 280,
         .pokemonOffset = 1,
         .trainerScale = 269,
@@ -5170,7 +5180,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 250,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "One of these Pokémon once used\n"
+            "One of these Moémon once used\n"
             "its immeasurable strength to lift a\n"
             "large ship that was in trouble. It\n"
             "then carried the ship to port."),
@@ -5205,7 +5215,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 255,
         .expYield = 60,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -5216,13 +5226,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_BELLSPROUT,
         .natDexNum = NATIONAL_DEX_BELLSPROUT,
         .categoryName = _("Flower"),
-        .height = 7,
+        .height = 9,
         .weight = 40,
         .description = COMPOUND_STRING(
-            "A Bellsprout's thin and flexible body lets\n"
-            "it bend and sway to avoid any attack,\n"
-            "however strong it may be. From its mouth,\n"
-            "it leaks a fluid that melts even iron."),
+            "Bellsprout loves to chase people down\n"
+            "and wrap them in hugs. Her sweet smell\n"
+            "makes it hard to be mad at her for it.\n"
+            ""),
         .pokemonScale = 354,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -5253,7 +5263,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 120,
         .expYield = 137,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -5264,13 +5274,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_WEEPINBELL,
         .natDexNum = NATIONAL_DEX_WEEPINBELL,
         .categoryName = _("Flycatcher"),
-        .height = 10,
+        .height = 15,
         .weight = 64,
         .description = COMPOUND_STRING(
-            "At night, a Weepinbell hangs on to a tree\n"
-            "branch with its hooked rear and sleeps.\n"
-            "If it moves around in its sleep, it may\n"
-            "wake up to find itself on the ground."),
+            "Trainers that come near her are often\n"
+            "assaulted with kisses. Perfume stores\n"
+            "attempt to imitate her distinct scent.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -5302,7 +5312,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 221,
         .evYield_Attack = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -5313,13 +5323,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_VICTREEBEL,
         .natDexNum = NATIONAL_DEX_VICTREEBEL,
         .categoryName = _("Flycatcher"),
-        .height = 17,
+        .height = 18,
         .weight = 155,
         .description = COMPOUND_STRING(
-            "The long vine extending from its head is\n"
-            "waved about as if it were a living thing to\n"
-            "attract prey. When an unsuspecting victim\n"
-            "approaches, it is swallowed whole."),
+            "She uses her charming appearances to\n"
+            "lure victims in. Once in her embrace, it\n"
+            "becomes almost impossible to break\n"
+            "free."),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 312,
@@ -5352,7 +5362,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 67,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_POISON_BARB,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -5366,10 +5376,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 9,
         .weight = 455,
         .description = COMPOUND_STRING(
-            "Its body is almost entirely composed of\n"
-            "water. It ensnares its foe with its two\n"
-            "long tentacles, then stabs with the poison\n"
-            "stingers at their tips."),
+            "Tentacool likes to hang out near beaches.\n"
+            "Careless swimmers often get stung by\n"
+            "her hair, giving them painful rashes.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -5385,7 +5395,8 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Tentacool, 0),
         .footprint = gMonFootprint_Tentacool,
         LEARNSETS(Tentacool),
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_TENTACRUEL}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_TENTACRUEL},
+                                {EVO_ITEM, ITEM_DUSK_STONE, SPECIES_TENTACRUEL_AQUA}),
     },
 
     [SPECIES_TENTACRUEL] =
@@ -5401,7 +5412,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 180,
         .evYield_SpDefense = 2,
         .itemRare = ITEM_POISON_BARB,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -5412,13 +5423,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_TENTACRUEL,
         .natDexNum = NATIONAL_DEX_TENTACRUEL,
         .categoryName = _("Jellyfish"),
-        .height = 16,
+        .height = 18,
         .weight = 550,
         .description = COMPOUND_STRING(
-            "It lives in complex rock formations on\n"
-            "the ocean floor and traps prey using its\n"
-            "80 tentacles. Its red orbs glow when it\n"
-            "grows excited or agitated."),
+            "Tentacruel tends towards deeper waters,\n"
+            "snaring food in her hair. She drifts on\n"
+            "currents after depleting food supplies.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 312,
@@ -5444,7 +5455,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_STURDY, ABILITY_SAND_VEIL }
 
 #define GEODUDE_FAMILY_MISC_INFO                                \
-        .genderRatio = PERCENT_FEMALE(50),                      \
+        .genderRatio = PERCENT_FEMALE(95),                      \
         .eggCycles = 15,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
         .growthRate = GROWTH_MEDIUM_SLOW,                       \
@@ -5465,7 +5476,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_GEODUDE,                               \
         .natDexNum = NATIONAL_DEX_GEODUDE,                  \
         .categoryName = _("Rock"),                          \
-        .height = 4,                                        \
+        .height = 9,                                        \
         .pokemonScale = 347,                                \
         .pokemonOffset = 18,                                \
         .trainerScale = 256,                                \
@@ -5488,7 +5499,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_GRAVELER,                              \
         .natDexNum = NATIONAL_DEX_GRAVELER,                 \
         .categoryName = _("Rock"),                          \
-        .height = 10,                                       \
+        .height = 15,                                       \
         .pokemonScale = 256,                                \
         .pokemonOffset = 2,                                 \
         .trainerScale = 256,                                \
@@ -5523,10 +5534,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         GEODUDE_MISC_INFO,
         .weight = 200,
         .description = COMPOUND_STRING(
-            "It climbs mountain paths using only the\n"
-            "power of its arms. Because they look just\n"
-            "like boulders lining paths, hikers may step\n"
-            "on them without noticing."),
+            "Geodude takes her anger out on rocks.\n"
+            "The resulting gravel is often used in\n"
+            "construction projects.\n"
+            ""),
         FRONT_PIC(Geodude, 64, 32),
         .frontPicYOffset = 19,
         .frontAnimFrames = sAnims_Geodude,
@@ -5547,10 +5558,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         GRAVELER_MISC_INFO,
         .weight = 1050,
         .description = COMPOUND_STRING(
-            "They descend from mountains by tumbling\n"
-            "down steep slopes. They are so brutal,\n"
-            "they smash aside obstructing trees and\n"
-            "massive boulders with thunderous tackles."),
+            "She tends to get physical. If she hates\n"
+            "you, she will hit you. If she likes you,\n"
+            "she will hit you even harder.\n"
+            ""),
         FRONT_PIC(Graveler, 64, 48),
         .frontPicYOffset = 9,
         .frontAnimFrames = sAnims_Graveler,
@@ -5569,13 +5580,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     {
         KANTONIAN_GEODUDE_FAMILY_INFO,
         GOLEM_MISC_INFO,
-        .height = 14,
+        .height = 18,
         .weight = 3000,
         .description = COMPOUND_STRING(
-            "It is said to live in volcanic craters\n"
-            "on mountain peaks. Once a year, it sheds\n"
-            "its hide and grows larger. The shed hide\n"
-            "crumbles and returns to the soil."),
+            "She poses on her rock as if she were a\n"
+            "model. People mistake her for a statue\n"
+            "which gives her mixed feelings.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 3,
         .trainerScale = 296,
@@ -5653,7 +5664,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ALOLAN_GEODUDE_FAMILY_INFO,
         GOLEM_MISC_INFO,
         .itemCommon = ITEM_CELL_BATTERY,
-        .height = 17,
+        .height = 18,
         .weight = 3160,
         .description = COMPOUND_STRING(
             "It fires rocks charged with electricity.\n"
@@ -5685,7 +5696,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_YELLOW
 
 #define PONYTA_FAMILY_MISC_INFO                             \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
@@ -5721,7 +5732,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .speciesName = _("Rapidash"),                       \
         .cryId = CRY_RAPIDASH,                              \
         .natDexNum = NATIONAL_DEX_RAPIDASH,                 \
-        .height = 17,                                       \
+        .height = 18,                                       \
         .pokemonScale = 256,                                \
         .pokemonOffset = 0,                                 \
         .trainerScale = 289,                                \
@@ -5735,13 +5746,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         KANTONIAN_PONYTA_FAMILY_INFO,
         PONYTA_MISC_INFO,
         .categoryName = _("Fire Horse"),
-        .height = 10,
+        .height = 9,
         .weight = 300,
         .description = COMPOUND_STRING(
-            "A Ponyta is very weak at birth. It can\n"
-            "barely stand up. Its legs become stronger\n"
-            "as it stumbles and falls while trying to\n"
-            "keep up with its parent."),
+            "Her skin is warm to the touch, and she\n"
+            "enjoys being groomed. When she runs,\n"
+            "grass bursts into flames.\n"
+            ""),
         .pokemonScale = 283,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -5767,10 +5778,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Fire Horse"),
         .weight = 950,
         .description = COMPOUND_STRING(
-            "It usually canters casually in the fields\n"
-            "and plains. But once a Rapidash turns\n"
-            "serious, its fiery manes flare and blaze\n"
-            "as it gallops its way up to 150 mph."),
+            "She has the strongest legs of any Moémon.\n"
+            "A trail of fire follows everywhere\n"
+            "that she runs.\n"
+            ""),
         FRONT_PIC(Rapidash, 64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_Rapidash,
@@ -5795,11 +5806,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         PONYTA_MISC_INFO,
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },
         .categoryName = _("Unique Horn"),
-        .height = 8,
+        .height = 9,
         .weight = 240,
         .description = COMPOUND_STRING(
             "Its small horn hides a healing power.\n"
-            "This Pokémon will look into your eyes and\n"
+            "This Moémon will look into your eyes and\n"
             "read the contents of your heart. If it\n"
             "finds evil there, it promptly hides away."),
         .pokemonScale = 283,
@@ -5828,7 +5839,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 800,
         .description = COMPOUND_STRING(
             "Little can stand up to its psycho cut.\n"
-            "Unleashed from this Pokémon's horn,\n"
+            "Unleashed from this Moémon's horn,\n"
             "the move will punch a hole right\n"
             "through a thick metal sheet."),
         FRONT_PIC(RapidashGalarian, 64, 64),
@@ -5856,7 +5867,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 190,                                       \
         .expYield = 63,                                         \
         .evYield_HP = 1,                                        \
-        .genderRatio = PERCENT_FEMALE(50),                      \
+        .genderRatio = PERCENT_FEMALE(95),                      \
         .eggCycles = 20,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
         .growthRate = GROWTH_MEDIUM_FAST,                       \
@@ -5865,7 +5876,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .speciesName = _("Slowpoke"),                           \
         .natDexNum = NATIONAL_DEX_SLOWPOKE,                     \
         .categoryName = _("Dopey"),                             \
-        .height = 12,                                           \
+        .height = 9,                                           \
         .weight = 360,                                          \
         .pokemonScale = 256,                                    \
         .pokemonOffset = 10,                                    \
@@ -5877,7 +5888,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define SLOWBRO_MISC_INFO                                       \
         .catchRate = 75,                                        \
         .itemRare = ITEM_KINGS_ROCK,                            \
-        .genderRatio = PERCENT_FEMALE(50),                      \
+        .genderRatio = PERCENT_FEMALE(95),                      \
         .eggCycles = 20,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
         .growthRate = GROWTH_MEDIUM_FAST,                       \
@@ -5893,7 +5904,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define SLOWKING_MISC_INFO                                      \
         .catchRate = 70,                                        \
         .expYield = 172,                                        \
-        .genderRatio = PERCENT_FEMALE(50),                      \
+        .genderRatio = PERCENT_FEMALE(95),                      \
         .eggCycles = 20,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
         .growthRate = GROWTH_MEDIUM_FAST,                       \
@@ -5914,10 +5925,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
         .cryId = CRY_SLOWPOKE,
         .description = COMPOUND_STRING(
-            "It catches prey by dipping its tail in\n"
-            "water at the side of a river. But it often\n"
-            "forgets what it is doing and spends entire\n"
-            "days just loafing at water's edge."),
+            "Many mistake her for being shrewd,\n"
+            "but she rarely thinks about things other\n"
+            "than fishing and relaxing.\n"
+            ""),
         FRONT_PIC(Slowpoke, 64, 32),
         .frontPicYOffset = 16,
         .frontAnimFrames = sAnims_Slowpoke,
@@ -5946,13 +5957,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 172,
         .evYield_Defense = 2,
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
-        .height = 16,
+        .height = 18,
         .weight = 785,
         .description = COMPOUND_STRING(
-            "Its tail has a Shellder firmly attached\n"
-            "with a bite. As a result, the tail can't be\n"
-            "used for fishing anymore. This forces it\n"
-            "to reluctantly swim and catch prey."),
+            "The backpack is a gift from Shellder.\n"
+            "She'd rather follow Shellder's guidance\n"
+            "than worry about the future.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 296,
@@ -5968,6 +5979,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         ICON(Slowbro, 0),
         LEARNSETS(Slowbro),
         .formChangeTable = sSlowbroFormChangeTable,
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_WATER_STONE, SPECIES_SLOWBRO_MEGA}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -5985,12 +5997,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .itemRare = ITEM_KINGS_ROCK,
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
         .categoryName = _("Royal"),
-        .height = 20,
+        .height = 18,
         .description = COMPOUND_STRING(
-            "It undertakes research every day to\n"
-            "solve the mysteries of the world.\n"
-            "However, it apparently forgets everything\n"
-            "if the Shellder on its head comes off."),
+            "The odd crown given to her by Shellder\n"
+            "seems to increase her intelligence.\n"
+            "Despite this, she is still very lazy.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,
@@ -6022,7 +6034,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 207,
         .evYield_Defense = 2,
         .abilities = { ABILITY_SHELL_ARMOR, ABILITY_SHELL_ARMOR, ABILITY_SHELL_ARMOR },
-        .height = 20,
+        .height = 18,
         .weight = 1200,
         .description = COMPOUND_STRING(
             "When bathed in the energy of Mega\n"
@@ -6088,13 +6100,13 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 172,
         .evYield_Attack = 2,
         .abilities = { ABILITY_QUICK_DRAW, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
-        .height = 16,
+        .height = 15,
         .weight = 705,
         .description = COMPOUND_STRING(
             "A Shellder bite set off a chemical reaction\n"
             "with the spices inside Slowbro's body,\n"
             "causing Slowbro to become a\n"
-            "Poison-type Pokémon."),
+            "Poison-type Moémon."),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 296,
@@ -6127,11 +6139,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_CURIOUS_MEDICINE, ABILITY_OWN_TEMPO, ABILITY_REGENERATOR },
         .categoryName = _("Hexpert"),
         .height = 18,
+    #if NSFW_CONTENT == TRUE
+        .description = COMPOUND_STRING(
+            "The odd crown given to her by Shellder\n"
+            "is now controlling her mind. She is \n"
+            "forced to accept any sexual advances,\n"
+            "and has her libido constantly maxed."),
+    #else
         .description = COMPOUND_STRING(
             "A combination of toxins and the shock of\n"
             "evolving has increased Shellder's\n"
             "intelligence to the point that Shellder\n"
             "now controls Slowking."),
+    #endif
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 309,
@@ -6283,7 +6303,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 1800,
         .description = COMPOUND_STRING(
             "As it zooms through the sky, this\n"
-            "Pokémon seems to be receiving signals\n"
+            "Moémon seems to be receiving signals\n"
             "of unknown origin, while transmitting its\n"
             "own signals of unknown purpose."),
         .pokemonScale = 282,
@@ -6313,7 +6333,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,                                    \
         .expYield = 132,                                    \
         .evYield_Attack = 1,                                \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
@@ -6343,7 +6363,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "It is always seen with a stick from a plant.\n"
             "Apparently, there are good sticks and bad\n"
-            "sticks. This Pokémon occasionally fights\n"
+            "sticks. This Moémon occasionally fights\n"
             "with others over choice sticks."),
         .pokemonScale = 330,
         .pokemonOffset = 2,
@@ -6412,7 +6432,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 177,
         .evYield_Attack = 2,
         .itemRare = ITEM_LEEK,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -6428,7 +6448,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "Only Farfetch'd that have survived many\n"
             "battles can attain this evolution. When\n"
-            "this Pokémon's leek withers, it will\n"
+            "this Moémon's leek withers, it will\n"
             "retire from combat."),
         .pokemonScale = 366,
         .pokemonOffset = 7,
@@ -6463,7 +6483,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 62,
         .evYield_Attack = 1,
         .itemRare = ITEM_SHARP_BEAK,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -6514,7 +6534,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 165,
         .evYield_Attack = 2,
         .itemRare = ITEM_SHARP_BEAK,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -6528,7 +6548,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 18,
         .weight = 852,
         .description = COMPOUND_STRING(
-            "A peculiar Pokémon species with three\n"
+            "A peculiar Moémon species with three\n"
             "heads. It vigorously races across grassy\n"
             "plains even in arid seasons with little\n"
             "rainfall."),
@@ -6565,7 +6585,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 190,
         .expYield = 65,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -6613,7 +6633,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 75,
         .expYield = 166,
         .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -6628,7 +6648,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 1200,
         .description = COMPOUND_STRING(
             "It loves to snooze on bitterly cold ice.\n"
-            "The sight of this Pokémon sleeping on\n"
+            "The sight of this Moémon sleeping on\n"
             "a glacier was mistakenly thought to be\n"
             "a mermaid by a mariner long ago."),
         .pokemonScale = 256,
@@ -6652,7 +6672,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_GRIMER
 #define GRIMER_FAMILY_MISC_INFO                                     \
         .itemRare = ITEM_BLACK_SLUDGE,                              \
-        .genderRatio = PERCENT_FEMALE(50),                          \
+        .genderRatio = PERCENT_FEMALE(95),                          \
         .eggCycles = 20,                                            \
         .friendship = STANDARD_FRIENDSHIP,                          \
         .growthRate = GROWTH_MEDIUM_FAST,                           \
@@ -6836,7 +6856,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Defense = 1,
         .itemCommon = ITEM_PEARL,
         .itemRare = ITEM_BIG_PEARL,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -6887,7 +6907,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Defense = 2,
         .itemCommon = ITEM_PEARL,
         .itemRare = ITEM_BIG_PEARL,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -6936,7 +6956,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 190,
         .expYield = 62,
         .evYield_SpAttack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -6985,7 +7005,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 90,
         .expYield = 142,
         .evYield_SpAttack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
@@ -7001,7 +7021,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "If a Haunter beckons you while it is\n"
             "floating in darkness, don't approach it.\n"
-            "This Pokémon will try to lick you with its\n"
+            "This Moémon will try to lick you with its\n"
             "tongue and steal your life away."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
@@ -7034,7 +7054,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_GHOST, TYPE_POISON },                       \
         .catchRate = 45,                                            \
         .evYield_SpAttack = 3,                                      \
-        .genderRatio = PERCENT_FEMALE(50),                          \
+        .genderRatio = PERCENT_FEMALE(95),                          \
         .eggCycles = 20,                                            \
         .friendship = STANDARD_FRIENDSHIP,                          \
         .growthRate = GROWTH_MEDIUM_SLOW,                           \
@@ -7167,7 +7187,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 77,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -7210,7 +7230,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 25,                                        \
         .evYield_Defense = 2,                                   \
         .itemRare = ITEM_METAL_COAT,                            \
-        .genderRatio = PERCENT_FEMALE(50),                      \
+        .genderRatio = PERCENT_FEMALE(95),                      \
         .eggCycles = 25,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
         .growthRate = GROWTH_MEDIUM_FAST,                       \
@@ -7240,7 +7260,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 4000,
         .description = COMPOUND_STRING(
             "Steelix live even further underground\n"
-            "than Onix. This Pokémon is known to dig\n"
+            "than Onix. This Moémon is known to dig\n"
             "toward the earth's core, reaching a depth\n"
             "of over six-tenths of a mile underground."),
         .pokemonScale = 256,
@@ -7313,7 +7333,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 190,
         .expYield = 66,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -7362,7 +7382,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 75,
         .expYield = 169,
         .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -7414,7 +7434,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 225,
         .expYield = 65,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -7461,7 +7481,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 60,                                                                \
         .expYield = 166,                                                                \
         .evYield_Attack = 2,                                                            \
-        .genderRatio = PERCENT_FEMALE(50),                                              \
+        .genderRatio = PERCENT_FEMALE(95),                                              \
         .eggCycles = 20,                                                                \
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .growthRate = GROWTH_MEDIUM_FAST,                                               \
@@ -7487,7 +7507,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "It waves its huge, oversized claw in the\n"
             "air to communicate with others.\n"
             "But since the claw is so heavy, this\n"
-            "Pokémon quickly tires."),
+            "Moémon quickly tires."),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -7512,7 +7532,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 0,
         .description = COMPOUND_STRING(
             "The flow of Gigantamax energy has\n"
-            "spurred this Pokémon's left pincer\n"
+            "spurred this Moémon's left pincer\n"
             "to grow to an enormous size. That\n"
             "claw can pulverize anything."),
         .pokemonScale = 256,
@@ -7700,7 +7720,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 65,
         .evYield_Defense = 1,
         .itemRare = ITEM_PSYCHIC_SEED,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -7741,7 +7761,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,                                    \
         .expYield = 186,                                    \
         .evYield_SpAttack = 2,                              \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_SLOW,                          \
@@ -7806,7 +7826,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 4156,
         .description = COMPOUND_STRING(
             "Alola is the best environment for\n"
-            "this Pokémon. Local people take pride\n"
+            "this Moémon. Local people take pride\n"
             "in its appearance, saying this is how\n"
             "Exeggutor ought to look."),
         .pokemonScale = 256,
@@ -7842,7 +7862,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 64,
         .evYield_Defense = 1,
         .itemRare = ITEM_THICK_CLUB,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -7891,7 +7911,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 149,                                        \
         .evYield_Defense = 2,                                   \
         .itemRare = ITEM_THICK_CLUB,                            \
-        .genderRatio = PERCENT_FEMALE(50),                      \
+        .genderRatio = PERCENT_FEMALE(95),                      \
         .eggCycles = 20,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
         .growthRate = GROWTH_MEDIUM_FAST,                       \
@@ -7942,7 +7962,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 340,
         .description = COMPOUND_STRING(
             "The cursed flames that light up the bone\n"
-            "carried by this Pokémon are said\n"
+            "carried by this Moémon are said\n"
             "to cause both mental and physical\n"
             "pain that will never fade."),
         FRONT_PIC(MarowakAlolan, 64, 64),
@@ -7974,7 +7994,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 75,
         .expYield = 42,
         .evYield_Attack = 1,
-        .genderRatio = MON_MALE,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -7990,7 +8010,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "Tyrogue become stressed out if they do\n"
             "not get to train every day. When raising\n"
-            "this Pokémon, the Trainer must establish\n"
+            "this Moémon, the Trainer must establish\n"
             "a regular training schedule."),
         .pokemonScale = 292,
         .pokemonOffset = 9,
@@ -8025,7 +8045,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 159,
         .evYield_Attack = 2,
-        .genderRatio = MON_MALE,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8072,7 +8092,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 159,
         .evYield_SpDefense = 2,
-        .genderRatio = MON_MALE,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8120,7 +8140,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 159,
         .evYield_SpDefense = 2,
-        .genderRatio = MON_MALE,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8171,7 +8191,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 77,
         .evYield_HP = 2,
         .itemRare = ITEM_LAGGING_TAIL,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8221,7 +8241,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 180,
         .evYield_HP = 3,
         .itemRare = ITEM_LAGGING_TAIL,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8272,7 +8292,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 68,
         .evYield_Defense = 1,
         .itemRare = ITEM_SMOKE_BALL,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8324,7 +8344,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 60,                                            \
         .expYield = 172,                                            \
         .evYield_Defense = 2,                                       \
-        .genderRatio = PERCENT_FEMALE(50),                          \
+        .genderRatio = PERCENT_FEMALE(95),                          \
         .eggCycles = 20,                                            \
         .friendship = STANDARD_FRIENDSHIP,                          \
         .growthRate = GROWTH_MEDIUM_FAST,                           \
@@ -8420,7 +8440,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 120,
         .expYield = 69,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -8470,7 +8490,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 60,
         .expYield = 170,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -8522,7 +8542,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 30,
         .expYield = 241,
         .evYield_Attack = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -8727,7 +8747,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 87,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8776,7 +8796,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 30,
         .expYield = 187,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8792,7 +8812,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "It ensnares prey by extending arms made\n"
             "of vines. Even if one of its arms is eaten,\n"
-            "it's fine. The Pokémon regenerates quickly\n"
+            "it's fine. The Moémon regenerates quickly\n"
             "and will go right back to normal."),
         .pokemonScale = 261,
         .pokemonOffset = 1,
@@ -8914,7 +8934,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 59,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_DRAGON_SCALE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -8964,7 +8984,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Defense = 1,
         .evYield_SpAttack = 1,
         .itemRare = ITEM_DRAGON_SCALE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -9017,7 +9037,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_SpAttack = 1,
         .evYield_SpDefense = 1,
         .itemRare = ITEM_DRAGON_SCALE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -9068,7 +9088,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 64,
         .evYield_Attack = 1,
         .itemRare = ITEM_MYSTIC_WATER,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -9119,7 +9139,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 158,
         .evYield_Attack = 2,
         .itemRare = ITEM_MYSTIC_WATER,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -9277,7 +9297,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 145,
         .expYield = 62,
         .evYield_SpDefense = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -9294,7 +9314,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "In an attempt to confuse its enemy,\n"
             "it mimics the enemy's movements.\n"
             "Once mimicked, the foe cannot take\n"
-            "its eyes off this Pokémon."),
+            "its eyes off this Moémon."),
         .pokemonScale = 422,
         .pokemonOffset = 14,
         .trainerScale = 256,
@@ -9318,7 +9338,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define MR_MIME_MISC_INFO                                           \
         .catchRate = 45,                                            \
         .expYield = 161,                                            \
-        .genderRatio = PERCENT_FEMALE(50),                          \
+        .genderRatio = PERCENT_FEMALE(95),                          \
         .eggCycles = 25,                                            \
         .friendship = STANDARD_FRIENDSHIP,                          \
         .growthRate = GROWTH_MEDIUM_FAST,                           \
@@ -9391,7 +9411,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "Its talent is tap-dancing. It can radiate\n"
             "chilliness from the bottoms of its feet to\n"
             "to create a floor of ice, which this\n"
-            "Pokémon can kick up to use as a barrier."),
+            "Moémon can kick up to use as a barrier."),
         .pokemonScale = 258,
         .pokemonOffset = 6,
         .trainerScale = 256,
@@ -9422,7 +9442,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 182,
         .evYield_SpAttack = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -9471,7 +9491,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 100,
         .evYield_Attack = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -9516,7 +9536,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_BUG, TYPE_STEEL },              \
         .catchRate = 25,                                \
         .evYield_Attack = 2,                            \
-        .genderRatio = PERCENT_FEMALE(50),              \
+        .genderRatio = PERCENT_FEMALE(95),              \
         .eggCycles = 25,                                \
         .friendship = STANDARD_FRIENDSHIP,              \
         .growthRate = GROWTH_MEDIUM_FAST,               \
@@ -9584,7 +9604,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 1250,
         .description = COMPOUND_STRING(
             "The excess energy that bathes this\n"
-            "Pokémon keeps it in constant danger of\n"
+            "Moémon keeps it in constant danger of\n"
             "overflow. It can't sustain a battle over\n"
             "long periods of time."),
         .pokemonScale = 278,
@@ -9617,7 +9637,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 15,
         .expYield = 175,
         .evYield_Attack = 3,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -9633,7 +9653,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "A violent creature that fells trees with\n"
             "its crude axes and shields itself with hard\n"
-            "stone. Should one encounter this Pokémon\n"
+            "stone. Should one encounter this Moémon\n"
             "in the wild, one's only recourse is to flee."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
@@ -10068,7 +10088,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define PINSIR_MISC_INFO                                \
         .catchRate = 45,                                \
         .evYield_Attack = 2,                            \
-        .genderRatio = PERCENT_FEMALE(50),              \
+        .genderRatio = PERCENT_FEMALE(95),              \
         .eggCycles = 25,                                \
         .friendship = STANDARD_FRIENDSHIP,              \
         .growthRate = GROWTH_SLOW,                      \
@@ -10167,7 +10187,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 70,                                \
         .catchRate = 45,                                    \
         .expYield = 172,                                    \
-        .genderRatio = MON_MALE,                            \
+        .genderRatio = MON_FEMALE,                            \
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_SLOW,                          \
@@ -10221,7 +10241,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_BROWN,
         .weight = 1150,
         .description = COMPOUND_STRING(
-            "This Pokémon has a muscular body\n"
+            "This Moémon has a muscular body\n"
             "and excels at close-quarters combat.\n"
             "It uses its short horns to strike\n"
             "the opponent’s weak spots."),
@@ -10273,7 +10293,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_BROWN,
         .weight = 1100,
         .description = COMPOUND_STRING(
-            "This Pokémon blasts water from holes on\n"
+            "This Moémon blasts water from holes on\n"
             "the tips of its horns--the high-pressure\n"
             "jets pierce right through\n"
             "Tauros’s enemies."),
@@ -10305,7 +10325,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 255,
         .expYield = 40,
         .evYield_Speed = 1,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 5,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -10346,7 +10366,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #define GYARADOS_MISC_INFO                                  \
         .catchRate = 45,                                    \
         .evYield_Attack = 2,                                \
-        .genderRatio = PERCENT_FEMALE(50),                  \
+        .genderRatio = PERCENT_FEMALE(95),                  \
         .eggCycles = 5,                                     \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_SLOW,                          \
@@ -10381,7 +10401,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 2350,
         .description = COMPOUND_STRING(
             "It is an extremely vicious and violent\n"
-            "Pokémon. When humans begin to fight,\n"
+            "Moémon. When humans begin to fight,\n"
             "it will appear and burn everything to the\n"
             "ground with intensely hot flames."),
         FRONT_PIC(Gyarados, 64, 64),
@@ -10446,7 +10466,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_HP = 2,                                                                \
         .itemCommon = ITEM_MYSTIC_WATER,                                                \
         .itemRare = ITEM_MYSTIC_WATER,                                                  \
-        .genderRatio = PERCENT_FEMALE(50),                                              \
+        .genderRatio = PERCENT_FEMALE(95),                                              \
         .eggCycles = 40,                                                                \
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .growthRate = GROWTH_SLOW,                                                      \
@@ -10579,7 +10599,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,                                                                \
         .expYield = 65,                                                                 \
         .evYield_SpDefense = 1,                                                         \
-        .genderRatio = PERCENT_FEMALE(12.5),                                            \
+        .genderRatio = PERCENT_FEMALE(95),                                            \
         .eggCycles = 35,                                                                \
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .growthRate = GROWTH_MEDIUM_FAST,                                               \
@@ -10604,7 +10624,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             "An Eevee has an unstable genetic makeup\n"
             "that suddenly mutates due to its\n"
             "environment. Radiation from various\n"
-            "Stones causes this Pokémon to evolve."),
+            "Stones causes this Moémon to evolve."),
         .pokemonScale = 476,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -10672,7 +10692,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 184,
         .evYield_HP = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 35,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -10719,7 +10739,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 184,
         .evYield_Speed = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 35,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -10766,7 +10786,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 184,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 35,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -10814,7 +10834,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 184,
         .evYield_SpAttack = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 35,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -10861,7 +10881,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 184,
         .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 35,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -10910,7 +10930,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 184,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 35,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -10957,7 +10977,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 184,
         .evYield_SpAttack = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 35,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -11006,7 +11026,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 184,
         .evYield_SpDefense = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 35,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -11173,7 +11193,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 340,
         .description = COMPOUND_STRING(
             "In order to create a more advanced\n"
-            "Pokémon, an additional program was\n"
+            "Moémon, an additional program was\n"
             "installed, but apparently it contained a\n"
             "defect that made it move oddly."),
         .pokemonScale = 338,
@@ -11210,7 +11230,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 71,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -11225,7 +11245,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 75,
         .description = COMPOUND_STRING(
             "One of the ancient and long-since-extinct\n"
-            "Pokémon that have been regenerated\n"
+            "Moémon that have been regenerated\n"
             "from fossils by humans. If attacked,\n"
             "it withdraws into its hard shell."),
         .pokemonScale = 521,
@@ -11258,7 +11278,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 173,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -11307,7 +11327,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 71,
         .evYield_Defense = 1,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -11321,7 +11341,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 5,
         .weight = 115,
         .description = COMPOUND_STRING(
-            "It is a Pokémon that has been regenerated\n"
+            "It is a Moémon that has been regenerated\n"
             "from a fossil. However, in rare cases, living\n"
             "examples have been discovered. Kabuto\n"
             "have not changed for 300 million years."),
@@ -11355,7 +11375,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .catchRate = 45,
         .expYield = 173,
         .evYield_Attack = 2,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
@@ -11396,7 +11416,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_ROCK, TYPE_FLYING },                \
         .catchRate = 45,                                    \
         .evYield_Speed = 2,                                 \
-        .genderRatio = PERCENT_FEMALE(12.5),                \
+        .genderRatio = PERCENT_FEMALE(95),                \
         .eggCycles = 35,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_SLOW,                          \
@@ -11425,7 +11445,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 18,
         .weight = 590,
         .description = COMPOUND_STRING(
-            "Aerodactyl is a Pokémon from the age\n"
+            "Aerodactyl is a Moémon from the age\n"
             "of dinosaurs. It was regenerated from DNA\n"
             "extracted from amber. It is imagined to\n"
             "have been the king of the skies."),
@@ -11499,7 +11519,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_HP = 1,
         .itemCommon = ITEM_LEFTOVERS,
         .itemRare = ITEM_LEFTOVERS,
-        .genderRatio = PERCENT_FEMALE(12.5),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 40,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -11549,7 +11569,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_HP = 2,                                                        \
         .itemCommon = ITEM_LEFTOVERS,                                           \
         .itemRare = ITEM_LEFTOVERS,                                             \
-        .genderRatio = PERCENT_FEMALE(12.5),                                    \
+        .genderRatio = PERCENT_FEMALE(95),                                    \
         .eggCycles = 40,                                                        \
         .friendship = STANDARD_FRIENDSHIP,                                      \
         .growthRate = GROWTH_SLOW,                                              \
@@ -11573,7 +11593,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .description = COMPOUND_STRING(
             "Snorlax's typical day consists of nothing\n"
             "more than eating and sleeping. It is such\n"
-            "a docile Pokémon that there are children\n"
+            "a docile Moémon that there are children\n"
             "who use its big belly as a place to play."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
@@ -11656,10 +11676,10 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Freeze"),
         .weight = 554,
         .description = COMPOUND_STRING(
-            "Articuno is a legendary bird Pokémon that\n"
+            "Articuno is a legendary bird Moémon that\n"
             "can control ice. The flapping of its wings\n"
             "chills the air. As a result, it is said that\n"
-            "when this Pokémon flies, snow will fall."),
+            "when this Moémon flies, snow will fall."),
         FRONT_PIC(Articuno, 64, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = sAnims_Articuno,
@@ -11752,7 +11772,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Electric"),
         .weight = 526,
         .description = COMPOUND_STRING(
-            "Zapdos is a legendary bird Pokémon that\n"
+            "Zapdos is a legendary bird Moémon that\n"
             "has the ability to control electricity.\n"
             "It usually lives in thunderclouds. It gains\n"
             "power if it is stricken by lightning bolts."),
@@ -11843,7 +11863,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Flame"),
         .weight = 600,
         .description = COMPOUND_STRING(
-            "Moltres is a legendary bird Pokémon\n"
+            "Moltres is a legendary bird Moémon\n"
             "that can control fire. If injured, it is said\n"
             "to dip its body in the molten magma of\n"
             "a volcano to burn and heal itself."),
@@ -11878,7 +11898,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .categoryName = _("Malevolent"),
         .weight = 660,
         .description = COMPOUND_STRING(
-            "This Pokémon's sinister, flame-like aura\n"
+            "This Moémon's sinister, flame-like aura\n"
             "will consume the spirit of any creature\n"
             "it hits. Victims become burned-out\n"
             "shadows of themselves."),
@@ -11911,7 +11931,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 60,
         .evYield_Attack = 1,
         .itemRare = ITEM_DRAGON_SCALE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 40,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
@@ -11960,7 +11980,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 147,
         .evYield_Attack = 2,
         .itemRare = ITEM_DRAGON_SCALE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 40,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
@@ -12009,7 +12029,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 270,
         .evYield_Attack = 3,
         .itemRare = ITEM_DRAGON_SCALE,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = PERCENT_FEMALE(95),
         .eggCycles = 40,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
@@ -12024,7 +12044,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 2100,
         .description = COMPOUND_STRING(
             "It can circle the globe in just 16 hours.\n"
-            "It is a kindhearted Pokémon that leads\n"
+            "It is a kindhearted Moémon that leads\n"
             "lost and foundering ships in a storm\n"
             "to the safety of land."),
         .pokemonScale = 256,
@@ -12080,7 +12100,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 20,
         .weight = 1220,
         .description = COMPOUND_STRING(
-            "A Pokémon that was created by genetic\n"
+            "A Moémon that was created by genetic\n"
             "manipulation. However, even though the\n"
             "scientific power of humans made its body,\n"
             "they failed to give it a warm heart."),
@@ -12206,7 +12226,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .weight = 40,
         .description = COMPOUND_STRING(
             "A Mew is said to possess the genes of all\n"
-            "Pokémon. It is capable of making itself\n"
+            "Moémon. It is capable of making itself\n"
             "invisible at will, so it entirely avoids\n"
             "notice even if it approaches people."),
         .pokemonScale = 457,

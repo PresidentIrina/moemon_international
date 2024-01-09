@@ -297,6 +297,9 @@ static const u8 sEmbodyAspectWellspringDescription[] = _("Raises Sp. Def.");
 static const u8 sEmbodyAspectCornerstoneDescription[] = _("Raises Defense.");
 static const u8 sToxicChainDescription[] = _("Moves can poison.");
 static const u8 sSupersweetSyrupDescription[] = _("Lowers the foe's Speed.");
+static const u8 sBeyondMachThreeDescription[] = _("Flying moves go first.");
+static const u8 sAntiAircraftDescription[] = _("Hits Flying types harder.");
+static const u8 sNavalSupremacyDescription[] = _("Water boosts all stats.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -608,6 +611,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_EMBODY_ASPECT_CORNERSTONE] = _("Embody Aspect"),
     [ABILITY_TOXIC_CHAIN] = _("Toxic Chain"),
     [ABILITY_SUPERSWEET_SYRUP] = _("Supersweet Syrup"),
+    [ABILITY_BEYOND_MACH_THREE] = _("Beyond Mach 3"),
+    [ABILITY_ANTI_AIRCRAFT] = _("Anti-Aircraft"),
+    [ABILITY_NAVAL_SUPREMACY] = _("Naval Supremacy"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -1231,4 +1237,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_EMBODY_ASPECT_CORNERSTONE] = sEmbodyAspectCornerstoneDescription,
     [ABILITY_TOXIC_CHAIN] = sToxicChainDescription,
     [ABILITY_SUPERSWEET_SYRUP] = sSupersweetSyrupDescription,
+    [ABILITY_BEYOND_MACH_THREE] = sBeyondMachThreeDescription,
+    [ABILITY_ANTI_AIRCRAFT] = sAntiAircraftDescription,
+    [ABILITY_NAVAL_SUPREMACY] = sNavalSupremacyDescription,
 };
