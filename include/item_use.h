@@ -44,6 +44,40 @@ u8 CheckIfItemIsTMHMOrEvolutionStone(u16 itemId);
 void FieldUseFunc_VsSeeker(u8 taskId);
 void Task_ItemUse_CloseMessageBoxAndReturnToField_VsSeeker(u8 taskId);
 
+// Start qol_field_moves
+
+void ItemUseOutOfBattle_CutTool(u8);
+static void ItemUseOnFieldCB_CutTool(u8);
+
+void ItemUseOutOfBattle_FlyTool(u8);
+static void CB2_OpenFlyToolFromBag(void);
+static void Task_OpenRegisteredFlyTool(u8 taskId);
+
+void ItemUseOutOfBattle_SurfTool(u8);
+static void ItemUseOnFieldCB_SurfTool(u8);
+
+void ItemUseOutOfBattle_StrengthTool(u8);
+static void ItemUseOnFieldCB_StrengthTool(u8);
+
+void ItemUseOutOfBattle_FlashTool(u8);
+void ItemUseOnFieldCB_FlashTool(u8 taskId);
+
+void ItemUseOutOfBattle_RockSmashTool(u8);
+static void ItemUseOnFieldCB_RockSmashTool(u8);
+
+void ItemUseOutOfBattle_WaterfallTool(u8);
+static void ItemUseOnFieldCB_WaterfallTool(u8);
+
+void ItemUseOutOfBattle_DiveTool(u8);
+static void ItemUseOnFieldCB_DiveTool(u8);
+
+void ItemUseOutOfBattle_TeleportTool(u8);
+
+void ItemUseOutOfBattle_SweetScentTool(u8);
+static void ItemUseOnFieldCB_SweetScentTool(u8);
+
+// End qol_field_moves
+
 enum {
     BALL_THROW_UNABLE_TWO_MONS,
     BALL_THROW_UNABLE_NO_ROOM,

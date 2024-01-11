@@ -9387,6 +9387,145 @@ const struct Item gItems[] =
         .flingPower = 30,
     },
 
+// Moemon International
+
+ //HM Items
+    [ITEM_CUT_TOOL] =
+    {
+        .name = _("Axe"),
+        .price = 0,
+        .importance = 1,
+        .description = sAxeDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CutTool,
+    },
+
+    [ITEM_FLY_TOOL] =
+    {
+        .name = _("Flight Beacon"),
+        .price = 0,
+        .importance = 1,
+        .description = sFlyingToolDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_FlyTool,
+    },
+
+    [ITEM_SURF_TOOL ] =
+    {
+        .name = _("Surfboard"),
+        .price = 0,
+        .importance = 1,
+        .description = sSurfboardDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_SurfTool,
+    },
+
+    [ITEM_STRENGTH_TOOL] =
+    {
+        .name = _("Power Fist"),
+        .price = 0,
+        .importance = 1,
+        .description = sPowerGloveDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_StrengthTool,
+    },
+
+    [ITEM_FLASH_TOOL] =
+    {
+        .name = _("Lantern"),
+        .price = 0,
+        .importance = 1,
+        .description = sLanternDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_FlashTool,
+    },
+
+    [ITEM_ROCKSMASH_TOOL] =
+    {
+        .name = _("Sledge Hammer"),
+        .price = 0,
+        .importance = 1,
+        .description = sHammerDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_RockSmashTool,
+    },
+
+    [ITEM_WATERFALL_TOOL ] =
+    {
+        .name = _("Water Jet"),
+        .price = 0,
+        .importance = 1,
+        .description = sWaterJetDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_WaterfallTool,
+    },
+
+    [ITEM_DIVE_TOOL] =
+    {
+        .name = _("Rebreather"),
+        .price = 0,
+        .importance = 1,
+        .description = sDivingSuitDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_DiveTool,
+    },
+
+    [ITEM_TELEPORT_TOOL] =
+    {
+        .name = _("Teleporter"),
+        .price = 0,
+        .importance = 1,
+        .description = sTeleportToolDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_TeleportTool,
+    },
+
+    [ITEM_SWEETSCENT_TOOL] =
+    {
+        .name = _("Moé Lure"),
+        .price = 0,
+        .importance = 1,
+        .description = sMoeAttractorDesc,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_SweetScentTool,
+    },
+ //HM Items
+
+    [ITEM_ABYSSAL_ORB] =
+    {
+        .name = _("Abyssal Orb"),
+        .price = 0,
+        .description = sAbyssalOrbDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .flingPower = 30,
+    },
+
+    [ITEM_MAGMA_ORB] =
+    {
+        .name = _("Magma Orb"),
+        .price = 0,
+        .description = sMagmaOrbDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .flingPower = 30,
+    },
+
+// Moemon International
+
+/*
     [ITEM_BUG_TERA_SHARD] =
     {
         .name = _("Bug TeraShard"),
@@ -9506,7 +9645,7 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
-
+*/
     [ITEM_NORMAL_TERA_SHARD] =
     {
         .name = _("NormlTeraShrd"),

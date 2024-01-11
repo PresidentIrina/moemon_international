@@ -378,6 +378,25 @@ extern const u8 EventScript_UseFlash[];
 extern const u8 EventScript_UseCut[];
 extern const u8 EventScript_UseRockSmash[];
 
+//Start qol_field_moves
+extern const u8 EventScript_CutTreeDown[];
+extern const u8 EventScript_UseCut[];
+extern const u8 EventScript_UseCutTool[];
+extern const u8 EventScript_UseSurfMove[];
+extern const u8 EventScript_UseSurfTool[];
+extern const u8 EventScript_UseSurfFieldEffect[];
+extern const u8 EventScript_UseStrengthTool[];
+extern const u8 EventScript_UseFlashTool[];
+extern const u8 EventScript_SmashRock[];
+extern const u8 EventScript_UseRockSmash[];
+extern const u8 EventScript_UseRockSmashTool[];
+extern const u8 EventScript_UseWaterfallMon[];
+extern const u8 EventScript_UseWaterfallTool[];
+extern const u8 EventScript_UseWaterfallFieldEffect[];
+extern const u8 EventScript_UseDiveTool[];
+extern const u8 EventScript_AskTeleportTool[];
+//End qol_field_moves
+
 //player pc
 extern const u8 LittlerootTown_BrendansHouse_2F_EventScript_TurnOffPlayerPC[];
 extern const u8 LittlerootTown_MaysHouse_2F_EventScript_TurnOffPlayerPC[];
@@ -539,8 +558,10 @@ extern const u8 EventScript_TrainerHillTimer[];
 extern const u8 EventScript_UseSurf[];
 extern const u8 EventScript_UseWaterfall[];
 extern const u8 EventScript_CannotUseWaterfall[];
+extern const u8 EventScript_DiveSpot[];
 extern const u8 EventScript_UseDive[];
 extern const u8 EventScript_UseDiveUnderwater[];
+extern const u8 EventScript_DiveUnderwater[];
 extern const u8 EventScript_FallDownHole[];
 extern const u8 EventScript_FieldPoison[];
 extern const u8 EventScript_EggHatch[];

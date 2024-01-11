@@ -819,6 +819,25 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_SCROLL_OF_WATERS] = {gItemIcon_ScrollOfWaters, gItemIconPalette_ScrollOfWaters},
     [ITEM_TERA_ORB] = {gItemIcon_TeraOrb, gItemIconPalette_TeraOrb},
     [ITEM_TINY_BAMBOO_SHOOT] = {gItemIcon_TinyBambooShoot, gItemIconPalette_TinyBambooShoot},
+
+// Moemon International
+ //HM Items
+    [ITEM_CUT_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_FLY_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SURF_TOOL ] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+	[ITEM_STRENGTH_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_FLASH_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+	[ITEM_ROCKSMASH_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_WATERFALL_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+	[ITEM_DIVE_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_TELEPORT_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SWEETSCENT_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+ //HM Items
+    [ITEM_ABYSSAL_ORB] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_MAGMA_ORB] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+// Moemon International
+
+/*
     [ITEM_BUG_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_BugTeraShard},
     [ITEM_DARK_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_DarkTeraShard},
     [ITEM_DRAGON_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_DragonTeraShard},
@@ -831,6 +850,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_GRASS_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_GrassTeraShard},
     [ITEM_GROUND_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_GroundTeraShard},
     [ITEM_ICE_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_IceTeraShard},
+*/
     [ITEM_NORMAL_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_NormalTeraShard},
     [ITEM_POISON_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_PoisonTeraShard},
     [ITEM_PSYCHIC_TERA_SHARD] = {gItemIcon_TeraShard, gItemIconPalette_PsychicTeraShard},

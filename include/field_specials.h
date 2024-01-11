@@ -33,4 +33,10 @@ bool8 ShouldShowBoxWasFullMessage(void);
 void SetPCBoxToSendMon(u8 boxId);
 void PreparePartyForSkyBattle(void);
 
+enum FlightBeaconStatus
+{
+    FLIGHT_BEACON_ACTIVE,
+    FLIGHT_BEACON_OFF
+};
+
 #endif // GUARD_FIELD_SPECIALS_H

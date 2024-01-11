@@ -4010,6 +4010,11 @@ static const u8 sHammerDesc[] = _(
     "hammer. It may can\n"
     "smash rocks.");
 
+static const u8 sWaterJetDesc[] = _(
+    "An attachment\n"
+    "for the Surfboard\n"
+    "");
+    
 static const u8 sDivingSuitDesc[] = _(
 	"A small device that\n"
     "recycles air while\n"
@@ -4029,3 +4034,23 @@ static const u8 sFlyingToolDesc[] = _(
 	"A special tool\n"
     "that can call\n"
     "for a flying Moémon.");
+
+static const u8 sTeleportToolDesc[] = _(
+	"This tool\n"
+    "is used for\n"
+    "getting to safety.");
+
+static const u8 sMoeAttractorDesc[] = _(
+	"This tool\n"
+    "is used for\n"
+    "luring Moémon.");
+
+static const u8 sAbyssalOrbDesc[] = _(
+	"The true orb of\n"
+    "the oceans. Unlocks\n"
+    "Kyogre's true power.");
+
+static const u8 sMagmaOrbDesc[] = _(
+	"The true orb of\n"
+    "the land. Unlocks\n"
+    "Groudon's true power.");

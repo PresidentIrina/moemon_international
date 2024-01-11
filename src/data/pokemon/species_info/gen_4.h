@@ -2116,6 +2116,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         PALETTES(Lopunny),
         ICON(Lopunny, 2),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_BLACK_BELT, SPECIES_LOPUNNY_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -2705,6 +2706,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(Garchomp),
         ICON(Garchomp, 0),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_DRAGON_FANG, SPECIES_GARCHOMP_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -2839,6 +2841,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_V_SHAKE_H_SLIDE,
         PALETTES(Lucario),
         ICON(Lucario, 2),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_BLACK_BELT, SPECIES_LUCARIO_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
@@ -3442,6 +3445,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .backAnimId = BACK_ANIM_V_SHAKE_LOW,
         PALETTES(Abomasnow),
         ICON(Abomasnow, 1),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_ICE_STONE, SPECIES_ABOMASNOW_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS

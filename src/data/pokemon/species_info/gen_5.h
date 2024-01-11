@@ -1910,6 +1910,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .backAnimId = BACK_ANIM_SHRINK_GROW,
         PALETTES(Audino),
         ICON(Audino, 1),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOFT_SAND, SPECIES_AUDINO_MEGA}),
     },
 
 #if P_MEGA_EVOLUTIONS
