@@ -22,7 +22,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_LEAF_GUARD },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Chikorita"),
@@ -32,10 +32,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 9,
         .weight = 64,
         .description = COMPOUND_STRING(
-            "It waves its leaf around to keep foes\n"
-            "at bay. However, a sweet fragrance also\n"
-            "wafts from the leaf, creating a friendly\n"
-            "atmosphere that becalms the battlers."),
+            "Chikorita spends her days sunbathing.\n"
+            "Warm days bring a stronger, sweeter\n"
+            "scent out of her leaf.\n"
+            ""),
         .pokemonScale = 512,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -71,7 +71,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_LEAF_GUARD },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Bayleef"),
@@ -81,10 +81,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 158,
         .description = COMPOUND_STRING(
-            "A Bayleef's neck is ringed by curled-up\n"
-            "leaves. Inside each leaf is a small tree\n"
-            "shoot. The fragrance of this shoot\n"
-            "makes people peppy."),
+            "The leaves on her neck give off a spicy\n"
+            "scent. Many cooks try to emulate the\n"
+            "aroma in their dishes.\n"
+            ""),
         .pokemonScale = 296,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -120,7 +120,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_GRASS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_LEAF_GUARD },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Meganium"),
@@ -130,10 +130,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 18,
         .weight = 1005,
         .description = COMPOUND_STRING(
-            "The fragrance of a Meganium's flower\n"
-            "soothes and calms emotions. In battle,\n"
-            "it gives off more of its becalming scent\n"
-            "to blunt the foe's fighting spirit."),
+            "Her mere presence can revitalize wilting\n"
+            "flowers. Meganium are popular in homes\n"
+            "due to their calming scent.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 277,
@@ -171,7 +171,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_FLASH_FIRE },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Cyndaquil"),
@@ -181,10 +181,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 5,
         .weight = 79,
         .description = COMPOUND_STRING(
-            "It flares flames from its back to protect\n"
-            "itself. The fire burns vigorously if the\n"
-            "Moémon is angry. When it is tired,\n"
-            "it sputters with incomplete combustion."),
+            "Cyndaquil often uses flames to express\n"
+            "her emotions. Her happiness warms\n"
+            "hearts figuratively and literally.\n"
+            ""),
         .pokemonScale = 539,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -220,7 +220,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_FLASH_FIRE },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Quilava"),
@@ -230,10 +230,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 9,
         .weight = 190,
         .description = COMPOUND_STRING(
-            "It intimidates foes with intense gusts of\n"
-            "flames and superheated air. Its quick\n"
-            "nimbleness lets it dodge attacks even\n"
-            "while scorching an enemy."),
+            "She flares up her flames to intimidate\n"
+            "threats. She's more scared of them than\n"
+            "they are of her.\n"
+            ""),
         .pokemonScale = 329,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -250,7 +250,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .footprint = gMonFootprint_Quilava,
         LEARNSETS(Quilava),
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_TYPHLOSION},
-                                {EVO_NONE, 0, SPECIES_TYPHLOSION_HISUIAN}),
+                                {EVO_ITEM, ITEM_DUSK_STONE, SPECIES_TYPHLOSION_HISUIAN}),
     },
 
 #define TYPHLOSION_MISC_INFO                                            \
@@ -261,11 +261,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                                \
         .friendship = STANDARD_FRIENDSHIP,                              \
         .growthRate = GROWTH_MEDIUM_SLOW,                               \
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },              \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },              \
         .bodyColor = BODY_COLOR_YELLOW,                                 \
         .speciesName = _("Typhlosion"),                                 \
         .cryId = CRY_TYPHLOSION,                                        \
-        .natDexNum = NATIONAL_DEX_TYPHLOSION,                           \
         .footprint = gMonFootprint_Typhlosion,                          \
         .formSpeciesIdTable = sTyphlosionFormSpeciesIdTable
 
@@ -280,14 +279,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpDefense = 85,
         .types = { TYPE_FIRE, TYPE_FIRE },
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_FLASH_FIRE },
+        .natDexNum = NATIONAL_DEX_TYPHLOSION,
         .categoryName = _("Volcano"),
         .height = 17,
         .weight = 795,
         .description = COMPOUND_STRING(
-            "It can hide behind a shimmering heat haze\n"
-            "that it creates using its intense flames.\n"
-            "Typhlosion create blazing explosive\n"
-            "blasts that burn everything to cinders."),
+            "When she's angry, her temperature rises\n"
+            "so high that anything that touches her\n"
+            "bursts into flames.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 268,
@@ -317,14 +317,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .baseSpDefense = 85,
         .types = { TYPE_FIRE, TYPE_GHOST },
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_FRISK },
+        .natDexNum = NATIONAL_DEX_TYPHLOSION_HISUIAN,
         .categoryName = _("Ghost Flame"),
         .height = 16,
         .weight = 698,
         .description = COMPOUND_STRING(
-            "Said to purify lost, forsaken souls with\n"
-            "its flames and guide them to the afterlife.\n"
-            "It's believed its form was influenced by\n"
-            "the energy of Mt. Coronet in ancient times."),
+            "Typhlosion's Hisuian sister, she has\n"
+            "absorbed energy from stones found in\n"
+            "Mt. Coronet. She works with ghost Moémon\n"
+            "to guide lost souls to the afterlife."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 268,
@@ -361,7 +362,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_1 },
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Totodile"),
@@ -371,10 +372,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 95,
         .description = COMPOUND_STRING(
-            "Despite its small body, Totodile's jaws\n"
-            "are very powerful. While it may think it is\n"
-            "just playfully nipping, its bite has enough\n"
-            "strength to cause serious injury."),
+            "Totodile loves to wrestle and play rough.\n"
+            "She doesn't know her own strength and\n"
+            "often ends up causing injuries.\n"
+            ""),
         .pokemonScale = 487,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -410,7 +411,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_1 },
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = TRUE,
@@ -421,10 +422,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 11,
         .weight = 250,
         .description = COMPOUND_STRING(
-            "Once its jaws clamp down on its foe, it will\n"
-            "absolutely not let go. Because the tips of\n"
-            "its fangs are forked back like fishhooks,\n"
-            "they become irremovably embedded."),
+            "Croconaw has a strong grip. Whether it's\n"
+            "a hug or a bite it's near impossible\n"
+            "to break free.\n"
+            ""),
         .pokemonScale = 378,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -460,7 +461,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_WATER_1 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_1 },
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SHEER_FORCE },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Feraligatr"),
@@ -470,10 +471,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 23,
         .weight = 888,
         .description = COMPOUND_STRING(
-            "It opens its huge mouth to intimidate\n"
-            "enemies. In battle, it runs using its thick\n"
-            "and powerful hind legs to charge the\n"
-            "foe with incredible speed."),
+            "She is very territorial, and the illusion\n"
+            "of being sluggish is destroyed when\n"
+            "she blitzes trespassers.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 342,
@@ -510,7 +511,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_RUN_AWAY, ABILITY_KEEN_EYE, ABILITY_FRISK },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Sentret"),
@@ -520,10 +521,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 8,
         .weight = 60,
         .description = COMPOUND_STRING(
-            "They take turns standing guard when it\n"
-            "is time to sleep. The sentry awakens the\n"
-            "others if it senses danger. If one becomes\n"
-            "separated, it turns sleepless with fear."),
+            "Sentret scouts her surroundings in\n"
+            "search of Trainers that may be kind\n"
+            "enough to share some food.\n"
+            ""),
         .pokemonScale = 439,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -558,7 +559,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_RUN_AWAY, ABILITY_KEEN_EYE, ABILITY_FRISK },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Furret"),
@@ -568,10 +569,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 18,
         .weight = 325,
         .description = COMPOUND_STRING(
-            "A Furret has a very slim build. When under\n"
-            "attack, it can squirm through narrow\n"
-            "spaces and get away. In spite of its short\n"
-            "limbs, it is very nimble and fleet."),
+            "Furret will protect young Sentret\n"
+            "that may find danger in the fields\n"
+            "against rival Rattata.\n"
+            ""),
         .pokemonScale = 346,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -607,7 +608,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_INSOMNIA, ABILITY_KEEN_EYE, ABILITY_TINTED_LENS },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Hoothoot"),
@@ -617,10 +618,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 7,
         .weight = 212,
         .description = COMPOUND_STRING(
-            "It has an internal organ that senses\n"
-            "the earth's rotation. Using this special\n"
-            "organ, a Hoothoot begins hooting at\n"
-            "precisely the same time every day."),
+            "Hoothoot has never once been late.\n"
+            "She is known to scold others harshly\n"
+            "for their tardiness.\n"
+            ""),
         .pokemonScale = 380,
         .pokemonOffset = -2,
         .trainerScale = 256,
@@ -655,7 +656,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_INSOMNIA, ABILITY_KEEN_EYE, ABILITY_TINTED_LENS },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Noctowl"),
@@ -665,10 +666,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 16,
         .weight = 408,
         .description = COMPOUND_STRING(
-            "It unfailingly catches prey in darkness.\n"
-            "Noctowl owe their success to superior\n"
-            "vision that allows them to see in minimal\n"
-            "light, and to their supple and silent wings."),
+            "Noctowl is a true night owl. Her eyes are\n"
+            "so sharp that she can see Sentret 100\n"
+            "yards away on moonless nights.\n"
+            ""),
         .pokemonScale = 278,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -704,7 +705,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_SWARM, ABILITY_EARLY_BIRD, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Ledyba"),
@@ -714,10 +715,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 10,
         .weight = 108,
         .description = COMPOUND_STRING(
-            "Ledyba communicate using a fluid that\n"
-            "they secrete from where the legs join the\n"
-            "body. They are said to convey feelings to\n"
-            "others by altering the fluid's scent."),
+            "She is very timid. Ledyba can't move\n"
+            "if she isn't with a swarm of others, and\n"
+            "they sleep in groups of four.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -754,7 +755,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_SWARM, ABILITY_EARLY_BIRD, ABILITY_IRON_FIST },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Ledian"),
@@ -764,10 +765,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 14,
         .weight = 356,
         .description = COMPOUND_STRING(
-            "It is said that in lands with clean air,\n"
-            "where the stars fill the sky, there live\n"
-            "many Ledian. For good reason, they use\n"
-            "the light of the stars as energy."),
+            "Ledian is an incredibly adept fighter.\n"
+            "Her lightspeed punches strike faster\n"
+            "than they eye can follow.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -806,7 +807,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_SWARM, ABILITY_INSOMNIA, ABILITY_SNIPER },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Spinarak"),
@@ -816,10 +817,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 5,
         .weight = 85,
         .description = COMPOUND_STRING(
-            "The web it spins can be considered its\n"
-            "second nervous system. It is said that a\n"
-            "Spinarak determines its prey by the tiny\n"
-            "vibrations it feels through the web."),
+            "Despite her cute appearance, she will\n"
+            "lie in wait for days at a time for\n"
+            "oblivious prey to wander close.\n"
+            ""),
         .pokemonScale = 414,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -854,7 +855,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 15,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_SWARM, ABILITY_INSOMNIA, ABILITY_SNIPER },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Ariados"),
@@ -864,10 +865,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 11,
         .weight = 335,
         .description = COMPOUND_STRING(
-            "Its feet are tipped with tiny hooked claws\n"
-            "that enable it to scuttle on ceilings and\n"
-            "vertical walls. It constricts its foe with\n"
-            "thin and strong silk webbing."),
+            "Ariados constructs elaborate traps\n"
+            "of webbing. Her venom causes most\n"
+            "Moémon to faint in minutes.\n"
+            ""),
         .pokemonScale = 316,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -904,7 +905,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_2 },
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_ILLUMINATE, ABILITY_WATER_ABSORB },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Chinchou"),
@@ -914,10 +915,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 5,
         .weight = 120,
         .description = COMPOUND_STRING(
-            "When it senses danger, it discharges\n"
-            "positive and negative electricity from its\n"
-            "two antennae. It lives in depths beyond\n"
-            "sunlight's reach."),
+            "Chinchou's two antennae generate light\n"
+            "and electricity. She uses flashing lights\n"
+            "to communicate with other Moémon.\n"
+            ""),
         .pokemonScale = 424,
         .pokemonOffset = -2,
         .trainerScale = 256,
@@ -953,7 +954,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_2 },
         .abilities = { ABILITY_VOLT_ABSORB, ABILITY_ILLUMINATE, ABILITY_WATER_ABSORB },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Lanturn"),
@@ -963,10 +964,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 225,
         .description = COMPOUND_STRING(
-            "The light-emitting orbs on its back are\n"
-            "very bright. They are formed from a part of\n"
-            "its dorsal fin. This Moémon illuminates\n"
-            "the inky darkness of deep seas."),
+            "Lanturn's twintails are world famous for\n"
+            "emitting a light so bright it earned her\n"
+            "the nickname 'The Deep-Sea Star.'\n"
+            ""),
         .pokemonScale = 269,
         .pokemonOffset = 6,
         .trainerScale = 256,
@@ -1014,10 +1015,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 3,
         .weight = 15,
         .description = COMPOUND_STRING(
-            "As its energy, it uses the feelings of\n"
-            "compassion and pleasure exuded by\n"
-            "people and Moémon. It stores up happy\n"
-            "feelings in its shell, then shares them out."),
+            "She does a mysterious dance that allows\n"
+            "her to use any move. While cute, it makes\n"
+            "her a danger to others.\n"
+            ""),
         .pokemonScale = 507,
         .pokemonOffset = 23,
         .trainerScale = 256,
@@ -1052,7 +1053,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FAIRY },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },
         .abilities = { ABILITY_HUSTLE, ABILITY_SERENE_GRACE, ABILITY_SUPER_LUCK },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Togetic"),
@@ -1062,10 +1063,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 32,
         .description = COMPOUND_STRING(
-            "It is said to be a Moémon that brings good\n"
-            "fortune. When it spots someone who is pure\n"
-            "of heart, a Togetic appears and shares its\n"
-            "happiness with that person."),
+            "She has learned to channel her dancing\n"
+            "into powerful moves used to protect the\n"
+            "Togepi in her care.\n"
+            ""),
         .pokemonScale = 424,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -1106,7 +1107,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FAIRY },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },
         .abilities = { ABILITY_HUSTLE, ABILITY_SERENE_GRACE, ABILITY_SUPER_LUCK },
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = TRUE,
@@ -1117,10 +1118,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 15,
         .weight = 380,
         .description = COMPOUND_STRING(
-            "As everyone knows, it visits peaceful\n"
-            "regions, bringing them gifts of kindness\n"
-            "and sweet blessings. It will never appear\n"
-            "where there is strife."),
+            "Togekiss wants all conflict to end, but\n"
+            "because of her pacifist nature, she\n"
+            "refuses to get involved herself.\n"
+            ""),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,
@@ -1158,7 +1159,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_EARLY_BIRD, ABILITY_MAGIC_BOUNCE },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Natu"),
@@ -1168,10 +1169,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 2,
         .weight = 20,
         .description = COMPOUND_STRING(
-            "It runs up short trees that grow on the\n"
-            "savanna to peck at new shoots.\n"
-            "A Natu's eyes look as if they are\n"
-            "always observing something."),
+            "This Moémon never says a word. She\n"
+            "only stares as if observing something.\n"
+            "She can often be found sitting in trees.\n"
+            ""),
         .pokemonScale = 610,
         .pokemonOffset = 25,
         .trainerScale = 256,
@@ -1208,7 +1209,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_SYNCHRONIZE, ABILITY_EARLY_BIRD, ABILITY_MAGIC_BOUNCE },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Xatu"),
@@ -1218,10 +1219,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 15,
         .weight = 150,
         .description = COMPOUND_STRING(
-            "It has the enigmatic power of foreseeing\n"
-            "the future. Some people in different lands\n"
-            "have long believed that Xatu are\n"
-            "emissaries from another world."),
+            "One eye sees future.\n"
+            "The other into the past.\n"
+            "She speaks in haiku.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 6,
         .trainerScale = 318,
@@ -1258,7 +1259,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_PLUS },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Mareep"),
@@ -1268,10 +1269,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 78,
         .description = COMPOUND_STRING(
-            "Its fluffy wool rubs together and builds\n"
-            "a static charge. The more energy is\n"
-            "charged, the more brightly the lightbulb\n"
-            "at the tip of its tail glows."),
+            "Covered completely in wool, any amount \n"
+            "of movement from her can generate an\n"
+            "amazing amount of electricity.\n"
+            ""),
         .pokemonScale = 379,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -1307,7 +1308,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_PLUS },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Flaaffy"),
@@ -1317,10 +1318,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 8,
         .weight = 133,
         .description = COMPOUND_STRING(
-            "Its fleece quality changes to generate\n"
-            "strong static electricity with a small\n"
-            "amount of wool. The bare, slick parts of its\n"
-            "hide are shielded against electricity."),
+            "Becoming highly adept at storing more\n"
+            "electricity, Flaaffy can charge her dress\n"
+            "and zap her opponents with high voltage.\n"
+            ""),
         .pokemonScale = 372,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -1346,10 +1347,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_SLOW,                   \
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_FIELD },\
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },\
         .bodyColor = BODY_COLOR_YELLOW,                     \
         .speciesName = _("Ampharos"),                       \
-        .natDexNum = NATIONAL_DEX_AMPHAROS,                 \
         .categoryName = _("Light"),                         \
         .height = 14,                                       \
         .weight = 615,                                      \
@@ -1377,11 +1377,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 230,
         .abilities = { ABILITY_STATIC, ABILITY_NONE, ABILITY_PLUS },
         .cryId = CRY_AMPHAROS,
+        .natDexNum = NATIONAL_DEX_AMPHAROS,
         .description = COMPOUND_STRING(
-            "It gives off so much light that it can be\n"
-            "seen even from space. People in the old\n"
-            "days used its light to send signals back\n"
-            "and forth with others far away."),
+            "The staff she wields can power an entire\n"
+            "city for a week on one charge. The light\n"
+            "on Ampharos' tail is used to guide ships.\n"
+            ""),
         FRONT_PIC(Ampharos, 56, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = sAnims_Ampharos,
@@ -1409,10 +1410,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 275,
         .abilities = { ABILITY_MOLD_BREAKER, ABILITY_MOLD_BREAKER, ABILITY_MOLD_BREAKER },
         .cryId = CRY_AMPHAROS_MEGA,
+        .natDexNum = NATIONAL_DEX_AMPHAROS_MEGA,
         .description = COMPOUND_STRING(
             "Massive amounts of energy intensely\n"
             "stimulated Ampharos's cells, apparently\n"
-            "awakening its long-sleeping dragon's\n"
+            "awakening her long-sleeping dragon's\n"
             "blood."),
         FRONT_PIC(AmpharosMega, 64, 64),
         .frontPicYOffset = 0,
@@ -1460,10 +1462,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 2,
         .weight = 20,
         .description = COMPOUND_STRING(
-            "Its tail, which is packed with nutrition,\n"
-            "is very bouncy like a rubber ball. On sunny\n"
-            "days they gather at the edge of water and\n"
-            "splash about for fun."),
+            "An excessively nervous Moémon, Azurill\n"
+            "will burst into tears at even the\n"
+            "slightest upsetting thought.\n"
+            ""),
         .pokemonScale = 603,
         .pokemonOffset = 23,
         .trainerScale = 256,
@@ -1503,7 +1505,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FAIRY },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },
         .abilities = { ABILITY_THICK_FAT, ABILITY_HUGE_POWER, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Marill"),
@@ -1513,10 +1515,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 4,
         .weight = 85,
         .description = COMPOUND_STRING(
-            "Its body is covered with water-repellent\n"
-            "fur. Because of the fur, it can swim\n"
-            "through water at high speed without being\n"
-            "slowed by the water's resistance."),
+            "Her tail is light and buoyant. Marill\n"
+            "spends many days lazily floating along\n"
+            "slow river currents.\n"
+            ""),
         .pokemonScale = 476,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -1555,7 +1557,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FAIRY },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },
         .abilities = { ABILITY_THICK_FAT, ABILITY_HUGE_POWER, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Azumarill"),
@@ -1565,10 +1567,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 8,
         .weight = 285,
         .description = COMPOUND_STRING(
-            "It lives in water virtually all day long.\n"
-            "Its body color and pattern act as\n"
-            "camouflage that makes it tough for\n"
-            "enemies to spot in water."),
+            "Azumarill's bubble tricks and alluring\n"
+            "looks make her a popular Moémon with\n"
+            "young male Trainers.\n"
+            ""),
         .pokemonScale = 448,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -1615,10 +1617,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 5,
         .weight = 150,
         .description = COMPOUND_STRING(
-            "Bonsly prefers an arid atmosphere.\n"
-            "In order to adjust the level of fluids\n"
-            "in its body, it exudes water from its eyes.\n"
-            "This makes it appear to be crying."),
+            "At the slightest provocation, Bonsly may\n"
+            "burst into tears. She does this so often\n"
+            "that she has formed an aversion to water.\n"
+            ""),
         .pokemonScale = 432,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -1654,7 +1656,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MINERAL },
         .abilities = { ABILITY_STURDY, ABILITY_ROCK_HEAD, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Sudowoodo"),
@@ -1664,10 +1666,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 380,
         .description = COMPOUND_STRING(
-            "It mimics a tree to avoid being attacked\n"
-            "by enemies. But since its forelegs\n"
-            "remain green throughout the year, it is\n"
-            "easily identified as a fake in the winter."),
+            "A Moémon that struggles with anxiety. She\n"
+            "can spend days motionless acting as\n"
+            "a tree. She hates getting wet.\n"
+            ""),
         .pokemonScale = 305,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -1705,7 +1707,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_GRASS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_LEAF_GUARD, ABILITY_INFILTRATOR },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Hoppip"),
@@ -1715,10 +1717,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 4,
         .weight = 5,
         .description = COMPOUND_STRING(
-            "This Moémon drifts and floats with the\n"
-            "wind. If it senses the approach of strong\n"
-            "winds, a Hoppip links leaves with others\n"
-            "to prepare against being blown away."),
+            "Even the gentlest breeze can sweep\n"
+            "Hoppip away. She has fun, but her Trainer\n"
+            "rarely does.\n"
+            ""),
         .pokemonScale = 562,
         .pokemonOffset = -7,
         .trainerScale = 256,
@@ -1754,7 +1756,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_GRASS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_LEAF_GUARD, ABILITY_INFILTRATOR },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Skiploom"),
@@ -1764,10 +1766,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 10,
         .description = COMPOUND_STRING(
-            "It blossoms when the temperature rises\n"
-            "above 64 degrees F. Because its flower's\n"
-            "blooming changes with the temperature,\n"
-            "it is sometimes used as a thermometer."),
+            "As much as she likes riding the winds,\n"
+            "Skiploom will hold hands with her friends\n"
+            "to remain grounded.\n"
+            ""),
         .pokemonScale = 387,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -1803,7 +1805,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_GRASS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_LEAF_GUARD, ABILITY_INFILTRATOR },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Jumpluff"),
@@ -1813,10 +1815,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 8,
         .weight = 30,
         .description = COMPOUND_STRING(
-            "Jumpluff ride warm southern winds to\n"
-            "cross the sea and fly to foreign lands.\n"
-            "This Moémon lands when it encounters\n"
-            "cold air while it is floating."),
+            "Jumpluff has learned how to remain\n"
+            "grounded, but her seeds will often be\n"
+            "blown away, causing new gardens to bloom.\n"
+            ""),
         .pokemonScale = 418,
         .pokemonOffset = -4,
         .trainerScale = 256,
@@ -1853,7 +1855,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_RUN_AWAY, ABILITY_PICKUP, ABILITY_SKILL_LINK },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Aipom"),
@@ -1863,10 +1865,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 8,
         .weight = 115,
         .description = COMPOUND_STRING(
-            "Its tail ends with a dexterous, handlike\n"
-            "appendage. However, because it uses the\n"
-            "tail so much, Aipom's real hands have\n"
-            "become rather clumsy."),
+            "After gaining speed on her skateboard,\n"
+            "Aipom uses her tail to perform advanced\n"
+            "tricks.\n"
+            ""),
         .pokemonScale = 363,
         .pokemonOffset = 6,
         .trainerScale = 256,
@@ -1904,7 +1906,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = 100,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_TECHNICIAN, ABILITY_PICKUP, ABILITY_SKILL_LINK },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Ambipom"),
@@ -1914,10 +1916,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 203,
         .description = COMPOUND_STRING(
-            "They live on large trees. Split into two,\n"
-            "the tails are so adept at handling and\n"
-            "doing things, Ambipom rarely uses\n"
-            "its hands now."),
+            "Evolving has made her gain a new tail,\n"
+            "which made using a skateboard difficult.\n"
+            "She adapted perfectly to roller skates.\n"
+            ""),
         .pokemonScale = 282,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -1956,7 +1958,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_GRASS, EGG_GROUP_GRASS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_SOLAR_POWER, ABILITY_EARLY_BIRD },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Sunkern"),
@@ -1966,10 +1968,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 3,
         .weight = 18,
         .description = COMPOUND_STRING(
-            "Sunkern try to minimize movement to\n"
-            "conserve the nutrients they have stored\n"
-            "in their bodies for evolution. They will\n"
-            "not eat, subsisting only on morning dew."),
+            "Though weak, Sunkern is optimistic.\n"
+            "She is often bullied by bird Moémon\n"
+            "like Spearow.\n"
+            ""),
         .pokemonScale = 541,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -2004,7 +2006,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_GRASS, EGG_GROUP_GRASS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_SOLAR_POWER, ABILITY_EARLY_BIRD },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Sunflora"),
@@ -2014,10 +2016,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 8,
         .weight = 85,
         .description = COMPOUND_STRING(
-            "Sunflora convert solar energy into\n"
-            "nutrition. They are highly active in the\n"
-            "warm daytime but suddenly stop moving as\n"
-            "soon as the sun sets."),
+            "Nothing makes Sunflora happier than a\n"
+            "sunny day. She spends hours basking\n"
+            "in it and gardening.\n"
+            ""),
         .pokemonScale = 444,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -2054,7 +2056,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_SPEED_BOOST, ABILITY_COMPOUND_EYES, ABILITY_FRISK },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Yanma"),
@@ -2064,10 +2066,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 380,
         .description = COMPOUND_STRING(
-            "It can see 360 degrees without moving\n"
-            "its eyes. It is a great flier capable of\n"
-            "making sudden stops and turning midair to\n"
-            "quickly chase down targeted prey."),
+            "The flapping of her wings is so powerful\n"
+            "that the shockwaves it makes can shatter\n"
+            "windows a mile away.\n"
+            ""),
         .pokemonScale = 274,
         .pokemonOffset = -1,
         .trainerScale = 256,
@@ -2105,7 +2107,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_SPEED_BOOST, ABILITY_TINTED_LENS, ABILITY_FRISK },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Yanmega"),
@@ -2115,10 +2117,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 19,
         .weight = 515,
         .description = COMPOUND_STRING(
-            "This six-legged Moémon is easily capable\n"
-            "of transporting an adult in flight. It is\n"
-            "adept at biting apart foes while flying\n"
-            "by at high speed."),
+            "The years she spent playing ninja while\n"
+            "she was young prepared her for many\n"
+            "dangerous stealth-based missions.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 1,
         .trainerScale = 326,
@@ -2154,10 +2156,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                                        \
         .friendship = STANDARD_FRIENDSHIP,                                      \
         .growthRate = GROWTH_MEDIUM_FAST,                                       \
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },                    \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },                    \
         .speciesName = _("Wooper"),                                             \
         .cryId = CRY_WOOPER,                                                    \
-        .natDexNum = NATIONAL_DEX_WOOPER,                                       \
         .height = 4,                                                            \
         .pokemonScale = 479,                                                    \
         .pokemonOffset = 21,                                                    \
@@ -2172,13 +2173,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .types = { TYPE_WATER, TYPE_GROUND },
         .abilities = { ABILITY_DAMP, ABILITY_WATER_ABSORB, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_BLUE,
+        .natDexNum = NATIONAL_DEX_WOOPER,
         .categoryName = _("Water Fish"),
         .weight = 85,
         .description = COMPOUND_STRING(
-            "Wooper usually live in water but come\n"
-            "out onto land seeking food occasionally.\n"
-            "On land, they coat their bodies with a\n"
-            "gooey, toxic film."),
+            "Much to the dismay of her Trainer, Wooper\n"
+            "can't resist diving headfirst into mud\n"
+            "puddles, even right after a bath.\n"
+            ""),
         FRONT_PIC(Wooper, 40, 32),
         FRONT_PIC_FEMALE(Wooper, 40, 32),
         .frontPicYOffset = 16,
@@ -2210,7 +2212,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_DAMP, ABILITY_WATER_ABSORB, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Quagsire"),
@@ -2220,10 +2222,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 14,
         .weight = 750,
         .description = COMPOUND_STRING(
-            "A Quagsire hunts by leaving its mouth wide\n"
-            "open in water and waiting for its prey to\n"
-            "blunder in. Because it doesn't move, it\n"
-            "does not get very hungry."),
+            "Despite her energetic youth, Quagsire is\n"
+            "very calm and stoic. She seems to have\n"
+            "command of muddy water.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -2251,13 +2253,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .abilities = { ABILITY_POISON_POINT, ABILITY_WATER_ABSORB, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_BROWN,
         .isPaldeanForm = TRUE,
+        .natDexNum = NATIONAL_DEX_WOOPER_PALDEAN,
         .categoryName = _("Poison Fish"),
         .weight = 110,
         .description = COMPOUND_STRING(
             "After losing a territorial struggle,\n"
             "Wooper began living on land.\n"
             "The Moémon changed over time, developing\n"
-            "a poisonous film to protect its body."),
+            "a poisonous film to protect her body."),
         FRONT_PIC(WooperPaldean, 40, 32),
         .frontPicYOffset = 16,
         .frontAnimFrames = sAnims_WooperPaldean,
@@ -2287,7 +2290,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_POISON_POINT, ABILITY_WATER_ABSORB, ABILITY_UNAWARE },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Clodsire"),
@@ -2299,7 +2302,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .description = COMPOUND_STRING(
             "When attacked, this Moémon will\n"
             "retaliate by sticking thick spines out\n"
-            "from its body. It's a risky move\n"
+            "from her body. It's a risky move\n"
             "that puts everything on the line."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -2337,7 +2340,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_INSOMNIA, ABILITY_SUPER_LUCK, ABILITY_PRANKSTER },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Murkrow"),
@@ -2347,10 +2350,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 5,
         .weight = 21,
         .description = COMPOUND_STRING(
-            "Murkrow were feared as the alleged\n"
-            "bearers of ill fortune. It shows strong\n"
-            "interest in anything that sparkles. It will\n"
-            "even try to steal rings from women."),
+            "Her strange mannerisms cause rumors\n"
+            "that she spreads bad luck. Murkrow loves\n"
+            "to share shiny objects she finds.\n"
+            ""),
         .pokemonScale = 401,
         .pokemonOffset = -8,
         .trainerScale = 256,
@@ -2389,7 +2392,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_INSOMNIA, ABILITY_SUPER_LUCK, ABILITY_MOXIE },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Honchkrow"),
@@ -2399,10 +2402,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 9,
         .weight = 273,
         .description = COMPOUND_STRING(
-            "Becoming active at night, it is known\n"
-            "to swarm with numerous Murkrow in tow.\n"
-            "It is said that it never forgives the\n"
-            "mistakes of its cronies."),
+            "Respected and feared by her underlings,\n"
+            "she won't think twice about punishing\n"
+            "them if they fail at their assigned jobs.\n"
+            ""),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -2439,7 +2442,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 25,
         .friendship = 35,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_AMORPHOUS },
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Misdreavus"),
@@ -2449,10 +2452,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 7,
         .weight = 10,
         .description = COMPOUND_STRING(
-            "A Misdreavus frightens people with a\n"
-            "creepy, sobbing cry. It apparently uses\n"
-            "its red spheres to absorb the fear of foes\n"
-            "as its nutrition."),
+            "Misdreavus guides unsuspecting Trainers\n"
+            "through graveyards with her lamp, solely\n"
+            "so she can play pranks on them.\n"
+            ""),
         .pokemonScale = 407,
         .pokemonOffset = -8,
         .trainerScale = 256,
@@ -2490,7 +2493,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 25,
         .friendship = 35,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_AMORPHOUS },
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Mismagius"),
@@ -2500,10 +2503,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 9,
         .weight = 44,
         .description = COMPOUND_STRING(
-            "Its cries sound like incantations.\n"
-            "Those hearing it are tormented by\n"
-            "headaches and hallucinations.\n"
-            "It appears where you least expect it."),
+            "Her incantations are often heard\n"
+            "from far away. Unfortunately, they\n"
+            "cause headaches and hallucinations\n"
+            "to those who hear them."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -2537,7 +2540,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 118,                                                \
         .evYield_Attack = 1,                                            \
         .evYield_SpAttack = 1,                                          \
-        .genderRatio = MON_GENDERLESS,                                  \
+        .genderRatio = MON_FEMALE,                                  \
         .eggCycles = 40,                                                \
         .friendship = STANDARD_FRIENDSHIP,                              \
         .growthRate = GROWTH_MEDIUM_FAST,                               \
@@ -2837,10 +2840,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 140,
         .description = COMPOUND_STRING(
-            "A Wynaut loves to eat sweet fruits.\n"
-            "It cleverly picks fruits using its earlike\n"
-            "arms. They gather in fruit gardens, drawn\n"
-            "by the fragrance."),
+            "Being blind, she starts to cheer when she\n"
+            "hears sounds of a battle, unaware that\n"
+            "her animal companion is defending her.\n"
+            ""),
         .pokemonScale = 484,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -2877,7 +2880,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_AMORPHOUS },
         .abilities = { ABILITY_SHADOW_TAG, ABILITY_NONE, ABILITY_TELEPATHY },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Wobbuffet"),
@@ -2887,10 +2890,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 13,
         .weight = 285,
         .description = COMPOUND_STRING(
-            "Usually docile, a Wobbuffet strikes back\n"
-            "ferociously if its black tail is attacked.\n"
-            "It makes its lair in caves where it waits\n"
-            "for nightfall."),
+            "Wobbuffet has won every fight she's ever\n"
+            "been in, but has never thrown a punch.\n"
+            "Her tail is rumored to house her brain.\n"
+            ""),
         .pokemonScale = 274,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -2931,7 +2934,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_EARLY_BIRD, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Girafarig"),
@@ -2941,10 +2944,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 15,
         .weight = 415,
         .description = COMPOUND_STRING(
-            "A Girafarig is an herbivore--it eats\n"
-            "grass and tree shoots. While it is eating,\n"
-            "its tail makes chewing and swallowing\n"
-            "motions as if it were also eating."),
+            "The head on Girafarig's tail has a mind\n"
+            "of its own. Luckily, her tail has no\n"
+            "control over her psychic abilities.\n"
+            ""),
         .pokemonScale = 281,
         .pokemonOffset = 1,
         .trainerScale = 256,
@@ -2982,7 +2985,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_CUD_CHEW, ABILITY_ARMOR_TAIL, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Farigiraf"),
@@ -2992,10 +2995,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 32,
         .weight = 1600,
         .description = COMPOUND_STRING(
-            "Now that the brain waves from the\n"
-            "head and tail are synced up, the\n"
-            "psychic power of this Moémon is 10\n"
-            "times stronger than Girafarig's."),
+            "Farigiraf has learned how to use\n"
+            "the psychic energy from the head on\n"
+            "her tail. As such, her psychic\n"
+            "abilities have improved 10-fold."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3032,7 +3035,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Pineco"),
@@ -3042,10 +3045,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 72,
         .description = COMPOUND_STRING(
-            "A Pineco hangs from a tree branch and\n"
-            "waits for prey. While eating, if it is\n"
-            "disturbed by someone shaking its tree, it\n"
-            "falls on the ground and suddenly explodes."),
+            "She spends all day scrounging around in\n"
+            "the woods. The bark she finds is used\n"
+            "to make the sturdy dress she wears.\n"
+            ""),
         .pokemonScale = 445,
         .pokemonOffset = 2,
         .trainerScale = 256,
@@ -3080,7 +3083,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Forretress"),
@@ -3090,10 +3093,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 1258,
         .description = COMPOUND_STRING(
-            "It keeps itself inside its steel shell.\n"
-            "The shell is opened when it is catching\n"
-            "prey, but it is so quick that the shell's\n"
-            "inside cannot be seen."),
+            "She is very protective of the trees in\n"
+            "her domain. Her caltrops keep those\n"
+            "who harm nature away.\n"
+            ""),
         .pokemonScale = 293,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -3129,7 +3132,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_RUN_AWAY, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Dunsparce"),
@@ -3139,10 +3142,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 15,
         .weight = 140,
         .description = COMPOUND_STRING(
-            "Its drill-tipped tail is used to burrow into\n"
-            "the ground backwards. This Moémon is\n"
-            "known to make its nest in complex shapes\n"
-            "deep under the ground."),
+            "This Moémon is so shy that many discount\n"
+            "her existence as mere urban legend. She\n"
+            "apparently has a friendship with Diglett.\n"
+            ""),
         .pokemonScale = 316,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -3179,7 +3182,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                                            \
         .friendship = STANDARD_FRIENDSHIP,                                          \
         .growthRate = GROWTH_MEDIUM_FAST,                                           \
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },                          \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },                          \
         .abilities = { ABILITY_SERENE_GRACE, ABILITY_RUN_AWAY, ABILITY_RATTLED },   \
         .bodyColor = BODY_COLOR_YELLOW,                                             \
         .speciesName = _("Dudunsprce"),                                             \
@@ -3209,10 +3212,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 36,
         .weight = 392,
         .description = COMPOUND_STRING(
-            "This Moémon uses its hard tail to\n"
-            "make its nest by boring holes into\n"
-            "bedrock deep underground. The nest\n"
-            "can reach lengths of over six miles."),
+            "Dudunsparce uses her drill to dig\n"
+            "holes into the ground. She uses these\n"
+            "holes to go meet Diglett even if they're\n"
+            "deep underground."),
     },
 
     [SPECIES_DUDUNSPARCE_THREE_SEGMENT] =
@@ -3221,10 +3224,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 45,
         .weight = 474,
         .description = COMPOUND_STRING(
-            "A recent study uncovered that the\n"
-            "number of segments a\n"
-            "Dudunsparce's body has is determined by the\n"
-            "Moémon's genes."),
+            "Dudunsparce uses her drill to dig\n"
+            "holes into the ground. She uses these\n"
+            "holes to go meet Diglett even if they're\n"
+            "deep underground."),
     },
 #endif //P_GEN_9_CROSS_EVOS
 #endif //P_FAMILY_DUNSPARCE
@@ -3246,7 +3249,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_HYPER_CUTTER, ABILITY_SAND_VEIL, ABILITY_IMMUNITY },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Gligar"),
@@ -3256,10 +3259,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 11,
         .weight = 648,
         .description = COMPOUND_STRING(
-            "It glides without making a single sound.\n"
-            "It grasps the face of its foe using its\n"
-            "hind and large front claws, then stabs\n"
-            "with its poison barb."),
+            "Gligar uses her cape to glide through the\n"
+            "skies on updrafts. She can't fly and will\n"
+            "drop like a rock if her cape gives out.\n"
+            ""),
         .pokemonScale = 350,
         .pokemonOffset = -1,
         .trainerScale = 256,
@@ -3299,7 +3302,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_HYPER_CUTTER, ABILITY_SAND_VEIL, ABILITY_POISON_HEAL },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Gliscor"),
@@ -3309,10 +3312,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 20,
         .weight = 425,
         .description = COMPOUND_STRING(
-            "Gliscor observes prey while hanging\n"
-            "upside down from branches. Its flight is\n"
-            "soundless. When the chance presents\n"
-            "itself, it swoops!"),
+            "She is capable of flying without making a\n"
+            "sound. She'll quietly sip her drink while\n"
+            "dealing with her opponents.\n"
+            ""),
         .pokemonScale = 261,
         .pokemonOffset = 1,
         .trainerScale = 334,
@@ -3354,7 +3357,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },
         .abilities = { ABILITY_INTIMIDATE, ABILITY_RUN_AWAY, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Snubbull"),
@@ -3364,10 +3367,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 78,
         .description = COMPOUND_STRING(
-            "By baring its fangs and making a scary\n"
-            "face, it sends smaller Moémon scurrying\n"
-            "in terror. The Snubbull does seem a\n"
-            "little sad at making its foes flee."),
+            "A Moémon with huge popularity among\n"
+            "female Trainers. Snubbull is incredibly\n"
+            "needy, and gets aggressive when ignored.\n"
+            ""),
         .pokemonScale = 465,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -3406,7 +3409,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FAIRY },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },
         .abilities = { ABILITY_INTIMIDATE, ABILITY_QUICK_FEET, ABILITY_RATTLED },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Granbull"),
@@ -3416,10 +3419,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 14,
         .weight = 487,
         .description = COMPOUND_STRING(
-            "It has a particularly well-developed lower\n"
-            "jaw. The huge fangs are heavy, causing\n"
-            "it to tilt its head. Unless it is startled,\n"
-            "it will not try to bite."),
+            "Granbull's laziness is only matched by\n"
+            "her protectiveness. Between scaring off\n"
+            "intruders, she likes naps on the couch.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -3454,11 +3457,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                                                \
         .friendship = STANDARD_FRIENDSHIP,                                              \
         .growthRate = GROWTH_MEDIUM_FAST,                                               \
-        .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },                          \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_2 },                          \
         .abilities = { ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM, ABILITY_INTIMIDATE },  \
         .speciesName = _("Qwilfish"),                                                   \
         .cryId = CRY_QWILFISH,                                                          \
-        .natDexNum = NATIONAL_DEX_QWILFISH,                                             \
         .categoryName = _("Balloon"),                                                   \
         .height = 5,                                                                    \
         .weight = 39,                                                                   \
@@ -3474,11 +3476,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         QWILFISH_MISC_INFO,
         .types = { TYPE_WATER, TYPE_POISON },
         .bodyColor = BODY_COLOR_GRAY,
+        .natDexNum = NATIONAL_DEX_QWILFISH,
         .description = COMPOUND_STRING(
-            "A Qwilfish uses the pressure of water\n"
-            "it swallows to shoot toxic quills all at\n"
-            "once from all over its body. It finds\n"
-            "swimming to be somewhat challenging."),
+            "When threatened, Qwilfish stands on her\n"
+            "toes, puffs out her chest, and flaps her\n"
+            "arms to appear larger.\n"
+            ""),
         FRONT_PIC(Qwilfish, 40, 48),
         .frontPicYOffset = 8,
         .frontAnimFrames = sAnims_Qwilfish,
@@ -3498,11 +3501,12 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         QWILFISH_MISC_INFO,
         .types = { TYPE_DARK, TYPE_POISON },
         .bodyColor = BODY_COLOR_BLACK,
+        .natDexNum = NATIONAL_DEX_QWILFISH_HISUIAN,
         .description = COMPOUND_STRING(
-            "A form of Qwilfish from the distant past.\n"
-            "Fishers detest this troublesome Moémon\n"
-            "because it sprays poison from its spines,\n"
-            "getting it everywhere."),
+            "Unlike her sister from Johto, Hisuian\n"
+            "Qwilfish has developed poison spikes to\n"
+            "keep foes away. Though she looks sad,\n"
+            "she quite enjoys her prickly personality."),
         FRONT_PIC(QwilfishHisuian, 48, 40),
         .frontPicYOffset = 16,
         .frontAnimFrames = sAnims_QwilfishHisuian,
@@ -3534,7 +3538,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_2 },
         .abilities = { ABILITY_POISON_POINT, ABILITY_SWIFT_SWIM, ABILITY_INTIMIDATE },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Overqwil"),
@@ -3544,10 +3548,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 25,
         .weight = 605,
         .description = COMPOUND_STRING(
-            "Its lancelike spikes and savage\n"
-            "temperament have earned it the\n"
-            "nickname “Sea Fiend”.\n"
-            "It slurps up poison to nourish itself."),
+            "Overqwil's love of her toxic spikes\n"
+            "has grown immensely. She'll sometimes\n"
+            "finds herself taking sips of her own\n"
+            "poison from the tips of her spikes."),
         .pokemonScale = 257,
         .pokemonOffset = 10,
         .trainerScale = 423,
@@ -3587,7 +3591,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
         .abilities = { ABILITY_STURDY, ABILITY_GLUTTONY, ABILITY_CONTRARY },
         .bodyColor = BODY_COLOR_YELLOW,
         .speciesName = _("Shuckle"),
@@ -3597,10 +3601,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 205,
         .description = COMPOUND_STRING(
-            "A Shuckle hides under rocks, keeping its\n"
-            "body concealed inside its shell while\n"
-            "eating stored berries. The berries mix with\n"
-            "its body fluids to become a juice."),
+            "Shuckle lacks any fighting ability, but\n"
+            "has unshakable defense. She makes\n"
+            "juices out of berries for her friends.\n"
+            ""),
         .pokemonScale = 485,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -3628,10 +3632,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 25,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_SLOW,                          \
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG },      \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },      \
         .bodyColor = BODY_COLOR_BLUE,                       \
         .speciesName = _("Heracross"),                      \
-        .natDexNum = NATIONAL_DEX_HERACROSS,                \
         .categoryName = _("Single Horn"),                   \
         .footprint = gMonFootprint_Heracross,               \
         LEARNSETS(Heracross),                               \
@@ -3650,13 +3653,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 175,
         .abilities = { ABILITY_SWARM, ABILITY_GUTS, ABILITY_MOXIE },
         .cryId = CRY_HERACROSS,
+        .natDexNum = NATIONAL_DEX_HERACROSS,
         .height = 15,
         .weight = 540,
         .description = COMPOUND_STRING(
-            "They gather in forests seeking the sweet\n"
-            "sap of trees. It is completely clad in a\n"
-            "steel-hard shell. It is proud of its horn,\n"
-            "which it uses to fling foes."),
+            "Her immense strength and her spear are\n"
+            "used in conjuction to uproot trees. She\n"
+            "can lift a Rhydon above her head.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -3688,13 +3692,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 210,
         .abilities = { ABILITY_SKILL_LINK, ABILITY_SKILL_LINK, ABILITY_SKILL_LINK },
         .cryId = CRY_HERACROSS_MEGA,
+        .natDexNum = NATIONAL_DEX_HERACROSS_MEGA,
         .height = 17,
         .weight = 625,
         .description = COMPOUND_STRING(
-            "A tremendous influx of energy builds it up,\n"
-            "but when Mega Evolution ends, Heracross\n"
-            "is bothered by terrible soreness in its\n"
-            "muscles."),
+            "A tremendous influx of energy has helped\n"
+            "Heracross become far stronger. She can\n"
+            "throw her spear at an incredibly high\n"
+            "speed, able to pierce through trees."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -3729,11 +3734,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                    \
         .friendship = 35,                                   \
         .growthRate = GROWTH_MEDIUM_SLOW,                   \
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },  \
         .noFlip = TRUE,                                     \
         .speciesName = _("Sneasel"),                        \
         .cryId = CRY_SNEASEL,                               \
-        .natDexNum = NATIONAL_DEX_SNEASEL,                  \
         .categoryName = _("Sharp Claw"),                    \
         .height = 9,                                        \
         .pokemonScale = 413,                                \
@@ -3749,12 +3753,13 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .types = { TYPE_DARK, TYPE_ICE },
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_KEEN_EYE, ABILITY_PICKPOCKET },
         .bodyColor = BODY_COLOR_BLACK,
+        .natDexNum = NATIONAL_DEX_SNEASEL,
         .weight = 280,
         .description = COMPOUND_STRING(
-            "A Sneasel scales trees by punching its\n"
-            "hooked claws into the bark. It seeks out\n"
-            "unguarded nests and steals eggs for food\n"
-            "while the parents are away."),
+            "The sharp blades she uses have many\n"
+            "utilities, such as defending herself and\n"
+            "scaling ice shelves in search of eggs.\n"
+            ""),
         FRONT_PIC(Sneasel, 56, 48),
         FRONT_PIC_FEMALE(Sneasel, 56, 48),
         .frontPicYOffset = 8,
@@ -3790,7 +3795,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_PICKPOCKET },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Weavile"),
@@ -3800,10 +3805,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 11,
         .weight = 340,
         .description = COMPOUND_STRING(
-            "They travel in groups of four or five,\n"
-            "leaving signs for one another on trees\n"
-            "and rocks. They bring down their prey\n"
-            "with coordinated attacks."),
+            "She conceals dangerous blades inside\n"
+            "her sleeves. Trainers that approach her\n"
+            "thinking she's cute become her prey.\n"
+            ""),
         .pokemonScale = 320,
         .pokemonOffset = 7,
         .trainerScale = 256,
@@ -3831,9 +3836,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .types = { TYPE_FIGHTING, TYPE_POISON },
         .abilities = { ABILITY_INNER_FOCUS, ABILITY_KEEN_EYE, ABILITY_PICKPOCKET },
         .bodyColor = BODY_COLOR_GRAY,
+        .natDexNum = NATIONAL_DEX_SNEASEL_HISUIAN,
         .weight = 270,
         .description = COMPOUND_STRING(
-            "Its sturdy, curved claws are ideal for\n"
+            "Her sturdy, curved claws are ideal for\n"
             "traversing precipitous cliffs. From the\n"
             "tips of these claws drips a venom that\n"
             "infiltrates the nerves of any prey caught."),
@@ -3870,7 +3876,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_PRESSURE, ABILITY_UNBURDEN, ABILITY_POISON_TOUCH },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Sneasler"),
@@ -3880,9 +3886,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 13,
         .weight = 430,
         .description = COMPOUND_STRING(
-            "Because of its wicked poison and daunting\n"
-            "physical prowess, no other species could\n"
-            "hope to best it on frozen highlands. It\n"
+            "Because of her wicked poison and daunting\n"
+            "physical prowess, no other Moémon could\n"
+            "hope to best her on frozen highlands. She\n"
             "prefers solitude and doesn't form packs."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
@@ -3920,7 +3926,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_PICKUP, ABILITY_QUICK_FEET, ABILITY_HONEY_GATHER },
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = TRUE,
@@ -3931,10 +3937,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 88,
         .description = COMPOUND_STRING(
-            "It licks its palms that are sweetened by\n"
-            "being soaked in honey. A Teddiursa makes\n"
-            "its own honey by blending fruits and pollen\n"
-            "collected by Beedrill."),
+            "Teddiursa has sharp claws, made for\n"
+            "scaling tree for honey. She never uses\n"
+            "them for combat, as she's too fearful.\n"
+            ""),
         .pokemonScale = 455,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -3969,7 +3975,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_GUTS, ABILITY_QUICK_FEET, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Ursaring"),
@@ -3979,10 +3985,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 18,
         .weight = 1258,
         .description = COMPOUND_STRING(
-            "In forests, it is said that there are many\n"
-            "streams and towering trees where an\n"
-            "Ursaring gathers food. It walks through\n"
-            "its forest collecting food every day."),
+            "Despite being a pacifist, her fierceness\n"
+            "when her children are threatened is\n"
+            "unmatched.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -4011,7 +4017,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                    \
         .friendship = STANDARD_FRIENDSHIP,                  \
         .growthRate = GROWTH_MEDIUM_FAST,                   \
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },  \
         .bodyColor = BODY_COLOR_BROWN,                      \
         .speciesName = _("Ursaluna"),                       \
         .cryId = CRY_URSALUNA,                              \
@@ -4035,7 +4041,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 24,
         .weight = 2900,
         .description = COMPOUND_STRING(
-            "Swampy terrain gives Ursaluna its burly\n"
+            "Swampy terrain gives Ursaluna her burly\n"
             "physique and newfound capacity to\n"
             "manipulate peat at will."),
         .pokemonScale = 256,
@@ -4071,9 +4077,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 27,
         .weight = 3330,
         .description = COMPOUND_STRING(
-            "It crossed the sea and drifted\n"
+            "She crossed the sea and drifted\n"
             "ashore in a new land. Surviving in this\n"
-            "place led it to take on a unique\n"
+            "place led Ursaluna to take on a unique\n"
             "appearance and gain special powers."),
         .pokemonScale = 256,
         .pokemonOffset = 3,
@@ -4111,7 +4117,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_AMORPHOUS },
         .abilities = { ABILITY_MAGMA_ARMOR, ABILITY_FLAME_BODY, ABILITY_WEAK_ARMOR },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Slugma"),
@@ -4121,10 +4127,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 7,
         .weight = 350,
         .description = COMPOUND_STRING(
-            "It is a species of Moémon that lives in\n"
-            "volcanic areas. If its body cools, its skin\n"
-            "hardens and immobilizes it. To avoid that,\n"
-            "it sleeps near magma."),
+            "Slugma's mother gives her a Moémon Egg\n"
+            "to care for. She doesn't know what to do,\n"
+            "but it appears to like being around her.\n"
+            ""),
         .pokemonScale = 329,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -4159,7 +4165,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_AMORPHOUS },
         .abilities = { ABILITY_MAGMA_ARMOR, ABILITY_FLAME_BODY, ABILITY_WEAK_ARMOR },
         .bodyColor = BODY_COLOR_RED,
         .noFlip = TRUE,
@@ -4170,10 +4176,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 8,
         .weight = 550,
         .description = COMPOUND_STRING(
-            "The shell on its back is made of hardened\n"
-            "magma. Tens of thousands of years spent\n"
-            "living in volcanic craters have turned\n"
-            "Magcargo's bodies into magma."),
+            "Magcargo's heart burns brighter\n"
+            "than the Sun with motherly love.\n"
+            "Eggs hatch faster in her presence.\n"
+            ""),
         .pokemonScale = 332,
         .pokemonOffset = 15,
         .trainerScale = 256,
@@ -4209,7 +4215,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_SNOW_CLOAK, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Swinub"),
@@ -4219,10 +4225,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 4,
         .weight = 65,
         .description = COMPOUND_STRING(
-            "It roots for food by rubbing its snout\n"
-            "against the ground. Its favorite food is a\n"
-            "mushroom that grows under dried grass.\n"
-            "It occasionally roots out hot springs."),
+            "Her eyesight is very poor, but her nose\n"
+            "is legendary. She hunts truffles that\n"
+            "Moémon like Paras use for cooking.\n"
+            ""),
         .pokemonScale = 324,
         .pokemonOffset = 20,
         .trainerScale = 256,
@@ -4258,7 +4264,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_SNOW_CLOAK, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Piloswine"),
@@ -4268,10 +4274,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 11,
         .weight = 558,
         .description = COMPOUND_STRING(
-            "A Piloswine is covered by a thick coat\n"
-            "of long hair for enduring freezing cold.\n"
-            "It uses its tusks to dig up food that has\n"
-            "been buried under ice."),
+            "Piloswine's blanket keeps her almost\n"
+            "invulnerable to cold. She shares it with\n"
+            "travelers in cold regions.\n"
+            ""),
         .pokemonScale = 306,
         .pokemonOffset = 10,
         .trainerScale = 256,
@@ -4309,7 +4315,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_OBLIVIOUS, ABILITY_SNOW_CLOAK, ABILITY_THICK_FAT },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Mamoswine"),
@@ -4319,10 +4325,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 25,
         .weight = 2910,
         .description = COMPOUND_STRING(
-            "A frozen Mamoswine was dug from ice\n"
-            "dating back 10,000 years. It woke up to\n"
-            "much amazement. This Moémon has been\n"
-            "around for a long, long, long time."),
+            "Mamoswine has become an avid snowboarder.\n"
+            "She has also swapped her blanket for\n"
+            "thick clothing that's easier to move\n"
+            "around in."),
         .pokemonScale = 257,
         .pokemonOffset = 6,
         .trainerScale = 423,
@@ -4355,10 +4361,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                        \
         .friendship = STANDARD_FRIENDSHIP,                      \
         .growthRate = GROWTH_FAST,                              \
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_WATER_3 },  \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_3 },  \
         .speciesName = _("Corsola"),                            \
         .cryId = CRY_CORSOLA,                                   \
-        .natDexNum = NATIONAL_DEX_CORSOLA,                      \
         .categoryName = _("Coral"),                             \
         .height = 6,                                            \
         .pokemonScale = 410,                                    \
@@ -4382,12 +4387,13 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .itemRare = ITEM_LUMINOUS_MOSS,
         .abilities = { ABILITY_HUSTLE, ABILITY_NATURAL_CURE, ABILITY_REGENERATOR },
         .bodyColor = BODY_COLOR_PINK,
+        .natDexNum = NATIONAL_DEX_CORSOLA,
         .weight = 50,
         .description = COMPOUND_STRING(
-            "Corsola live in warm southern seas.\n"
-            "If the sea becomes polluted, the beautiful\n"
-            "coral stalks become discolored and crumble\n"
-            "away in tatters."),
+            "She works hard organizing events to\n"
+            "keep beaches clean. The coral that grows\n"
+            "from her head is extremely valuable.\n"
+            ""),
         FRONT_PIC(Corsola, 48, 40),
         .frontPicYOffset = 12,
         .frontAnimFrames = sAnims_Corsola,
@@ -4413,12 +4419,13 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .types = { TYPE_GHOST, TYPE_GHOST },
         .abilities = { ABILITY_WEAK_ARMOR, ABILITY_NONE, ABILITY_CURSED_BODY },
         .bodyColor = BODY_COLOR_WHITE,
+        .natDexNum = NATIONAL_DEX_CORSOLA_GALARIAN,
         .weight = 5,
         .description = COMPOUND_STRING(
-            "Sudden climate change wiped out this\n"
-            "ancient kind of Corsola. With its branches,\n"
-            "it absorbs others' life-force. It curses\n"
-            "those unaware that kick it by accident."),
+            "A Corsola from a part of the ocean she\n"
+            "failed to protect. She wanders the dead\n"
+            "reef she once called her home.\n"
+            ""),
         FRONT_PIC(CorsolaGalarian, 48, 48),
         .frontPicYOffset = 11,
         .frontAnimFrames = sAnims_CorsolaGalarian,
@@ -4449,20 +4456,29 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_WATER_3 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_3 },
         .abilities = { ABILITY_WEAK_ARMOR, ABILITY_NONE, ABILITY_PERISH_BODY },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Cursola"),
         .cryId = CRY_CURSOLA,
         .natDexNum = NATIONAL_DEX_CURSOLA,
-        .categoryName = _("Coral"),
         .height = 10,
         .weight = 4,
+    #if NSFW_CONTENT == TRUE
+        .categoryName = _("Broken"),
         .description = COMPOUND_STRING(
-            "Its shell is overflowing with its\n"
-            "heightened otherworldly energy. The\n"
-            "ectoplasm serves as protection for this\n"
-            "Moémon's core spirit."),
+            "After wandering the dead reefs for so\n"
+            "long, Cursola's mind fully broke. She\n"
+            "has come to love her surroundings, and\n"
+            "will pleasure herself to the sight."),
+    #else
+        .categoryName = _("Coral"),
+        .description = COMPOUND_STRING(
+            "After wandering the dead reefs for so\n"
+            "long, Cursola learned to harness an\n"
+            "otherworldly energy. She now uses this\n"
+            "power to sink vessels that come close."),
+    #endif
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4499,7 +4515,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_WATER_2 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_2 },
         .abilities = { ABILITY_HUSTLE, ABILITY_SNIPER, ABILITY_MOODY },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Remoraid"),
@@ -4509,10 +4525,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 120,
         .description = COMPOUND_STRING(
-            "A Remoraid uses its abdominal muscles\n"
-            "to forcefully expel swallowed water, then\n"
-            "shoot down flying prey. When evolution\n"
-            "approaches, it travels down rivers."),
+            "She launches concentrated water blasts\n"
+            "from her mouth so precisely, that she can\n"
+            "hit targets 40 meters away.\n"
+            ""),
         .pokemonScale = 316,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -4548,7 +4564,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_WATER_2 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_2 },
         .abilities = { ABILITY_SUCTION_CUPS, ABILITY_SNIPER, ABILITY_MOODY },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Octillery"),
@@ -4558,10 +4574,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 9,
         .weight = 285,
         .description = COMPOUND_STRING(
-            "It ensnares its foe with its suction-\n"
-            "cupped tentacles before delivering the\n"
-            "finishing blow. If the foe turns out to be\n"
-            "too strong, it spews ink to escape."),
+            "Her slick skin allows her to fit into \n"
+            "tight crevices. If in real danger, she\n"
+            "fires ink missiles to blind her foes.\n"
+            ""),
         .pokemonScale = 296,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -4600,7 +4616,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_VITAL_SPIRIT, ABILITY_HUSTLE, ABILITY_INSOMNIA },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Delibird"),
@@ -4610,10 +4626,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 9,
         .weight = 160,
         .description = COMPOUND_STRING(
-            "It carries food bundled up in its tail.\n"
-            "There was a famous explorer who\n"
-            "managed to scale Mt. Everest thanks\n"
-            "to a Delibird sharing its food."),
+            "Every year, children across Johto go to\n"
+            "bed early for the holidays, awaiting the\n"
+            "gifts Delibird will bring.\n"
+            ""),
         .pokemonScale = 293,
         .pokemonOffset = 11,
         .trainerScale = 256,
@@ -4660,10 +4676,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 10,
         .weight = 650,
         .description = COMPOUND_STRING(
-            "When it swims close to the surface\n"
-            "of the ocean, people aboard ships are\n"
-            "able to observe the pattern on its back.\n"
-            "It often swims in a school of Remoraid."),
+            "Although young, Mantyke learns how to\n"
+            "become a teacher like her big sister.\n"
+            "She has a difficult time keeping up,\n"
+            "but enjoys the time spent anyways."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
@@ -4699,7 +4715,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_WATER_1 },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_1 },
         .abilities = { ABILITY_SWIFT_SWIM, ABILITY_WATER_ABSORB, ABILITY_WATER_VEIL },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Mantine"),
@@ -4709,10 +4725,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 21,
         .weight = 2200,
         .description = COMPOUND_STRING(
-            "On sunny days, schools of Mantine can be\n"
-            "seen elegantly leaping over the waves.\n"
-            "It is not bothered by the Remoraid that\n"
-            "hitches rides."),
+            "Mantine runs a school for Remoraid, and\n"
+            "takes great joy in bringing them under\n"
+            "her wing.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 342,
@@ -4750,7 +4766,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 25,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_KEEN_EYE, ABILITY_STURDY, ABILITY_WEAK_ARMOR },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Skarmory"),
@@ -4760,10 +4776,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 17,
         .weight = 505,
         .description = COMPOUND_STRING(
-            "A Moémon that has a body and wings of\n"
-            "steel. People in the past used feathers\n"
-            "fallen from Skarmory to make swords and\n"
-            "knives."),
+            "The only thing sturdier than her armor\n"
+            "is her resolve. Skarmory can spin her\n"
+            "blade fast enough to create Whirlwinds.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 271,
@@ -4799,7 +4815,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_FLASH_FIRE, ABILITY_UNNERVE },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Houndour"),
@@ -4809,10 +4825,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 108,
         .description = COMPOUND_STRING(
-            "Houndour communicate with each other\n"
-            "using a variety of cries to corner their\n"
-            "prey. This Moémon's remarkable teamwork\n"
-            "is simply unparalleled."),
+            "Her appearance gives Trainers an uneasy\n"
+            "feeling. Despite looking villainous, she\n"
+            "is incredibly loyal and kind.\n"
+            ""),
         .pokemonScale = 393,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -4839,10 +4855,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,                                    \
         .friendship = 35,                                   \
         .growthRate = GROWTH_SLOW,                          \
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },  \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },  \
         .bodyColor = BODY_COLOR_BLACK,                      \
         .speciesName = _("Houndoom"),                       \
-        .natDexNum = NATIONAL_DEX_HOUNDOOM,                 \
         .categoryName = _("Dark"),                          \
         .footprint = gMonFootprint_Houndoom,                \
         LEARNSETS(Houndoom),                                \
@@ -4861,13 +4876,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 175,
         .abilities = { ABILITY_EARLY_BIRD, ABILITY_FLASH_FIRE, ABILITY_UNNERVE },
         .cryId = CRY_HOUNDOOM,
+        .natDexNum = NATIONAL_DEX_HOUNDOOM,
         .height = 14,
         .weight = 350,
         .description = COMPOUND_STRING(
-            "In a Houndoom pack, the one with its horns\n"
-            "raked sharply back serves a leadership\n"
-            "role. They choose their leader by fighting\n"
-            "among themselves."),
+            "Houndoom has gained a strange control\n"
+            "over fire. These dark flames can burn\n"
+            "at any temperature she chooses.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -4899,12 +4915,14 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 210,
         .abilities = { ABILITY_SOLAR_POWER, ABILITY_SOLAR_POWER, ABILITY_SOLAR_POWER },
         .cryId = CRY_HOUNDOOM_MEGA,
+        .natDexNum = NATIONAL_DEX_HOUNDOOM_MEGA,
         .height = 19,
         .weight = 495,
         .description = COMPOUND_STRING(
-            "Its red claws and the tips of its tail are\n"
-            "melting from high internal temperatures\n"
-            "that are painful to Houndoom itself.\n"),
+            "Her flames have become energized after\n"
+            "Mega Evolution. These new flames can\n"
+            "very quickly switch between biting cold\n"
+            "and searing heat."),
         .pokemonScale = 256,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -4940,7 +4958,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_PICKUP, ABILITY_NONE, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Phanpy"),
@@ -4950,10 +4968,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 5,
         .weight = 335,
         .description = COMPOUND_STRING(
-            "Phanpy's big ears serve as broad fans.\n"
-            "When it becomes hot, it flaps the ears\n"
-            "busily to cool down. Even the young are\n"
-            "very strong."),
+            "Phanphy doesn't know her own strength.\n"
+            "Even a playful smack from her scarf can\n"
+            "cause large bruises.\n"
+            ""),
         .pokemonScale = 465,
         .pokemonOffset = 21,
         .trainerScale = 256,
@@ -4989,7 +5007,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_STURDY, ABILITY_NONE, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Donphan"),
@@ -4999,10 +5017,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 11,
         .weight = 1200,
         .description = COMPOUND_STRING(
-            "A Donphan is so strong it can easily haul\n"
-            "a dump truck. Its hide has toughened to a\n"
-            "rock-hard state. An ordinary sort of\n"
-            "attack won't even leave a scratch."),
+            "Her strength and heavy footsteps are\n"
+            "well utilized by construction companies,\n"
+            "to help clear paths for roadbuilding.\n"
+            ""),
         .pokemonScale = 313,
         .pokemonOffset = 9,
         .trainerScale = 256,
@@ -5040,7 +5058,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FRISK, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Stantler"),
@@ -5050,10 +5068,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 14,
         .weight = 712,
         .description = COMPOUND_STRING(
-            "Stantler's magnificent antlers were\n"
-            "once traded at high prices as works of art.\n"
-            "As a result, this Moémon was hunted\n"
-            "close to extinction."),
+            "Stantler's antlers have a peculiar curve\n"
+            "that distorts time. Staring too closely\n"
+            "induces loss of consciousness.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -5090,7 +5108,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_INTIMIDATE, ABILITY_FRISK, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Wyrdeer"),
@@ -5101,9 +5119,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .weight = 951,
         .description = COMPOUND_STRING(
             "The black orbs shine with an uncanny light\n"
-            "when it is erecting invisible barriers.\n"
-            "The fur shed from its beard retains heat\n"
-            "and is useful for winter clothing."),
+            "when she is erecting invisible barriers.\n"
+            "Wyrdeer has adapteed to colder climates,\n"
+            "donning a scarf and thick clothing."),
         .pokemonScale = 267,
         .pokemonOffset = 2,
         .trainerScale = 286,
@@ -5140,7 +5158,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_FAST,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_OWN_TEMPO, ABILITY_TECHNICIAN, ABILITY_MOODY },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Smeargle"),
@@ -5150,10 +5168,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 580,
         .description = COMPOUND_STRING(
-            "A Smeargle marks its territory using a\n"
-            "fluid that leaks out from the tip of its\n"
-            "tail. About 5,000 different marks left by\n"
-            "this Moémon have been found."),
+            "With a heart full of passion for drawing,\n"
+            "Smeargle will doodle on any and every\n"
+            "surface when bored.\n"
+            ""),
         .pokemonScale = 287,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -5191,7 +5209,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         .abilities = { ABILITY_THICK_FAT, ABILITY_SCRAPPY, ABILITY_SAP_SIPPER },
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Miltank"),
@@ -5201,10 +5219,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 755,
         .description = COMPOUND_STRING(
-            "It gives over five gallons of milk daily.\n"
-            "Its sweet milk is enjoyed by children and\n"
-            "grown-ups alike. People who can't drink\n"
-            "milk turn it into yogurt and eat it instead."),
+            "A humble milk merchant, Miltank loves\n"
+            "making peoples' days up with her drinks.\n"
+            "Where she gets her milk from is unknown.\n"
+            ""),
         .pokemonScale = 280,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -5237,11 +5255,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 261,
         .evYield_Speed = 2,
         .evYield_SpAttack = 1,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 80,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         #if P_UPDATED_ABILITIES >= GEN_7
             .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_INNER_FOCUS },
         #else
@@ -5256,10 +5274,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 19,
         .weight = 1780,
         .description = COMPOUND_STRING(
-            "Raikou embodies the speed of lightning.\n"
-            "Its roars send shock waves shuddering\n"
-            "through the air and ground as if\n"
-            "lightning bolts were crashing down."),
+            "Reborn as the embodiment of the lightning\n"
+            "that set Brass Tower ablaze, her sword\n"
+            "makes thundercracks when swung.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -5292,11 +5310,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 261,
         .evYield_HP = 1,
         .evYield_Attack = 2,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 80,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },
         #if P_UPDATED_ABILITIES >= GEN_7
             .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_INNER_FOCUS },
         #else
@@ -5311,10 +5329,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 21,
         .weight = 1980,
         .description = COMPOUND_STRING(
-            "Entei embodies the passion of magma.\n"
-            "It is thought to have been born in the\n"
-            "eruption of a volcano. It blasts fire that\n"
-            "consumes all that it touches."),
+            "Entei serves as the avatar of the flames\n"
+            "that scorched Brass Tower. Her sword\n"
+            "burns hot with passion and rage.\n"
+            ""),
         .pokemonScale = 259,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -5347,11 +5365,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 261,
         .evYield_Defense = 1,
         .evYield_SpDefense = 2,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 80,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_1 },
         #if P_UPDATED_ABILITIES >= GEN_7
             .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_INNER_FOCUS },
         #else
@@ -5366,10 +5384,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 20,
         .weight = 1870,
         .description = COMPOUND_STRING(
-            "Suicune embodies the compassion of\n"
-            "a pure spring of water. It runs across\n"
-            "the land with gliding elegance. It has the\n"
-            "power to purify dirty water."),
+            "The soul of the rain that put out the\n"
+            "fires of Brass Tower resides in her. She\n"
+            "moves with the grace of a river.\n"
+            ""),
         .pokemonScale = 269,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -5405,7 +5423,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 40,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_MONSTER },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MONSTER },
         .abilities = { ABILITY_GUTS, ABILITY_NONE, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Larvitar"),
@@ -5415,10 +5433,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 720,
         .description = COMPOUND_STRING(
-            "A Larvitar is born deep under the ground.\n"
-            "It must eat its way through the soil above\n"
-            "and reach the surface for it to see its\n"
-            "parents' faces."),
+            "Larvitar are taught toughness by their\n"
+            "parents at a young age, being subjected\n"
+            "to brutal fights to help defend the pack.\n"
+            ""),
         .pokemonScale = 472,
         .pokemonOffset = 18,
         .trainerScale = 256,
@@ -5453,7 +5471,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 40,
         .friendship = 35,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_MONSTER },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MONSTER },
         .abilities = { ABILITY_SHED_SKIN, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Pupitar"),
@@ -5463,10 +5481,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 12,
         .weight = 1520,
         .description = COMPOUND_STRING(
-            "A Pupitar creates a gas inside its body\n"
-            "that it ejects under compression to propel\n"
-            "itself like a jet. Its body can withstand\n"
-            "a collision with solid steel."),
+            "Hardened by years of fierce fighting,\n"
+            "Pupitar is allowed to rest. After a few\n"
+            "weeks she discards her shell and evolves.\n"
+            ""),
         .pokemonScale = 292,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -5493,11 +5511,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .eggCycles = 40,                                        \
         .friendship = 35,                                       \
         .growthRate = GROWTH_SLOW,                              \
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_MONSTER },  \
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MONSTER },  \
         .bodyColor = BODY_COLOR_GREEN,                          \
         .speciesName = _("Tyranitar"),                          \
-        .natDexNum = NATIONAL_DEX_TYRANITAR,                    \
-        .categoryName = _("Armor"),                             \
         .footprint = gMonFootprint_Tyranitar,                   \
         LEARNSETS(Tyranitar),                                   \
         .formSpeciesIdTable = sTyranitarFormSpeciesIdTable,     \
@@ -5515,13 +5531,15 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 270,
         .abilities = { ABILITY_SAND_STREAM, ABILITY_NONE, ABILITY_UNNERVE },
         .cryId = CRY_TYRANITAR,
+        .natDexNum = NATIONAL_DEX_TYRANITAR,
+        .categoryName = _("Armor"),
         .height = 20,
         .weight = 2020,
         .description = COMPOUND_STRING(
-            "A Tyranitar is so overwhelmingly powerful,\n"
-            "it can bring down a whole mountain to make\n"
-            "its nest. It roams in mountains seeking\n"
-            "new opponents to fight."),
+            "Vicious but loving, her mothering style\n"
+            "will ensure that her young grow to be\n"
+            "as powerful as her.n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -5552,13 +5570,24 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .expYield = 315,
         .abilities = { ABILITY_SAND_STREAM, ABILITY_SAND_STREAM, ABILITY_SAND_STREAM },
         .cryId = CRY_TYRANITAR_MEGA,
+        .natDexNum = NATIONAL_DEX_TYRANITAR_MEGA,
         .height = 25,
         .weight = 2550,
+    #if NSFW_CONTENT == TRUE
+        .categoryName = _("Dominant Sex"),
+        .description = COMPOUND_STRING(
+            "A Tyranitar that has gone into heat is very\n"
+            "dangerous. She will roam mountainous areas\n"
+            "in search of trainers and other Moémon to\n"
+            "defeat in combat and force herself upon."),
+    #else
+        .categoryName = _("Armor"),
         .description = COMPOUND_STRING(
             "Due to the colossal power poured into it,\n"
-            "this Moémon's back split right open. Its\n"
-            "destructive instincts are the only thing\n"
-            "keeping it moving."),
+            "this Moémon's back armor split right open.\n"
+            "It doesn't matter though, as the outflow\n"
+            "of energy destroys anything too close."),
+    #endif
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 345,
@@ -5590,11 +5619,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .catchRate = 3,
         .expYield = 306,
         .evYield_SpDefense = 3,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_MULTISCALE },
         .bodyColor = BODY_COLOR_WHITE,
         .isLegendary = TRUE,
@@ -5605,10 +5634,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 52,
         .weight = 2160,
         .description = COMPOUND_STRING(
-            "Lugia is so powerful even a light\n"
-            "fluttering of its wings can blow apart\n"
-            "houses. As a result, it chooses to live out\n"
-            "of sight deep under the sea."),
+            "Her enormous wings can stir up\n"
+            "hurricanes. Knowing this, she rests at\n"
+            "the bottom of the sea to protect humans.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 721,
@@ -5644,11 +5673,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .evYield_SpDefense = 3,
         .itemCommon = ITEM_SACRED_ASH,
         .itemRare   = ITEM_SACRED_ASH,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 120,
         .friendship = 0,
         .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_REGENERATOR },
         .bodyColor = BODY_COLOR_RED,
         .isLegendary = TRUE,
@@ -5659,10 +5688,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 38,
         .weight = 1990,
         .description = COMPOUND_STRING(
-            "Its feathers--which glow in seven colors\n"
-            "depending on the angle at which they are\n"
-            "struck by light--are thought to bring joy.\n"
-            "It is said to live at the foot of a rainbow."),
+            "Her shimmering feathers create stunning\n"
+            "rainbows. Ho-Oh blesses those pure in\n"
+            "heart with a feather as a gift.\n"
+            ""),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 610,
@@ -5697,11 +5726,11 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .evYield_HP = 3,
         .itemCommon = ITEM_LUM_BERRY,
         .itemRare = ITEM_LUM_BERRY,
-        .genderRatio = MON_GENDERLESS,
+        .genderRatio = MON_FEMALE,
         .eggCycles = 120,
         .friendship = 100,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },
         .abilities = { ABILITY_NATURAL_CURE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
         .isMythical = TRUE,
@@ -5712,10 +5741,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 6,
         .weight = 50,
         .description = COMPOUND_STRING(
-            "This Moémon came from the future by\n"
-            "crossing over time. It is thought that so\n"
-            "long as Celebi appears, a bright and\n"
-            "shining future awaits us."),
+            "Celebi travels time, planting seeds that\n"
+            "eventually become lush forests. After\n"
+            "each trip, she returns to her shrine.\n"
+            ""),
         .pokemonScale = 393,
         .pokemonOffset = -10,
         .trainerScale = 256,

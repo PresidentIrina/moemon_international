@@ -33,121 +33,121 @@ const u8 gArceusPokedexText[] = _(
     "is why Moémon innately desire battle.");
 
 const u8 gGenesectPokedexText[] = _(
-    "Over 300 million years ago, it was\n"
+    "Over 300 million years ago, Genesect was\n"
     "feared as the strongest of hunters.\n"
-    "Team Plasma altered it and attached\n"
-    "a cannon to its back.");
+    "She asked Team Plasma to modify her body\n"
+    "to further her capabilities.");
 
 const u8 gGreninjaPokedexText[] = _(
-    "It appears and vanishes with a ninja's\n"
-    "grace. It toys with its enemies using swift\n"
+    "She appears and vanishes with a ninja's\n"
+    "grace. She toys with its enemies using swift\n"
     "movements, while slicing them with throwing\n"
     "stars made of compressed water.");
 
 const u8 gFurfrouPokedexText[] = _(
-    "Trimming its fluffy fur not only makes\n"
-    "it more elegant but also increases the\n"
-    "swiftness of its movements. These\n"
-    "Pokémon were the guardians of kings.");
+    "Trimming her fluffy fur not only makes\n"
+    "Furfrou more elegant but also increases the\n"
+    "swiftness of her movements. These Moémon\n"
+    "were the guardians of future kings.");
 
 const u8 gXerneasPokedexText[] = _(
     "Legends say that when the horns on\n"
-    "its head shine in seven colors, it is\n"
-    "sharing everlasting life. It slept for a\n"
+    "her head shine in seven colors, she is\n"
+    "sharing everlasting life. She slept for a\n"
     "thousand years in the form of a tree");
 
 const u8 gZygarde50PokedexText[] = _(
-    "It's said to be monitoring the ecosystem\n"
-    "from deep in the caves where it lives.\n"
+    "She's said to be monitoring the ecosystem\n"
+    "from deep in the caves where she lives.\n"
     "There are rumors that even greater power\n"
-    "lies hidden within its cells.");
+    "lies hidden within her cells.");
 
 const u8 gZygarde10PokedexText[] = _(
     "This is Zygarde when about 10% of\n"
-    "its pieces have been assembled. It\n"
-    "leaps at its opponent's chest and\n"
-    "sinks its sharp fangs into them.");
+    "her pieces have been assembled. She\n"
+    "leaps at her opponent's chest and\n"
+    "sinks her sharp fangs into them.");
 
 const u8 gRockruffPokedexText[] = _(
-    "This Pokémon has lived with people since\n"
-    "times long ago. It can sense when its\n"
+    "This Moémon has lived with people since\n"
+    "times long ago. She can sense when her\n"
     "Trainer is in the dumps and will stick\n"
-    "close by its Trainer's side.");
+    "close by her Trainer's side.");
 
 const u8 gSilvallyNormalPokedexText[] = _(
-    "Its trust in its partner awakens it.\n"
-    "This Pokémon is capable of changing its\n"
-    "type by equipping special memories, a\n"
-    "trait that is well displayed in battle.");
+    "Silvally's trust in her partner has\n"
+    "brought her out of her shell. She's\n"
+    "now able to use her collected memories\n"
+    "to improve herself in battle.");
 
 const u8 gSilvallyMemoryPokedexText[] = _(
-    "Upon awakening, its RKS System is\n"
+    "Upon awakening, her RKS System is\n"
     "activated. By employing specific\n"
-    "memories, this Pokémon can adapt its\n"
-    "type to confound its enemies.");
+    "memories, this Moémon can adapt her\n"
+    "type to confound her enemies.");
 
 const u8 gMiniorMeteorPokedexText[] = _(
-    "Originally making its home in the ozone\n"
-    "layer, it hurtles to the ground when the\n"
-    "shell encasing its body grows too heavy.\n"
-    "It was born from mutated nanoparticles.");
+    "Originally making her home in the ozone\n"
+    "layer, she hurtles to the ground when the\n"
+    "shell encasing her body grows too heavy.\n"
+    "She was born from mutated nanoparticles.");
 
 const u8 gMiniorCorePokedexText[] = _(
-    "If its core stays exposed, it will\n"
-    "soon die off. It's possible that it\n"
-    "may survive if it's put into a Poké Ball\n"
-    "quickly enough.");
+    "Minior's shell broke off when she landed\n"
+    "from space. While she is no longer\n"
+    "protected by it, the lack of weight has\n"
+    "vastly increased her speed.");
 
 const u8 gAlcremieVanillaCreamPokedexText[] = _(
-    "When it trusts a Trainer, it will treat\n"
+    "When she trusts a Trainer, she will treat\n"
     "them to berries it's decorated with cream.");
 
 const u8 gAlcremieRubyCreamPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
+    "The moment she evolved, she took on a\n"
     "sweet and tart flavor. This is\n"
-    "because of the way its cells\n"
+    "because of the way Alcremie's cells\n"
     "spontaneously shifted during evolution.");
 
 const u8 gAlcremieMatchaCreamPokedexText[] = _(
-    "The moment it evolved, it took on\n"
+    "The moment she evolved, she took on\n"
     "an aromatic flavor. This is because\n"
-    "of the way its cells spontaneously\n"
+    "of the way Alcremie's cells spontaneously\n"
     "shifted during evolution.");
 
 const u8 gAlcremieMintCreamPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "refreshing flavor. This is because\n"
-    "of the way its cells spontaneously\n"
+    "The moment she evolved, she took on a\n"
+    "refreshing flavor. This is because of the\n"
+    "way Alcremie's cells spontaneously\n"
     "shifted during evolution.");
 
 const u8 gAlcremieLemonCreamPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "sour flavor. This is because of the\n"
-    "way its cells spontaneously shifted\n"
+    "The moment she evolved, she took on a\n"
+    "sour flavor. This is because of the way\n"
+    "Alcremie's cells spontaneously shifted\n"
     "during evolution.");
 
 const u8 gAlcremieSaltedCreamPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "salty flavor. This is because of the\n"
-    "way its cells spontaneously shifted\n"
+    "The moment she evolved, she took on a\n"
+    "salty flavor. This is because of the way\n"
+    "Alcremie's cells spontaneously shifted\n"
     "during evolution.");
 
 const u8 gAlcremieRubySwirlPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "mixed flavor. This is because of the\n"
-    "way its cells spontaneously shifted\n"
+    "The moment she evolved, she took on a\n"
+    "mixed flavor. This is because of the way\n"
+    "Alcremie's cells spontaneously shifted\n"
     "during evolution.");
 
 const u8 gAlcremieCaramelSwirlPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "bitter flavor. This is because of\n"
-    "the way its cells spontaneously\n"
+    "The moment she evolved, she took on a\n"
+    "bitter flavor. This is because of the\n"
+    "way Alcremie's cells spontaneously\n"
     "shifted during evolution.");
 
 const u8 gAlcremieRainbowSwirlPokedexText[] = _(
-    "The moment it evolved, it took on a\n"
-    "complex flavor. This is because of\n"
-    "the way its cells spontaneously\n"
+    "The moment she evolved, she took on a\n"
+    "complex flavor. This is because of the\n"
+    "way Alcremie's cells spontaneously\n"
     "shifted during evolution.");
 
 const u8 gToxtricityGigantamaxPokedexText[] = _(
@@ -340,6 +340,66 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .allPerfectIVs = TRUE,
     },
     */
+
+
+
+ //MOEMON INTERNATIONAL SPECIES TEMPLATE
+ /*
+    [SPECIES_] =
+    {
+        .baseHP        = 0,
+        .baseAttack    = 0,
+        .baseDefense   = 0,
+        .baseSpeed     = 0,
+        .baseSpAttack  = 0,
+        .baseSpDefense = 0,
+        .types = { TYPE_TYPE, TYPE_TYPE },
+        .catchRate = 65,
+        .expYield = 200,
+        .evYield_HP = 0,
+        .evYield_Attack = 0,
+        .evYield_Defense = 0,
+        .evYield_Speed = 0,
+        .evYield_SpDefense = 0,
+        .evYield_SpAttack = 0,
+        .itemCommon = ITEM_ITEM,
+        .itemRare = ITEM_ITEM,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_EGG_GROUP, EGG_GROUP_EGG_GROUP },
+        .abilities = { ABILITY_ABILITY, ABILITY_ABILITY, ABILITY_ABILITY },
+        .bodyColor = BODY_COLOR_COLOR,
+        .speciesName = _("Species"),
+        .cryId = CRY_SPECIES,
+        .natDexNum = NATIONAL_DEX_SPECIES,
+        .categoryName = _("Category"),
+        .height = 18,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "\n"
+            "\n"
+            "\n"
+            ""),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 312,
+        .trainerOffset = 1,
+        FRONT_PIC(Species, 64, 56),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_Species,
+        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
+        .enemyMonElevation = 0,
+        BACK_PIC(Species, 64, 48),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        PALETTES(Species),
+        ICON(Species, 0),
+        .footprint = gMonFootprint_Species,
+        LEARNSETS(Species),
+    },
+ */
  //Moemon International
     [SPECIES_VALKYRIE] =
     {
@@ -364,7 +424,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_BEYOND_MACH_THREE, ABILITY_NONE},
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Valkyrie"),
-        .cryId = CRY_VALKYRIE,
+        .cryId = CRY_SKARMORY,
         .natDexNum = NATIONAL_DEX_VALKYRIE,
         .categoryName = _("Fast Bomber"),
         .height = 19,
@@ -416,7 +476,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_ANTI_AIRCRAFT, ABILITY_NONE},
         .bodyColor = BODY_COLOR_GRAY,
         .speciesName = _("Flak 88"),
-        .cryId = CRY_FLAK88,
+        .cryId = CRY_BASTIODON,
         .natDexNum = NATIONAL_DEX_FLAK88,
         .categoryName = _("AA Gun"),
         .height = 17,
@@ -468,7 +528,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_NAVAL_SUPREMACY, ABILITY_NONE},
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Ryuuhou"),
-        .cryId = CRY_RYUUHOU,
+        .cryId = CRY_EMPOLEON,
         .natDexNum = NATIONAL_DEX_RYUUHOU,
         .categoryName = _("Carrier"),
         .height = 18,
@@ -510,11 +570,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .expYield = 180,
         .evYield_SpDefense = 2,
         .itemRare = ITEM_POISON_BARB,
-        .genderRatio = PERCENT_FEMALE(95),
+        .genderRatio = MON_FEMALE,
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_WATER_3, EGG_GROUP_WATER_3 },
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_3 },
         .abilities = { ABILITY_STAKEOUT, ABILITY_LIQUID_OOZE, ABILITY_CLEAR_BODY },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Tentacruel"),
@@ -556,15 +616,43 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .types = { TYPE_BUG, TYPE_STEEL},
         .catchRate = 75,
         .expYield = 173,
-        .evYield_Attack    = 2,
+        .evYield_Speed = 2,
+        .itemCommon = ITEM_WATER_GEM,
+        .itemRare = ITEM_WATER_GEM,
         .genderRatio = MON_FEMALE,
-        .eggCycles = 15,
+        .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
-        .growthRate = GROWTH_MEDIUM_FAST,
-        .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG},
-        .abilities = {ABILITY_SWIFT_SWIM, ABILITY_SHELL_ARMOR, ABILITY_OVERCOAT},
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_BUG },
+        .abilities = { ABILITY_SWIFT_SWIM, ABILITY_SHELL_ARMOR, ABILITY_OVERCOAT },
         .bodyColor = BODY_COLOR_GRAY,
-        .noFlip = FALSE,
+        .speciesName = _("Escavalier"),
+        .cryId = CRY_ESCAVALIER,
+        .natDexNum = NATIONAL_DEX_ESCAVALIERSUMMER,
+        .categoryName = _("WTR Cavalry"),
+        .height = 18,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "Escavalier in her swimsuit. Without her\n"
+            "heavy armor, she's able to full enjoy\n"
+            "swimming.\n"
+            ""),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 312,
+        .trainerOffset = 1,
+        FRONT_PIC(EscavalierSummer, 64, 56),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_EscavalierSummer,
+        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
+        .enemyMonElevation = 0,
+        BACK_PIC(EscavalierSummer, 64, 48),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        PALETTES(EscavalierSummer),
+        ICON(EscavalierSummer, 0),
+        .footprint = gMonFootprint_Escavalier,
+        LEARNSETS(EscavalierSummer),
     },
 
     [SPECIES_GARCHOMPBUNNY] =
@@ -579,14 +667,42 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .catchRate = 45,
         .expYield = 270,
         .evYield_Attack    = 3,
+        .itemCommon = ITEM_DRAGON_GEM,
+        .itemRare = ITEM_DRAGON_GEM,
         .genderRatio = MON_FEMALE,
-        .eggCycles = 40,
+        .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_DRAGON},
-        .abilities = {ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN},
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_DRAGON },
+        .abilities = { ABILITY_SAND_VEIL, ABILITY_NONE, ABILITY_ROUGH_SKIN },
         .bodyColor = BODY_COLOR_BLUE,
-        .noFlip = FALSE,
+        .speciesName = _("Garchomp"),
+        .cryId = CRY_GARCHOMP,
+        .natDexNum = NATIONAL_DEX_GARCHOMPBUNNY,
+        .categoryName = _("Mach Bunny"),
+        .height = 19,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "Garchomp in her special Bunny outfit.\n"
+            "She's able to jump higher and move even\n"
+            "faster than her normal counterpart.\n"
+            ""),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 312,
+        .trainerOffset = 1,
+        FRONT_PIC(GarchompBunny, 64, 56),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_GarchompBunny,
+        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
+        .enemyMonElevation = 0,
+        BACK_PIC(GarchompBunny, 64, 48),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        PALETTES(GarchompBunny),
+        ICON(GarchompBunny, 0),
+        .footprint = gMonFootprint_Garchomp,
+        LEARNSETS(GarchompBunny),
     },
 
     [SPECIES_COBALIONBUNNY] =
@@ -601,15 +717,42 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .catchRate = 3,
         .expYield = 261,
         .evYield_Speed   = 3,
+        .itemCommon = ITEM_STEEL_GEM,
+        .itemRare = ITEM_STEEL_GEM,
         .genderRatio = MON_FEMALE,
-        .eggCycles = 80,
-        .friendship = 35,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
-        .abilities = {ABILITY_SPEED_BOOST, ABILITY_NONE},
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MINERAL },
+        .abilities = { ABILITY_SPEED_BOOST, ABILITY_NONE, ABILITY_JUSTIFIED },
         .bodyColor = BODY_COLOR_BLUE,
-        .noFlip = FALSE,
-        .flags = SPECIES_FLAG_LEGENDARY,
+        .speciesName = _("Cobalion"),
+        .cryId = CRY_COBALION,
+        .natDexNum = NATIONAL_DEX_COBALIONBUNNY,
+        .categoryName = _("STL Bunny"),
+        .height = 18,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "Cobalion in her special Bunny outfit.\n"
+            "She's able to jump higher and move even\n"
+            "faster than her normal counterpart.\n"
+            ""),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 312,
+        .trainerOffset = 1,
+        FRONT_PIC(CobalionBunny, 64, 56),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_CobalionBunny,
+        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
+        .enemyMonElevation = 0,
+        BACK_PIC(CobalionBunny, 64, 48),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        PALETTES(CobalionBunny),
+        ICON(CobalionBunny, 0),
+        .footprint = gMonFootprint_Cobalion,
+        LEARNSETS(CobalionBunny),
     },
 
     [SPECIES_TERRAKIONBUNNY] =
@@ -624,15 +767,42 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .catchRate = 3,
         .expYield = 261,
         .evYield_Speed    = 3,
+        .itemCommon = ITEM_ROCK_GEM,
+        .itemRare = ITEM_ROCK_GEM,
         .genderRatio = MON_FEMALE,
-        .eggCycles = 80,
-        .friendship = 35,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
-        .abilities = {ABILITY_SPEED_BOOST, ABILITY_NONE},
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MINERAL },
+        .abilities = { ABILITY_SPEED_BOOST, ABILITY_NONE, ABILITY_JUSTIFIED },
         .bodyColor = BODY_COLOR_GRAY,
-        .noFlip = FALSE,
-        .flags = SPECIES_FLAG_LEGENDARY,
+        .speciesName = _("Terrakion"),
+        .cryId = CRY_TERRAKION,
+        .natDexNum = NATIONAL_DEX_TERRAKIONBUNNY,
+        .categoryName = _("RCK Bunny"),
+        .height = 18,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "Terrakion in her special Bunny outfit.\n"
+            "She's able to jump higher and move even\n"
+            "faster than her normal counterpart.\n"
+            ""),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 312,
+        .trainerOffset = 1,
+        FRONT_PIC(TerrakionBunny, 64, 56),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_TerrakionBunny,
+        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
+        .enemyMonElevation = 0,
+        BACK_PIC(TerrakionBunny, 64, 48),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        PALETTES(TerrakionBunny),
+        ICON(TerrakionBunny, 0),
+        .footprint = gMonFootprint_Terrakion,
+        LEARNSETS(TerrakionBunny),
     },
 
     [SPECIES_VIRIZIONBUNNY] =
@@ -647,14 +817,41 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .catchRate = 3,
         .expYield = 261,
         .evYield_Speed = 3,
+        .itemCommon = ITEM_GRASS_GEM,
+        .itemRare = ITEM_GRASS_GEM,
         .genderRatio = MON_FEMALE,
-        .eggCycles = 80,
-        .friendship = 35,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
-        .abilities = {ABILITY_SPEED_BOOST, ABILITY_NONE},
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
+        .abilities = { ABILITY_SPEED_BOOST, ABILITY_NONE, ABILITY_JUSTIFIED },
         .bodyColor = BODY_COLOR_GREEN,
-        .noFlip = FALSE,
-        .flags = SPECIES_FLAG_LEGENDARY,
+        .speciesName = _("Virizion"),
+        .cryId = CRY_VIRIZION,
+        .natDexNum = NATIONAL_DEX_VIRIZIONBUNNY,
+        .categoryName = _("GRS Bunny"),
+        .height = 18,
+        .weight = 550,
+        .description = COMPOUND_STRING(
+            "Virizion in her special Bunny outfit.\n"
+            "She's able to jump higher and move even\n"
+            "faster than her normal counterpart.\n"
+            ""),
+        .pokemonScale = 256,
+        .pokemonOffset = 0,
+        .trainerScale = 312,
+        .trainerOffset = 1,
+        FRONT_PIC(VirizionBunny, 64, 56),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_VirizionBunny,
+        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
+        .enemyMonElevation = 0,
+        BACK_PIC(VirizionBunny, 64, 48),
+        .backPicYOffset = 11,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        PALETTES(VirizionBunny),
+        ICON(VirizionBunny, 0),
+        .footprint = gMonFootprint_Virizion,
+        LEARNSETS(VirizionBunny),
     },
 };

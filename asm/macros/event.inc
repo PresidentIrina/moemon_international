@@ -2026,6 +2026,7 @@
 	trainerbattle_no_intro \trainer2, NULL
 	.endm
 
+	@ qol field moves
 	@ Checks if any Pokémon in the party can learn a specific HM.
 	@ If so, VAR_RESULT is set to the
 	@ (zero-indexed) slot number of the first Pokemon that knows the move. If not, VAR_RESULT is set to PARTY_SIZE.
@@ -2034,5 +2035,3 @@
 	.byte 0xe3
 	.2byte \tmhm
 	.endm
-
-    @ End qol_field_moves

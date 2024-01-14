@@ -4676,7 +4676,8 @@ s8 GetMovePriority(u32 battler, u16 move)
     if (gBattleStruct->dynamax.usingMaxMove[battler] && gBattleMoves[move].split == SPLIT_STATUS)
         return gBattleMoves[MOVE_MAX_GUARD].priority;
 
-    if (ability == ABILITY_GALE_WINGS
+    //Moemon International
+    if ((ability == ABILITY_GALE_WINGS || ability == ABILITY_BEYOND_MACH_THREE)
         && (B_GALE_WINGS < GEN_7 || BATTLER_MAX_HP(battler))
         && gBattleMoves[move].type == TYPE_FLYING)
     {

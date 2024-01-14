@@ -1318,20 +1318,22 @@ u8 GetDaycareCompatibilityScore(struct DayCare *daycare)
     if (eggGroups[0][0] == EGG_GROUP_DITTO || eggGroups[1][0] == EGG_GROUP_DITTO)
     {
         if (trainerIds[0] == trainerIds[1])
-            return PARENTS_LOW_COMPATIBILITY;
-
-        return PARENTS_MED_COMPATIBILITY;
+            return PARENTS_MAX_COMPATIBILITY;
+        // Moemon International: Using Ditto For Breeding is Max Compatibility Always
+        return PARENTS_MAX_COMPATIBILITY;
     }
     // neither parent is Ditto
     else
     {
+    // Moemon International: Allow Breeding Between Female Moemon
+    /*
         if (genders[0] == genders[1])
             return PARENTS_INCOMPATIBLE;
         if (genders[0] == MON_GENDERLESS || genders[1] == MON_GENDERLESS)
             return PARENTS_INCOMPATIBLE;
         if (!EggGroupsOverlap(eggGroups[0], eggGroups[1]))
             return PARENTS_INCOMPATIBLE;
-
+    */
         if (species[0] == species[1])
         {
             if (trainerIds[0] == trainerIds[1])
@@ -1574,16 +1576,17 @@ void ChooseSendDaycareMon(void)
 
 static u8 ModifyBreedingScoreForOvalCharm(u8 score)
 {
+    // Moemon International: Breeding Item Gauranteed Effect
     if (CheckBagHasItem(ITEM_OVAL_CHARM, 1))
     {
         switch (score)
         {
         case 20:
-            return 40;
+            return 100;
         case 50:
-            return 80;
+            return 100;
         case 70:
-            return 88;
+            return 100;
         }
     }
 

@@ -5078,6 +5078,11 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             u8 statAmount = 1;
             switch (gLastUsedAbility)
             {
+            //Moemon International
+            case ABILITY_NAVAL_SUPREMACY:
+                if (moveType == TYPE_WATER)
+                    effect = 2, statId = STAT_SPEED, statId = STAT_SPATK, statId = STAT_ATK, statId = STAT_SPDEF, statId = STAT_DEF;
+                break;
             case ABILITY_VOLT_ABSORB:
                 if (moveType == TYPE_ELECTRIC)
                     effect = 1;
@@ -10003,6 +10008,10 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
             RecordAbilityBattle(battlerAtk, ABILITY_SCRAPPY);
     }
 
+    //Moemon International
+    if (defType == TYPE_FLYING && GetBattlerAbility(battlerAtk) == ABILITY_ANTI_AIRCRAFT)
+        mod = UQ_4_12(1.5);
+    
     if (moveType == TYPE_PSYCHIC && defType == TYPE_DARK && gStatuses3[battlerDef] & STATUS3_MIRACLE_EYED && mod == UQ_4_12(0.0))
         mod = UQ_4_12(1.0);
     if (gBattleMoves[move].effect == EFFECT_FREEZE_DRY && defType == TYPE_WATER)

@@ -1159,11 +1159,11 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     #endif
     const u8 gMonFootprint_Tentacruel[] = INCBIN_U8("graphics/pokemon/tentacruel/footprint.1bpp");
 
-    const u32 gMonFrontPic_TentacruelAqua[] = INCBIN_U32("graphics/pokemon/tentacruel/aqua/anim_front.4bpp.lz");
-    const u32 gMonBackPic_TentacruelAqua[] = INCBIN_U32("graphics/pokemon/tentacruel/aqua/back.4bpp.lz");
-    const u32 gMonPalette_TentacruelAqua[] = INCBIN_U32("graphics/pokemon/tentacruel/aqua/normal.gbapal.lz");
-    const u32 gMonShinyPalette_TentacruelAqua[] = INCBIN_U32("graphics/pokemon/tentacruel/aqua/shiny.gbapal.lz");
-    const u8 gMonIcon_TentacruelAqua[] = INCBIN_U8("graphics/pokemon/tentacruel/aqua/icon.4bpp");
+    const u32 gMonFrontPic_Tentacruel_Aqua[] = INCBIN_U32("graphics/pokemon/tentacruel/aqua/anim_front.4bpp.lz");
+    const u32 gMonBackPic_Tentacruel_Aqua[] = INCBIN_U32("graphics/pokemon/tentacruel/aqua/back.4bpp.lz");
+    const u32 gMonPalette_Tentacruel_Aqua[] = INCBIN_U32("graphics/pokemon/tentacruel/aqua/normal.gbapal.lz");
+    const u32 gMonShinyPalette_Tentacruel_Aqua[] = INCBIN_U32("graphics/pokemon/tentacruel/aqua/shiny.gbapal.lz");
+    const u8 gMonIcon_Tentacruel_Aqua[] = INCBIN_U8("graphics/pokemon/tentacruel/aqua/icon.4bpp");
 #endif //P_FAMILY_TENTACOOL
 
 #if P_FAMILY_GEODUDE
@@ -1833,6 +1833,7 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u32 gMonBackPic_Tangrowth[] = INCBIN_U32("graphics/pokemon/tangrowth/nsfw/back.4bpp.lz");
     const u32 gMonPalette_Tangrowth[] = INCBIN_U32("graphics/pokemon/tangrowth/nsfw/normal.gbapal.lz");
     const u32 gMonShinyPalette_Tangrowth[] = INCBIN_U32("graphics/pokemon/tangrowth/nsfw/shiny.gbapal.lz");
+    const u8 gMonIcon_Tangrowth[] = INCBIN_U8("graphics/pokemon/tangrowth/nsfw/icon.4bpp");
     const u32 gMonFrontPic_TangrowthF[] = INCBIN_U32("graphics/pokemon/tangrowth/nsfw/anim_frontf.4bpp.lz");
     #else
     const u32 gMonFrontPic_Tangrowth[] = INCBIN_U32("graphics/pokemon/tangrowth/anim_front.4bpp.lz");
@@ -3771,6 +3772,14 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u8 gMonIcon_Grovyle[] = INCBIN_U8("graphics/pokemon/grovyle/icon.4bpp");
     const u8 gMonFootprint_Grovyle[] = INCBIN_U8("graphics/pokemon/grovyle/footprint.1bpp");
 
+    const u32 gMonFrontPic_Sceptile[] = INCBIN_U32("graphics/pokemon/sceptile/anim_front.4bpp.lz");
+    const u32 gMonPalette_Sceptile[] = INCBIN_U32("graphics/pokemon/sceptile/normal.gbapal.lz");
+    const u32 gMonBackPic_Sceptile[] = INCBIN_U32("graphics/pokemon/sceptile/back.4bpp.lz");
+    const u32 gMonShinyPalette_Sceptile[] = INCBIN_U32("graphics/pokemon/sceptile/shiny.gbapal.lz");
+    const u8 gMonIcon_Sceptile[] = INCBIN_U8("graphics/pokemon/sceptile/icon.4bpp");
+    const u8 gMonFootprint_Sceptile[] = INCBIN_U8("graphics/pokemon/sceptile/footprint.1bpp");
+
+#if P_MEGA_EVOLUTIONS
     #if NSFW_CONTENT == TRUE
     const u32 gMonFrontPic_SceptileMega[] = INCBIN_U32("graphics/pokemon/sceptile/mega/nsfw/front.4bpp.lz");
     const u32 gMonBackPic_SceptileMega[] = INCBIN_U32("graphics/pokemon/sceptile/mega/nsfw/back.4bpp.lz");
@@ -3778,20 +3787,12 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u32 gMonShinyPalette_SceptileMega[] = INCBIN_U32("graphics/pokemon/sceptile/mega/nsfw/shiny.gbapal.lz");
     const u8 gMonIcon_SceptileMega[] = INCBIN_U8("graphics/pokemon/sceptile/mega/nsfw/icon.4bpp");
     #else
-    const u32 gMonFrontPic_Sceptile[] = INCBIN_U32("graphics/pokemon/sceptile/anim_front.4bpp.lz");
-    const u32 gMonPalette_Sceptile[] = INCBIN_U32("graphics/pokemon/sceptile/normal.gbapal.lz");
-    const u32 gMonBackPic_Sceptile[] = INCBIN_U32("graphics/pokemon/sceptile/back.4bpp.lz");
-    const u32 gMonShinyPalette_Sceptile[] = INCBIN_U32("graphics/pokemon/sceptile/shiny.gbapal.lz");
-    const u8 gMonIcon_Sceptile[] = INCBIN_U8("graphics/pokemon/sceptile/icon.4bpp");
-    #endif
-    const u8 gMonFootprint_Sceptile[] = INCBIN_U8("graphics/pokemon/sceptile/footprint.1bpp");
-
-#if P_MEGA_EVOLUTIONS
     const u32 gMonFrontPic_SceptileMega[] = INCBIN_U32("graphics/pokemon/sceptile/mega/front.4bpp.lz");
     const u32 gMonPalette_SceptileMega[] = INCBIN_U32("graphics/pokemon/sceptile/mega/normal.gbapal.lz");
     const u32 gMonBackPic_SceptileMega[] = INCBIN_U32("graphics/pokemon/sceptile/mega/back.4bpp.lz");
     const u32 gMonShinyPalette_SceptileMega[] = INCBIN_U32("graphics/pokemon/sceptile/mega/shiny.gbapal.lz");
     const u8 gMonIcon_SceptileMega[] = INCBIN_U8("graphics/pokemon/sceptile/mega/icon.4bpp");
+    #endif
 #endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_TREECKO
 
@@ -6757,11 +6758,11 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
 
 #if P_FAMILY_BASCULIN
     #if NSFW_CONTENT == TRUE
-    const u32 gMonFrontPic_Basculin[] = INCBIN_U32("graphics/pokemon/basculin/nsfw/anim_front.4bpp.lz");
-    const u32 gMonBackPic_Basculin[] = INCBIN_U32("graphics/pokemon/basculin/nsfw/back.4bpp.lz");
-    const u32 gMonPalette_Basculin[] = INCBIN_U32("graphics/pokemon/basculin/nsfw/normal.gbapal.lz");
-    const u32 gMonShinyPalette_Basculin[] = INCBIN_U32("graphics/pokemon/basculin/nsfw/shiny.gbapal.lz");
-    const u8 gMonIcon_Basculin[] = INCBIN_U8("graphics/pokemon/basculin/nsfw/icon.4bpp");
+    const u32 gMonFrontPic_BasculinRedStriped[] = INCBIN_U32("graphics/pokemon/basculin/nsfw/anim_front.4bpp.lz");
+    const u32 gMonBackPic_BasculinRedStriped[] = INCBIN_U32("graphics/pokemon/basculin/nsfw/back.4bpp.lz");
+    const u32 gMonPalette_BasculinRedStriped[] = INCBIN_U32("graphics/pokemon/basculin/nsfw/normal.gbapal.lz");
+    const u32 gMonShinyPalette_BasculinRedStriped[] = INCBIN_U32("graphics/pokemon/basculin/nsfw/shiny.gbapal.lz");
+    const u8 gMonIcon_BasculinRedStriped[] = INCBIN_U8("graphics/pokemon/basculin/nsfw/icon.4bpp");
     #else
     const u32 gMonFrontPic_BasculinRedStriped[] = INCBIN_U32("graphics/pokemon/basculin/anim_front.4bpp.lz");
     const u32 gMonPalette_BasculinRedStriped[] = INCBIN_U32("graphics/pokemon/basculin/normal.gbapal.lz");
@@ -7823,11 +7824,11 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
 
 #if P_FAMILY_TORNADUS
     #if NSFW_CONTENT == TRUE
-    const u32 gMonFrontPic_Tornadus[] = INCBIN_U32("graphics/pokemon/tornadus/nsfw/anim_front.4bpp.lz");
-    const u32 gMonBackPic_Tornadus[] = INCBIN_U32("graphics/pokemon/tornadus/nsfw/back.4bpp.lz");
-    const u32 gMonPalette_Tornadus[] = INCBIN_U32("graphics/pokemon/tornadus/nsfw/normal.gbapal.lz");
-    const u32 gMonShinyPalette_Tornadus[] = INCBIN_U32("graphics/pokemon/tornadus/nsfw/shiny.gbapal.lz");
-    const u8 gMonIcon_Tornadus[] = INCBIN_U8("graphics/pokemon/tornadus/nsfw/icon.4bpp");
+    const u32 gMonFrontPic_TornadusIncarnate[] = INCBIN_U32("graphics/pokemon/tornadus/nsfw/anim_front.4bpp.lz");
+    const u32 gMonBackPic_TornadusIncarnate[] = INCBIN_U32("graphics/pokemon/tornadus/nsfw/back.4bpp.lz");
+    const u32 gMonPalette_TornadusIncarnate[] = INCBIN_U32("graphics/pokemon/tornadus/nsfw/normal.gbapal.lz");
+    const u32 gMonShinyPalette_TornadusIncarnate[] = INCBIN_U32("graphics/pokemon/tornadus/nsfw/shiny.gbapal.lz");
+    const u8 gMonIcon_TornadusIncarnate[] = INCBIN_U8("graphics/pokemon/tornadus/nsfw/icon.4bpp");
     #else
     const u32 gMonFrontPic_TornadusIncarnate[] = INCBIN_U32("graphics/pokemon/tornadus/anim_front.4bpp.lz");
     const u32 gMonPalette_TornadusIncarnate[] = INCBIN_U32("graphics/pokemon/tornadus/normal.gbapal.lz");
@@ -7846,11 +7847,11 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
 
 #if P_FAMILY_THUNDURUS
     #if NSFW_CONTENT == TRUE
-    const u32 gMonFrontPic_Thundurus[] = INCBIN_U32("graphics/pokemon/thundurus/nsfw/anim_front.4bpp.lz");
-    const u32 gMonBackPic_Thundurus[] = INCBIN_U32("graphics/pokemon/thundurus/nsfw/back.4bpp.lz");
-    const u32 gMonPalette_Thundurus[] = INCBIN_U32("graphics/pokemon/thundurus/nsfw/normal.gbapal.lz");
-    const u32 gMonShinyPalette_Thundurus[] = INCBIN_U32("graphics/pokemon/thundurus/nsfw/shiny.gbapal.lz");
-    const u8 gMonIcon_Thundurus[] = INCBIN_U8("graphics/pokemon/thundurus/nsfw/icon.4bpp");
+    const u32 gMonFrontPic_ThundurusIncarnate[] = INCBIN_U32("graphics/pokemon/thundurus/nsfw/anim_front.4bpp.lz");
+    const u32 gMonBackPic_ThundurusIncarnate[] = INCBIN_U32("graphics/pokemon/thundurus/nsfw/back.4bpp.lz");
+    const u32 gMonPalette_ThundurusIncarnate[] = INCBIN_U32("graphics/pokemon/thundurus/nsfw/normal.gbapal.lz");
+    const u32 gMonShinyPalette_ThundurusIncarnate[] = INCBIN_U32("graphics/pokemon/thundurus/nsfw/shiny.gbapal.lz");
+    const u8 gMonIcon_ThundurusIncarnate[] = INCBIN_U8("graphics/pokemon/thundurus/nsfw/icon.4bpp");
     #else
     const u32 gMonFrontPic_ThundurusIncarnate[] = INCBIN_U32("graphics/pokemon/thundurus/anim_front.4bpp.lz");
     const u32 gMonPalette_ThundurusIncarnate[] = INCBIN_U32("graphics/pokemon/thundurus/normal.gbapal.lz");
@@ -7911,11 +7912,11 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
 
 #if P_FAMILY_LANDORUS
     #if NSFW_CONTENT == TRUE
-    const u32 gMonFrontPic_Landorus[] = INCBIN_U32("graphics/pokemon/landorus/nsfw/anim_front.4bpp.lz");
-    const u32 gMonBackPic_Landorus[] = INCBIN_U32("graphics/pokemon/landorus/nsfw/back.4bpp.lz");
-    const u32 gMonPalette_Landorus[] = INCBIN_U32("graphics/pokemon/landorus/nsfw/normal.gbapal.lz");
-    const u32 gMonShinyPalette_Landorus[] = INCBIN_U32("graphics/pokemon/landorus/nsfw/shiny.gbapal.lz");
-    const u8 gMonIcon_Landorus[] = INCBIN_U8("graphics/pokemon/landorus/nsfw/icon.4bpp");
+    const u32 gMonFrontPic_LandorusIncarnate[] = INCBIN_U32("graphics/pokemon/landorus/nsfw/anim_front.4bpp.lz");
+    const u32 gMonBackPic_LandorusIncarnate[] = INCBIN_U32("graphics/pokemon/landorus/nsfw/back.4bpp.lz");
+    const u32 gMonPalette_LandorusIncarnate[] = INCBIN_U32("graphics/pokemon/landorus/nsfw/normal.gbapal.lz");
+    const u32 gMonShinyPalette_LandorusIncarnate[] = INCBIN_U32("graphics/pokemon/landorus/nsfw/shiny.gbapal.lz");
+    const u8 gMonIcon_LandorusIncarnate[] = INCBIN_U8("graphics/pokemon/landorus/nsfw/icon.4bpp");
     #else
     const u32 gMonFrontPic_LandorusIncarnate[] = INCBIN_U32("graphics/pokemon/landorus/anim_front.4bpp.lz");
     const u32 gMonPalette_LandorusIncarnate[] = INCBIN_U32("graphics/pokemon/landorus/normal.gbapal.lz");
@@ -11860,3 +11861,25 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
 
+//Moemon International
+//Valkyrie
+const u32 gMonFrontPic_Valkyrie[] = INCBIN_U32("graphics/pokemon/valkyrie/anim_front.4bpp.lz");
+const u32 gMonPalette_Valkyrie[] = INCBIN_U32("graphics/pokemon/valkyrie/normal.gbapal.lz");
+const u32 gMonBackPic_Valkyrie[] = INCBIN_U32("graphics/pokemon/valkyrie/back.4bpp.lz");
+const u32 gMonShinyPalette_Valkyrie[] = INCBIN_U32("graphics/pokemon/valkyrie/shiny.gbapal.lz");
+const u8 gMonIcon_Valkyrie[] = INCBIN_U8("graphics/pokemon/valkyrie/icon.4bpp");
+const u8 gMonFootprint_Valkyrie[] = INCBIN_U8("graphics/pokemon/valkyrie/footprint.1bpp");
+//Flak88
+const u32 gMonFrontPic_Flak88[] = INCBIN_U32("graphics/pokemon/flak88/anim_front.4bpp.lz");
+const u32 gMonPalette_Flak88[] = INCBIN_U32("graphics/pokemon/flak88/normal.gbapal.lz");
+const u32 gMonBackPic_Flak88[] = INCBIN_U32("graphics/pokemon/flak88/back.4bpp.lz");
+const u32 gMonShinyPalette_Flak88[] = INCBIN_U32("graphics/pokemon/flak88/shiny.gbapal.lz");
+const u8 gMonIcon_Flak88[] = INCBIN_U8("graphics/pokemon/flak88/icon.4bpp");
+const u8 gMonFootprint_Flak88[] = INCBIN_U8("graphics/pokemon/flak88/footprint.1bpp");
+//Ryuuhou
+const u32 gMonFrontPic_Ryuuhou[] = INCBIN_U32("graphics/pokemon/ryuuhou/anim_front.4bpp.lz");
+const u32 gMonPalette_Ryuuhou[] = INCBIN_U32("graphics/pokemon/ryuuhou/normal.gbapal.lz");
+const u32 gMonBackPic_Ryuuhou[] = INCBIN_U32("graphics/pokemon/ryuuhou/back.4bpp.lz");
+const u32 gMonShinyPalette_Ryuuhou[] = INCBIN_U32("graphics/pokemon/ryuuhou/shiny.gbapal.lz");
+const u8 gMonIcon_Ryuuhou[] = INCBIN_U8("graphics/pokemon/ryuuhou/icon.4bpp");
+const u8 gMonFootprint_Ryuuhou[] = INCBIN_U8("graphics/pokemon/ryuuhou/footprint.1bpp");
