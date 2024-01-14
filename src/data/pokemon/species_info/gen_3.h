@@ -6248,11 +6248,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_DUSKNOIR] =
     {
         .baseHP        = 45,
-        .baseAttack    = 100,
-        .baseDefense   = 135,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 135,
+        .baseAttack    = 85,
+        .baseDefense   = 145,
+        .baseSpeed     = 35,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 145,
         .types = { TYPE_GHOST, TYPE_GHOST },
         .catchRate = 45,
         .expYield = 236,
