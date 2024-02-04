@@ -110,6 +110,19 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
+// Moemon International
+#define TRAINER_PIC_MAGMA_ADMIN_F         93
+#define TRAINER_PIC_ROCKET_GRUNT_M        94
+#define TRAINER_PIC_ROCKET_GRUNT_F        95
+#define TRAINER_PIC_ROCKET_ADMIN_1        96
+#define TRAINER_PIC_ROCKET_ADMIN_2        97
+#define TRAINER_PIC_ROCKET_LEADER         98
+#define TRAINER_PIC_GALACTIC_GRUNT_M      99
+#define TRAINER_PIC_GALACTIC_GRUNT_F      100
+#define TRAINER_PIC_GALACTIC_ADMIN_1      101
+#define TRAINER_PIC_GALACTIC_ADMIN_2      102
+#define TRAINER_PIC_GALACTIC_ADMIN_3      103
+#define TRAINER_PIC_GALACTIC_LEADER       104
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -352,7 +365,19 @@
 #define TRAINER_CLASS_PIKE_QUEEN     0x3f
 #define TRAINER_CLASS_PYRAMID_KING   0x40
 #define TRAINER_CLASS_RS_PROTAG      0x41
-#define TRAINER_CLASS_COUNT          0x42
+#define TRAINER_CLASS_MAGMA_ADMIN_F  0x42
+#define TRAINER_CLASS_ROCKET_GRUNT_M 0x43
+#define TRAINER_CLASS_ROCKET_GRUNT_F 0x44
+#define TRAINER_CLASS_ROCKET_ADMIN_1 0x45 //Petrel
+#define TRAINER_CLASS_ROCKET_ADMIN_2 0x46 //Proton
+#define TRAINER_CLASS_ROCKET_LEADER  0x47
+#define TRAINER_CLASS_GALACTIC_GRUNT_M 0x48
+#define TRAINER_CLASS_GALACTIC_GRUNT_F 0x49
+#define TRAINER_CLASS_GALACTIC_ADMIN_1 0x50 //Jupiter
+#define TRAINER_CLASS_GALACTIC_ADMIN_2 0x51 //Saturn
+#define TRAINER_CLASS_GALACTIC_ADMIN_3 0x52 //Mars
+#define TRAINER_CLASS_GALACTIC_LEADER 0x53
+#define TRAINER_CLASS_COUNT          0x54
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

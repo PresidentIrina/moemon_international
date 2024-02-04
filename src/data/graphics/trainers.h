@@ -1,11 +1,18 @@
+#include "config/pokemon.h"
+
 const u32 gTrainerFrontPic_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.4bpp.lz");
 const u32 gTrainerPalette_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.gbapal.lz");
 
 const u32 gTrainerFrontPic_AquaGruntM[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_m.4bpp.lz");
 const u32 gTrainerPalette_AquaGruntM[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_m.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_PokemonBreederF[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_breeder_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_PokemonBreederF[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_breeder_f_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_PokemonBreederF[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_breeder_f.4bpp.lz");
 const u32 gTrainerPalette_PokemonBreederF[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_breeder_f.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_CoolTrainerM[] = INCBIN_U32("graphics/trainers/front_pics/cooltrainer_m.4bpp.lz");
 const u32 gTrainerPalette_CoolTrainerM[] = INCBIN_U32("graphics/trainers/front_pics/cooltrainer_m.gbapal.lz");
@@ -76,8 +83,16 @@ const u32 gTrainerPalette_ExpertF[] = INCBIN_U32("graphics/trainers/front_pics/e
 const u32 gTrainerFrontPic_Pokemaniac[] = INCBIN_U32("graphics/trainers/front_pics/pokemaniac.4bpp.lz");
 const u32 gTrainerPalette_Pokemaniac[] = INCBIN_U32("graphics/trainers/front_pics/pokemaniac.gbapal.lz");
 
+//const u32 gTrainerFrontPic_MagmaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/magma_grunt_f.4bpp.lz");
+//const u32 gTrainerPalette_MagmaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/magma_grunt_f.gbapal.lz");
+
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_MagmaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/magma_grunt_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_MagmaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/magma_grunt_f_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_MagmaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/magma_grunt_f.4bpp.lz");
 const u32 gTrainerPalette_MagmaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/magma_grunt_f.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_Guitarist[] = INCBIN_U32("graphics/trainers/front_pics/guitarist.4bpp.lz");
 const u32 gTrainerPalette_Guitarist[] = INCBIN_U32("graphics/trainers/front_pics/guitarist.gbapal.lz");
@@ -88,8 +103,13 @@ const u32 gTrainerPalette_Kindler[] = INCBIN_U32("graphics/trainers/front_pics/k
 const u32 gTrainerFrontPic_Camper[] = INCBIN_U32("graphics/trainers/front_pics/camper.4bpp.lz");
 const u32 gTrainerPalette_Camper[] = INCBIN_U32("graphics/trainers/front_pics/camper.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_Picnicker[] = INCBIN_U32("graphics/trainers/front_pics/picnicker_nsfw.4bpp.lz");
+const u32 gTrainerPalette_Picnicker[] = INCBIN_U32("graphics/trainers/front_pics/picnicker_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_Picnicker[] = INCBIN_U32("graphics/trainers/front_pics/picnicker.4bpp.lz");
 const u32 gTrainerPalette_Picnicker[] = INCBIN_U32("graphics/trainers/front_pics/picnicker.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_BugManiac[] = INCBIN_U32("graphics/trainers/front_pics/bug_maniac.4bpp.lz");
 const u32 gTrainerPalette_BugManiac[] = INCBIN_U32("graphics/trainers/front_pics/bug_maniac.gbapal.lz");
@@ -109,8 +129,13 @@ const u32 gTrainerPalette_Gentleman[] = INCBIN_U32("graphics/trainers/front_pics
 const u32 gTrainerFrontPic_EliteFourSidney[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.4bpp.lz");
 const u32 gTrainerPalette_EliteFourSidney[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_EliteFourPhoebe[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_phoebe_nsfw.4bpp.lz");
+const u32 gTrainerPalette_EliteFourPhoebe[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_phoebe_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_EliteFourPhoebe[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_phoebe.4bpp.lz");
 const u32 gTrainerPalette_EliteFourPhoebe[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_phoebe.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_EliteFourGlacia[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_glacia.4bpp.lz");
 const u32 gTrainerPalette_EliteFourGlacia[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_glacia.gbapal.lz");
@@ -118,8 +143,13 @@ const u32 gTrainerPalette_EliteFourGlacia[] = INCBIN_U32("graphics/trainers/fron
 const u32 gTrainerFrontPic_EliteFourDrake[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_drake.4bpp.lz");
 const u32 gTrainerPalette_EliteFourDrake[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_drake.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_LeaderRoxanne[] = INCBIN_U32("graphics/trainers/front_pics/leader_roxanne_nsfw.4bpp.lz");
+const u32 gTrainerPalette_LeaderRoxanne[] = INCBIN_U32("graphics/trainers/front_pics/leader_roxanne_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_LeaderRoxanne[] = INCBIN_U32("graphics/trainers/front_pics/leader_roxanne.4bpp.lz");
 const u32 gTrainerPalette_LeaderRoxanne[] = INCBIN_U32("graphics/trainers/front_pics/leader_roxanne.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_LeaderBrawly[] = INCBIN_U32("graphics/trainers/front_pics/leader_brawly.4bpp.lz");
 const u32 gTrainerPalette_LeaderBrawly[] = INCBIN_U32("graphics/trainers/front_pics/leader_brawly.gbapal.lz");
@@ -133,8 +163,13 @@ const u32 gTrainerPalette_LeaderFlannery[] = INCBIN_U32("graphics/trainers/front
 const u32 gTrainerFrontPic_LeaderNorman[] = INCBIN_U32("graphics/trainers/front_pics/leader_norman.4bpp.lz");
 const u32 gTrainerPalette_LeaderNorman[] = INCBIN_U32("graphics/trainers/front_pics/leader_norman.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_LeaderWinona[] = INCBIN_U32("graphics/trainers/front_pics/leader_winona_nsfw.4bpp.lz");
+const u32 gTrainerPalette_LeaderWinona[] = INCBIN_U32("graphics/trainers/front_pics/leader_winona_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_LeaderWinona[] = INCBIN_U32("graphics/trainers/front_pics/leader_winona.4bpp.lz");
 const u32 gTrainerPalette_LeaderWinona[] = INCBIN_U32("graphics/trainers/front_pics/leader_winona.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_LeaderTateAndLiza[] = INCBIN_U32("graphics/trainers/front_pics/leader_tate_and_liza.4bpp.lz");
 const u32 gTrainerPalette_LeaderTateAndLiza[] = INCBIN_U32("graphics/trainers/front_pics/leader_tate_and_liza.gbapal.lz");
@@ -145,8 +180,13 @@ const u32 gTrainerPalette_LeaderJuan[] = INCBIN_U32("graphics/trainers/front_pic
 const u32 gTrainerFrontPic_SchoolKidM[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_m.4bpp.lz");
 const u32 gTrainerPalette_SchoolKidM[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_m.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_SchoolKidF[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_SchoolKidF[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_f_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_SchoolKidF[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_f.4bpp.lz");
 const u32 gTrainerPalette_SchoolKidF[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_f.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_SrAndJr[] = INCBIN_U32("graphics/trainers/front_pics/sr_and_jr.4bpp.lz");
 const u32 gTrainerPalette_SrAndJr[] = INCBIN_U32("graphics/trainers/front_pics/sr_and_jr.gbapal.lz");
@@ -229,8 +269,13 @@ const u32 gTrainerPalette_PokemonRangerF[] = INCBIN_U32("graphics/trainers/front
 const u32 gTrainerFrontPic_MagmaLeaderMaxie[] = INCBIN_U32("graphics/trainers/front_pics/magma_leader_maxie.4bpp.lz");
 const u32 gTrainerPalette_MagmaLeaderMaxie[] = INCBIN_U32("graphics/trainers/front_pics/magma_leader_maxie.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_Lass[] = INCBIN_U32("graphics/trainers/front_pics/lass_nsfw.4bpp.lz");
+const u32 gTrainerPalette_Lass[] = INCBIN_U32("graphics/trainers/front_pics/lass_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_Lass[] = INCBIN_U32("graphics/trainers/front_pics/lass.4bpp.lz");
 const u32 gTrainerPalette_Lass[] = INCBIN_U32("graphics/trainers/front_pics/lass.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_YoungCouple[] = INCBIN_U32("graphics/trainers/front_pics/young_couple.4bpp.lz");
 const u32 gTrainerPalette_YoungCouple[] = INCBIN_U32("graphics/trainers/front_pics/young_couple.gbapal.lz");
@@ -288,3 +333,60 @@ const u8 gTrainerBackPic_Steven[] = INCBIN_U8("graphics/trainers/back_pics/steve
 
 const u32 gTrainerBackPicPalette_Red[] = INCBIN_U32("graphics/trainers/back_pics/red.gbapal.lz");
 const u32 gTrainerBackPicPalette_Leaf[] = INCBIN_U32("graphics/trainers/back_pics/leaf.gbapal.lz");
+
+// Moemon International
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_MagmaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/magma_admin_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_MagmaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/magma_admin_f_nsfw.gbapal.lz");
+#else
+const u32 gTrainerFrontPic_MagmaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/magma_admin_f.4bpp.lz");
+const u32 gTrainerPalette_MagmaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/magma_admin_f.gbapal.lz");
+#endif
+
+const u32 gTrainerFrontPic_RocketGruntM[] = INCBIN_U32("graphics/trainers/front_pics/rocket_grunt_m.4bpp.lz");
+const u32 gTrainerPalette_RocketGruntM[] = INCBIN_U32("graphics/trainers/front_pics/rocket_grunt_m.gbapal.lz");
+
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_RocketGruntF[] = INCBIN_U32("graphics/trainers/front_pics/rocket_grunt_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_RocketGruntF[] = INCBIN_U32("graphics/trainers/front_pics/rocket_grunt_f_nsfw.gbapal.lz");
+#else
+const u32 gTrainerFrontPic_RocketGruntF[] = INCBIN_U32("graphics/trainers/front_pics/rocket_grunt_f.4bpp.lz");
+const u32 gTrainerPalette_RocketGruntF[] = INCBIN_U32("graphics/trainers/front_pics/rocket_grunt_f.gbapal.lz");
+#endif
+
+const u32 gTrainerFrontPic_RocketAdminPetrel[] = INCBIN_U32("graphics/trainers/front_pics/rocket_admin_petrel.4bpp.lz");
+const u32 gTrainerPalette_RocketAdminPetrel[] = INCBIN_U32("graphics/trainers/front_pics/rocket_admin_petrel.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketAdminProton[] = INCBIN_U32("graphics/trainers/front_pics/rocket_admin_proton.4bpp.lz");
+const u32 gTrainerPalette_RocketAdminProton[] = INCBIN_U32("graphics/trainers/front_pics/rocket_admin_proton.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketLeaderGiovanni[] = INCBIN_U32("graphics/trainers/front_pics/rocket_leader_giovanni.4bpp.lz");
+const u32 gTrainerPalette_RocketLeaderGiovanni[] = INCBIN_U32("graphics/trainers/front_pics/rocket_leader_giovanni.gbapal.lz");
+
+const u32 gTrainerFrontPic_GalacticGruntM[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_m.4bpp.lz");
+const u32 gTrainerPalette_GalacticGruntM[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_m.gbapal.lz");
+
+const u32 gTrainerFrontPic_GalacticGruntF[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_f.4bpp.lz");
+const u32 gTrainerPalette_GalacticGruntF[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_f.gbapal.lz");
+
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_GalacticAdminJupiter[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_jupiter_nsfw.4bpp.lz");
+const u32 gTrainerPalette_GalacticAdminJupiter[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_jupiter_nsfw.gbapal.lz");
+#else
+const u32 gTrainerFrontPic_GalacticAdminJupiter[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_jupiter.4bpp.lz");
+const u32 gTrainerPalette_GalacticAdminJupiter[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_jupiter.gbapal.lz");
+#endif
+
+const u32 gTrainerFrontPic_GalacticAdminSaturn[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_saturn.4bpp.lz");
+const u32 gTrainerPalette_GalacticAdminSaturn[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_saturn.gbapal.lz");
+
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_GalacticAdminMars[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_mars_nsfw.4bpp.lz");
+const u32 gTrainerPalette_GalacticAdminMars[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_mars_nsfw.gbapal.lz");
+#else
+const u32 gTrainerFrontPic_GalacticAdminMars[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_mars.4bpp.lz");
+const u32 gTrainerPalette_GalacticAdminMars[] = INCBIN_U32("graphics/trainers/front_pics/galactic_admin_mars.gbapal.lz");
+#endif
+
+const u32 gTrainerFrontPic_GalacticLeaderCyrus[] = INCBIN_U32("graphics/trainers/front_pics/galactic_leader_cyrus.4bpp.lz");
+const u32 gTrainerPalette_GalacticLeaderCyrus[] = INCBIN_U32("graphics/trainers/front_pics/galactic_leader_cyrus.gbapal.lz");

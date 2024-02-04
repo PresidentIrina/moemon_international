@@ -278,6 +278,10 @@ static const union AnimCmd *const sAnims_MagmaAdmin[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_MagmaAdminF[] ={
+    sAnim_GeneralFrame0,
+};
+
 static const union AnimCmd *const sAnims_Wally[] ={
     sAnim_GeneralFrame0,
 };
@@ -370,6 +374,51 @@ static const union AnimCmd *const sAnims_RubySapphireMay[] ={
     sAnim_GeneralFrame0,
 };
 
+// Moemon International
+static const union AnimCmd *const sAnims_RocketGruntM[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_RocketGruntF[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_RocketAdminPetrel[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_RocketAdminProton[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_RocketLeaderGiovanni[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GalacticGruntM[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GalacticGruntF[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GalacticAdminJupiter[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GalacticAdminSaturn[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GalacticAdminMars[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GalacticLeaderCyrus[] ={
+    sAnim_GeneralFrame0,
+};
+
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
@@ -442,6 +491,7 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_TWINS] = sAnims_Twins,
     [TRAINER_PIC_SAILOR] = sAnims_Sailor,
     [TRAINER_PIC_MAGMA_ADMIN] = sAnims_MagmaAdmin,
+    [TRAINER_PIC_MAGMA_ADMIN_F] = sAnims_MagmaAdminF,
     [TRAINER_PIC_WALLY] = sAnims_Wally,
     [TRAINER_PIC_BRENDAN] = sAnims_Brendan,
     [TRAINER_PIC_MAY] = sAnims_May,
@@ -465,4 +515,15 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_LEAF] = sAnims_Leaf,
     [TRAINER_PIC_RS_BRENDAN] = sAnims_RubySapphireBrendan,
     [TRAINER_PIC_RS_MAY] = sAnims_RubySapphireMay,
+    [TRAINER_PIC_ROCKET_GRUNT_M] = sAnims_RocketGruntM,
+    [TRAINER_PIC_ROCKET_GRUNT_F] = sAnims_RocketGruntF,
+    [TRAINER_PIC_ROCKET_ADMIN_1] = sAnims_RocketAdminPetrel,
+    [TRAINER_PIC_ROCKET_ADMIN_2] = sAnims_RocketAdminProton,
+    [TRAINER_PIC_ROCKET_LEADER] = sAnims_RocketLeaderGiovanni,
+    [TRAINER_PIC_GALACTIC_GRUNT_M] = sAnims_GalacticGruntM,
+    [TRAINER_PIC_GALACTIC_GRUNT_F] = sAnims_GalacticGruntF,
+    [TRAINER_PIC_GALACTIC_ADMIN_1] = sAnims_GalacticAdminJupiter,
+    [TRAINER_PIC_GALACTIC_ADMIN_2] = sAnims_GalacticAdminSaturn,
+    [TRAINER_PIC_GALACTIC_ADMIN_3] = sAnims_GalacticAdminMars,
+    [TRAINER_PIC_GALACTIC_LEADER] = sAnims_GalacticLeaderCyrus,
 };

@@ -557,6 +557,54 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .allPerfectIVs = TRUE,
     },
 
+    [SPECIES_FROSLASS_MEGA] =
+    {
+        .baseHP        = 70,
+        .baseAttack    = 120,
+        .baseDefense   = 70,
+        .baseSpeed     = 130,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 70,
+        .types = { TYPE_ICE, TYPE_GHOST },
+        .catchRate = 75,
+        .expYield = 168,
+        .evYield_Speed = 2,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MINERAL },
+        .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_CURSED_BODY },
+        .bodyColor = BODY_COLOR_WHITE,
+        .speciesName = _("Froslass"),
+        .cryId = CRY_FROSLASS,
+        .natDexNum = NATIONAL_DEX_FROSLASS_MEGA,
+        .categoryName = _("Tsurara-Onna"),
+        .height = 19,
+        .weight = 266,
+        .description = COMPOUND_STRING(
+            "When a trainer shows great love and\n"
+            "care for their Froslass, she will\n"
+            "Mega Evolve. She will often marry\n"
+            "their trainer soon after."),
+        .pokemonScale = 272,
+        .pokemonOffset = 3,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        FRONT_PIC(FroslassMega, 48, 48),
+        .frontPicYOffset = 8,
+        .frontAnimFrames = sAnims_Froslass,
+        .frontAnimId = ANIM_V_SLIDE_WOBBLE,
+        .enemyMonElevation = 7,
+        BACK_PIC(FroslassMega, 64, 64),
+        .backPicYOffset = 3,
+        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
+        PALETTES(FroslassMega),
+        ICON(FroslassMega, 0),
+        .footprint = gMonFootprint_Froslass,
+        LEARNSETS(FroslassMega),
+    },
+
     [SPECIES_TENTACRUEL_AQUA] =
     {
         .baseHP        = 80,

@@ -116,7 +116,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .bodyColor = BODY_COLOR_BROWN,                          \
         .speciesName = _("Decidueye"),                          \
         .cryId = CRY_DECIDUEYE,                                 \
-        .natDexNum = NATIONAL_DEX_DECIDUEYE,                    \
         .categoryName = _("Arrow Quill"),                       \
         .height = 16,                                           \
         .pokemonScale = 259,                                    \
@@ -137,6 +136,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpDefense = 100,
         .types = { TYPE_GRASS, TYPE_GHOST },
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_LONG_REACH },
+        .natDexNum = NATIONAL_DEX_DECIDUEYE,
         .weight = 366,
         .description = COMPOUND_STRING(
             "Decidueye is cool and cautious.\n"
@@ -167,6 +167,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseSpDefense = 95,
         .types = { TYPE_GRASS, TYPE_FIGHTING },
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_SCRAPPY },
+        .natDexNum = NATIONAL_DEX_DECIDUEYE_HISUIAN,
         .weight = 370,
         .description = COMPOUND_STRING(
             "The air stored inside the rachises\n"
@@ -1236,8 +1237,9 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         FRONT_PIC(Rockruff, 37, 39),
         BACK_PIC(Rockruff, 64, 56),
         .backAnimId = BACK_ANIM_V_STRETCH,
-        .evolutions = EVOLUTION({EVO_LEVEL_DAY, 25, SPECIES_LYCANROC_MIDDAY},
-                                {EVO_LEVEL_NIGHT, 25, SPECIES_LYCANROC_MIDNIGHT}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 25, SPECIES_LYCANROC_MIDDAY},
+                                {EVO_ITEM, ITEM_DUSK_STONE, SPECIES_LYCANROC_DUSK},
+                                {EVO_ITEM, ITEM_MOON_STONE, SPECIES_LYCANROC_MIDNIGHT}),
     },
 
     [SPECIES_ROCKRUFF_OWN_TEMPO] =
@@ -1261,7 +1263,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .growthRate = GROWTH_MEDIUM_FAST,                   \
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },  \
         .speciesName = _("Lycanroc"),                       \
-        .natDexNum = NATIONAL_DEX_LYCANROC,                 \
         .categoryName = _("Wolf"),                          \
         .weight = 250,                                      \
         .pokemonScale = 366,                                \
@@ -1284,6 +1285,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .abilities = { ABILITY_KEEN_EYE, ABILITY_SAND_RUSH, ABILITY_STEADFAST },
         .bodyColor = BODY_COLOR_BROWN,
         .cryId = CRY_LYCANROC_MIDDAY,
+        .natDexNum = NATIONAL_DEX_LYCANROC,
         .height = 8,
         .description = COMPOUND_STRING(
             "It has a calm and collected\n"
@@ -1313,6 +1315,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .abilities = { ABILITY_KEEN_EYE, ABILITY_VITAL_SPIRIT, ABILITY_NO_GUARD },
         .bodyColor = BODY_COLOR_RED,
         .cryId = CRY_LYCANROC_MIDNIGHT,
+        .natDexNum = NATIONAL_DEX_LYCANROC_MIDNIGHT,
         .height = 11,
         .description = COMPOUND_STRING(
             "This Moémon uses its rocky mane\n"
@@ -1342,6 +1345,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .abilities = { ABILITY_TOUGH_CLAWS, ABILITY_NONE },
         .bodyColor = BODY_COLOR_BROWN,
         .cryId = CRY_LYCANROC_DUSK,
+        .natDexNum = NATIONAL_DEX_LYCANROC_DUSK,
         .height = 8,
         .description = COMPOUND_STRING(
             "These Moémon have both calm and\n"

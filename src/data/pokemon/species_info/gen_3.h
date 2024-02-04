@@ -437,7 +437,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backPicYOffset = 10,
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(Mudkip),
-        ICON(Mudkip, 0),
+        ICON(Mudkip, 6),
         .footprint = gMonFootprint_Mudkip,
         LEARNSETS(Mudkip),
         .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_MARSHTOMP}),
@@ -485,7 +485,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backPicYOffset = 3,
         .backAnimId = BACK_ANIM_CONCAVE_ARC_SMALL,
         PALETTES(Marshtomp),
-        ICON(Marshtomp, 0),
+        ICON(Marshtomp, 6),
         .footprint = gMonFootprint_Marshtomp,
         LEARNSETS(Marshtomp),
         .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_SWAMPERT}),
@@ -540,7 +540,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .backPicYOffset = 6,
         .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
         PALETTES(Swampert),
-        ICON(Swampert, 0),
+        ICON(Swampert, 6),
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_WATER_STONE, SPECIES_SWAMPERT_MEGA}),
     },
 
@@ -4102,6 +4102,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .expYield = 161,
         .abilities = { ABILITY_ROUGH_SKIN, ABILITY_NONE, ABILITY_SPEED_BOOST },
         .cryId = CRY_SHARPEDO,
+        .natDexNum = NATIONAL_DEX_SHARPEDO,
         .height = 18,
         .weight = 888,
         .description = COMPOUND_STRING(
@@ -6737,7 +6738,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         ICON(Froslass, 0),
         .footprint = gMonFootprint_Froslass,
         LEARNSETS(Froslass),
-        //.evolutions = EVOLUTION({EVO_ITEM, ITEM_NEVER_MELT_ICE, SPECIES_FROSLASS_MEGA}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_NEVER_MELT_ICE, SPECIES_FROSLASS_MEGA}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 #endif //P_FAMILY_SNORUNT

@@ -159,6 +159,19 @@ extern const u32 gTrainerFrontPic_Red[];
 extern const u32 gTrainerFrontPic_Leaf[];
 extern const u32 gTrainerFrontPic_RubySapphireBrendan[];
 extern const u32 gTrainerFrontPic_RubySapphireMay[];
+// Moemon International
+extern const u32 gTrainerFrontPic_MagmaAdminF[];
+extern const u32 gTrainerFrontPic_RocketGruntM[];
+extern const u32 gTrainerFrontPic_RocketGruntF[];
+extern const u32 gTrainerFrontPic_RocketAdminPetrel[];
+extern const u32 gTrainerFrontPic_RocketAdminProton[];
+extern const u32 gTrainerFrontPic_RocketLeaderGiovanni[];
+extern const u32 gTrainerFrontPic_GalacticGruntM[];
+extern const u32 gTrainerFrontPic_GalacticGruntF[];
+extern const u32 gTrainerFrontPic_GalacticAdminJupiter[];
+extern const u32 gTrainerFrontPic_GalacticAdminSaturn[];
+extern const u32 gTrainerFrontPic_GalacticAdminMars[];
+extern const u32 gTrainerFrontPic_GalacticLeaderCyrus[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
@@ -253,6 +266,19 @@ extern const u32 gTrainerPalette_Red[];
 extern const u32 gTrainerPalette_Leaf[];
 extern const u32 gTrainerPalette_RubySapphireBrendan[];
 extern const u32 gTrainerPalette_RubySapphireMay[];
+// Moemon International
+extern const u32 gTrainerPalette_MagmaAdminF[];
+extern const u32 gTrainerPalette_RocketGruntM[];
+extern const u32 gTrainerPalette_RocketGruntF[];
+extern const u32 gTrainerPalette_RocketAdminPetrel[];
+extern const u32 gTrainerPalette_RocketAdminProton[];
+extern const u32 gTrainerPalette_RocketLeaderGiovanni[];
+extern const u32 gTrainerPalette_GalacticGruntM[];
+extern const u32 gTrainerPalette_GalacticGruntF[];
+extern const u32 gTrainerPalette_GalacticAdminJupiter[];
+extern const u32 gTrainerPalette_GalacticAdminSaturn[];
+extern const u32 gTrainerPalette_GalacticAdminMars[];
+extern const u32 gTrainerPalette_GalacticLeaderCyrus[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];

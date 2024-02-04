@@ -2503,10 +2503,10 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .height = 9,
         .weight = 44,
         .description = COMPOUND_STRING(
-            "Her incantations are often heard\n"
-            "from far away. Unfortunately, they\n"
-            "cause headaches and hallucinations\n"
-            "to those who hear them."),
+            "Having tapped into fierce magic,\n"
+            "she uses it to come up with even more\n"
+            "elaborate pranks to torment others with.\n"
+            ""),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -4792,7 +4792,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .backPicYOffset = 1,
         .backAnimId = BACK_ANIM_JOLT_RIGHT,
         PALETTES(Skarmory),
-        ICON(Skarmory, 0),
+        ICON(Skarmory, 8),
         .footprint = gMonFootprint_Skarmory,
         LEARNSETS(Skarmory),
     },

@@ -373,12 +373,24 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_PKMN_RANGER, 12},
     {TRAINER_CLASS_TEAM_MAGMA, 5},
     {TRAINER_CLASS_MAGMA_ADMIN, 10},
+    {TRAINER_CLASS_MAGMA_ADMIN_F, 10},
     {TRAINER_CLASS_MAGMA_LEADER, 20},
     {TRAINER_CLASS_LASS, 4},
     {TRAINER_CLASS_BUG_CATCHER, 4},
     {TRAINER_CLASS_HIKER, 10},
     {TRAINER_CLASS_YOUNG_COUPLE, 8},
     {TRAINER_CLASS_WINSTRATE, 10},
+    {TRAINER_CLASS_ROCKET_GRUNT_M, 5},
+    {TRAINER_CLASS_ROCKET_GRUNT_F, 5},
+    {TRAINER_CLASS_ROCKET_ADMIN_1, 10},
+    {TRAINER_CLASS_ROCKET_ADMIN_2, 10},
+    {TRAINER_CLASS_ROCKET_LEADER, 20},
+    {TRAINER_CLASS_GALACTIC_GRUNT_M, 5},
+    {TRAINER_CLASS_GALACTIC_GRUNT_F, 5},
+    {TRAINER_CLASS_GALACTIC_ADMIN_1, 10},
+    {TRAINER_CLASS_GALACTIC_ADMIN_2, 10},
+    {TRAINER_CLASS_GALACTIC_ADMIN_3, 10},
+    {TRAINER_CLASS_GALACTIC_LEADER, 20},
     {0xFF, 5}, // Any trainer class not listed above uses this
 };
 
@@ -1960,11 +1972,14 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             else if (trainer->encounterMusic_gender & F_TRAINER_FEMALE)
                 personalityValue = 0x78; // Use personality more likely to result in a female Pokémon
             else
-                personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
+                //Moemon International; All Moemon will be female regardless of trainer gender
+                personalityValue = 0x78;
+                //personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
 
             personalityValue += personalityHash << 8;
-            if (partyData[i].gender == TRAINER_MON_MALE)
-                personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_MALE, partyData[i].species);
+            if (partyData[i].gender == TRAINER_MON_MALE) //Moemon International; All Moemon will be female regardless of trainer gender
+                personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_FEMALE, partyData[i].species);
+                //personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_MALE, partyData[i].species);
             else if (partyData[i].gender == TRAINER_MON_FEMALE)
                 personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_FEMALE, partyData[i].species);
             if (partyData[i].nature != 0)
@@ -5540,7 +5555,7 @@ static void ReturnFromBattleToOverworld(void)
 #else
         if ((gBattleOutcome == B_OUTCOME_WON) || gBattleOutcome == B_OUTCOME_CAUGHT) // Bug: When Roar is used by roamer, gBattleOutcome is B_OUTCOME_PLAYER_TELEPORTED (5).
 #endif                                                                               // & with B_OUTCOME_WON (1) will return TRUE and deactivates the roamer.
-            SetRoamerInactive();
+            NextRoamer();
     }
 
     m4aSongNumStop(SE_LOW_HEALTH);

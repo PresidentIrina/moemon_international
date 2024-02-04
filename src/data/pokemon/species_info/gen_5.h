@@ -455,7 +455,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .bodyColor = BODY_COLOR_BLUE,                                       \
         .speciesName = _("Samurott"),                                       \
         .cryId = CRY_SAMUROTT,                                              \
-        .natDexNum = NATIONAL_DEX_SAMUROTT,                                 \
         .categoryName = _("Formidable"),                                    \
         .height = 15,                                                       \
         .pokemonScale = 268,                                                \
@@ -477,6 +476,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .types = { TYPE_WATER, TYPE_WATER },
         .evYield_SpAttack = 3,
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SHELL_ARMOR },
+        .natDexNum = NATIONAL_DEX_SAMUROTT,
         .weight = 946,
         .description = COMPOUND_STRING(
             "One swing of the seamitars attached\n"
@@ -508,6 +508,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .types = { TYPE_WATER, TYPE_DARK },
         .evYield_Attack = 3,
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SHARPNESS },
+        .natDexNum = NATIONAL_DEX_SAMUROTT_HISUIAN,
         .weight = 582,
         .description = COMPOUND_STRING(
             "Hard of heart and deft of blade,\n"
@@ -1868,7 +1869,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .growthRate = GROWTH_FAST,                          \
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FAIRY },  \
         .speciesName = _("Audino"),                         \
-        .natDexNum = NATIONAL_DEX_AUDINO,                   \
         .categoryName = _("Hearing"),                       \
         .footprint = gMonFootprint_Audino,                  \
         LEARNSETS(Audino),                                  \
@@ -1890,6 +1890,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_HEALER, ABILITY_REGENERATOR, ABILITY_KLUTZ },
         .bodyColor = BODY_COLOR_PINK,
         .cryId = CRY_AUDINO,
+        .natDexNum = NATIONAL_DEX_AUDINO,
         .height = 11,
         .weight = 310,
         .description = COMPOUND_STRING(
@@ -1928,6 +1929,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_HEALER, ABILITY_HEALER, ABILITY_HEALER },
         .bodyColor = BODY_COLOR_WHITE,
         .cryId = CRY_AUDINO_MEGA,
+        .natDexNum = NATIONAL_DEX_AUDINO_MEGA,
         .height = 15,
         .weight = 320,
         .description = COMPOUND_STRING(
@@ -2550,11 +2552,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     [SPECIES_WHIRLIPEDE] =
     {
         .baseHP        = 40,
-        .baseAttack    = 55,
-        .baseDefense   = 99,
-        .baseSpeed     = 47,
+        .baseAttack    = 60,
+        .baseDefense   = 100,
+        .baseSpeed     = 50,
         .baseSpAttack  = 40,
-        .baseSpDefense = 79,
+        .baseSpDefense = 80,
         .types = { TYPE_BUG, TYPE_POISON },
         .catchRate = 120,
         .expYield = 126,
@@ -2603,11 +2605,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     [SPECIES_SCOLIPEDE] =
     {
         .baseHP        = 60,
-        .baseAttack    = P_UPDATED_STATS >= GEN_6 ? 100 : 90,
-        .baseDefense   = 89,
-        .baseSpeed     = 112,
-        .baseSpAttack  = 55,
-        .baseSpDefense = 69,
+        .baseAttack    = 120,
+        .baseDefense   = 90,
+        .baseSpeed     = 110,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 70,
         .types = { TYPE_BUG, TYPE_POISON },
         .catchRate = 45,
         .expYield = 218,
@@ -2823,7 +2825,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .noFlip = TRUE,                                     \
         .speciesName = _("Lilligant"),                      \
         .cryId = CRY_LILLIGANT,                             \
-        .natDexNum = NATIONAL_DEX_LILLIGANT,                \
         .footprint = gMonFootprint_Lilligant,               \
         .formSpeciesIdTable = sLilligantFormSpeciesIdTable
 
@@ -2839,6 +2840,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .types = { TYPE_GRASS, TYPE_GRASS },
         .evYield_SpAttack = 2,
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_OWN_TEMPO, ABILITY_LEAF_GUARD },
+        .natDexNum = NATIONAL_DEX_LILLIGANT,
         .categoryName = _("Flowering"),
         .height = 11,
         .weight = 163,
@@ -2877,6 +2879,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .evYield_Attack = 1,
         .evYield_Speed = 1,
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_HUSTLE, ABILITY_LEAF_GUARD },
+        .natDexNum = NATIONAL_DEX_LILLIGANT_HISUIAN,
         .categoryName = _("Spinning"),
         .height = 12,
         .weight = 192,
@@ -3248,7 +3251,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .abilities = { ABILITY_HUSTLE, ABILITY_NONE, ABILITY_INNER_FOCUS }, \
         .speciesName = _("Darumaka"),                                       \
         .cryId = CRY_DARUMAKA,                                              \
-        .natDexNum = NATIONAL_DEX_DARUMAKA,                                 \
         .categoryName = _("Zen Charm"),                                     \
         .footprint = gMonFootprint_Darumaka,                                \
         .formSpeciesIdTable = sDarumakaFormSpeciesIdTable
@@ -3258,6 +3260,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         DARUMAKA_MISC_INFO,
         .types = { TYPE_FIRE, TYPE_FIRE },
         .bodyColor = BODY_COLOR_RED,
+        .natDexNum = NATIONAL_DEX_DARUMAKA,
         .height = 6,
         .weight = 375,
         .description = COMPOUND_STRING(
@@ -3291,7 +3294,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FIELD },  \
         .speciesName = _("Darmanitan"),                     \
         .cryId = CRY_DARMANITAN,                            \
-        .natDexNum = NATIONAL_DEX_DARMANITAN,               \
         .footprint = gMonFootprint_Darmanitan,              \
         .formSpeciesIdTable = sDarmanitanFormSpeciesIdTable
 
@@ -3329,6 +3331,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         DARMANITAN_UNOVAN_MISC_INFO,
         .types = { TYPE_FIRE, TYPE_FIRE },
         .bodyColor = BODY_COLOR_RED,
+        .natDexNum = NATIONAL_DEX_DARMANITAN,
         .categoryName = _("Blazing"),
         .description = COMPOUND_STRING(
             "When one is injured in a fierce battle,\n"
@@ -3358,6 +3361,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpDefense = 105,
         .types = { TYPE_FIRE, TYPE_PSYCHIC },
         .bodyColor = BODY_COLOR_BLUE,
+        .natDexNum = NATIONAL_DEX_DARMANITAN,
         .description = COMPOUND_STRING(
             "When wounded, it stops moving. It\n"
             "goes as still as stone to meditate,\n"
@@ -3379,6 +3383,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         DARUMAKA_MISC_INFO,
         .types = { TYPE_ICE, TYPE_ICE },
         .bodyColor = BODY_COLOR_WHITE,
+        .natDexNum = NATIONAL_DEX_DARUMAKA_GALARIAN,
         .height = 7,
         .weight = 400,
         .description = COMPOUND_STRING(
@@ -3422,6 +3427,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         DARMANITAN_GALARIAN_MISC_INFO,
         DARMANITAN_STANDARD_MISC_INFO,
         .types = { TYPE_ICE, TYPE_ICE },
+        .natDexNum = NATIONAL_DEX_DARMANITAN_GALARIAN,
         .categoryName = _("Zen Charm"),
         .description = COMPOUND_STRING(
             "On days when blizzards blow\n"
@@ -3450,6 +3456,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 30,
         .baseSpDefense = 55,
         .types = { TYPE_ICE, TYPE_FIRE },
+        .natDexNum = NATIONAL_DEX_DARMANITAN_GALARIAN,
         .description = COMPOUND_STRING(
             "Darmanitan takes this form when\n"
             "enraged. It won't stop spewing flames\n"
@@ -3789,7 +3796,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .bodyColor = BODY_COLOR_BLACK,                              \
         .speciesName = _("Yamask"),                                 \
         .cryId = CRY_YAMASK,                                        \
-        .natDexNum = NATIONAL_DEX_YAMASK,                           \
         .categoryName = _("Spirit"),                                \
         .height = 5,                                                \
         .weight = 15,                                               \
@@ -3812,6 +3818,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .types = { TYPE_GHOST, TYPE_GHOST },
         .itemRare = ITEM_SPELL_TAG,
         .abilities = { ABILITY_MUMMY, ABILITY_NONE },
+        .natDexNum = NATIONAL_DEX_YAMASK,
         .description = COMPOUND_STRING(
             "These Moémon arose from the spirits\n"
             "of people interred in graves in past ages.\n"
@@ -3891,6 +3898,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpDefense = 65,
         .types = { TYPE_GROUND, TYPE_GHOST },
         .abilities = { ABILITY_WANDERING_SPIRIT, ABILITY_NONE },
+        .natDexNum = NATIONAL_DEX_YAMASK_GALARIAN,
         .description = COMPOUND_STRING(
             "A clay slab with cursed engravings\n"
             "took possession of a Yamask. The\n"
@@ -4303,7 +4311,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .bodyColor = BODY_COLOR_GRAY,                       \
         .speciesName = _("Zorua"),                          \
         .cryId = CRY_ZORUA,                                 \
-        .natDexNum = NATIONAL_DEX_ZORUA,                    \
         .height = 7,                                        \
         .weight = 125,                                      \
         .pokemonScale = 365,                                \
@@ -4326,7 +4333,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .bodyColor = BODY_COLOR_GRAY,                       \
         .speciesName = _("Zoroark"),                        \
         .cryId = CRY_ZOROARK,                               \
-        .natDexNum = NATIONAL_DEX_ZOROARK,                  \
         .height = 16,                                       \
         .pokemonScale = 259,                                \
         .pokemonOffset = 1,                                 \
@@ -4345,6 +4351,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 80,
         .baseSpDefense = 40,
         .types = { TYPE_DARK, TYPE_DARK },
+        .natDexNum = NATIONAL_DEX_ZORUA,
         .categoryName = _("Tricky Fox"),
         .description = COMPOUND_STRING(
             "To protect themselves from danger, they\n"
@@ -4374,6 +4381,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 120,
         .baseSpDefense = 60,
         .types = { TYPE_DARK, TYPE_DARK },
+        .natDexNum = NATIONAL_DEX_ZOROARK,
         .categoryName = _("Illusion Fox"),
         .weight = 811,
         .description = COMPOUND_STRING(
@@ -4404,6 +4412,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 85,
         .baseSpDefense = 40,
         .types = { TYPE_NORMAL, TYPE_GHOST },
+        .natDexNum = NATIONAL_DEX_ZORUA_HISUIAN,
         .categoryName = _("Spiteful Fox"),
         .description = COMPOUND_STRING(
             "Derives power from resentment,\n"
@@ -4434,6 +4443,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 125,
         .baseSpDefense = 60,
         .types = { TYPE_NORMAL, TYPE_GHOST },
+        .natDexNum = NATIONAL_DEX_ZOROARK_HISUIAN,
         .categoryName = _("Baneful Fox"),
         .weight = 730,
         .description = COMPOUND_STRING(
@@ -6842,7 +6852,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_AMORPHOUS },    \
         .speciesName = _("Stunfisk"),                               \
         .cryId = CRY_STUNFISK,                                      \
-        .natDexNum = NATIONAL_DEX_STUNFISK,                         \
         .categoryName = _("Trap"),                                  \
         .height = 7,                                                \
         .pokemonScale = 365,                                        \
@@ -6866,6 +6875,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = 70,
         .abilities = { ABILITY_STATIC, ABILITY_LIMBER, ABILITY_SAND_VEIL },
         .bodyColor = BODY_COLOR_BROWN,
+        .natDexNum = NATIONAL_DEX_STUNFISK,
         .weight = 110,
         .description = COMPOUND_STRING(
             "It conceals itself in the mud of the\n"
@@ -6898,6 +6908,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .abilities = { ABILITY_MIMICRY, ABILITY_NONE },
         .bodyColor = BODY_COLOR_GREEN,
+        .natDexNum = NATIONAL_DEX_STUNFISK_GALARIAN,
         .weight = 205,
         .description = COMPOUND_STRING(
             "Its conspicuous lips lure prey in\n"
@@ -7423,7 +7434,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },    \
         .speciesName = _("Braviary"),                           \
         .cryId = CRY_BRAVIARY,                                  \
-        .natDexNum = NATIONAL_DEX_BRAVIARY,                     \
         .footprint = gMonFootprint_Braviary,                    \
         .formSpeciesIdTable = sBraviaryFormSpeciesIdTable
 
@@ -7440,6 +7450,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .evYield_Attack = 2,
         .abilities = { ABILITY_KEEN_EYE, ABILITY_SHEER_FORCE, ABILITY_DEFIANT },
         .bodyColor = BODY_COLOR_RED,
+        .natDexNum = NATIONAL_DEX_BRAVIARY,
         .height = 15,
         .weight = 410,
     #if NSFW_CONTENT == TRUE
@@ -7488,6 +7499,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .evYield_SpAttack = 2,
         .abilities = { ABILITY_KEEN_EYE, ABILITY_SHEER_FORCE, ABILITY_TINTED_LENS },
         .bodyColor = BODY_COLOR_WHITE,
+        .natDexNum = NATIONAL_DEX_BRAVIARY_HISUIAN,
         .categoryName = _("Battle Cry"),
         .height = 17,
         .weight = 434,
@@ -8503,7 +8515,6 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .bodyColor = BODY_COLOR_GRAY,                                                   \
         .noFlip = TRUE,                                                                 \
         .speciesName = _("Kyurem"),                                                     \
-        .natDexNum = NATIONAL_DEX_KYUREM,                                               \
         .categoryName = _("Boundary"),                                                  \
         .weight = 3250,                                                                 \
         .footprint = gMonFootprint_Kyurem,                                              \
@@ -8525,6 +8536,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .evYield_SpAttack = 1,
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE },
         .cryId = CRY_KYUREM,
+        .natDexNum = NATIONAL_DEX_KYUREM,
         .height = 30,
         .description = COMPOUND_STRING(
             "This legendary ice Moémon waits for a\n"
@@ -8561,6 +8573,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .evYield_SpAttack = 3,
         .abilities = { ABILITY_TURBOBLAZE, ABILITY_NONE },
         .cryId = CRY_KYUREM_WHITE,
+        .natDexNum = NATIONAL_DEX_KYUREM_WHITE,
         .height = 36,
         .description = COMPOUND_STRING(
             "The sameness of Reshiram's and\n"
@@ -8598,6 +8611,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .evYield_Attack = 3,
         .abilities = { ABILITY_TERAVOLT, ABILITY_NONE },
         .cryId = CRY_KYUREM_BLACK,
+        .natDexNum = NATIONAL_DEX_KYUREM_BLACK,
         .height = 33,
         .description = COMPOUND_STRING(
             "The sameness of Zekrom's and\n"
