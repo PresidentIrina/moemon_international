@@ -2097,7 +2097,7 @@ END:
     }
 
     // B_WEATHER_STRONG_WINDS prints a string when it's about to reduce the power
-    // of a move that is Super Effective against a Flying-type Pokémon.
+    // of a move that is Super Effective against a Flying-type Moémon.
     if (gBattleWeather & B_WEATHER_STRONG_WINDS)
     {
         if ((GetBattlerType(gBattlerTarget, 0) == TYPE_FLYING
@@ -3592,7 +3592,7 @@ void SetMoveEffect(bool32 primary, u32 certain)
                 gBattlescriptCurrInstr = BattleScript_DoubleShockRemoveType;
                 break;
             case MOVE_EFFECT_ROUND:
-                TryUpdateRoundTurnOrder(); // If another Pokémon uses Round before the user this turn, the user will use Round directly after it
+                TryUpdateRoundTurnOrder(); // If another Moémon uses Round before the user this turn, the user will use Round directly after it
                 gBattlescriptCurrInstr++;
                 break;
             case MOVE_EFFECT_DIRE_CLAW:
@@ -4357,7 +4357,7 @@ bool32 NoAliveMonsForPlayer(void)
     // Get total HP for the player's party to determine if the player has lost
     if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && (gPartnerTrainerId == TRAINER_STEVEN_PARTNER || gPartnerTrainerId >= TRAINER_CUSTOM_PARTNER))
     {
-        // In multi battle with Steven, skip his Pokémon
+        // In multi battle with Steven, skip his Moémon
         for (i = 0; i < MULTI_PARTY_SIZE; i++)
         {
             if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
@@ -6388,9 +6388,9 @@ static void Cmd_jumpifcantswitch(void)
     }
 }
 
-// Opens the party screen to choose a new Pokémon to send out.
-// slotId is the Pokémon to replace.
-// Note that this is not used by the Switch action, only replacing fainted Pokémon or Baton Pass
+// Opens the party screen to choose a new Moémon to send out.
+// slotId is the Moémon to replace.
+// Note that this is not used by the Switch action, only replacing fainted Moémon or Baton Pass
 static void ChooseMonToSendOut(u32 battler, u8 slotId)
 {
     gBattleStruct->battlerPartyIndexes[battler] = gBattlerPartyIndexes[battler];
@@ -7702,7 +7702,7 @@ static void Cmd_drawlvlupbox(void)
 
     if (gBattleScripting.drawlvlupboxState == 0)
     {
-        // If the Pokémon getting exp is not in-battle then
+        // If the Moémon getting exp is not in-battle then
         // slide out a banner with their name and icon on it.
         // Otherwise skip ahead.
         if (IsMonGettingExpSentOut())
@@ -10281,8 +10281,8 @@ static void Cmd_various(void)
     case VARIOUS_SET_ATTACKER_STICKY_WEB_USER:
     {
         VARIOUS_ARGS();
-        // For Mirror Armor: "If the Pokémon with this Ability is affected by Sticky Web, the effect is reflected back to the Pokémon which set it up.
-        //  If Pokémon which set up Sticky Web is not on the field, no Pokémon have their Speed lowered."
+        // For Mirror Armor: "If the Moémon with this Ability is affected by Sticky Web, the effect is reflected back to the Moémon which set it up.
+        //  If Moémon which set up Sticky Web is not on the field, no Moémon have their Speed lowered."
         gBattlerAttacker = gBattlerTarget;  // Initialize 'fail' condition
         SET_STATCHANGER(STAT_SPEED, 1, TRUE);
         if (gSideTimers[GetBattlerSide(battler)].stickyWebBattlerId != 0xFF)
@@ -12097,6 +12097,7 @@ static void Cmd_weatherdamage(void)
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ROCK)
                 && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GROUND)
                 && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_STEEL)
+                && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST)
                 && ability != ABILITY_SAND_VEIL
                 && ability != ABILITY_SAND_FORCE
                 && ability != ABILITY_SAND_RUSH
@@ -12123,6 +12124,8 @@ static void Cmd_weatherdamage(void)
                 gBattleMoveDamage *= -1;
             }
             else if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
+                && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GHOST)
+                && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_STEEL)
                 && ability != ABILITY_SNOW_CLOAK
                 && ability != ABILITY_OVERCOAT
                 && ability != ABILITY_ICE_BODY
@@ -12165,16 +12168,16 @@ static void Cmd_tryinfatuating(void)
     }
     else
     {
-        if (gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION
-            || !AreBattlersOfOppositeGender(gBattlerAttacker, gBattlerTarget))
-        {
-            gBattlescriptCurrInstr = cmd->failInstr;
-        }
-        else
-        {
+    //    if (gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION
+    //        || !AreBattlersOfOppositeGender(gBattlerAttacker, gBattlerTarget))
+    //    {
+    //        gBattlescriptCurrInstr = cmd->failInstr;
+    //    }
+    //    else
+    //    {
             gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
             gBattlescriptCurrInstr = cmd->nextInstr;
-        }
+    //    }
     }
 }
 
@@ -14829,19 +14832,19 @@ static void Cmd_handleballthrow(void)
             case ITEM_NEST_BALL:
                 if (B_NEST_BALL_MODIFIER >= GEN_6)
                 {
-                    //((41 - Pokémon's level) ÷ 10)× if Pokémon's level is between 1 and 29, 1× otherwise.
+                    //((41 - Moémon's level) ÷ 10)× if Moémon's level is between 1 and 29, 1× otherwise.
                     if (gBattleMons[gBattlerTarget].level < 30)
                         ballMultiplier = 410 - (gBattleMons[gBattlerTarget].level * 10);
                 }
                 else if (B_NEST_BALL_MODIFIER >= GEN_5)
                 {
-                    //((41 - Pokémon's level) ÷ 10)×, minimum 1×
+                    //((41 - Moémon's level) ÷ 10)×, minimum 1×
                     if (gBattleMons[gBattlerTarget].level < 31)
                         ballMultiplier = 410 - (gBattleMons[gBattlerTarget].level * 10);
                 }
                 else if (gBattleMons[gBattlerTarget].level < 40)
                 {
-                    //((40 - Pokémon's level) ÷ 10)×, minimum 1×
+                    //((40 - Moémon's level) ÷ 10)×, minimum 1×
                     ballMultiplier = 400 - (gBattleMons[gBattlerTarget].level * 10);
                     if (ballMultiplier <= 90)
                         ballMultiplier = 100;
@@ -15421,9 +15424,9 @@ static void Cmd_jumpifoppositegenders(void)
 {
     CMD_ARGS(const u8 *jumpInstr);
 
-    if (AreBattlersOfOppositeGender(gBattlerAttacker, gBattlerTarget))
-        gBattlescriptCurrInstr = cmd->jumpInstr;
-    else
+    //if (AreBattlersOfOppositeGender(gBattlerAttacker, gBattlerTarget))
+    //    gBattlescriptCurrInstr = cmd->jumpInstr;
+    //else
         gBattlescriptCurrInstr = cmd->nextInstr;
 }
 

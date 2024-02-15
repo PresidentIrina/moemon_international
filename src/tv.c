@@ -1766,7 +1766,7 @@ void SetPokemonAnglerSpecies(u16 species)
 }
 
 // World of Masters is initialized in the last slot by InitWorldOfMastersShowAttempt
-// If enough Pokémon were caught during the day the show can be put on air (and will
+// If enough Moémon were caught during the day the show can be put on air (and will
 // be moved out of the last slot).
 // Either way the temporary version of the show in the last slot is deleted.
 static void ResolveWorldOfMastersShow(u16 days)
@@ -2032,7 +2032,7 @@ static void SecretBaseVisit_CalculatePartyData(TVShow *show)
             sTV_SecretBaseVisitMonsTemp[numPokemon].level = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
             sTV_SecretBaseVisitMonsTemp[numPokemon].species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
 
-            // Check all the Pokémon's moves, then randomly select one to save
+            // Check all the Moémon's moves, then randomly select one to save
             numMoves = 0;
             move = GetMonData(&gPlayerParty[i], MON_DATA_MOVE1);
             if (move != MOVE_NONE)
@@ -3066,7 +3066,7 @@ static u16 GetRandomDifferentSpeciesSeenByPlayer(u16 excludedSpecies)
 
         if (species == initSpecies)
         {
-            // Looped back to initial species (only Pokémon seen), must choose excluded species
+            // Looped back to initial species (only Moémon seen), must choose excluded species
             species = excludedSpecies;
             return species;
         }

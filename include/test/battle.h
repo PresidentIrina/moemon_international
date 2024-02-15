@@ -57,14 +57,14 @@
  * with:
  *     make check TESTS='Stun Spore'
  *
- * GIVEN initializes the parties, PLAYER and OPPONENT add a Pokémon to
+ * GIVEN initializes the parties, PLAYER and OPPONENT add a Moémon to
  * their respective parties. They can both accept a block which further
- * customizes the Pokémon's stats, moves, item, ability, etc.
+ * customizes the Moémon's stats, moves, item, ability, etc.
  *
  * WHEN describes the turns, and TURN describes the choices made in a
  * single turn. MOVE causes the player to use Stun Spore and adds the
- * move to the Pokémon's moveset if an explicit Moves was not specified.
- * Pokémon that are not mentioned in a TURN use Celebrate.
+ * move to the Moémon's moveset if an explicit Moves was not specified.
+ * Moémon that are not mentioned in a TURN use Celebrate.
  * The test runner rigs the RNG so that unless otherwise specified,
  * moves always hit, never critical hit, always activate their secondary
  * effects, and always roll the same damage modifier.
@@ -173,7 +173,7 @@
  * ASSUME(cond)
  * Causes the test to be skipped if cond is false. Used to document any
  * prerequisites of the test, e.g. to test Burn reducing the Attack of a
- * Pokémon we can observe the damage of a physical attack with and
+ * Moémon we can observe the damage of a physical attack with and
  * without the burn. To document that this test assumes the attack is
  * physical we can use:
  *     ASSUME(gBattleMoves[MOVE_WHATEVER].split == SPLIT_PHYSICAL);
@@ -244,7 +244,7 @@
  * Checks that the test passes successes/trials. If tag is provided, the
  * test is run for each value that the tag can produce. For example, to
  * check that Paralysis causes the turn to be skipped 25/100 times, we
- * can write the following test that passes only if the Pokémon is fully
+ * can write the following test that passes only if the Moémon is fully
  * paralyzed and specify that we expect it to pass 25/100 times when
  * RNG_PARALYSIS varies:
  *     SINGLE_BATTLE_TEST("Paralysis has a 25% chance of skipping the turn")
@@ -282,7 +282,7 @@
  *
  * PLAYER(species) and OPPONENT(species)
  * Adds the species to the player's or opponent's party respectively.
- * The Pokémon can be further customized with the following functions:
+ * The Moémon can be further customized with the following functions:
  * - Gender(MON_MALE | MON_FEMALE)
  * - Nature(nature)
  * - Ability(ability)
@@ -295,8 +295,8 @@
  * - Status1(status1)
  * For example to create a Wobbuffet that is poisoned:
  *     PLAYER(SPECIES_WOBBUFFET) { Status1(STATUS1_POISON); }
- * Note if Speed is specified for any Pokémon then it must be specified
- * for all Pokémon.
+ * Note if Speed is specified for any Moémon then it must be specified
+ * for all Moémon.
  * Note if Moves is specified then MOVE will not automatically add moves
  * to the moveset.
  *
@@ -311,7 +311,7 @@
  * TURN
  * Groups the choices made by the battlers on a single turn. If Speeds
  * have not been explicitly specified then the order of the MOVEs in the
- * TURN will be used to infer the Speeds of the Pokémon, e.g.:
+ * TURN will be used to infer the Speeds of the Moémon, e.g.:
  *     // player's speed will be greater than opponent's speed.
  *     TURN { MOVE(player, MOVE_SPLASH); MOVE(opponent, MOVE_SPLASH); }
  *     // opponent's speed will be greater than player's speed.
@@ -346,7 +346,7 @@
  *     SKIP_TURN(player);
  *
  * SEND_OUT(battler, partyIndex)
- * Used when the battler chooses to switch to another Pokémon but not
+ * Used when the battler chooses to switch to another Moémon but not
  * via Switch, e.g. after fainting or due to a U-turn.
  *     SEND_OUT(player, 1);
  *

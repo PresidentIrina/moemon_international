@@ -443,6 +443,9 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectGlaiveRush              @ EFFECT_GLAIVE_RUSH
 	.4byte BattleScript_EffectBrickBreak              @ EFFECT_RAGING_BULL
 	.4byte BattleScript_EffectHit                     @ EFFECT_RAGE_FIST
+	.4byte BattleScript_EffectScald					  @ EFFECT_SCALD
+	.4byte BattleScript_EffectRockSmash				  @ EFFECT_ROCK_SMASH
+	.4byte BattleScript_EffectFlash					  @ EFFECT_FLASH
 
 BattleScript_EffectGlaiveRush::
 	call BattleScript_EffectHit_Ret
@@ -6432,7 +6435,7 @@ BattleScript_HandleFaintedMon::
 	jumpifbyte CMP_NOT_EQUAL, gBattleOutcome, 0, BattleScript_FaintedMonEnd
 	jumpifbattletype BATTLE_TYPE_TRAINER | BATTLE_TYPE_DOUBLE, BattleScript_FaintedMonTryChoose
 	jumpifword CMP_NO_COMMON_BITS, gHitMarker, HITMARKER_PLAYER_FAINTED, BattleScript_FaintedMonTryChoose
-@ Yes/No for sending out a new Pokémon if one is defeated in a wild battle
+@ Yes/No for sending out a new Moémon if one is defeated in a wild battle
 	printstring STRINGID_USENEXTPKMN
 	setbyte gBattleCommunication, 0
 	yesnobox
@@ -6452,7 +6455,7 @@ BattleScript_FaintedMonTryChoose:
 	jumpifbyte CMP_EQUAL, sBATTLE_STYLE, OPTIONS_BATTLE_STYLE_SET, BattleScript_FaintedMonSendOutNew
 	jumpifcantswitch BS_PLAYER1, BattleScript_FaintedMonSendOutNew
 	setbyte sILLUSION_NICK_HACK, 1
-@ Yes/No for sending out a new Pokémon when the opponent is switching
+@ Yes/No for sending out a new Moémon when the opponent is switching
 	printstring STRINGID_ENEMYABOUTTOSWITCHPKMN
 	setbyte gBattleCommunication, 0
 	yesnobox
@@ -6462,7 +6465,7 @@ BattleScript_FaintedMonTryChoose:
 	openpartyscreen BS_ATTACKER | PARTY_SCREEN_OPTIONAL, BattleScript_FaintedMonSendOutNew
 	switchhandleorder BS_ATTACKER, 2
 	jumpifbyte CMP_EQUAL, gBattleCommunication, PARTY_SIZE, BattleScript_FaintedMonSendOutNew
-@ Switch Pokémon before opponent
+@ Switch Moémon before opponent
 	atknameinbuff1
 	resetswitchinabilitybits BS_ATTACKER
 	hpthresholds2 BS_ATTACKER
@@ -10817,3 +10820,16 @@ BattleScript_EffectSnow::
 	call BattleScript_CheckPrimalWeather
 	setsnow
 	goto BattleScript_MoveWeatherChange
+
+BattleScript_EffectScald::
+	setmoveeffect MOVE_EFFECT_BURN
+	goto BattleScript_EffectHit
+
+BattleScript_EffectRockSmash::
+	goto BattleScript_EffectHit
+
+BattleScript_EffectFlash::
+	attackcanceler
+	jumpifnotfirstturn BattleScript_FailedFromAtkString
+	setmoveeffect MOVE_EFFECT_FLINCH
+	goto BattleScript_EffectHit

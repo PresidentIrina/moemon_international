@@ -281,7 +281,7 @@ BattleFrontier_ScottsHouse_Text_MayFindWildMonsInFrontier:
 	.string "I think I remember you working on\n"
 	.string "a POKéDEX as well.\p"
 	.string "Well, guess what?\p"
-	.string "You may run into wild POKéMON in\n"
+	.string "You may run into wild Moémon in\n"
 	.string "the BATTLE FRONTIER somewhere…\l"
 	.string "Fufufu!$"
 
@@ -346,4 +346,3 @@ BattleFrontier_ScottsHouse_Text_ExpectingToHearEvenGreaterThings:
 BattleFrontier_ScottsHouse_Text_ComeBackForThisLater:
 	.string "Oops, well, if you have too much\n"
 	.string "stuff, come back for this later.$"
-

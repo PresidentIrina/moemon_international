@@ -23,7 +23,7 @@ SINGLE_BATTLE_TEST("Poison Sting inflicts poison")
     }
 }
 
-SINGLE_BATTLE_TEST("Poison cannot be inflicted on Poison and Steel-type Pokémon")
+SINGLE_BATTLE_TEST("Poison cannot be inflicted on Poison and Steel-type Moémon")
 {
     u32 mon;
     PARAMETRIZE { mon = SPECIES_NIDORAN_M; }

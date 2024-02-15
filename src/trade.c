@@ -212,7 +212,7 @@ static EWRAM_DATA struct {
 } *sTradeMenu = NULL;
 
 static EWRAM_DATA struct {
-    struct Pokemon tempMon; // Used as a temp variable when swapping Pokémon
+    struct Pokemon tempMon; // Used as a temp variable when swapping Moémon
     u32 timer;
     u32 monPersonalities[2];
     u8 filler_70[2];
@@ -635,7 +635,7 @@ static void CB2_CreateTradeMenu(void)
         temp.tileTag += GFXTAG_CANCEL_R;
         CreateSprite(&temp, 215 + 32, 152, 1);
 
-        // Create Choose a Pokémon text sprites (only 3 are needed, other 3 are empty)
+        // Create Choose a Moémon text sprites (only 3 are needed, other 3 are empty)
         for (i = 0; i < NUM_CHOOSE_PKMN_SPRITES; i++)
         {
             temp = sSpriteTemplate_MenuText;
@@ -824,7 +824,7 @@ static void CB2_ReturnToTradeMenu(void)
         temp.tileTag += GFXTAG_CANCEL_R;
         CreateSprite(&temp, 215 + 32, 152, 1);
 
-        // Create Choose a Pokémon text sprites
+        // Create Choose a Moémon text sprites
         for (i = 0; i < NUM_CHOOSE_PKMN_SPRITES; i++)
         {
             temp = sSpriteTemplate_MenuText;
@@ -2512,7 +2512,7 @@ int GetUnionRoomTradeMessageId(struct RfuGameCompatibilityData player, struct Rf
     }
     else
     {
-        // Player's Pokémon must be of the type the partner requested
+        // Player's Moémon must be of the type the partner requested
         if (gSpeciesInfo[playerSpecies2].types[0] != requestedType
          && gSpeciesInfo[playerSpecies2].types[1] != requestedType)
             return UR_TRADE_MSG_NOT_MON_PARTNER_WANTS;
@@ -2523,7 +2523,7 @@ int GetUnionRoomTradeMessageId(struct RfuGameCompatibilityData player, struct Rf
     if (playerSpecies2 == SPECIES_EGG && playerSpecies2 != partnerSpecies)
         return UR_TRADE_MSG_MON_CANT_BE_TRADED_NOW;
 
-    // If the player doesn't have the National Dex then Eggs and non-Hoenn Pokémon can't be traded
+    // If the player doesn't have the National Dex then Eggs and non-Hoenn Moémon can't be traded
     if (!playerHasNationalDex)
     {
         if (playerSpecies2 == SPECIES_EGG)
@@ -2536,7 +2536,7 @@ int GetUnionRoomTradeMessageId(struct RfuGameCompatibilityData player, struct Rf
             return UR_TRADE_MSG_PARTNERS_MON_CANT_BE_TRADED;
     }
 
-    // If the partner doesn't have the National Dex then the player's offer has to be a Hoenn Pokémon
+    // If the partner doesn't have the National Dex then the player's offer has to be a Hoenn Moémon
     if (!partnerHasNationalDex && !IsSpeciesInHoennDex(playerSpecies2))
         return UR_TRADE_MSG_PARTNER_CANT_ACCEPT_MON;
 
@@ -3437,7 +3437,7 @@ static bool8 DoTradeAnim_Cable(void)
         }
         else
         {
-            // Pokémon has arrived onscreen
+            // Moémon has arrived onscreen
             gSprites[sTradeAnim->monSpriteIds[TRADE_PLAYER]].x2 = 0;
             sTradeAnim->bg2hofs = 0;
             sTradeAnim->state = STATE_SEND_MSG;
@@ -4379,7 +4379,7 @@ static bool8 DoTradeAnim_Wireless(void)
     return FALSE;
 }
 
-// Try to evolve a Pokémon received in a link trade
+// Try to evolve a Moémon received in a link trade
 // In-game trades resolve evolution during the trade sequence, in STATE_TRY_EVOLUTION
 static void CB2_TryLinkTradeEvolution(void)
 {

@@ -177,10 +177,10 @@ DebugScript_HatchAnEgg_CantForceHatch::
 	end
 
 DebugScript_HatchAnEgg_Text_EmptyParty::
-	.string "You have no Pokémon nor Eggs.$"
+	.string "You have no Moémon nor Eggs.$"
 
 DebugScript_HatchAnEgg_Text_NotAnEgg::
-	.string "That's not a Pokémon Egg.$"
+	.string "That's not a Moémon Egg.$"
 
 DebugScript_ZeroDaycareMons::
 	msgbox DebugText_DaycareNoPokemon, MSGBOX_DEFAULT
@@ -198,13 +198,13 @@ DebugScript_DaycareMonsNotCompatible::
 	end
 
 DebugText_DaycareNoPokemon:
-	.string "You have no Pokémon at Daycare.$"
+	.string "You have no Moémon at Daycare.$"
 
 DebugText_DaycareOnePokemon:
-	.string "You have only one Pokémon at Daycare.$"
+	.string "You have only one Moémon at Daycare.$"
 
 DebugText_DaycarePokemonNotCompatible:
-	.string "Your Pokémon at Daycare can't\nhave babies together!$"
+	.string "Your Moémon at Daycare can't\nhave babies together!$"
 
 Debug_ShowExpansionVersion::
 	callnative BufferExpansionVersion

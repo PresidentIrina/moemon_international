@@ -13,7 +13,7 @@ SINGLE_BATTLE_TEST("Pressure causes opponent's moves to use up 1 additional PP")
     }
 }
 
-DOUBLE_BATTLE_TEST("Pressure's effect stacks with multiple Pokémon")
+DOUBLE_BATTLE_TEST("Pressure's effect stacks with multiple Moémon")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { MovesWithPP({MOVE_SWIFT, 20}); }

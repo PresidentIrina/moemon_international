@@ -8,7 +8,7 @@ ASSUMPTIONS
     ASSUME(gSpeciesInfo[SPECIES_PORYGON].genderRatio == MON_GENDERLESS);
 }
 
-SINGLE_BATTLE_TEST("Rivalry increases power by x1.25 towards Pokémon of the same gender", s16 damage)
+SINGLE_BATTLE_TEST("Rivalry increases power by x1.25 towards Moémon of the same gender", s16 damage)
 {
     u16 species, ability;
     PARAMETRIZE { species = SPECIES_NIDOKING; ability = ABILITY_POISON_POINT; }
@@ -30,7 +30,7 @@ SINGLE_BATTLE_TEST("Rivalry increases power by x1.25 towards Pokémon of the sam
     }
 }
 
-SINGLE_BATTLE_TEST("Rivalry decreases power by x0.75 towards Pokémon of different gender", s16 damage)
+SINGLE_BATTLE_TEST("Rivalry decreases power by x0.75 towards Moémon of different gender", s16 damage)
 {
     u16 species1, species2, ability;
     PARAMETRIZE { species1 = SPECIES_NIDOKING; species2 = SPECIES_NIDOQUEEN; ability = ABILITY_POISON_POINT; }

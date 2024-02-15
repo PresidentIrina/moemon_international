@@ -5516,7 +5516,7 @@ bool8 SaveContestWinner(u8 rank)
         if (gContestFinalStandings[i] == 0)
             break;
 
-    // Exit if attempting to save a Pokémon other than the player's to the museum
+    // Exit if attempting to save a Moémon other than the player's to the museum
     if (rank == CONTEST_SAVE_FOR_MUSEUM && i != gContestPlayerMonIndex)
         return FALSE;
 

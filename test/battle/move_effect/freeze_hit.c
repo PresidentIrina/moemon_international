@@ -22,7 +22,7 @@ SINGLE_BATTLE_TEST("Powder Snow inflicts freeze")
     }
 }
 
-SINGLE_BATTLE_TEST("Powder Snow cannot freeze an Ice-type Pokémon")
+SINGLE_BATTLE_TEST("Powder Snow cannot freeze an Ice-type Moémon")
 {
     GIVEN {
         ASSUME(gSpeciesInfo[SPECIES_SNORUNT].types[0] == TYPE_ICE);

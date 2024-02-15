@@ -17,7 +17,7 @@ SINGLE_BATTLE_TEST("Hail deals 1/16 damage per turn")
    } THEN { EXPECT_EQ(hailDamage, opponent->maxHP / 16); }
 }
 
-SINGLE_BATTLE_TEST("Hail damage does not affect Ice-type Pokémon")
+SINGLE_BATTLE_TEST("Hail damage does not affect Ice-type Moémon")
 {
     GIVEN {
         ASSUME(gSpeciesInfo[SPECIES_GLALIE].types[0] == TYPE_ICE);

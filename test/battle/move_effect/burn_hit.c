@@ -21,7 +21,7 @@ SINGLE_BATTLE_TEST("Ember inflicts burn")
     }
 }
 
-SINGLE_BATTLE_TEST("Ember cannot burn a Fire-type Pokémon")
+SINGLE_BATTLE_TEST("Ember cannot burn a Fire-type Moémon")
 {
     GIVEN {
         ASSUME(gSpeciesInfo[SPECIES_CHARMANDER].types[0] == TYPE_FIRE);

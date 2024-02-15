@@ -2972,7 +2972,7 @@ static void DebugAction_Give_PokemonSimple(u8 taskId)
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
 
-    // Display initial Pokémon
+    // Display initial Moémon
     StringCopy(gStringVar2, gText_DigitIndicator[0]);
     ConvertIntToDecimalStringN(gStringVar3, sDebugMonData->species, STR_CONV_MODE_LEADING_ZEROS, 3);
     StringCopy(gStringVar1, GetSpeciesName(sDebugMonData->species));
@@ -3012,7 +3012,7 @@ static void DebugAction_Give_PokemonComplex(u8 taskId)
 
     CopyWindowToVram(windowId, COPYWIN_FULL);
 
-    // Display initial Pokémon
+    // Display initial Moémon
     StringCopy(gStringVar2, gText_DigitIndicator[0]);
     ConvertIntToDecimalStringN(gStringVar3, sDebugMonData->species, STR_CONV_MODE_LEADING_ZEROS, 4);
     StringCopy(gStringVar1, GetSpeciesName(sDebugMonData->species));

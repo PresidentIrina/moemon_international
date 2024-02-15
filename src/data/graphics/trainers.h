@@ -23,8 +23,13 @@ const u32 gTrainerPalette_BirdKeeper[] = INCBIN_U32("graphics/trainers/front_pic
 const u32 gTrainerFrontPic_Collector[] = INCBIN_U32("graphics/trainers/front_pics/collector.4bpp.lz");
 const u32 gTrainerPalette_Collector[] = INCBIN_U32("graphics/trainers/front_pics/collector.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_AquaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_AquaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_f_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_AquaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_f.4bpp.lz");
 const u32 gTrainerPalette_AquaGruntF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_f.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_SwimmerM[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_m.4bpp.lz");
 const u32 gTrainerPalette_SwimmerM[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_m.gbapal.lz");
@@ -41,8 +46,13 @@ const u32 gTrainerPalette_AquaAdminM[] = INCBIN_U32("graphics/trainers/front_pic
 const u32 gTrainerFrontPic_BlackBelt[] = INCBIN_U32("graphics/trainers/front_pics/black_belt.4bpp.lz");
 const u32 gTrainerPalette_BlackBelt[] = INCBIN_U32("graphics/trainers/front_pics/black_belt.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_AquaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_admin_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_AquaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_admin_f_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_AquaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_admin_f.4bpp.lz");
 const u32 gTrainerPalette_AquaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/aqua_admin_f.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_AquaLeaderArchie[] = INCBIN_U32("graphics/trainers/front_pics/aqua_leader_archie.4bpp.lz");
 const u32 gTrainerPalette_AquaLeaderArchie[] = INCBIN_U32("graphics/trainers/front_pics/aqua_leader_archie.gbapal.lz");
@@ -65,8 +75,13 @@ const u32 gTrainerPalette_TuberF[] = INCBIN_U32("graphics/trainers/front_pics/tu
 const u32 gTrainerFrontPic_TuberM[] = INCBIN_U32("graphics/trainers/front_pics/tuber_m.4bpp.lz");
 const u32 gTrainerPalette_TuberM[] = INCBIN_U32("graphics/trainers/front_pics/tuber_m.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_CoolTrainerF[] = INCBIN_U32("graphics/trainers/front_pics/cooltrainer_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_CoolTrainerF[] = INCBIN_U32("graphics/trainers/front_pics/cooltrainer_f_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_CoolTrainerF[] = INCBIN_U32("graphics/trainers/front_pics/cooltrainer_f.4bpp.lz");
 const u32 gTrainerPalette_CoolTrainerF[] = INCBIN_U32("graphics/trainers/front_pics/cooltrainer_f.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_Lady[] = INCBIN_U32("graphics/trainers/front_pics/lady.4bpp.lz");
 const u32 gTrainerPalette_Lady[] = INCBIN_U32("graphics/trainers/front_pics/lady.gbapal.lz");
@@ -188,8 +203,13 @@ const u32 gTrainerFrontPic_SchoolKidF[] = INCBIN_U32("graphics/trainers/front_pi
 const u32 gTrainerPalette_SchoolKidF[] = INCBIN_U32("graphics/trainers/front_pics/school_kid_f.gbapal.lz");
 #endif
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_SrAndJr[] = INCBIN_U32("graphics/trainers/front_pics/sr_and_jr_nsfw.4bpp.lz");
+const u32 gTrainerPalette_SrAndJr[] = INCBIN_U32("graphics/trainers/front_pics/sr_and_jr_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_SrAndJr[] = INCBIN_U32("graphics/trainers/front_pics/sr_and_jr.4bpp.lz");
 const u32 gTrainerPalette_SrAndJr[] = INCBIN_U32("graphics/trainers/front_pics/sr_and_jr.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_PokefanM[] = INCBIN_U32("graphics/trainers/front_pics/pokefan_m.4bpp.lz");
 const u32 gTrainerPalette_PokefanM[] = INCBIN_U32("graphics/trainers/front_pics/pokefan_m.gbapal.lz");
@@ -221,8 +241,13 @@ const u32 gTrainerPalette_RunningTriathleteF[] = INCBIN_U32("graphics/trainers/f
 const u32 gTrainerFrontPic_SwimmingTriathleteM[] = INCBIN_U32("graphics/trainers/front_pics/swimming_triathlete_m.4bpp.lz");
 const u32 gTrainerPalette_SwimmingTriathleteM[] = INCBIN_U32("graphics/trainers/front_pics/swimming_triathlete_m.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_SwimmingTriathleteF[] = INCBIN_U32("graphics/trainers/front_pics/swimming_triathlete_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_SwimmingTriathleteF[] = INCBIN_U32("graphics/trainers/front_pics/swimming_triathlete_f_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_SwimmingTriathleteF[] = INCBIN_U32("graphics/trainers/front_pics/swimming_triathlete_f.4bpp.lz");
 const u32 gTrainerPalette_SwimmingTriathleteF[] = INCBIN_U32("graphics/trainers/front_pics/swimming_triathlete_f.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_DragonTamer[] = INCBIN_U32("graphics/trainers/front_pics/dragon_tamer.4bpp.lz");
 const u32 gTrainerPalette_DragonTamer[] = INCBIN_U32("graphics/trainers/front_pics/dragon_tamer.gbapal.lz");
@@ -230,14 +255,29 @@ const u32 gTrainerPalette_DragonTamer[] = INCBIN_U32("graphics/trainers/front_pi
 const u32 gTrainerFrontPic_NinjaBoy[] = INCBIN_U32("graphics/trainers/front_pics/ninja_boy.4bpp.lz");
 const u32 gTrainerPalette_NinjaBoy[] = INCBIN_U32("graphics/trainers/front_pics/ninja_boy.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_BattleGirl[] = INCBIN_U32("graphics/trainers/front_pics/battle_girl_nsfw.4bpp.lz");
+const u32 gTrainerPalette_BattleGirl[] = INCBIN_U32("graphics/trainers/front_pics/battle_girl_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_BattleGirl[] = INCBIN_U32("graphics/trainers/front_pics/battle_girl.4bpp.lz");
 const u32 gTrainerPalette_BattleGirl[] = INCBIN_U32("graphics/trainers/front_pics/battle_girl.gbapal.lz");
+#endif
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_ParasolLady[] = INCBIN_U32("graphics/trainers/front_pics/parasol_lady_nsfw.4bpp.lz");
+const u32 gTrainerPalette_ParasolLady[] = INCBIN_U32("graphics/trainers/front_pics/parasol_lady_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_ParasolLady[] = INCBIN_U32("graphics/trainers/front_pics/parasol_lady.4bpp.lz");
 const u32 gTrainerPalette_ParasolLady[] = INCBIN_U32("graphics/trainers/front_pics/parasol_lady.gbapal.lz");
+#endif
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_SwimmerF[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_f_nsfw.4bpp.lz");
+const u32 gTrainerPalette_SwimmerF[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_f_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_SwimmerF[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_f.4bpp.lz");
 const u32 gTrainerPalette_SwimmerF[] = INCBIN_U32("graphics/trainers/front_pics/swimmer_f.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_Twins[] = INCBIN_U32("graphics/trainers/front_pics/twins.4bpp.lz");
 const u32 gTrainerPalette_Twins[] = INCBIN_U32("graphics/trainers/front_pics/twins.gbapal.lz");
@@ -254,8 +294,13 @@ const u32 gTrainerPalette_Wally[] = INCBIN_U32("graphics/trainers/palettes/wally
 const u32 gTrainerFrontPic_Brendan[] = INCBIN_U32("graphics/trainers/front_pics/brendan.4bpp.lz");
 const u32 gTrainerPalette_Brendan[] = INCBIN_U32("graphics/trainers/palettes/brendan.gbapal.lz");
 
+#if NSFW_CONTENT == TRUE
+const u32 gTrainerFrontPic_May[] = INCBIN_U32("graphics/trainers/front_pics/may_nsfw.4bpp.lz");
+const u32 gTrainerPalette_May[] = INCBIN_U32("graphics/trainers/palettes/may_nsfw.gbapal.lz");
+#else
 const u32 gTrainerFrontPic_May[] = INCBIN_U32("graphics/trainers/front_pics/may.4bpp.lz");
 const u32 gTrainerPalette_May[] = INCBIN_U32("graphics/trainers/palettes/may.gbapal.lz");
+#endif
 
 const u32 gTrainerFrontPic_BugCatcher[] = INCBIN_U32("graphics/trainers/front_pics/bug_catcher.4bpp.lz");
 const u32 gTrainerPalette_BugCatcher[] = INCBIN_U32("graphics/trainers/front_pics/bug_catcher.gbapal.lz");
@@ -323,7 +368,11 @@ const u32 gTrainerFrontPic_RubySapphireMay[] = INCBIN_U32("graphics/trainers/fro
 const u32 gTrainerPalette_RubySapphireMay[] = INCBIN_U32("graphics/trainers/palettes/may_rs.gbapal.lz");
 
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
+#if NSFW_CONTENT == TRUE
+const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may_nsfw.4bpp");
+#else
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
+#endif
 const u8 gTrainerBackPic_Red[] = INCBIN_U8("graphics/trainers/back_pics/red.4bpp");
 const u8 gTrainerBackPic_Leaf[] = INCBIN_U8("graphics/trainers/back_pics/leaf.4bpp");
 const u8 gTrainerBackPic_RubySapphireBrendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan_rs.4bpp");

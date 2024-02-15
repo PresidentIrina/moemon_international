@@ -51,7 +51,7 @@ SINGLE_BATTLE_TEST("Salt Cure inflicts 1/4 to Water/Steel types of their maximum
     }
 }
 
-SINGLE_BATTLE_TEST("Salt Cure is removed when the afflicted Pokémon is switched out")
+SINGLE_BATTLE_TEST("Salt Cure is removed when the afflicted Moémon is switched out")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET);

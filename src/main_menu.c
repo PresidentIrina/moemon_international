@@ -2252,7 +2252,7 @@ static void NewGameBirchSpeech_ClearWindow(u8 windowId)
 
 static void NewGameBirchSpeech_WaitForThisIsPokemonText(struct TextPrinterTemplate *printer, u16 renderCmd)
 {
-    // Wait for Birch's "This is a Pokémon" text to reach the pause
+    // Wait for Birch's "This is a Moémon" text to reach the pause
     // Then start the PokéBall release (if it hasn't been started already)
     if (*(printer->currentChar - 2) == EXT_CTRL_CODE_PAUSE && !sStartedPokeBallTask)
     {

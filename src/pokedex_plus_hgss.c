@@ -305,7 +305,7 @@ static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("g
 #define POKEBALL_ROTATION_TOP    64
 #define POKEBALL_ROTATION_BOTTOM (POKEBALL_ROTATION_TOP - 16)
 
-// Coordinates of the Pokémon sprite on its page (info/cry screens)
+// Coordinates of the Moémon sprite on its page (info/cry screens)
 #define MON_PAGE_X 48
 #define MON_PAGE_Y 56
 
@@ -2354,7 +2354,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
     }
 }
 
-// Opening the info screen from list view. Pokémon sprite is moving to its new position, wait for it to arrive
+// Opening the info screen from list view. Moémon sprite is moving to its new position, wait for it to arrive
 static void Task_OpenInfoScreenAfterMonMovement(u8 taskId)
 {
     if (gSprites[sPokedexView->selectedMonSpriteId].x == MON_PAGE_X && gSprites[sPokedexView->selectedMonSpriteId].y == MON_PAGE_Y)
@@ -4398,6 +4398,7 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES + CONTEST_CATEGORIE
     [TYPE_DRAGON] = TYPE_ICON_PAL_NUM_2,
     [TYPE_DARK] = TYPE_ICON_PAL_NUM_0,
     [TYPE_FAIRY] = TYPE_ICON_PAL_NUM_1,
+    [TYPE_LIGHT] = TYPE_ICON_PAL_NUM_0,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_COOL] = TYPE_ICON_PAL_NUM_0,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_BEAUTY] = TYPE_ICON_PAL_NUM_1,
     [NUMBER_OF_MON_TYPES + CONTEST_CATEGORY_CUTE] = TYPE_ICON_PAL_NUM_1,

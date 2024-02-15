@@ -149,7 +149,7 @@ static const u16 sRibbonIcons2_Pal[] = INCBIN_U16("graphics/pokenav/ribbons/icon
 static const u16 sRibbonIcons3_Pal[] = INCBIN_U16("graphics/pokenav/ribbons/icons3.gbapal");
 static const u16 sRibbonIcons4_Pal[] = INCBIN_U16("graphics/pokenav/ribbons/icons4.gbapal");
 static const u16 sRibbonIcons5_Pal[] = INCBIN_U16("graphics/pokenav/ribbons/icons5.gbapal");
-static const u16 sMonInfo_Pal[] = INCBIN_U16("graphics/pokenav/ribbons/mon_info.gbapal"); // palette for Pokémon's name/gender/level text
+static const u16 sMonInfo_Pal[] = INCBIN_U16("graphics/pokenav/ribbons/mon_info.gbapal"); // palette for Moémon's name/gender/level text
 static const u32 sRibbonIconsSmall_Gfx[] = INCBIN_U32("graphics/pokenav/ribbons/icons.4bpp.lz");
 static const u32 sRibbonIconsBig_Gfx[] = INCBIN_U32("graphics/pokenav/ribbons/icons_big.4bpp.lz");
 
@@ -216,7 +216,7 @@ void FreeRibbonsSummaryScreen1(void)
 // Handles input when a specific ribbon is not currently selected
 static u32 RibbonsSummaryHandleInput(struct Pokenav_RibbonsSummaryList *list)
 {
-    // Handle Up/Down movement to select a new Pokémon to show ribbons for
+    // Handle Up/Down movement to select a new Moémon to show ribbons for
     if (JOY_REPEAT(DPAD_UP) && list->monList->currIndex != 0)
     {
         list->monList->currIndex--;
@@ -983,7 +983,7 @@ static void SlideMonSpriteOn(struct Pokenav_RibbonsSummaryMenu *menu)
     StartMonSpriteSlide(&gSprites[menu->monSpriteId], MON_SPRITE_X_OFF, MON_SPRITE_X_ON, 6);
 }
 
-// Is Pokémon summary sprite still sliding off/on
+// Is Moémon summary sprite still sliding off/on
 static bool32 IsMonSpriteAnimating(struct Pokenav_RibbonsSummaryMenu *menu)
 {
     return (gSprites[menu->monSpriteId].callback != SpriteCallbackDummy);

@@ -22,7 +22,8 @@
 #define TYPE_DRAGON           16
 #define TYPE_DARK             17
 #define TYPE_FAIRY            18
-#define NUMBER_OF_MON_TYPES   19
+#define TYPE_LIGHT            19
+#define NUMBER_OF_MON_TYPES   20
 
 // Pokemon egg groups
 #define EGG_GROUP_NONE                0
@@ -134,7 +135,7 @@
 
 // The above gift ribbons (Marine - World) are
 // special distribution ribbons that correspond to
-// 1 bit each in the Pokémon struct. Gen 4 hard-codes
+// 1 bit each in the Moémon struct. Gen 4 hard-codes
 // each of these to the given name. In Gen 3 they're
 // used to get an index into giftRibbons in the save block,
 // which can have a value 0-64 (0 is 'no ribbon') that
@@ -255,58 +256,58 @@
 // Evolution types
 #define EVOLUTIONS_END                    0xFFFF // Not an actual evolution, used to mark the end of an evolution array.
 #define EVO_NONE                          0xFFFE // Not an actual evolution, used to generate offspring that can't evolve into the specified species, like regional forms.
-#define EVO_FRIENDSHIP                    1      // Pokémon levels up with friendship ≥ 220
-#define EVO_FRIENDSHIP_DAY                2      // Pokémon levels up during the day with friendship ≥ 220
-#define EVO_FRIENDSHIP_NIGHT              3      // Pokémon levels up at night with friendship ≥ 220
-#define EVO_LEVEL                         4      // Pokémon reaches the specified level
-#define EVO_TRADE                         5      // Pokémon is traded
-#define EVO_TRADE_ITEM                    6      // Pokémon is traded while it's holding the specified item
-#define EVO_ITEM                          7      // specified item is used on Pokémon
-#define EVO_LEVEL_ATK_GT_DEF              8      // Pokémon reaches the specified level with attack > defense
-#define EVO_LEVEL_ATK_EQ_DEF              9      // Pokémon reaches the specified level with attack = defense
-#define EVO_LEVEL_ATK_LT_DEF              10     // Pokémon reaches the specified level with attack < defense
-#define EVO_LEVEL_SILCOON                 11     // Pokémon reaches the specified level with a Silcoon personality value
-#define EVO_LEVEL_CASCOON                 12     // Pokémon reaches the specified level with a Cascoon personality value
-#define EVO_LEVEL_NINJASK                 13     // Pokémon reaches the specified level (special value for Ninjask)
-#define EVO_LEVEL_SHEDINJA                14     // Pokémon reaches the specified level (special value for Shedinja)
-#define EVO_BEAUTY                        15     // Pokémon levels up with beauty ≥ specified value
-#define EVO_LEVEL_FEMALE                  16     // Pokémon reaches the specified level, is female
-#define EVO_LEVEL_MALE                    17     // Pokémon reaches the specified level, is male
-#define EVO_LEVEL_NIGHT                   18     // Pokémon reaches the specified level, is night
-#define EVO_LEVEL_DAY                     19     // Pokémon reaches the specified level, is day
-#define EVO_LEVEL_DUSK                    20     // Pokémon reaches the specified level, is dusk (5-6 P.M)
-#define EVO_ITEM_HOLD_DAY                 21     // Pokémon levels up, holds specified item at day
-#define EVO_ITEM_HOLD_NIGHT               22     // Pokémon levels up, holds specified item at night
-#define EVO_MOVE                          23     // Pokémon levels up, knows specified move
-#define EVO_FRIENDSHIP_MOVE_TYPE          24     // Pokémon levels up with friendship ≥ 220, knows move with specified type
-#define EVO_MAPSEC                        25     // Pokémon levels up on specified mapsec
-#define EVO_ITEM_MALE                     26     // specified item is used on a male Pokémon
-#define EVO_ITEM_FEMALE                   27     // specified item is used on a female Pokémon
-#define EVO_LEVEL_RAIN                    28     // Pokémon reaches the specified level during rain in the overworld
-#define EVO_SPECIFIC_MON_IN_PARTY         29     // Pokémon levels up with a specified Pokémon in party
-#define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  30     // Pokémon reaches the specified level with a Dark Type Pokémon in party
-#define EVO_TRADE_SPECIFIC_MON            31     // Pokémon is traded for a specified Pokémon
-#define EVO_SPECIFIC_MAP                  32     // Pokémon levels up on specified map
-#define EVO_LEVEL_NATURE_AMPED            33     // Pokémon reaches the specified level, it has a Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky nature.
-#define EVO_LEVEL_NATURE_LOW_KEY          34     // Pokémon reaches the specified level, it has a Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful nature.
-#define EVO_CRITICAL_HITS                 35     // Pokémon performs specified number of critical hits in one battle
-#define EVO_SCRIPT_TRIGGER_DMG            36     // Pokémon has specified HP below max, then player interacts trigger
+#define EVO_FRIENDSHIP                    1      // Moémon levels up with friendship ≥ 220
+#define EVO_FRIENDSHIP_DAY                2      // Moémon levels up during the day with friendship ≥ 220
+#define EVO_FRIENDSHIP_NIGHT              3      // Moémon levels up at night with friendship ≥ 220
+#define EVO_LEVEL                         4      // Moémon reaches the specified level
+#define EVO_TRADE                         5      // Moémon is traded
+#define EVO_TRADE_ITEM                    6      // Moémon is traded while it's holding the specified item
+#define EVO_ITEM                          7      // specified item is used on Moémon
+#define EVO_LEVEL_ATK_GT_DEF              8      // Moémon reaches the specified level with attack > defense
+#define EVO_LEVEL_ATK_EQ_DEF              9      // Moémon reaches the specified level with attack = defense
+#define EVO_LEVEL_ATK_LT_DEF              10     // Moémon reaches the specified level with attack < defense
+#define EVO_LEVEL_SILCOON                 11     // Moémon reaches the specified level with a Silcoon personality value
+#define EVO_LEVEL_CASCOON                 12     // Moémon reaches the specified level with a Cascoon personality value
+#define EVO_LEVEL_NINJASK                 13     // Moémon reaches the specified level (special value for Ninjask)
+#define EVO_LEVEL_SHEDINJA                14     // Moémon reaches the specified level (special value for Shedinja)
+#define EVO_BEAUTY                        15     // Moémon levels up with beauty ≥ specified value
+#define EVO_LEVEL_FEMALE                  16     // Moémon reaches the specified level, is female
+#define EVO_LEVEL_MALE                    17     // Moémon reaches the specified level, is male
+#define EVO_LEVEL_NIGHT                   18     // Moémon reaches the specified level, is night
+#define EVO_LEVEL_DAY                     19     // Moémon reaches the specified level, is day
+#define EVO_LEVEL_DUSK                    20     // Moémon reaches the specified level, is dusk (5-6 P.M)
+#define EVO_ITEM_HOLD_DAY                 21     // Moémon levels up, holds specified item at day
+#define EVO_ITEM_HOLD_NIGHT               22     // Moémon levels up, holds specified item at night
+#define EVO_MOVE                          23     // Moémon levels up, knows specified move
+#define EVO_FRIENDSHIP_MOVE_TYPE          24     // Moémon levels up with friendship ≥ 220, knows move with specified type
+#define EVO_MAPSEC                        25     // Moémon levels up on specified mapsec
+#define EVO_ITEM_MALE                     26     // specified item is used on a male Moémon
+#define EVO_ITEM_FEMALE                   27     // specified item is used on a female Moémon
+#define EVO_LEVEL_RAIN                    28     // Moémon reaches the specified level during rain in the overworld
+#define EVO_SPECIFIC_MON_IN_PARTY         29     // Moémon levels up with a specified Moémon in party
+#define EVO_LEVEL_DARK_TYPE_MON_IN_PARTY  30     // Moémon reaches the specified level with a Dark Type Moémon in party
+#define EVO_TRADE_SPECIFIC_MON            31     // Moémon is traded for a specified Moémon
+#define EVO_SPECIFIC_MAP                  32     // Moémon levels up on specified map
+#define EVO_LEVEL_NATURE_AMPED            33     // Moémon reaches the specified level, it has a Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky nature.
+#define EVO_LEVEL_NATURE_LOW_KEY          34     // Moémon reaches the specified level, it has a Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful nature.
+#define EVO_CRITICAL_HITS                 35     // Moémon performs specified number of critical hits in one battle
+#define EVO_SCRIPT_TRIGGER_DMG            36     // Moémon has specified HP below max, then player interacts trigger
 #define EVO_DARK_SCROLL                   37     // interacts with Scroll of Darkness
 #define EVO_WATER_SCROLL                  38     // interacts with Scroll of Waters
-#define EVO_ITEM_NIGHT                    39     // specified item is used on Pokémon, is night
-#define EVO_ITEM_DAY                      40     // specified item is used on Pokémon, is day
-#define EVO_ITEM_HOLD                     41     // Pokémon levels up, holds specified item
-#define EVO_LEVEL_FOG                     42     // Pokémon reaches the specified level during fog in the overworld
-#define EVO_MOVE_TWO_SEGMENT              43     // Pokémon levels up, knows specified move, has a personality value with a modulus of 0
-#define EVO_MOVE_THREE_SEGMENT            44     // Pokémon levels up, knows specified move, has a personality value with a modulus of 1-99
-#define EVO_LEVEL_FAMILY_OF_THREE         45     // Pokémon reaches the specified level with a personality value with a modulus of 0
-#define EVO_LEVEL_FAMILY_OF_FOUR          46     // Pokémon reaches the specified level with a personality value with a modulus of 1-99
+#define EVO_ITEM_NIGHT                    39     // specified item is used on Moémon, is night
+#define EVO_ITEM_DAY                      40     // specified item is used on Moémon, is day
+#define EVO_ITEM_HOLD                     41     // Moémon levels up, holds specified item
+#define EVO_LEVEL_FOG                     42     // Moémon reaches the specified level during fog in the overworld
+#define EVO_MOVE_TWO_SEGMENT              43     // Moémon levels up, knows specified move, has a personality value with a modulus of 0
+#define EVO_MOVE_THREE_SEGMENT            44     // Moémon levels up, knows specified move, has a personality value with a modulus of 1-99
+#define EVO_LEVEL_FAMILY_OF_THREE         45     // Moémon reaches the specified level with a personality value with a modulus of 0
+#define EVO_LEVEL_FAMILY_OF_FOUR          46     // Moémon reaches the specified level with a personality value with a modulus of 1-99
 
 // Evolution 'modes,' for GetEvolutionTargetSpecies
 #define EVO_MODE_NORMAL            0
 #define EVO_MODE_TRADE             1
 #define EVO_MODE_ITEM_USE          2
-#define EVO_MODE_ITEM_CHECK        3 // If an Everstone is being held, still want to show that the stone *could* be used on that Pokémon to evolve
+#define EVO_MODE_ITEM_CHECK        3 // If an Everstone is being held, still want to show that the stone *could* be used on that Moémon to evolve
 #define EVO_MODE_BATTLE_SPECIAL    4
 #define EVO_MODE_OVERWORLD_SPECIAL 5
 

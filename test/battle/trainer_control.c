@@ -42,7 +42,7 @@ static const struct Trainer sTestTrainer1 =
     .party = TRAINER_PARTY(sTestParty1),
 };
 
-TEST("CreateNPCTrainerPartyForTrainer generates customized Pokémon")
+TEST("CreateNPCTrainerPartyForTrainer generates customized Moémon")
 {
     struct Pokemon *testParty = Alloc(6 * sizeof(struct Pokemon));
     u8 nickBuffer[20];

@@ -6,7 +6,7 @@ ASSUMPTIONS
     ASSUME(gBattleMoves[MOVE_LEECH_SEED].effect == EFFECT_LEECH_SEED);
 }
 
-SINGLE_BATTLE_TEST("Leech Seed doesn't affect Grass-type Pokémon")
+SINGLE_BATTLE_TEST("Leech Seed doesn't affect Grass-type Moémon")
 {
     PASSES_RANDOMLY(90, 100, RNG_ACCURACY);
     GIVEN {

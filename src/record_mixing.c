@@ -715,7 +715,7 @@ static u8 GetDaycareMailItemId(struct DaycareMail *mail)
 }
 
 // Indexes for a 2 element array used to store the multiplayer id and daycare
-// slot that correspond to a daycare Pokémon that can hold an item.
+// slot that correspond to a daycare Moémon that can hold an item.
 enum {
     MULTIPLAYER_ID,
     DAYCARE_SLOT,
@@ -847,13 +847,13 @@ static void ReceiveDaycareMailData(struct RecordMixingDaycareMail *records, size
         }
     }
 
-    // For each player, get which of their daycare Pokémon can hold items
+    // For each player, get which of their daycare Moémon can hold items
     // (can't hold items if already holding one, or if daycare slot is empty).
-    // Note that when deposited in the daycare, Pokémon have their mail taken
-    // from them and returned upon withdrawal, which means daycare Pokémon that
+    // Note that when deposited in the daycare, Moémon have their mail taken
+    // from them and returned upon withdrawal, which means daycare Moémon that
     // have associated mail do not have a held item.
     // Because not holding an item is the only determination for a swap, this also
-    // means that a "swap" can occur even if neither Pokémon has associated mail.
+    // means that a "swap" can occur even if neither Moémon has associated mail.
     numDaycareCanHold = 0;
     for (i = 0; i < linkPlayerCount; i++)
     {
@@ -876,7 +876,7 @@ static void ReceiveDaycareMailData(struct RecordMixingDaycareMail *records, size
         mixMail = (void *)records + i * recordSize;
 
         // Count number of players that have at least
-        // one daycare Pokémon with no held item
+        // one daycare Moémon with no held item
         if (canHoldItem[i][0] == TRUE || canHoldItem[i][1] == TRUE)
             numDaycareCanHold++;
 

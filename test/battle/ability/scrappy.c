@@ -27,7 +27,7 @@ SINGLE_BATTLE_TEST("Scrappy prevents intimidate")
     }
 }
 
-SINGLE_BATTLE_TEST("Scrappy allows to hit Ghost-type Pokémon with Normal- and Fighting-type moves")
+SINGLE_BATTLE_TEST("Scrappy allows to hit Ghost-type Moémon with Normal- and Fighting-type moves")
 {
     u32 move;
     PARAMETRIZE { move = MOVE_TACKLE; }

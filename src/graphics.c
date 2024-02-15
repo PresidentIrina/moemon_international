@@ -420,6 +420,9 @@ const u32 gBattleAnimSpritePal_SmallCloud[] = INCBIN_U32("graphics/battle_anims/
 const u32 gBattleAnimSpriteGfx_AttackOrder[] = INCBIN_U32("graphics/battle_anims/sprites/attack_order.4bpp.lz");
 const u32 gBattleAnimSpritePal_AttackOrder[] = INCBIN_U32("graphics/battle_anims/sprites/attack_order.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_StrikeOrder[] = INCBIN_U32("graphics/battle_anims/sprites/strike_order.4bpp.lz");
+const u32 gBattleAnimSpritePal_StrikeOrder[] = INCBIN_U32("graphics/battle_anims/sprites/strike_order.gbapal.lz");
+
 const u32 gBattleAnimSpriteGfx_DragonPulse[] = INCBIN_U32("graphics/battle_anims/sprites/dragon_pulse.4bpp.lz");
 const u32 gBattleAnimSpritePal_DragonPulse[] = INCBIN_U32("graphics/battle_anims/sprites/dragon_pulse.gbapal.lz");
 

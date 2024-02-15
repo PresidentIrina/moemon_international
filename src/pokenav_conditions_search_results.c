@@ -326,7 +326,7 @@ static u32 BuildBoxMonSearchResults(s32 state)
 }
 
 // Data below is initially set by BuildPartyMonSearchResults / BuildBoxMonSearchResults, and
-// is the Pokémon's condition value for the condition they are sorted by.
+// is the Moémon's condition value for the condition they are sorted by.
 // The condition value in data is then overwritten with their ranking.
 static u32 ConvertConditionsToListRanks(s32 state)
 {

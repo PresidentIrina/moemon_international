@@ -57,7 +57,7 @@ enum {
 #define MON_X 48
 #define MON_Y 80
 
-// The animation the Pokémon does during the feeding scene depends on their nature.
+// The animation the Moémon does during the feeding scene depends on their nature.
 // The below values are offsets into sMonPokeblockAnims of the animation data for that nature.
 #define ANIM_HARDY   0
 #define ANIM_LONELY  (ANIM_HARDY + 3)
@@ -170,7 +170,7 @@ static const u8 sNatureToMonPokeblockAnim[NUM_NATURES][2] =
     [NATURE_QUIRKY]  = { ANIM_QUIRKY,  AFFINE_NONE },
 };
 
-// Data for the animation the Pokémon does while readying to jump for the Pokéblock
+// Data for the animation the Moémon does while readying to jump for the Pokéblock
 // Each nature can have up to 8 anim 'stages' it progresses through, and each stage has its own array of data.
 // The elements in each array correspond in order to the following:
 // - ANIMDATA_ROT_IDX      : Index into sin/cos table for circular movement
@@ -799,7 +799,7 @@ static void SetPokeblockSpritePal(u8 pokeblockCaseId)
 #define tState            data[0]
 #define tHorizontalThrow  data[1]
 
-#define STATE_START_THROW  255 // If the length of the Pokémon's animation exceeds 255 the throw may happen twice
+#define STATE_START_THROW  255 // If the length of the Moémon's animation exceeds 255 the throw may happen twice
 #define STATE_SPAWN_PBLOCK (STATE_START_THROW + 14)
 #define STATE_START_JUMP   (STATE_SPAWN_PBLOCK + 12)
 #define STATE_PRINT_MSG    (STATE_START_JUMP + 16)
@@ -897,7 +897,7 @@ static void Task_FadeOutPokeblockFeed(u8 taskId)
 #undef tState
 #undef tHorizontalThrow
 
-// Sprite data for Pokéblock and Pokémon
+// Sprite data for Pokéblock and Moémon
 #define sSpeed   data[0]
 #define sAccel   data[1]
 #define sSpecies data[2]

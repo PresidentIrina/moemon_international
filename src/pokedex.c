@@ -112,7 +112,7 @@ enum {
 #define POKEBALL_ROTATION_TOP    64
 #define POKEBALL_ROTATION_BOTTOM (POKEBALL_ROTATION_TOP - 16)
 
-// Coordinates of the Pokémon sprite on its page (info/cry screens)
+// Coordinates of the Moémon sprite on its page (info/cry screens)
 #define MON_PAGE_X 48
 #define MON_PAGE_Y 56
 
@@ -1398,6 +1398,7 @@ static const struct SearchOptionText sDexSearchTypeOptions[NUMBER_OF_MON_TYPES +
     {gText_DexEmptyString, gTypeNames[TYPE_DRAGON]},
     {gText_DexEmptyString, gTypeNames[TYPE_DARK]},
     {gText_DexEmptyString, gTypeNames[TYPE_FAIRY]},
+    {gText_DexEmptyString, gTypeNames[TYPE_LIGHT]},
     {},
 };
 
@@ -1433,6 +1434,7 @@ static const u8 sDexSearchTypeIds[NUMBER_OF_MON_TYPES] =
     TYPE_DRAGON,
     TYPE_DARK,
     TYPE_FAIRY,
+    TYPE_LIGHT,
 };
 
 // Number pairs are the task data for tracking the cursor pos and scroll offset of each option list
@@ -1793,7 +1795,7 @@ static void Task_HandlePokedexStartMenuInput(u8 taskId)
     }
 }
 
-// Opening the info screen from list view. Pokémon sprite is moving to its new position, wait for it to arrive
+// Opening the info screen from list view. Moémon sprite is moving to its new position, wait for it to arrive
 static void Task_OpenInfoScreenAfterMonMovement(u8 taskId)
 {
     if (gSprites[sPokedexView->selectedMonSpriteId].x == MON_PAGE_X && gSprites[sPokedexView->selectedMonSpriteId].y == MON_PAGE_Y)

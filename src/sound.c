@@ -327,7 +327,7 @@ void PlayCry_ByMode(u16 species, s8 pan, u8 mode)
     }
 }
 
-// Used when releasing multiple Pokémon at once in battle.
+// Used when releasing multiple Moémon at once in battle.
 void PlayCry_ReleaseDouble(u16 species, s8 pan, u8 mode)
 {
     if (mode == CRY_MODE_DOUBLES)

@@ -111,9 +111,9 @@ enum {
 #define VINE_STATE_TIMER(vineState)(((vineState) << 8) | 0xFF)
 
 enum {
-    MONSTATE_NORMAL, // Pokémon is either on the ground or in the middle of a jump
-    MONSTATE_JUMP,   // Pokémon has begun a jump
-    MONSTATE_HIT,    // Pokémon got hit by the vine
+    MONSTATE_NORMAL, // Moémon is either on the ground or in the middle of a jump
+    MONSTATE_JUMP,   // Moémon has begun a jump
+    MONSTATE_HIT,    // Moémon got hit by the vine
 };
 
 enum {
@@ -420,8 +420,8 @@ EWRAM_DATA static struct PokemonJump *sPokemonJump = NULL;
 EWRAM_DATA static struct PokemonJumpGfx *sPokemonJumpGfx = NULL;
 
 /*
-    According to the clerk, the Pokémon allowed in
-    Pokémon Jump are all <= 28 inches, and do not
+    According to the clerk, the Moémon allowed in
+    Moémon Jump are all <= 28 inches, and do not
     only swim, burrow, or fly.
 */
 static const struct PokemonJumpMons sPokeJumpMons[] =
@@ -3214,12 +3214,12 @@ static void UpdateVineAnim(struct PokemonJumpGfx *jumpGfx, int vineState)
         // animNums for vine on upswing are same as
         // on downswing but in reverse
         vineState = NUM_VINESTATES - vineState;
-        priority = 3; // Set vine behind Pokémon
+        priority = 3; // Set vine behind Moémon
         palNum = jumpGfx->vinePalNumUpswing;
     }
     else
     {
-        priority = 2; // Set vine in front of Pokémon
+        priority = 2; // Set vine in front of Moémon
         palNum = jumpGfx->vinePalNumDownswing;
     }
 

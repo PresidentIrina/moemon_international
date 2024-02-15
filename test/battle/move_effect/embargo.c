@@ -6,7 +6,7 @@ ASSUMPTIONS
     ASSUME(gBattleMoves[MOVE_EMBARGO].effect == EFFECT_EMBARGO);
 }
 
-SINGLE_BATTLE_TEST("Embargo blocks the effect of an affected Pokémon's held item")
+SINGLE_BATTLE_TEST("Embargo blocks the effect of an affected Moémon's held item")
 {
     GIVEN {
         ASSUME(gItems[ITEM_FOCUS_SASH].holdEffect == HOLD_EFFECT_FOCUS_SASH);
@@ -25,7 +25,7 @@ SINGLE_BATTLE_TEST("Embargo blocks the effect of an affected Pokémon's held ite
     }
 }
 
-SINGLE_BATTLE_TEST("Embargo blocks an affected Pokémon's trainer from using items")
+SINGLE_BATTLE_TEST("Embargo blocks an affected Moémon's trainer from using items")
 {
     // As of writing, the battle tests system doesn't perform all the operations involved
     // in the action of an NPC using an item in battle.
@@ -119,7 +119,7 @@ WILD_BATTLE_TEST("Embargo doesn't block held item effects that affect friendship
     u32 initialFriendship;
     u32 finalFriendship;
 
-    KNOWN_FAILING; // Pokémon are currently not obtaining Friendship for using items in battle.
+    KNOWN_FAILING; // Moémon are currently not obtaining Friendship for using items in battle.
     GIVEN {
         ASSUME(gItems[ITEM_X_ACCURACY].battleUsage == EFFECT_ITEM_INCREASE_STAT);
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_SOOTHE_BELL); };

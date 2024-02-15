@@ -332,7 +332,7 @@ SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
 	.string "You're not dressed for the part.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "POKéMON, people… All life depends on\n"
+	.string "Moémon, people… All life depends on\n"
 	.string "the sea.\p"
 	.string "So, TEAM AQUA is dedicated to\n"
 	.string "the expansion of the sea.\p"
@@ -437,4 +437,3 @@ SlateportCity_OceanicMuseum_2F_Text_SSAnneReplica:
 	.string "“S.S. ANNE\p"
 	.string "“A replica of the luxury liner that\n"
 	.string "circles the globe.”$"
-

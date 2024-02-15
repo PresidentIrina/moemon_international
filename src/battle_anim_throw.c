@@ -1735,7 +1735,7 @@ static void SpriteCB_Ball_Release_Step(struct Sprite *sprite)
         break;
     }
 
-    // Animate Pokémon emerging from Poké Ball
+    // Animate Moémon emerging from Poké Ball
     gSprites[gBattlerSpriteIds[gBattleAnimTarget]].invisible = FALSE;
     StartSpriteAffineAnim(&gSprites[gBattlerSpriteIds[gBattleAnimTarget]], BATTLER_AFFINE_EMERGE);
     AnimateSprite(&gSprites[gBattlerSpriteIds[gBattleAnimTarget]]);

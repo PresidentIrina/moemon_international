@@ -405,7 +405,7 @@ const s8 gNatureStatTable[NUM_NATURES][NUM_NATURE_STATS] =
 #define PP_UP_SHIFTS(val)           val,        (val) << 2,        (val) << 4,        (val) << 6
 #define PP_UP_SHIFTS_INV(val) (u8)~(val), (u8)~((val) << 2), (u8)~((val) << 4), (u8)~((val) << 6)
 
-// PP Up bonuses are stored for a Pokémon as a single byte.
+// PP Up bonuses are stored for a Moémon as a single byte.
 // There are 2 bits (a value 0-3) for each move slot that
 // represent how many PP Ups have been applied.
 // The following arrays take a move slot id and return:
@@ -746,7 +746,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         u32 shinyValue;
         do
         {
-            // Choose random OT IDs until one that results in a non-shiny Pokémon
+            // Choose random OT IDs until one that results in a non-shiny Moémon
             value = Random32();
             shinyValue = GET_SHINY_VALUE(value, personality);
         } while (shinyValue < SHINY_ODDS);
@@ -3123,7 +3123,7 @@ const u32 sExpCandyExperienceTable[] = {
     [EXP_30000 - 1] = 30000,
 };
 
-// Returns TRUE if the item has no effect on the Pokémon, FALSE otherwise
+// Returns TRUE if the item has no effect on the Moémon, FALSE otherwise
 bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 moveIndex, bool8 usedByAI)
 {
     u32 dataUnsigned;
@@ -3520,9 +3520,9 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 
                     case 5: // ITEM5_FRIENDSHIP_LOW
                         // Changes to friendship are given differently depending on
-                        // how much friendship the Pokémon already has.
-                        // In general, Pokémon with lower friendship receive more,
-                        // and Pokémon with higher friendship receive less.
+                        // how much friendship the Moémon already has.
+                        // In general, Moémon with lower friendship receive more,
+                        // and Moémon with higher friendship receive less.
                         if (GetMonData(mon, MON_DATA_FRIENDSHIP, NULL) < 100)
                             UPDATE_FRIENDSHIP_FROM_ITEM();
                         itemEffectParam++;
@@ -5545,7 +5545,7 @@ static bool8 ShouldSkipFriendshipChange(void)
 }
 
 // The below functions are for the 'MonSpritesGfxManager', a method of allocating
-// space for Pokémon sprites. These are only used for the summary screen Pokémon
+// space for Moémon sprites. These are only used for the summary screen Moémon
 // sprites (unless gMonSpritesGfxPtr is in use), but were set up for more general use.
 // Only the 'default' mode (MON_SPR_GFX_MODE_NORMAL) is used, which is set
 // up to allocate 4 sprites using the battler sprite templates (gBattlerSpriteTemplates).

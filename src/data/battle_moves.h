@@ -66,7 +66,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_MULTI_HIT,
         .power = 18,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 85,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -250,8 +250,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_CUT] =
     {
         .effect = EFFECT_HIT,
-        .power = 50,
-        .type = TYPE_NORMAL,
+        .power = 55,
+        .type = TYPE_STEEL,
         .accuracy = 95,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -1227,7 +1227,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_HIT,
         .power = 80,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FIGHTING,
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -1847,7 +1847,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         #endif
         .effect = EFFECT_RESTORE_HP,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_USER,
@@ -1987,7 +1987,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_LIGHT_SCREEN,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -2522,7 +2522,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_SLEEP,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_DARK,
         .accuracy = 75,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -2633,14 +2633,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         #else
             .accuracy = 70,
         #endif
-        .effect = EFFECT_ACCURACY_DOWN,
-        .power = 0,
-        .type = TYPE_NORMAL,
-        .pp = 20,
-        .secondaryEffectChance = 0,
+        .effect = EFFECT_FLASH,
+        .power = 40,
+        .type = TYPE_LIGHT,
+        .pp = 10,
+        .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .split = SPLIT_STATUS,
+        .priority = 3,
+        .split = SPLIT_SPECIAL,
         .zMoveEffect = Z_EFFECT_EVSN_UP_1,
         .magicCoatAffected = TRUE,
     },
@@ -3043,7 +3043,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         #endif
         .effect = EFFECT_LOCK_ON,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_PSYCHIC,
         .pp = 5,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -3328,11 +3328,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SWEET_KISS] =
     {
-        #if B_UPDATED_MOVE_TYPES >= GEN_6
-            .type = TYPE_FAIRY,
-        #else
-            .type = TYPE_NORMAL,
-        #endif
+        .type = TYPE_LIGHT,
         .effect = EFFECT_CONFUSE,
         .power = 0,
         .accuracy = 75,
@@ -3876,7 +3872,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_HEAL_BELL,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -3940,7 +3936,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_SAFEGUARD,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 25,
         .secondaryEffectChance = 0,
@@ -4185,7 +4181,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_MORNING_SUN,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -4306,7 +4302,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_SUNNY_DAY,
         .power = 0,
-        .type = TYPE_FIRE,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -4911,7 +4907,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_WISH,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -5146,7 +5142,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_REFRESH,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -5291,7 +5287,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
         .power = 95,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_LIGHT,
         .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 50,
@@ -5760,7 +5756,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_COSMIC_POWER,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -6452,7 +6448,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_HEALING_WISH,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -7937,7 +7933,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_CHANGE_TYPE_ON_ITEM,
         .power = 100,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -8122,7 +8118,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_HEALING_WISH,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -8830,7 +8826,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SCALD] =
     {
-        .effect = EFFECT_BURN_HIT,
+        .effect = EFFECT_SCALD,
         .power = 80,
         .type = TYPE_WATER,
         .accuracy = 100,
@@ -8865,7 +8861,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_HEAL_PULSE,
         .power = 0,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -9050,7 +9046,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_BESTOW,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -9341,7 +9337,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         #endif
         .effect = EFFECT_HIT,
         .power = 90,
-        .type = TYPE_FIGHTING,
+        .type = TYPE_LIGHT,
         .accuracy = 100,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -10773,7 +10769,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_RECOIL_50,
         .power = 140,
-        .type = TYPE_FAIRY,
+        .type = TYPE_LIGHT,
         .accuracy = 90,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -11279,7 +11275,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_PURIFY,
         .power = 0,
-        .type = TYPE_POISON,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -11558,7 +11554,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_RECHARGE,
         .power = 160,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_LIGHT,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 0,
@@ -11589,7 +11585,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_HIT,
         .power = 100,
-        .type = TYPE_STEEL,
+        .type = TYPE_LIGHT,
         .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -11720,7 +11716,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_PHOTON_GEYSER,
         .power = 100,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_LIGHT,
         .accuracy = 100,
         .pp = 5,
         .secondaryEffectChance = 0,
@@ -13743,7 +13739,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_REVIVAL_BLESSING,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_LIGHT,
         .accuracy = 0,
         .pp = 1,
         .secondaryEffectChance = 0,
@@ -15652,6 +15648,57 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .priority = 0,
         .split = SPLIT_PHYSICAL,
         .argument = MAX_EFFECT_BYPASS_PROTECT, //EFFECT TODO
+    },
+
+    //Moemon International
+    [MOVE_STRIKE_ORDER] =
+    {
+        .effect = EFFECT_BURN_HIT,
+        .power = 90,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .highCritRatio = TRUE,
+    },
+
+    [MOVE_PATROL_ORDER] =
+    {
+        .effect = EFFECT_COSMIC_POWER,
+        .power = 0,
+        .type = TYPE_STEEL,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = Z_EFFECT_DEF_UP_1,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+    },
+
+    [MOVE_REPAIR_ORDER] =
+    {
+        .effect = EFFECT_RESTORE_HP,
+        .power = 0,
+        .type = TYPE_STEEL,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = Z_EFFECT_RESET_STATS,
+        .healBlockBanned = TRUE,
+        .snatchAffected = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
     },
 
 };

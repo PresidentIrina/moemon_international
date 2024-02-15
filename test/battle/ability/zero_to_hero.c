@@ -96,7 +96,7 @@ SINGLE_BATTLE_TEST("Gastro Acid, Worry Seed, and Simple Beam fail if the target 
     }
 }
 
-SINGLE_BATTLE_TEST("Role Play, Skill Swap, and Entrainment fail if either Pokémon has Zero to Hero")
+SINGLE_BATTLE_TEST("Role Play, Skill Swap, and Entrainment fail if either Moémon has Zero to Hero")
 {
     u16 move;
 

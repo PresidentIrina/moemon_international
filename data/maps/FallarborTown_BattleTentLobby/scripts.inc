@@ -316,7 +316,7 @@ FallarborTown_BattleTentLobby_Text_FallarborTentMyFavorite:
 	.string "TENT in FALLARBOR TOWN.\p"
 	.string "I think it's fantastic how TRAINERS\n"
 	.string "try to win with all their faith in\l"
-	.string "their POKéMON.$"
+	.string "their Moémon.$"
 
 FallarborTown_BattleTentLobby_Text_CameToCampOut:
 	.string "I heard something about some tent,\n"
@@ -345,4 +345,3 @@ FallarborTown_BattleTentLobby_Text_ScottMakeChallenge:
 	.string "SCOTT: Instead of wasting your\n"
 	.string "time with the likes of me, why not\l"
 	.string "make a challenge?$"
-

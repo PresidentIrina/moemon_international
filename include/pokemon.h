@@ -162,28 +162,28 @@ struct PokemonSubstruct3
  /* 0x09 */ u32 championRibbon:1;           // Given when defeating the Champion. Because both RSE and FRLG use it, later generations don't specify from which region it comes from.
  /* 0x0A */ u32 winningRibbon:1;            // Given at the Battle Tower's Level 50 challenge by winning a set of seven battles that extends the current streak to 56 or more.
  /* 0x0A */ u32 victoryRibbon:1;            // Given at the Battle Tower's Level 100 challenge by winning a set of seven battles that extends the current streak to 56 or more.
- /* 0x0A */ u32 artistRibbon:1;             // Given at the Contest Hall by winning a Master Rank contest with at least 800 points, and agreeing to have the Pokémon's portrait placed in the museum after being offered.
- /* 0x0A */ u32 effortRibbon:1;             // Given at Slateport's market to Pokémon with maximum EVs.
+ /* 0x0A */ u32 artistRibbon:1;             // Given at the Contest Hall by winning a Master Rank contest with at least 800 points, and agreeing to have the Moémon's portrait placed in the museum after being offered.
+ /* 0x0A */ u32 effortRibbon:1;             // Given at Slateport's market to Moémon with maximum EVs.
  /* 0x0A */ u32 marineRibbon:1;             // Never distributed.
  /* 0x0A */ u32 landRibbon:1;               // Never distributed.
  /* 0x0A */ u32 skyRibbon:1;                // Never distributed.
- /* 0x0A */ u32 countryRibbon:1;            // Distributed during Pokémon Festa '04 and '05 to tournament winners.
- /* 0x0B */ u32 nationalRibbon:1;           // Given to purified Shadow Pokémon in Colosseum/XD.
+ /* 0x0A */ u32 countryRibbon:1;            // Distributed during Moémon Festa '04 and '05 to tournament winners.
+ /* 0x0B */ u32 nationalRibbon:1;           // Given to purified Shadow Moémon in Colosseum/XD.
  /* 0x0B */ u32 earthRibbon:1;              // Given to teams that have beaten Mt. Battle's 100-battle challenge in Colosseum/XD.
- /* 0x0B */ u32 worldRibbon:1;              // Distributed during Pokémon Festa '04 and '05 to tournament winners.
+ /* 0x0B */ u32 worldRibbon:1;              // Distributed during Moémon Festa '04 and '05 to tournament winners.
  /* 0x0B */ u32 unusedRibbons:2;            // Discarded in Gen 4.
  /* 0x0B */ u32 abilityNum:2;
 
  // The functionality of this bit changed in FRLG:
  // In RS, this bit does nothing, is never set, & is accidentally unset when hatching Eggs.
  // In FRLG & Emerald, this controls Mew & Deoxys obedience and whether they can be traded.
- // If set, a Pokémon is a fateful encounter in FRLG's summary screen if hatched & for all Pokémon in Gen 4+ summary screens.
- // Set for in-game event island legendaries, events distributed after a certain date, & Pokémon from XD: Gale of Darkness.
+ // If set, a Moémon is a fateful encounter in FRLG's summary screen if hatched & for all Moémon in Gen 4+ summary screens.
+ // Set for in-game event island legendaries, events distributed after a certain date, & Moémon from XD: Gale of Darkness.
  // Not to be confused with METLOC_FATEFUL_ENCOUNTER.
  /* 0x0B */ u32 modernFatefulEncounter:1;
 };
 
-// Number of bytes in the largest Pokémon substruct.
+// Number of bytes in the largest Moémon substruct.
 // They are assumed to be the same size, and will be padded to
 // the largest size by the union.
 // By default they are all 12 bytes.
@@ -210,7 +210,7 @@ struct BoxPokemon
     u8 isBadEgg:1;
     u8 hasSpecies:1;
     u8 isEgg:1;
-    u8 blockBoxRS:1; // Unused, but Pokémon Box Ruby & Sapphire will refuse to deposit a Pokémon with this flag set
+    u8 blockBoxRS:1; // Unused, but Moémon Box Ruby & Sapphire will refuse to deposit a Moémon with this flag set
     u8 unused:4;
     u8 otName[PLAYER_NAME_LENGTH];
     u8 markings;
@@ -368,7 +368,7 @@ struct SpeciesInfo /*0x8C*/
  /* 0x68 */ const u8 *iconSprite;
  /* 0x6C */ const u8 *iconSpriteFemale;
  /* 0x70 */ const u8 *footprint;
-            // All Pokémon pics are 64x64, but this data table defines where in this 64x64 frame the sprite's non-transparent pixels actually are.
+            // All Moémon pics are 64x64, but this data table defines where in this 64x64 frame the sprite's non-transparent pixels actually are.
  /* 0x74 */ u8 frontPicSize; // The dimensions of this drawn pixel area.
  /* 0x74 */ u8 frontPicSizeFemale; // The dimensions of this drawn pixel area.
  /* 0x75 */ u8 frontPicYOffset; // The number of pixels between the drawn pixel area and the bottom edge.
@@ -378,7 +378,7 @@ struct SpeciesInfo /*0x8C*/
  /* 0x78 */ u8 iconPalIndex:3;
             u8 iconPalIndexFemale:3;
             u8 padding3:2;
- /* 0x79 */ u8 enemyMonElevation; // This determines how much higher above the usual position the enemy Pokémon is during battle. Species that float or fly have nonzero values.
+ /* 0x79 */ u8 enemyMonElevation; // This determines how much higher above the usual position the enemy Moémon is during battle. Species that float or fly have nonzero values.
             // Flags
  /* 0x7A */ u32 isLegendary:1;
             u32 isMythical:1;

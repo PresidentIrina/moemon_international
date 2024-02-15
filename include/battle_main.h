@@ -10,7 +10,7 @@ struct TrainerMoney
     u8 value;
 };
 
-// For displaying a multi battle partner's Pokémon in the party menu
+// For displaying a multi battle partner's Moémon in the party menu
 struct MultiPartnerMenuPokemon
 {
     /*0x00*/ u16 species;

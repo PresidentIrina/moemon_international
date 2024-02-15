@@ -29,7 +29,7 @@
 
 #define TAG_MON_BG 1001
 
-// Positions for the Pokémon images
+// Positions for the Moémon images
 enum {
     POS_LEFT,
     POS_CENTER,
@@ -493,7 +493,7 @@ static void Task_CreditsMain(u8 taskId)
     }
     else if (gTasks[taskId].tNextMode == MODE_SHOW_MONS)
     {
-        // Start a Pokémon interlude
+        // Start a Moémon interlude
         gTasks[taskId].tCurrentMode = mode;
         gTasks[taskId].tNextMode = MODE_NONE;
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
@@ -827,7 +827,7 @@ static void Task_UpdatePage(u8 taskId)
 
 #undef tDelay
 
-#define PAGE_INTERVAL (PAGE_COUNT / 9) // 9 scenes (5 bike scenes, 4 Pokémon interludes)
+#define PAGE_INTERVAL (PAGE_COUNT / 9) // 9 scenes (5 bike scenes, 4 Moémon interludes)
 
 static u8 CheckChangeScene(u8 page, u8 taskId)
 {
@@ -835,7 +835,7 @@ static u8 CheckChangeScene(u8 page, u8 taskId)
 
     if (page == PAGE_INTERVAL * 1)
     {
-        // Pokémon interlude
+        // Moémon interlude
         gTasks[taskId].tNextMode = MODE_SHOW_MONS;
     }
 
@@ -848,7 +848,7 @@ static u8 CheckChangeScene(u8 page, u8 taskId)
 
     if (page == PAGE_INTERVAL * 3)
     {
-        // Pokémon interlude
+        // Moémon interlude
         gTasks[taskId].tNextMode = MODE_SHOW_MONS;
     }
 
@@ -861,7 +861,7 @@ static u8 CheckChangeScene(u8 page, u8 taskId)
 
     if (page == PAGE_INTERVAL * 5)
     {
-        // Pokémon interlude
+        // Moémon interlude
         gTasks[taskId].tNextMode = MODE_SHOW_MONS;
     }
 
@@ -874,7 +874,7 @@ static u8 CheckChangeScene(u8 page, u8 taskId)
 
     if (page == PAGE_INTERVAL * 7)
     {
-        // Pokémon interlude
+        // Moémon interlude
         gTasks[taskId].tNextMode = MODE_SHOW_MONS;
     }
 
@@ -1540,7 +1540,7 @@ static void SpriteCB_CreditsMonBg(struct Sprite *sprite)
         return;
     }
 
-    // Copy sprite data from the associated Pokémon
+    // Copy sprite data from the associated Moémon
     sprite->invisible = gSprites[sprite->sMonSpriteId].invisible;
     sprite->oam.objMode = gSprites[sprite->sMonSpriteId].oam.objMode;
     sprite->oam.affineMode = gSprites[sprite->sMonSpriteId].oam.affineMode;

@@ -1245,7 +1245,7 @@ void SetSpriteRotScale(u8 spriteId, s16 xScale, s16 yScale, u16 rotation)
     gOamMatrices[i].d = matrix.d;
 }
 
-// Pokémon in Contests (except Unown) should be flipped.
+// Moémon in Contests (except Unown) should be flipped.
 static bool8 ShouldRotScaleSpeciesBeFlipped(void)
 {
     if (IsContest())

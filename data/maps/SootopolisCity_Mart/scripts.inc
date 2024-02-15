@@ -57,7 +57,7 @@ SootopolisCity_Mart_EventScript_GentlemanNoLegendaries::
 SootopolisCity_Mart_Text_PPUpIsGreat:
 	.string "PP UP is great!\p"
 	.string "It raises the POWER POINTS, the PP,\n"
-	.string "of a POKéMON move.$"
+	.string "of a Moémon move.$"
 
 SootopolisCity_Mart_Text_TooScaryOutside:
 	.string "What…\n"
@@ -74,4 +74,3 @@ SootopolisCity_Mart_Text_FullRestoreItemOfDreams:
 SootopolisCity_Mart_Text_DidSomethingAwaken:
 	.string "This weather…\n"
 	.string "Did something awaken?$"
-

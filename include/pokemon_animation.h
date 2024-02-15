@@ -7,7 +7,7 @@ void StartMonSummaryAnimation(struct Sprite *sprite, u8 frontAnimId);
 void LaunchAnimationTaskForBackSprite(struct Sprite *sprite, u8 backAnimSet);
 void SetSpriteCB_MonAnimDummy(struct Sprite *sprite);
 
-// Pokémon back animation sets
+// Moémon back animation sets
 #define BACK_ANIM_NONE                         0
 #define BACK_ANIM_H_VIBRATE                    1
 #define BACK_ANIM_H_SLIDE                      2
@@ -35,7 +35,7 @@ void SetSpriteCB_MonAnimDummy(struct Sprite *sprite);
 #define BACK_ANIM_SHAKE_GLOW_GREEN             24
 #define BACK_ANIM_SHAKE_GLOW_BLUE              25
 
-// Pokémon animation function ids (for front and back)
+// Moémon animation function ids (for front and back)
 // Each front anim uses 1, and each back anim uses a set of 3
 #define ANIM_V_SQUISH_AND_BOUNCE                0
 #define ANIM_CIRCULAR_STRETCH_TWICE             1

@@ -6,7 +6,7 @@ ASSUMPTIONS
     ASSUME(gBattleMoves[MOVE_SHEER_COLD].effect == EFFECT_OHKO);
 }
 
-SINGLE_BATTLE_TEST("Sheer Cold doesn't affect Ice-type Pokémon")
+SINGLE_BATTLE_TEST("Sheer Cold doesn't affect Ice-type Moémon")
 {
     GIVEN {
         ASSUME(B_SHEER_COLD_IMMUNITY >= GEN_7);

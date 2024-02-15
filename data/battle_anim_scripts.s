@@ -876,9 +876,13 @@ gBattleAnims_Moves::
 	.4byte Move_GIGAVOLT_HAVOC
 	.4byte Move_SHATTERED_PSYCHE
 	.4byte Move_SUBZERO_SLAMMER
-	.4byte Move_DEVASTATING_DRAKE
-	.4byte Move_BLACK_HOLE_ECLIPSE
-	.4byte Move_TWINKLE_TACKLE
+@@@ Moemon International
+	.4byte Move_STRIKE_ORDER
+	.4byte Move_PATROL_ORDER
+	.4byte Move_REPAIR_ORDER
+@@@	.4byte Move_DEVASTATING_DRAKE
+@@@	.4byte Move_BLACK_HOLE_ECLIPSE
+@@@	.4byte Move_TWINKLE_TACKLE
 	.4byte Move_CATASTROPIKA
 	.4byte Move_10000000_VOLT_THUNDERBOLT
 	.4byte Move_STOKED_SPARKSURFER
@@ -947,9 +951,9 @@ gBattleAnims_Moves::
 	.4byte Move_G_MAX_SNOOZE
 	.4byte Move_G_MAX_FINALE
 	.4byte Move_G_MAX_STEELSURGE
-	.4byte Move_G_MAX_DEPLETION
-	.4byte Move_G_MAX_ONE_BLOW
-	.4byte Move_G_MAX_RAPID_FLOW
+@@@	.4byte Move_G_MAX_DEPLETION
+@@@	.4byte Move_G_MAX_ONE_BLOW
+@@@	.4byte Move_G_MAX_RAPID_FLOW
 @@@ Last Move - cannot be reached
 	.4byte Move_COUNT
 
@@ -33560,5 +33564,125 @@ General_DynamaxGrowth:: @ PORTED FROM CFRU
 	createvisualtask SoundTask_PlayCryWithEcho, 2, ANIM_ATTACKER, 2
 	delay 8
 	createvisualtask AnimTask_DynamaxGrowth, 0x5, 0x1, 0x0
+	waitforvisualfinish
+	end
+
+Move_STRIKE_ORDER:
+	loadspritegfx ANIM_TAG_STRIKE_ORDER
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_ROCKS
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	playsewithpan SE_TRUCK_MOVE, SOUND_PAN_TARGET
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 120, 70, 5, 70, 30
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 120, 55, 6, 60, 25
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 120, 60, 7, 60, 30
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 120, 55, 10, 60, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 100, 50, 4, 50, 26
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 105, 25, 8, 60, 20
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 120, 40, 10, 48, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 120, 30, 6, 45, 25
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 120, 35, 10, 60, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 105, 20, 8, 40, 0
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 20, 255, 15, 32, 0
+	createsprite gStrikeOrderParticleSpriteTemplate, ANIM_TARGET, 5, 110, 10, 8, 32, 20
+	waitforvisualfinish
+	createsprite gBasicHitSplatSpriteTemplate 131, 4, -32, -16, 1, 3
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_PLAYER_RIGHT, 1, 3, 0, 12, 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_PLAYER_RIGHT, 1, 3, 0, 12, 1
+	delay 4
+	createsprite gRandomPosHitSplatSpriteTemplate 131, 2, 1, 3
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	delay 4
+	createsprite gRandomPosHitSplatSpriteTemplate 131, 2, 1, 3
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	delay 4
+	createsprite gBasicHitSplatSpriteTemplate 131, 4, 32, 20, 1, 3
+	playsewithpan SE_M_COMET_PUNCH, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+
+Move_PATROL_ORDER:
+	loadspritegfx ANIM_TAG_STRIKE_ORDER
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_ROCKS
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	playsewithpan SE_TRUCK_MOVE, SOUND_PAN_TARGET
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 120, 70, 5, 70, 30
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 55, 6, 60, 25
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 60, 7, 60, 30
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 55, 10, 60, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 100, 50, 4, 50, 26
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 105, 25, 8, 60, 20
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 40, 10, 48, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 120, 30, 6, 45, 25
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 35, 10, 60, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 105, 20, 8, 40, 0
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 20, 255, 15, 32, 0
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 110, 10, 8, 32, 20
+	waitforvisualfinish
+	loadspritegfx ANIM_TAG_BLUE_STAR
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	delay 1
+	call BideSetUp
+	waitforvisualfinish
+	end
+
+Move_REPAIR_ORDER:
+	loadspritegfx ANIM_TAG_STRIKE_ORDER
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_ROCKS
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	playsewithpan SE_TRUCK_MOVE, SOUND_PAN_TARGET
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 120, 70, 5, 70, 30
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 55, 6, 60, 25
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 60, 7, 60, 30
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 55, 10, 60, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 100, 50, 4, 50, 26
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 105, 25, 8, 60, 20
+	delay 1
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 40, 10, 48, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 120, 30, 6, 45, 25
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 115, 35, 10, 60, 30
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 105, 20, 8, 40, 0
+	delay 3
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 20, 255, 15, 32, 0
+	createsprite gStrikeOrderParticleSpriteTemplate, 130, 5, 110, 10, 8, 32, 20
+	waitforvisualfinish
+	loadspritegfx ANIM_TAG_BLUE_STAR
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	delay 1
+	call HealingEffect
 	waitforvisualfinish
 	end

@@ -1,7 +1,7 @@
 #include "global.h"
 #include "test/battle.h"
 
-SINGLE_BATTLE_TEST("Powder moves are blocked by Grass-type Pokémon")
+SINGLE_BATTLE_TEST("Powder moves are blocked by Grass-type Moémon")
 {
     GIVEN {
         ASSUME(gBattleMoves[MOVE_STUN_SPORE].powderMove);

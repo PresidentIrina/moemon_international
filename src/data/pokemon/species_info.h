@@ -157,7 +157,7 @@ const u8 gToxtricityGigantamaxPokedexText[] = _(
     "contaminating the earth with toxic sweat.");
 
 const u8 gOgerponTealMaskPokedexText[] = _(
-    "This Pokémon's type changes based on\n"
+    "This Moémon's type changes based on\n"
     "which mask it's wearing. It confounds\n"
     "its enemies with nimble movements\n"
     "and kicks.");
@@ -218,8 +218,8 @@ const u8 gOgerponCornerstoneMaskPokedexText[] = _(
         .levelUpLearnset = s ## learn##LevelUpLearnset,     \
         .teachableLearnset = s ## learn##TeachableLearnset
 
-// Maximum value for a female Pokémon is 254 (MON_FEMALE) which is 100% female.
-// 255 (MON_GENDERLESS) is reserved for genderless Pokémon.
+// Maximum value for a female Moémon is 254 (MON_FEMALE) which is 100% female.
+// 255 (MON_GENDERLESS) is reserved for genderless Moémon.
 #define PERCENT_FEMALE(percent) min(254, ((percent * 255) / 100))
 
 #define FLIP    0
@@ -236,7 +236,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 0,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "This is a newly discovered Pokémon.\n"
+            "This is a newly discovered Moémon.\n"
             "It is currently under investigation.\n"
             "No detailed information is available\n"
             "at this time."),
@@ -249,7 +249,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimFrames = sAnims_None,
         .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         BACK_PIC(CircledQuestionMark, 40, 40),
-        .backPicYOffset = 12,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_NONE,
         PALETTES(CircledQuestionMark),
         ICON(QuestionMark, 0),
@@ -269,10 +269,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_EGG] =
     {
         FRONT_PIC(Egg, 24, 24),
-        .frontPicYOffset = 20,
+        .frontPicYOffset = 0,
         .backPic = gMonFrontPic_Egg,
         .backPicSize = MON_COORDS_SIZE(24, 24),
-        .backPicYOffset = 20,
+        .backPicYOffset = 0,
         .palette = gMonPalette_Egg,
         .shinyPalette = gMonPalette_Egg,
         ICON(Egg, 1),
@@ -309,7 +309,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 0,
         .weight = 0,
         .description = COMPOUND_STRING(
-            "This is a newly discovered Pokémon.\n"
+            "This is a newly discovered Moémon.\n"
             "It is currently under investigation.\n"
             "No detailed information is available\n"
             "at this time."),
@@ -325,7 +325,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .enemyMonElevation = 0,
         BACK_PIC(CircledQuestionMark, 64, 64),
         //BACK_PIC_FEMALE(CircledQuestionMark, 64, 64),
-        .backPicYOffset = 7,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_NONE,
         PALETTES(CircledQuestionMark),
         //PALETTE_FEMALE(CircledQuestionMark),
@@ -392,7 +392,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 0,
         BACK_PIC(Species, 64, 48),
-        .backPicYOffset = 11,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(Species),
         ICON(Species, 0),
@@ -536,8 +536,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .description = COMPOUND_STRING(
             "An artificial Moémon created by the IP\n"
             "Moémon Research Lab. She is designed after\n"
-            "a vehicle from another world, capable of\n"
-            "incredibly fast speeds."),
+            "a vessel from another world, capable of\n"
+            "commanding a fleet of ethereal aircraft."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -545,7 +545,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         FRONT_PIC(Ryuuhou, 64, 64),
         .frontPicYOffset = 0,
         .frontAnimFrames = sAnims_Ryuuhou,
-        .frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        .frontAnimId = ANIM_GROW_VIBRATE,
         .enemyMonElevation = 0,
         BACK_PIC(Ryuuhou, 64, 64),
         .backPicYOffset = 0,
@@ -597,7 +597,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 7,
         BACK_PIC(FroslassMega, 64, 64),
-        .backPicYOffset = 3,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
         PALETTES(FroslassMega),
         ICON(FroslassMega, 0),
@@ -645,7 +645,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimFrames = sAnims_Tentacruel,
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         BACK_PIC(Tentacruel_Aqua, 64, 48),
-        .backPicYOffset = 11,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(Tentacruel_Aqua),
         ICON(Tentacruel, 0),
@@ -695,7 +695,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 0,
         BACK_PIC(EscavalierSummer, 64, 48),
-        .backPicYOffset = 11,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(EscavalierSummer),
         ICON(EscavalierSummer, 0),
@@ -745,7 +745,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 0,
         BACK_PIC(GarchompBunny, 64, 48),
-        .backPicYOffset = 11,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(GarchompBunny),
         ICON(GarchompBunny, 0),
@@ -795,7 +795,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 0,
         BACK_PIC(CobalionBunny, 64, 48),
-        .backPicYOffset = 11,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(CobalionBunny),
         ICON(CobalionBunny, 0),
@@ -845,7 +845,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 0,
         BACK_PIC(TerrakionBunny, 64, 48),
-        .backPicYOffset = 11,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(TerrakionBunny),
         ICON(TerrakionBunny, 0),
@@ -895,7 +895,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .frontAnimId = ANIM_V_SLIDE_WOBBLE,
         .enemyMonElevation = 0,
         BACK_PIC(VirizionBunny, 64, 48),
-        .backPicYOffset = 11,
+        .backPicYOffset = 0,
         .backAnimId = BACK_ANIM_H_SLIDE,
         PALETTES(VirizionBunny),
         ICON(VirizionBunny, 0),

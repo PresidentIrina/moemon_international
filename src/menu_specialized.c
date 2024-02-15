@@ -309,7 +309,7 @@ void MailboxMenu_Free(void)
 // Condition graph
 //
 // This is the graph in the Pokénav and
-// Pokéblock case that shows a Pokémon's
+// Pokéblock case that shows a Moémon's
 // conditions (Beauty, Tough, etc.).
 // It works by using scanlines to
 // selectively reveal a bg that has been
@@ -346,7 +346,7 @@ void ConditionGraph_Init(struct ConditionGraph *graph)
 }
 
 // Fills the newPositions array with incremental positions between
-// old and new for the graph transition when switching between Pokémon.
+// old and new for the graph transition when switching between Moémon.
 void ConditionGraph_SetNewPositions(struct ConditionGraph *graph, struct UCoords16 *old, struct UCoords16 *new)
 {
     u16 i, j;

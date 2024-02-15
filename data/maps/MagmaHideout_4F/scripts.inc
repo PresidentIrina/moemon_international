@@ -134,18 +134,18 @@ MagmaHideout_4F_EventScript_Tabitha::
 	end
 
 MagmaHideout_4F_Text_Grunt11Intro:
-	.string "I want to see GROUDON, too, but they\n"
-	.string "won't let me see even its tail…\p"
+	.string "I want to see Groudon, too, but they\n"
+	.string "won't let me see even her tail…\p"
 	.string "It's got me feeling really frustrated.\p"
 	.string "Oh, no!\n"
-	.string "I blabbed about GROUDON!$"
+	.string "I blabbed about Groudon!$"
 
 MagmaHideout_4F_Text_Grunt11Defeat:
 	.string "I guess it's impossible to win if one\n"
 	.string "doesn't have a calm mind…$"
 
 MagmaHideout_4F_Text_Grunt11PostBattle:
-	.string "I wonder if GROUDON even has a tail?$"
+	.string "I wonder if Groudon even has a tail?$"
 
 MagmaHideout_4F_Text_Grunt12Intro:
 	.string "Fuhahaha!\n"
@@ -171,13 +171,13 @@ MagmaHideout_4F_Text_Grunt13PostBattle:
 	.string "C-come on, one more match…$"
 
 MagmaHideout_4F_Text_TabithaIntro:
-	.string "Hehehe!\n"
+	.string "Hey there!\n"
 	.string "You made it this far, so I'll tell you!\p"
 	.string "That's right!\n"
-	.string "Up ahead, GROUDON is sleeping!\p"
-	.string "MAXIE went to GROUDON just seconds\n"
+	.string "Up ahead, Groudon is sleeping!\p"
+	.string "Maxie went to Groudon just seconds\n"
 	.string "ago!\p"
-	.string "It's going to awaken real soon!\n"
+	.string "She's going to awaken real soon!\n"
 	.string "Hehe! Hehehe!$"
 
 MagmaHideout_4F_Text_TabithaDefeat:
@@ -186,10 +186,10 @@ MagmaHideout_4F_Text_TabithaDefeat:
 
 MagmaHideout_4F_Text_TabithaPostBattle:
 	.string "…And while you wasted time with me,\n"
-	.string "MAXIE should have awakened GROUDON…$"
+	.string "MAXIE should have awakened Groudon…$"
 
 MagmaHideout_4F_Text_MaxieAwakenGroudon:
-	.string "MAXIE: GROUDON…\p"
+	.string "MAXIE: Groudon…\p"
 	.string "Nothing could awaken you from your\n"
 	.string "sleep bathed in magma…\p"
 	.string "This BLUE ORB is what you sought.\n"
@@ -200,10 +200,10 @@ MagmaHideout_4F_Text_MaxieAwakenGroudon:
 	.string "Show me the full extent of your power!$"
 
 MagmaHideout_4F_Text_MaxieGroudonWhatsWrong:
-	.string "MAXIE: GROUDON!\n"
+	.string "MAXIE: Groudon!\n"
 	.string "What's wrong?\p"
 	.string "Wasn't the BLUE ORB the key?\p"
-	.string "GROUDON!\n"
+	.string "Groudon!\n"
 	.string "Where have you gone…$"
 
 MagmaHideout_4F_Text_MaxieOhItWasYou:
@@ -215,18 +215,18 @@ MagmaHideout_4F_Text_MaxieOhItWasYou:
 
 MagmaHideout_4F_Text_MaxieDefeat:
 	.string "What makes you so adept at handling\n"
-	.string "POKéMON?$"
+	.string "Moémon?$"
 
 MagmaHideout_4F_Text_MaxieImGoingAfterGroudon:
 	.string "MAXIE: There has to be some reason\n"
-	.string "why GROUDON fled…\p"
+	.string "why Groudon fled…\p"
 	.string "That's what you're trying to say,\n"
 	.string "aren't you?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Humph…\n"
 	.string "You think I didn't know that?\p"
-	.string "With GROUDON gone, there is no longer\n"
+	.string "With Groudon gone, there is no longer\n"
 	.string "any need for this blasted volcano.\p"
-	.string "I am going after GROUDON, so this\n"
+	.string "I am going after Groudon, so this\n"
 	.string "is where we part!$"

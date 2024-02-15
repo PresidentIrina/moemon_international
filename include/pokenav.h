@@ -128,8 +128,8 @@ enum
     POKENAV_CONDITION_GRAPH_SEARCH,             // The Condition graph screen when a search result has been selected
     POKENAV_RETURN_CONDITION_SEARCH,            // Exited the graph screen back to the list of Condition search results
     POKENAV_MATCH_CALL,
-    POKENAV_RIBBONS_MON_LIST,                   // The list of Pokémon with ribbons
-    POKENAV_RIBBONS_SUMMARY_SCREEN,             // The ribbon summary screen shown when a Pokémon has been selected
+    POKENAV_RIBBONS_MON_LIST,                   // The list of Moémon with ribbons
+    POKENAV_RIBBONS_SUMMARY_SCREEN,             // The ribbon summary screen shown when a Moémon has been selected
     POKENAV_RIBBONS_RETURN_TO_MON_LIST,         // Exited the summary screen back to the ribbon list
 };
 

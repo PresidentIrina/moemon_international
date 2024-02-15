@@ -330,7 +330,7 @@
 #define MUS_ENCOUNTER_RICH          397 // MUS_TEST
 #define MUS_VERDANTURF              398 // MUS_GOMACHI0
 #define MUS_RUSTBORO                399 // MUS_GOTOWN           // Also used in Mauville City, Mossdeep City, Daycare, Weather Institute and several Route houses.
-#define MUS_POKE_CENTER             400 // MUS_POKECEN          // Also used in the Pokémon League's lobby.
+#define MUS_POKE_CENTER             400 // MUS_POKECEN          // Also used in the Moémon League's lobby.
 #define MUS_ROUTE104                401 // MUS_NEXTROAD         // Also used in Routes 105, 106, 107, 108, 109, 115 and 116.
 #define MUS_ROUTE119                402 // MUS_GRANROAD         // Also used in Routes 129, 130, 131, 132, 133, 134 and 118's east half.
 #define MUS_CYCLING                 403 // MUS_CYCLING
@@ -359,7 +359,7 @@
 #define MUS_GAME_CORNER             426 // MUS_CASINO
 #define MUS_DEWFORD                 427 // MUS_HIGHTOWN         // Also used in Route 109's Seashore house.
 #define MUS_SAFARI_ZONE             428 // MUS_SAFARI
-#define MUS_VICTORY_ROAD            429 // MUS_C_ROAD           // Also used in Pokémon League's E4/Champion rooms and halls.
+#define MUS_VICTORY_ROAD            429 // MUS_C_ROAD           // Also used in Moémon League's E4/Champion rooms and halls.
 #define MUS_AQUA_MAGMA_HIDEOUT      430 // MUS_AJITO
 #define MUS_SAILING                 431 // MUS_M_BOAT
 #define MUS_MT_PYRE                 432 // MUS_M_DUNGON         // Also used in New Mauville and Shoal Cave.
@@ -577,10 +577,10 @@
 #define MUS_HG_ROUTE11                    641 // Route 11
 #define MUS_HG_ROUTE24                    642 // Route 24
 #define MUS_HG_ROUTE26                    643 // Route 26
-#define MUS_HG_POKE_CENTER                644 // Pokémon Center
+#define MUS_HG_POKE_CENTER                644 // Moémon Center
 #define MUS_HG_POKE_MART                  645 // Poké Mart
-#define MUS_HG_GYM                        646 // Pokémon Gym
-#define MUS_HG_ELM_LAB                    647 // Elm Pokémon Lab
+#define MUS_HG_GYM                        646 // Moémon Gym
+#define MUS_HG_ELM_LAB                    647 // Elm Moémon Lab
 #define MUS_HG_OAK                        648 // Professor Oak
 #define MUS_HG_DANCE_THEATER              649 // Ecruteak Dance Theater
 #define MUS_HG_GAME_CORNER                650 // Goldenrod Game Corner
@@ -599,7 +599,7 @@
 #define MUS_HG_ROCK_TUNNEL                663 // Rock Tunnel
 #define MUS_HG_VIRIDIAN_FOREST            664 // Viridian Forest
 #define MUS_HG_VICTORY_ROAD               665 // Victory Road
-#define MUS_HG_POKEMON_LEAGUE             666 // The Pokémon League
+#define MUS_HG_POKEMON_LEAGUE             666 // The Moémon League
 #define MUS_HG_FOLLOW_ME_1                667 // Hurry Along
 #define MUS_HG_FOLLOW_ME_2                668 // Hurry Along 2
 #define MUS_HG_ENCOUNTER_RIVAL            669 // A Rival Appears!
@@ -611,12 +611,12 @@
 #define MUS_HG_MAGNET_TRAIN               675 // Magnet Train
 #define MUS_HG_SS_AQUA                    676 // S.S. Aqua
 #define MUS_HG_MT_MOON_SQUARE             677 // Mt. Moon
-#define MUS_HG_RADIO_JINGLE               678 // Pokégear Radio: Pokémon Channel
-#define MUS_HG_RADIO_LULLABY              679 // Pokégear Radio: Pokémon Lullaby
-#define MUS_HG_RADIO_MARCH                680 // Pokégear Radio: Pokémon March
+#define MUS_HG_RADIO_JINGLE               678 // Pokégear Radio: Moémon Channel
+#define MUS_HG_RADIO_LULLABY              679 // Pokégear Radio: Moémon Lullaby
+#define MUS_HG_RADIO_MARCH                680 // Pokégear Radio: Moémon March
 #define MUS_HG_RADIO_UNOWN                681 // Pokégear Radio: Unown
 #define MUS_HG_RADIO_POKE_FLUTE           682 // Pokégear Radio: Poké Flute
-#define MUS_HG_RADIO_OAK                  683 // Pokégear Radio: Professor Oak's Pokémon Talk
+#define MUS_HG_RADIO_OAK                  683 // Pokégear Radio: Professor Oak's Moémon Talk
 #define MUS_HG_RADIO_BUENA                684 // Pokégear Radio: Buena's Password
 #define MUS_HG_EUSINE                     685 // Eusine
 #define MUS_HG_CLAIR                      686 // Clair
@@ -629,7 +629,7 @@
 #define MUS_HG_ENCOUNTER_GIRL_2           693 // Trainers' Eyes Meet (Girl 2)
 #define MUS_HG_ENCOUNTER_BOY_2            694 // Trainers' Eyes Meet (Boy 2)
 #define MUS_HG_ENCOUNTER_SUSPICIOUS_2     695 // Trainers' Eyes Meet (Suspicious Figure 2)
-#define MUS_HG_VS_WILD                    696 // Battle! (Wild Pokémon - Johto Version)
+#define MUS_HG_VS_WILD                    696 // Battle! (Wild Moémon - Johto Version)
 #define MUS_HG_VS_TRAINER                 697 // Battle! (Trainer Battle - Johto Version)
 #define MUS_HG_VS_GYM_LEADER              698 // Battle! (Gym Leader - Johto Version)
 #define MUS_HG_VS_RIVAL                   699 // Battle! (Rival)
@@ -638,12 +638,12 @@
 #define MUS_HG_VS_ENTEI                   702 // Battle! (Entei)
 #define MUS_HG_VS_RAIKOU                  703 // Battle! (Raikou)
 #define MUS_HG_VS_CHAMPION                704 // Battle! (Champion)
-#define MUS_HG_VS_WILD_KANTO              705 // Battle! (Wild Pokémon - Kanto Version)
+#define MUS_HG_VS_WILD_KANTO              705 // Battle! (Wild Moémon - Kanto Version)
 #define MUS_HG_VS_TRAINER_KANTO           706 // Battle! (Trainer Battle - Kanto Version)
 #define MUS_HG_VS_GYM_LEADER_KANTO        707 // Battle! (Gym Leader - Kanto Version)
 #define MUS_HG_VICTORY_TRAINER            708 // Victory! (Trainer Battle)
-#define MUS_HG_VICTORY_WILD               709 // Victory! (Wild Pokémon)
-#define MUS_HG_CAUGHT                     710 // Victory! (Wild Pokémon) (No intro)
+#define MUS_HG_VICTORY_WILD               709 // Victory! (Wild Moémon)
+#define MUS_HG_CAUGHT                     710 // Victory! (Wild Moémon) (No intro)
 #define MUS_HG_VICTORY_GYM_LEADER         711 // Victory! (Gym Leader)
 #define MUS_HG_VS_HO_OH                   712 // Battle! (Ho-Oh)
 #define MUS_HG_VS_LUGIA                   713 // Battle! (Lugia)
@@ -685,14 +685,14 @@
 #define MUS_HG_RADIO_ROUTE201             749 // Pokégear Radio: Route 201
 #define MUS_HG_RADIO_TRAINER              750 // Pokégear Radio: Trainer Channel
 #define MUS_HG_RADIO_VARIETY              751 // Pokégear Radio: Variety Channel
-#define MUS_HG_VS_KYOGRE_GROUDON          752 // Battle! (Super-Ancient Pokémon)
+#define MUS_HG_VS_KYOGRE_GROUDON          752 // Battle! (Super-Ancient Moémon)
 #define MUS_HG_POKEWALKER                 753 // Pokéwalker
 #define MUS_HG_VS_ARCEUS                  754 // Arceus
-#define MUS_HG_HEAL                       755 // Pokémon Healed
+#define MUS_HG_HEAL                       755 // Moémon Healed
 #define MUS_HG_LEVEL_UP                   756 // Level Up!
 #define MUS_HG_OBTAIN_ITEM                757 // Picked Up an Item!
 #define MUS_HG_OBTAIN_KEY_ITEM            758 // Obtained a Key Item!
-#define MUS_HG_EVOLVED                    759 // Congratulations! Your Pokémon Evolved!
+#define MUS_HG_EVOLVED                    759 // Congratulations! Your Moémon Evolved!
 #define MUS_HG_OBTAIN_BADGE               760 // Received a Gym Badge!
 #define MUS_HG_OBTAIN_TMHM                761 // Received a TM!
 #define MUS_HG_OBTAIN_ACCESSORY           762 // Obtained an Accessory
@@ -704,7 +704,7 @@
 #define MUS_HG_DEX_RATING_4               768 // Pokédex Evaluation... Not Bad!
 #define MUS_HG_DEX_RATING_5               769 // Pokédex Evaluation... Just a Little More!
 #define MUS_HG_DEX_RATING_6               770 // Pokédex Evaluation... Complete!
-#define MUS_HG_OBTAIN_EGG                 771 // Received a Pokémon Egg!
+#define MUS_HG_OBTAIN_EGG                 771 // Received a Moémon Egg!
 #define MUS_HG_BUG_CONTEST_1ST_PLACE      772 // Bug-Catching Contest: Winner
 #define MUS_HG_BUG_CONTEST_2ND_PLACE      773 // Bug-Catching Contest: Second Place
 #define MUS_HG_BUG_CONTEST_3RD_PLACE      774 // Bug-Catching Contest: Third Place
@@ -714,7 +714,7 @@
 #define MUS_HG_LETS_GO_TOGETHER           778 // Let's Go Together
 #define MUS_HG_POKEATHLON_READY           779 // Pokéathlon: Getting Changed
 #define MUS_HG_POKEATHLON_1ST_PLACE       780 // Pokéathlon: In First Place!
-#define MUS_HG_RECEIVE_POKEMON            781 // Received a Pokémon!
+#define MUS_HG_RECEIVE_POKEMON            781 // Received a Moémon!
 #define MUS_HG_OBTAIN_ARCADE_POINTS       782// Received Battle Points in the Battle Arcade!
 #define MUS_HG_OBTAIN_CASTLE_POINTS       783 // Received Castle Points!
 #define MUS_HG_OBTAIN_B_POINTS            784 // Received Battle Points!

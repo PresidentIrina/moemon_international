@@ -814,6 +814,17 @@ const struct SpriteTemplate gAttackOrderParticleSpriteTemplate =
     .callback = AnimMoveTwisterParticle,
 };
 
+const struct SpriteTemplate gStrikeOrderParticleSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_STRIKE_ORDER,
+    .paletteTag = ANIM_TAG_STRIKE_ORDER,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gRazorLeafParticleAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMoveTwisterParticle,
+};
+
 const union AnimCmd gRazorLeafCutterAnimCmds[] =
 {
     ANIMCMD_FRAME(0, 3),

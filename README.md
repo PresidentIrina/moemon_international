@@ -13,7 +13,7 @@ Based off RHH's pokeemerald-expansion v1.7.0 https://github.com/rh-hideout/pokee
 ## What features are included?
 - ***IMPORTANT*❗❗ Read through these to learn what features you can toggle**:
     - [Battle configurations](/include/config/battle.h)
-    - [Pokémon configurations](/include/config/pokemon.h)
+    - [Moémon configurations](/include/config/pokemon.h)
     - [Item configurations](/include/config/item.h)
     - [Overworld configurations](/include/config/overworld.h)
     - [Debug configurations](/include/config/debug.h)
@@ -45,8 +45,8 @@ Based off RHH's pokeemerald-expansion v1.7.0 https://github.com/rh-hideout/pokee
         - Message and animation/cry happens at the same time.
     - Faster HP drain.
     - Battle Debug menu.
-        - Accessed by pressing `Select` on the "Fight/Bag/Pokémon/Run" menu.
-    - Option to use AI flags in wild Pokémon battles.
+        - Accessed by pressing `Select` on the "Fight/Bag/Moémon/Run" menu.
+    - Option to use AI flags in wild Moémon battles.
     - FRLG/Gen4+ whiteout money calculation.
     - Configurable experience settings
         - Experience on catch.
@@ -59,7 +59,7 @@ Based off RHH's pokeemerald-expansion v1.7.0 https://github.com/rh-hideout/pokee
     - Critical capture.
     - Removed badge boosts (configurable).
     - Recalculating stats at the end of every battle.
-    - Level 100 Pokémon can earn EVs.
+    - Level 100 Moémon can earn EVs.
     - Inverse battle support.
     - TONS of other features listed [here](/include/config/battle.h).
 - ***Full Trainer customization***
@@ -71,15 +71,15 @@ Based off RHH's pokeemerald-expansion v1.7.0 https://github.com/rh-hideout/pokee
         - New flag options to let you customize the intelligence of your trainers.
         - Faster calculations.
     - Specify Poké Balls by Trainer class.
-- ***Pokémon Species from Generations 1-9.***
-    - Simplified process to add new Pokémon.
+- ***Moémon Species from Generations 1-9.***
+    - Simplified process to add new Moémon.
     - Option to disable unwanted families.
     - Updated sprites to DS style.
     - Updated stats, types, abilities and egg groups (configurable).
     - Updated Hoenn's Regional Dex to match ORAS' (configurable).
     - Updated National Dex incorporating the new species.
     - Sprite and animation visualizer.
-        - Accesible by pressing `Select` on a Pokémon's Summary screen.
+        - Accesible by pressing `Select` on a Moémon's Summary screen.
     - Gen4+ evolution methods, with some changes:
         - Mossy Rock, Icy Rock and Magnetic Field locations match ORAS'.
             - Leaf, Ice and Thunder Stones may also be used.
@@ -107,7 +107,7 @@ Based off RHH's pokeemerald-expansion v1.7.0 https://github.com/rh-hideout/pokee
     - End of turn (eg. Morpeko)
     - Time of day (Shaymin)
 - ***Breeding Improvements***
-    - Incense Baby Pokémon now happen automatically (configurable).
+    - Incense Baby Moémon now happen automatically (configurable).
     - Level 1 eggs (configurable).
     - Poké Ball inheriting (configurable).
     - Egg Move Transfer, including Mirror Herb (configurable).
@@ -132,7 +132,7 @@ Based off RHH's pokeemerald-expansion v1.7.0 https://github.com/rh-hideout/pokee
         - May be disabled.
         - Accesible by pressing `R + Start` in the overworld by default.
         - **Additional features**:
-            - *Clear Boxes*: cleans every Pokémon from the Boxes.
+            - *Clear Boxes*: cleans every Moémon from the Boxes.
             - *Hatch an Egg*: lets you choose an Egg in your party and immediatly hatch it.
     - [HGSS Pokédex](https://github.com/TheXaman/pokeemerald/tree/tx_pokedexPlus_hgss) by @TheXaman
         - May be disabled.
@@ -141,7 +141,7 @@ Based off RHH's pokeemerald-expansion v1.7.0 https://github.com/rh-hideout/pokee
             - *Dark Mode*.
     - [Nature Colors](https://github.com/DizzyEggg/pokeemerald/tree/nature_color) in summary screen by @DizzyEggg
 - ***Other features***
-    - Pressing B while holding a Pokémon drops them like in modern games (configurable).
+    - Pressing B while holding a Moémon drops them like in modern games (configurable).
     - Running indoors (configurable).
     - Configurable overworld poison damage.
     - Configurable flags for disabling Wild encounters and Trainer battles.
@@ -185,6 +185,6 @@ The project has now gotten larger and DizzyEgg is now maintaining the project as
 
 ## What is the ROM Hacking Hideout?
 
-A Discord-based ROM hacking community that has many members who hack using the disassembly and decompilation projects for Pokémon. Quite a few contributors to the original feature branches by DizzyEgg were members of ROM Hacking Hideout. You can call it RHH for short!
+A Discord-based ROM hacking community that has many members who hack using the disassembly and decompilation projects for Moémon. Quite a few contributors to the original feature branches by DizzyEgg were members of ROM Hacking Hideout. You can call it RHH for short!
 
 [Click here to join the RHH Discord Server!](https://discord.gg/6CzjAG6GZk)

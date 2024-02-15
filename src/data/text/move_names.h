@@ -144,7 +144,7 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_POISON_GAS] = _("Poison Gas"),
     [MOVE_BARRAGE] = _("Barrage"),
     [MOVE_LEECH_LIFE] = _("Leech Life"),
-    [MOVE_LOVELY_KISS] = _("Lovely Kiss"),
+    [MOVE_LOVELY_KISS] = _("Demon's Kiss"),
     [MOVE_SKY_ATTACK] = _("Sky Attack"),
     [MOVE_TRANSFORM] = _("Transform"),
     [MOVE_BUBBLE] = _("Bubble"),
@@ -188,7 +188,7 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_MACH_PUNCH] = _("Mach Punch"),
     [MOVE_SCARY_FACE] = _("Scary Face"),
     [MOVE_FEINT_ATTACK] = _("Feint Attack"),
-    [MOVE_SWEET_KISS] = _("Sweet Kiss"),
+    [MOVE_SWEET_KISS] = _("Angel's Kiss"),
     [MOVE_BELLY_DRUM] = _("Belly Drum"),
     [MOVE_SLUDGE_BOMB] = _("Sludge Bomb"),
     [MOVE_MUD_SLAP] = _("Mud-Slap"),
@@ -391,7 +391,7 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_PUNISHMENT] = _("Punishment"),
     [MOVE_LAST_RESORT] = _("Last Resort"),
     [MOVE_WORRY_SEED] = _("Worry Seed"),
-    [MOVE_SUCKER_PUNCH] = _("Sucker Punch"),
+    [MOVE_SUCKER_PUNCH] = _("Surprise Attack"),
     [MOVE_TOXIC_SPIKES] = _("Toxic Spikes"),
     [MOVE_HEART_SWAP] = _("Heart Swap"),
     [MOVE_AQUA_RING] = _("Aqua Ring"),
@@ -889,6 +889,10 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_G_MAX_DEPLETION] = _("Gmax Depletion"),
     [MOVE_G_MAX_ONE_BLOW] = _("Gmax One Blow"),
     [MOVE_G_MAX_RAPID_FLOW] = _("Gmax Rapid Flow"),
+    //Moemon International
+    [MOVE_STRIKE_ORDER] = _("Strike Order"),
+    [MOVE_PATROL_ORDER] = _("Patrol Order"),
+    [MOVE_REPAIR_ORDER] = _("Repair Order"),
 };
 #else
 // 12 letters
@@ -1781,6 +1785,10 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_G_MAX_DEPLETION] = _("G-Depletion"),
     [MOVE_G_MAX_ONE_BLOW] = _("G-One Blow"),
     [MOVE_G_MAX_RAPID_FLOW] = _("G-Rapid Flow"),
+    //Moemon International
+    [MOVE_STRIKE_ORDER] = _("Strike Order"),
+    [MOVE_PATROL_ORDER] = _("Patrol Order"),
+    [MOVE_REPAIR_ORDER] = _("Repair Order"),
 };
 #endif
 

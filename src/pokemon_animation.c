@@ -12,7 +12,7 @@
 #include "constants/rgb.h"
 
 /*
-    This file handles the movements of the Pokémon intro animations.
+    This file handles the movements of the Moémon intro animations.
 
     Each animation type is identified by an ANIM_* constant that
     refers to a sprite callback to start the animation. These functions
@@ -23,7 +23,7 @@
 
     Every front animation uses 1 of these ANIMs, and every back animation
     uses a BACK_ANIM_* that refers to a set of 3 ANIM functions. Which of the
-    3 that gets used depends on the Pokémon's nature (see sBackAnimationIds).
+    3 that gets used depends on the Moémon's nature (see sBackAnimationIds).
 
     The gSpeciesInfo table links to both BACK_ANIM and ANIM in its frontAnimId and backAnimId fields.
 

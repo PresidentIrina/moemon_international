@@ -7,6 +7,7 @@ RustboroCity_CuttersHouse_EventScript_Cutter::
 	goto_if_set FLAG_RECEIVED_HM_CUT, RustboroCity_CuttersHouse_EventScript_ExplainCut
 	msgbox RustboroCity_CuttersHouse_Text_YouCanPutThisHMToGoodUse, MSGBOX_DEFAULT
 	giveitem ITEM_HM_CUT
+	giveitem ITEM_CUT_TOOL
 	setflag FLAG_RECEIVED_HM_CUT
 	msgbox RustboroCity_CuttersHouse_Text_ExplainCut, MSGBOX_DEFAULT
 	release
@@ -24,7 +25,7 @@ RustboroCity_CuttersHouse_EventScript_Lass::
 RustboroCity_CuttersHouse_Text_YouCanPutThisHMToGoodUse:
 	.string "That determined expression…\n"
 	.string "That limber way you move…\l"
-	.string "And your well-trained POKéMON…\p"
+	.string "And your well-trained Moémon…\p"
 	.string "You're obviously a skilled TRAINER!\p"
 	.string "No, wait, don't say a word.\n"
 	.string "I can tell just by looking at you.\p"
@@ -37,8 +38,8 @@ RustboroCity_CuttersHouse_Text_ExplainCut:
 	.string "That HIDDEN MACHINE, or HM for\n"
 	.string "short, is CUT.\p"
 	.string "An HM move is one that can be used\n"
-	.string "by POKéMON outside of battle.\p"
-	.string "Any POKéMON that's learned CUT can\n"
+	.string "by Moémon outside of battle.\p"
+	.string "Any Moémon that's learned CUT can\n"
 	.string "chop down thin trees if the TRAINER\l"
 	.string "has earned the STONE BADGE.\p"
 	.string "And, unlike a TM, an HM can be used\n"
@@ -47,6 +48,5 @@ RustboroCity_CuttersHouse_Text_ExplainCut:
 RustboroCity_CuttersHouse_Text_DadHelpedClearLandOfTrees:
 	.string "When they were expanding the city of\n"
 	.string "RUSTBORO, my dad helped out.\p"
-	.string "He made his POKéMON use CUT to clear\n"
+	.string "He made his Moémon use CUT to clear\n"
 	.string "the land of trees.$"
-

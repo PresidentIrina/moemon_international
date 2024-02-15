@@ -605,7 +605,7 @@ static void Task_DoPokeballSendOutAnim(u8 taskId)
 }
 
 // This sequence of functions is very similar to those that get run when
-// a Pokéball gets thrown at a wild Pokémon, starting at SpriteCB_Ball_Arc.
+// a Pokéball gets thrown at a wild Moémon, starting at SpriteCB_Ball_Arc.
 // These do not seem to get run.
 static void SpriteCB_BallThrow(struct Sprite *sprite)
 {

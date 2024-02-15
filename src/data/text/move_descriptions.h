@@ -69,8 +69,8 @@ static const u8 sSwordsDanceDescription[] = _(
     "sharply raises Attack.");
 
 static const u8 sCutDescription[] = _(
-    "Cuts the foe with sharp\n"
-    "scythes, claws, etc.");
+    "Cuts the foe with a sharp\n"
+    "scythe, claw, sword, etc.");
 
 static const u8 sGustDescription[] = _(
     "Strikes the foe with a gust\n"
@@ -494,7 +494,7 @@ static const u8 sBideDescription[] = _(
 
 static const u8 sMetronomeDescription[] = _(
     "Waggles a finger to use any\n"
-    "Pokémon move at random.");
+    "Moémon move at random.");
 
 static const u8 sMirrorMoveDescription[] = _(
     "Counters the foe's attack\n"
@@ -614,7 +614,7 @@ static const u8 sSporeDescription[] = _(
 
 static const u8 sFlashDescription[] = _(
     "Looses a powerful blast of\n"
-    "light that cuts accuracy.");
+    "light causes flinching.");
 
 static const u8 sPsywaveDescription[] = _(
     "Attacks with a psychic\n"
@@ -801,7 +801,7 @@ static const u8 sDestinyBondDescription[] = _(
     "is also made to faint.");
 
 static const u8 sPerishSongDescription[] = _(
-    "Any Pokémon hearing this\n"
+    "Any Moémon hearing this\n"
     "song faints in 3 turns.");
 
 static const u8 sIcyWindDescription[] = _(
@@ -1029,7 +1029,7 @@ static const u8 sWhirlpoolDescription[] = _(
     "a whirlpool for "BINDING_TURNS" turns.");
 
 static const u8 sBeatUpDescription[] = _(
-    "Summons party Pokémon to\n"
+    "Summons party Moémon to\n"
     "join in the attack.");
 
 static const u8 sFakeOutDescription[] = _(
@@ -1201,7 +1201,7 @@ static const u8 sArmThrustDescription[] = _(
     "strike the foe 2 to 5 times.");
 
 static const u8 sCamouflageDescription[] = _(
-    "Alters the Pokémon's type\n"
+    "Alters the Moémon's type\n"
     "depending on the location.");
 
 static const u8 sTailGlowDescription[] = _(
@@ -1221,7 +1221,7 @@ static const u8 sFeatherDanceDescription[] = _(
     "to sharply reduce Attack.");
 
 static const u8 sTeeterDanceDescription[] = _(
-    "Confuses all Pokémon on\n"
+    "Confuses all Moémon on\n"
     "the scene.");
 
 static const u8 sBlazeKickDescription[] = _(
@@ -1749,7 +1749,7 @@ static const u8 sDefogDescription[] = _(
     "lowers evasion.");
 
 static const u8 sTrickRoomDescription[] = _(
-    "Slower Pokémon get to move\n"
+    "Slower Moémon get to move\n"
     "first for 5 turns.");
 
 static const u8 sDracoMeteorDescription[] = _(
@@ -2214,7 +2214,7 @@ static const u8 sBelchDescription[] = _(
 
 static const u8 sRototillerDescription[] = _(
     "Ups the Attack and Sp. Atk\n"
-    "of Grass-type Pokémon.");
+    "of Grass-type Moémon.");
 
 static const u8 sStickyWebDescription[] = _(
     "Weaves a sticky net that\n"
@@ -2237,7 +2237,7 @@ static const u8 sIonDelugeDescription[] = _(
     "moves with charged atoms.");
 
 static const u8 sParabolicChargeDescription[] = _(
-    "Damages adjacent Pokémon and\n"
+    "Damages adjacent Moémon and\n"
     "heals up by half of it.");
 
 static const u8 sForestsCurseDescription[] = _(
@@ -2274,7 +2274,7 @@ static const u8 sCraftyShieldDescription[] = _(
 
 static const u8 sFlowerShieldDescription[] = _(
     "Raises the Defense of\n"
-    "Grass-type Pokémon.");
+    "Grass-type Moémon.");
 
 static const u8 sGrassyTerrainDescription[] = _(
     "The ground turns to grass\n"
@@ -2346,7 +2346,7 @@ static const u8 sSpikyShieldDescription[] = _(
 
 static const u8 sAromaticMistDescription[] = _(
     "Raises the Sp. Def of a\n"
-    "partner Pokémon.");
+    "partner Moémon.");
 
 static const u8 sEerieImpulseDescription[] = _(
     "Exposes the foe to a pulse\n"
@@ -2486,7 +2486,7 @@ static const u8 sLeafageDescription[] = _(
 
 static const u8 sSpotlightDescription[] = _(
     "Makes the foe attack the\n"
-    "spotlighted Pokémon.");
+    "spotlighted Moémon.");
 
 static const u8 sToxicThreadDescription[] = _(
     "Attacks with a thread that\n"
@@ -2746,7 +2746,7 @@ static const u8 sDragonDartsDescription[] = _(
     "targets are hit once each.");
 
 static const u8 sTeatimeDescription[] = _(
-    "All Pokémon have teatime\n"
+    "All Moémon have teatime\n"
     "and eat their Berries.");
 
 static const u8 sOctolockDescription[] = _(
@@ -2907,7 +2907,7 @@ static const u8 sPoltergeistDescription[] = _(
 
 static const u8 sCorrosiveGasDescription[] = _(
     "Highly acidic gas melts items\n"
-    "held by surrounding Pokémon.");
+    "held by surrounding Moémon.");
 
 static const u8 sCoachingDescription[] = _(
     "Properly coaches allies to\n"
@@ -2915,7 +2915,7 @@ static const u8 sCoachingDescription[] = _(
 
 static const u8 sFlipTurnDescription[] = _(
     "Attacks and rushes back to\n"
-    "switch with a party Pokémon.");
+    "switch with a party Moémon.");
 
 static const u8 sTripleAxelDescription[] = _(
     "A 3-kick attack that gets\n"
@@ -3287,6 +3287,19 @@ static const u8 sIvyCudgelDescription[] = _(
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
+
+    //Moemon International
+static const u8 sStrikeOrderDescription[] = _(
+    "Aircraft strike the foe.\n"
+    "May inflict burn on them.");
+
+static const u8 sPatrolOrderDescription[] = _(
+    "Raises Defense and Sp. Def\n"
+    "with a defensive patrol.");
+
+static const u8 sRepairOrderDescription[] = _(
+    "Ryuuhou's aircraft return\n"
+    "to heal half her max HP.");
 
 #undef BINDING_TURNS
 
@@ -4127,4 +4140,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_MATCHA_GOTCHA - 1] = sMatchaGotchaDescription,
     [MOVE_SYRUP_BOMB - 1] = sSyrupBombDescription,
     [MOVE_IVY_CUDGEL - 1] = sIvyCudgelDescription,
+
+    //Moemon International
+    [MOVE_STRIKE_ORDER - 1] = sStrikeOrderDescription,
+    [MOVE_PATROL_ORDER - 1] = sPatrolOrderDescription,
+    [MOVE_REPAIR_ORDER - 1] = sRepairOrderDescription,
 };

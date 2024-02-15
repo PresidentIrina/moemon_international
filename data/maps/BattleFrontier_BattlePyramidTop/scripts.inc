@@ -252,7 +252,7 @@ BattleFrontier_BattlePyramidTop_Text_ExplorationsAreGrandestAdventure:
 	.string "are the grandest of adventures?\p"
 	.string "Your own wits!\p"
 	.string "Your own strength!\p"
-	.string "Your own POKéMON!\p"
+	.string "Your own Moémon!\p"
 	.string "And, above all, only your own courage\n"
 	.string "to lead you through unknown worlds…$"
 
@@ -331,4 +331,3 @@ BattleFrontier_BattlePyramidTop_Text_FarewellForNow:
 BattleFrontier_BattlePyramidTop_Text_StepForwardWhenReady:
 	.string "Now, when you are ready, take courage\n"
 	.string "and step forward.$"
-

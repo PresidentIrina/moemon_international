@@ -35,7 +35,7 @@ SINGLE_BATTLE_TEST("Sandstorm multiplies the special defense of Rock-types by 1.
     }
 }
 
-SINGLE_BATTLE_TEST("Sandstorm damage does not hurt Ground, Rock, and Steel-type Pokémon")
+SINGLE_BATTLE_TEST("Sandstorm damage does not hurt Ground, Rock, and Steel-type Moémon")
 {
     u32 mon;
     PARAMETRIZE { mon = SPECIES_SANDSLASH; }

@@ -409,7 +409,7 @@ static void WallyHandlePlaySE(u32 battler)
 }
 
 // All of the other controllers use CRY_MODE_FAINT.
-// Wally's Pokémon during the tutorial is never intended to faint, so that's probably why it's different here.
+// Wally's Moémon during the tutorial is never intended to faint, so that's probably why it's different here.
 static void WallyHandleFaintingCry(u32 battler)
 {
     u16 species = GetMonData(&gPlayerParty[gBattlerPartyIndexes[battler]], MON_DATA_SPECIES);

@@ -63,6 +63,7 @@ RusturfTunnel_EventScript_ClearTunnelScene::
 	call_if_eq VAR_TEMP_1, 2, RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer
 	call_if_eq VAR_TEMP_1, 3, RusturfTunnel_EventScript_WandasBoyfriendApproachPlayer
 	giveitem ITEM_HM_STRENGTH
+	giveitem ITEM_STRENGTH_TOOL
 	setflag FLAG_RECEIVED_HM_STRENGTH
 	msgbox RusturfTunnel_Text_ExplainStrength, MSGBOX_DEFAULT
 	closemessage
@@ -432,7 +433,7 @@ RusturfTunnel_Text_Peeko:
 
 RusturfTunnel_Text_GruntIntro:
 	.string "Grah, keelhaul it all!\p"
-	.string "That hostage POKéMON turned out to\n"
+	.string "That hostage Moémon turned out to\n"
 	.string "be worthless!\p"
 	.string "And to think I made a getaway…\n"
 	.string "In this tunnel to nowhere!\p"
@@ -497,7 +498,7 @@ RusturfTunnel_Text_YouShatteredBoulderTakeHM:
 
 RusturfTunnel_Text_ExplainStrength:
 	.string "That HM contains STRENGTH.\p"
-	.string "If a muscular POKéMON were to learn\n"
+	.string "If a muscular Moémon were to learn\n"
 	.string "that, it would be able to move even\l"
 	.string "large boulders.$"
 
@@ -518,15 +519,14 @@ RusturfTunnel_Text_BoyfriendOnOtherSideOfRock:
 RusturfTunnel_Text_MikeIntro:
 	.string "What do you call a wild man up in the\n"
 	.string "mountains? A mountain man, right?\p"
-	.string "So why don't they call a POKéMON in\n"
-	.string "the mountains a mountain POKéMON?$"
+	.string "So why don't they call a Moémon in\n"
+	.string "the mountains a mountain Moémon?$"
 
 RusturfTunnel_Text_MikeDefeat:
-	.string "My POKéMON…\n"
+	.string "My Moémon…\n"
 	.string "Ran out of power…$"
 
 RusturfTunnel_Text_MikePostBattle:
 	.string "They halted development here to\n"
-	.string "protect POKéMON, right?\l"
+	.string "protect Moémon, right?\l"
 	.string "There's a feel-good story!$"
-

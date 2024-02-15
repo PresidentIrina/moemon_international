@@ -22,6 +22,7 @@ PetalburgCity_WallysHouse_EventScript_GiveHMSurf::
 	lockall
 	msgbox PetalburgCity_WallysHouse_Text_PleaseExcuseUs, MSGBOX_DEFAULT
 	giveitem ITEM_HM_SURF
+	giveitem ITEM_SURF_TOOL
 	setflag FLAG_RECEIVED_HM_SURF
 	msgbox PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces, MSGBOX_DEFAULT
 	setvar VAR_PETALBURG_CITY_STATE, 5
@@ -93,7 +94,7 @@ PetalburgCity_WallysHouse_Text_PleaseExcuseUs:
 	.string "since he went to VERDANTURF TOWN.\p"
 	.string "We owe it all to you!\p"
 	.string "When WALLY left town, you helped\n"
-	.string "him catch a POKéMON, right?\p"
+	.string "him catch a Moémon, right?\p"
 	.string "I think that made WALLY really\n"
 	.string "happy.\p"
 	.string "Actually, not just WALLY.\n"
@@ -104,7 +105,7 @@ PetalburgCity_WallysHouse_Text_PleaseExcuseUs:
 	.string "I'd really like you to have this.$"
 
 PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces:
-	.string "If your POKéMON can SURF, you'll be\n"
+	.string "If your Moémon can SURF, you'll be\n"
 	.string "able to go to all sorts of places.$"
 
 PetalburgCity_WallysHouse_Text_WallyIsComingHomeSoon:
@@ -121,7 +122,7 @@ PetalburgCity_WallysHouse_Text_YouMetWallyInEverGrandeCity:
 
 PetalburgCity_WallysHouse_Text_WallyWasReallyHappy:
 	.string "WALLY was really happy when he told\n"
-	.string "us that he caught a POKéMON.\p"
+	.string "us that he caught a Moémon.\p"
 	.string "It's been ages since I've seen him\n"
 	.string "smile like that.$"
 
@@ -134,4 +135,3 @@ PetalburgCity_WallysHouse_Text_WallyLeftWithoutTelling:
 	.string "he's surprisingly strong-willed.\p"
 	.string "I'm sure that he'll come back safe\n"
 	.string "and sound one day!$"
-

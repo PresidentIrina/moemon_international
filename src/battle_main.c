@@ -319,6 +319,7 @@ const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
     [TYPE_DRAGON] = _("Dragon"),
     [TYPE_DARK] = _("Dark"),
     [TYPE_FAIRY] = _("Fairy"),
+    [TYPE_LIGHT] = _("Light"),
 };
 
 // This is a factor in how much money you get for beating a trainer.
@@ -940,10 +941,10 @@ static void CB2_HandleStartBattle(void)
         }
         break;
     case 3:
-        // Link battle, send/receive party Pokémon 2 at a time
+        // Link battle, send/receive party Moémon 2 at a time
         if (IsLinkTaskFinished())
         {
-            // Send Pokémon 1-2
+            // Send Moémon 1-2
             SendBlock(BitmaskAllOtherLinkPlayers(), gPlayerParty, sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -951,7 +952,7 @@ static void CB2_HandleStartBattle(void)
     case 4:
         if ((GetBlockReceivedStatus() & 3) == 3)
         {
-            // Recv Pokémon 1-2
+            // Recv Moémon 1-2
             ResetBlockReceivedFlags();
             memcpy(gEnemyParty, gBlockRecvBuffer[enemyMultiplayerId], sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
@@ -960,7 +961,7 @@ static void CB2_HandleStartBattle(void)
     case 7:
         if (IsLinkTaskFinished())
         {
-            // Send Pokémon 3-4
+            // Send Moémon 3-4
             SendBlock(BitmaskAllOtherLinkPlayers(), &gPlayerParty[2], sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -968,7 +969,7 @@ static void CB2_HandleStartBattle(void)
     case 8:
         if ((GetBlockReceivedStatus() & 3) == 3)
         {
-            // Recv Pokémon 3-4
+            // Recv Moémon 3-4
             ResetBlockReceivedFlags();
             memcpy(&gEnemyParty[2], gBlockRecvBuffer[enemyMultiplayerId], sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
@@ -977,7 +978,7 @@ static void CB2_HandleStartBattle(void)
     case 11:
         if (IsLinkTaskFinished())
         {
-            // Send Pokémon 5-6
+            // Send Moémon 5-6
             SendBlock(BitmaskAllOtherLinkPlayers(), &gPlayerParty[4], sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -985,7 +986,7 @@ static void CB2_HandleStartBattle(void)
     case 12:
         if ((GetBlockReceivedStatus() & 3) == 3)
         {
-            // Recv Pokémon 5-6
+            // Recv Moémon 5-6
             ResetBlockReceivedFlags();
             memcpy(&gEnemyParty[4], gBlockRecvBuffer[enemyMultiplayerId], sizeof(struct Pokemon) * 2);
 
@@ -1050,7 +1051,7 @@ static void CB2_HandleStartBattle(void)
                 gBattleTypeFlags |= BATTLE_TYPE_LINK_IN_BATTLE;
         }
         break;
-    // Introduce short delays between sending party Pokémon for link
+    // Introduce short delays between sending party Moémon for link
     case 5:
     case 9:
     case 13:
@@ -1152,10 +1153,10 @@ static void CB2_HandleStartMultiPartnerBattle(void)
         }
         break;
     case 3:
-        // Link battle, send/receive party Pokémon in groups
+        // Link battle, send/receive party Moémon in groups
         if (IsLinkTaskFinished())
         {
-            // Send Pokémon 1-2
+            // Send Moémon 1-2
             SendBlock(BitmaskAllOtherLinkPlayers(), gPlayerParty, sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -1163,7 +1164,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 4:
         if ((GetBlockReceivedStatus() & 3) == 3)
         {
-            // Recv partner's Pokémon 1-2, and copy partner's and own Pokémon into party positions
+            // Recv partner's Moémon 1-2, and copy partner's and own Moémon into party positions
             ResetBlockReceivedFlags();
             if (gLinkPlayers[playerMultiplayerId].id != 0)
             {
@@ -1181,7 +1182,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 5:
         if (IsLinkTaskFinished())
         {
-            // Send Pokémon 3
+            // Send Moémon 3
             SendBlock(BitmaskAllOtherLinkPlayers(), &gPlayerParty[2], sizeof(struct Pokemon));
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -1189,7 +1190,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 6:
         if ((GetBlockReceivedStatus() & 3) == 3)
         {
-            // Recv partner's Pokémon 3, and copy partner's and own Pokémon into party positions
+            // Recv partner's Moémon 3, and copy partner's and own Moémon into party positions
             ResetBlockReceivedFlags();
             if (gLinkPlayers[playerMultiplayerId].id != 0)
             {
@@ -1207,7 +1208,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 7:
         if (IsLinkTaskFinished())
         {
-            // Send enemy Pokémon 1-2 to partner
+            // Send enemy Moémon 1-2 to partner
             SendBlock(BitmaskAllOtherLinkPlayers(), gEnemyParty, sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -1215,7 +1216,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 8:
         if ((GetBlockReceivedStatus() & 3) == 3)
         {
-            // Recv enemy Pokémon 1-2 (if not master)
+            // Recv enemy Moémon 1-2 (if not master)
             ResetBlockReceivedFlags();
             if (GetMultiplayerId() != 0)
                 memcpy(gEnemyParty, gBlockRecvBuffer[0], sizeof(struct Pokemon) * 2);
@@ -1225,7 +1226,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 9:
         if (IsLinkTaskFinished())
         {
-            // Send enemy Pokémon 3-4 to partner
+            // Send enemy Moémon 3-4 to partner
             SendBlock(BitmaskAllOtherLinkPlayers(), &gEnemyParty[2], sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -1233,7 +1234,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 10:
         if ((GetBlockReceivedStatus() & 3) == 3)
         {
-            // Recv enemy Pokémon 3-4 (if not master)
+            // Recv enemy Moémon 3-4 (if not master)
             ResetBlockReceivedFlags();
             if (GetMultiplayerId() != 0)
                 memcpy(&gEnemyParty[2], gBlockRecvBuffer[0], sizeof(struct Pokemon) * 2);
@@ -1243,7 +1244,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 11:
         if (IsLinkTaskFinished())
         {
-            // Send enemy Pokémon 5-6 to partner
+            // Send enemy Moémon 5-6 to partner
             SendBlock(BitmaskAllOtherLinkPlayers(), &gEnemyParty[4], sizeof(struct Pokemon) * 2);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
@@ -1251,7 +1252,7 @@ static void CB2_HandleStartMultiPartnerBattle(void)
     case 12:
         if ((GetBlockReceivedStatus() & 3) == 3)
         {
-            // Recv enemy Pokémon 5-6 (if not master)
+            // Recv enemy Moémon 5-6 (if not master)
             ResetBlockReceivedFlags();
             if (GetMultiplayerId() != 0)
                 memcpy(&gEnemyParty[4], gBlockRecvBuffer[0], sizeof(struct Pokemon) * 2);
@@ -1970,11 +1971,11 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             if (trainer->doubleBattle == TRUE)
                 personalityValue = 0x80;
             else if (trainer->encounterMusic_gender & F_TRAINER_FEMALE)
-                personalityValue = 0x78; // Use personality more likely to result in a female Pokémon
+                personalityValue = 0x78; // Use personality more likely to result in a female Moémon
             else
                 //Moemon International; All Moemon will be female regardless of trainer gender
                 personalityValue = 0x78;
-                //personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
+                //personalityValue = 0x88; // Use personality more likely to result in a male Moémon
 
             personalityValue += personalityHash << 8;
             if (partyData[i].gender == TRAINER_MON_MALE) //Moemon International; All Moemon will be female regardless of trainer gender

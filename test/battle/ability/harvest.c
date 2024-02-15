@@ -12,6 +12,6 @@ TO_DO_BATTLE_TEST("Harvest doesn't restore a Berry when knocked off by Knock Off
 TO_DO_BATTLE_TEST("Harvest doesn't restore a Berry when eaten by Bug Bite/Pluck");
 TO_DO_BATTLE_TEST("Harvest doesn't restore a Berry that's collected via Pickup");
 TO_DO_BATTLE_TEST("Harvest order is affected by speed");
-TO_DO_BATTLE_TEST("Harvest doesn't restore a Berry when transfered to another Pokémon");
-TO_DO_BATTLE_TEST("Harvest can restore a Berry that was transferred from another Pokémon");
-TO_DO_BATTLE_TEST("Harvest can only restore the newest berry consumed that was transferred from another Pokémon instead of its original Berry");
+TO_DO_BATTLE_TEST("Harvest doesn't restore a Berry when transfered to another Moémon");
+TO_DO_BATTLE_TEST("Harvest can restore a Berry that was transferred from another Moémon");
+TO_DO_BATTLE_TEST("Harvest can only restore the newest berry consumed that was transferred from another Moémon instead of its original Berry");

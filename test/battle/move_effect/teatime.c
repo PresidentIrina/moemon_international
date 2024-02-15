@@ -94,7 +94,7 @@ SINGLE_BATTLE_TEST("Teatime causes other Pokemon to consume their Berry even if 
     }
 }
 
-DOUBLE_BATTLE_TEST("Teatime causes all Pokémon to consume their berry")
+DOUBLE_BATTLE_TEST("Teatime causes all Moémon to consume their berry")
 {
     struct BattlePokemon *user = NULL;
     PARAMETRIZE { user = playerLeft; }
@@ -123,7 +123,7 @@ DOUBLE_BATTLE_TEST("Teatime causes all Pokémon to consume their berry")
     }
 }
 
-SINGLE_BATTLE_TEST("Teatime fails if no Pokémon is holding a Berry")
+SINGLE_BATTLE_TEST("Teatime fails if no Moémon is holding a Berry")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_NONE); }
@@ -137,7 +137,7 @@ SINGLE_BATTLE_TEST("Teatime fails if no Pokémon is holding a Berry")
     }
 }
 
-SINGLE_BATTLE_TEST("Teatime does not affect Pokémon in the semi-invulnerable turn of a move")
+SINGLE_BATTLE_TEST("Teatime does not affect Moémon in the semi-invulnerable turn of a move")
 {
     GIVEN {
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_NONE); }

@@ -14,37 +14,37 @@
 #define FUSION_TERMINATOR                       0xFF
 #define FORM_CHANGE_TERMINATOR                  0
 
-// Form change that activates when the specified item is given to or taken from the selected Pokémon.
+// Form change that activates when the specified item is given to or taken from the selected Moémon.
 // param1: item to hold.
 // param2: ability to check for, optional.
 #define FORM_CHANGE_ITEM_HOLD                   1
 
-// Form change that activates when the item is used on the selected Pokémon.
+// Form change that activates when the item is used on the selected Moémon.
 // param1: item to use
 // param2: time of day to check, optional.
 // - DAY if Form change that activates in the daytime.
 // - NIGHT if Form change that activates at nighttime.
 #define FORM_CHANGE_ITEM_USE                    2
 
-// TODO: Form change that activates when the Pokémon learns or forgets the move.
+// TODO: Form change that activates when the Moémon learns or forgets the move.
 // param1: move to check for
 // param2:
 // - WHEN_LEARNED if Form change that activates when move is forgotten
 // - WHEN_FORGOTTEN if Form change that activates when move is learned
 #define FORM_CHANGE_MOVE                        3
 
-// Form change that activates when the Pokémon is withdrawn from the PC or Daycare.
+// Form change that activates when the Moémon is withdrawn from the PC or Daycare.
 // Daycare withdraw done, PC withdraw TODO.
 // - No parameters.
 #define FORM_CHANGE_WITHDRAW                    4
 
-// Form change that activates when the Pokémon faints, either in battle or in the overworld by poison.
+// Form change that activates when the Moémon faints, either in battle or in the overworld by poison.
 // If species is not specified and it's on the player's side, it will try to use the value
 // saved in gBattleStruct->changedSpecies from a previous form change.
 // - No parameters.
 #define FORM_CHANGE_FAINT                       5
 
-// Form change that activates when the Pokémon is sent out at the beginning of a battle
+// Form change that activates when the Moémon is sent out at the beginning of a battle
 // param1: item to hold, optional
 // param2: a move that will be replaced, optional
 // param3: a new move to replace it with, optional
@@ -60,11 +60,11 @@
 // param1: battle terrain to check.
 #define FORM_CHANGE_END_BATTLE_TERRAIN          8
 
-// Form change that activates when the Pokémon is switched out in battle.
+// Form change that activates when the Moémon is switched out in battle.
 // - No parameters.
 #define FORM_CHANGE_BATTLE_SWITCH               9
 
-// Form change that activates when the Pokémon's HP % passes a certain threshold.
+// Form change that activates when the Moémon's HP % passes a certain threshold.
 // param1: Ability to check.
 // param2: HP comparer
 // - HP_HIGHER_THAN if the form triggers when the current HP is higher than the specified threshold.

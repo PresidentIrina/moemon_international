@@ -984,7 +984,7 @@
 	.byte \textTop
 	.endm
 
-	@ Gives the player a Pokémon of the specified species and level, holding the specified item. The trailing 0s are unused parameters.
+	@ Gives the player a Moémon of the specified species and level, holding the specified item. The trailing 0s are unused parameters.
 	@ VAR_RESULT will be set to MON_GIVEN_TO_PARTY, MON_GIVEN_TO_PC, or MON_CANT_GIVE depending on the outcome.
 	.macro givemon species:req, level:req, item=ITEM_NONE
 	.byte 0x79
@@ -1003,8 +1003,8 @@
 	.2byte \species
 	.endm
 
-	@ Replaces the move at 'slot' of the Pokémon in the player's party at 'partyIndex' with the specified move.
-	@ If a value greater than PARTY_SIZE is given for partyIndex it will use the last Pokémon in the party instead.
+	@ Replaces the move at 'slot' of the Moémon in the player's party at 'partyIndex' with the specified move.
+	@ If a value greater than PARTY_SIZE is given for partyIndex it will use the last Moémon in the party instead.
 	@ Note that this means in vanilla a value equal to PARTY_SIZE for partyIndex will go out of bounds.
 	.macro setmonmove partyIndex:req, slot:req, move:req
 	.byte 0x7b
@@ -1938,7 +1938,7 @@
 	closebraillemessage
 	.endm
 
-	@ Creates a Pokémon with the modernFatefulEncounter bit set for an encounter
+	@ Creates a Moémon with the modernFatefulEncounter bit set for an encounter
 	.macro seteventmon species:req, level:req, item=ITEM_NONE
 	setvar VAR_0x8004, \species
 	setvar VAR_0x8005, \level
@@ -2027,7 +2027,7 @@
 	.endm
 
 	@ qol field moves
-	@ Checks if any Pokémon in the party can learn a specific HM.
+	@ Checks if any Moémon in the party can learn a specific HM.
 	@ If so, VAR_RESULT is set to the
 	@ (zero-indexed) slot number of the first Pokemon that knows the move. If not, VAR_RESULT is set to PARTY_SIZE.
 	@ VAR_0x8004 is also set to this Pokemon's species.

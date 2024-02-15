@@ -31,7 +31,7 @@
     The intro is grouped into the following scenes
     Scene 0. Copyright screen
     Scene 1. GF Logo, pan up over plants, Flygon silhouette goes by
-    Scene 2. Player biking on path, joined by Pokémon
+    Scene 2. Player biking on path, joined by Moémon
     Scene 3. A fight between Groudon/Kyogre ends with Rayquaza
 
     After this it progresses to the title screen
@@ -1395,7 +1395,7 @@ static void Task_Scene2_CreateSprites(u8 taskId)
     LoadSpritePalettes(gSpritePalettes_IntroPlayerFlygon);
     LoadSpritePalettes(sSpritePalettes_RunningPokemon);
 
-    // Create Pokémon and player sprites
+    // Create Moémon and player sprites
     CreateSprite(&sSpriteTemplate_Manectric, DISPLAY_WIDTH + 32, 128, 0);
     CreateSprite(&sSpriteTemplate_Torchic, DISPLAY_WIDTH + 48, 110, 1);
 

@@ -22,7 +22,7 @@ STARTERGFXDIR := graphics/starter_choose
 NAMINGGFXDIR := graphics/naming_screen
 SPINDAGFXDIR := graphics/pokemon/spinda/spots
 
-types := normal fight flying poison ground rock bug ghost steel mystery fire water grass electric psychic ice dragon dark fairy
+types := normal fight flying poison ground rock bug ghost steel mystery fire water grass electric psychic ice dragon dark fairy light
 contest_types := cool beauty cute smart tough
 
 ### Tilesets ###
@@ -438,7 +438,7 @@ graphics/birch_speech/unused_beauty.4bpp: %.4bpp: %.png
 
 
 
-### Pokémon Storage System ###
+### Moémon Storage System ###
 
 $(WALLPAPERGFXDIR)/forest/frame.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 55 -Wnum_tiles

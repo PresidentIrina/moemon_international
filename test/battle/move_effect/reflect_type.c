@@ -86,7 +86,7 @@ SINGLE_BATTLE_TEST("Reflect Type does not affect any of Silvally's forms")
     }
 }
 
-SINGLE_BATTLE_TEST("Reflect Type does not affect Pokémon with no types")
+SINGLE_BATTLE_TEST("Reflect Type does not affect Moémon with no types")
 {
     ASSUME(gSpeciesInfo[SPECIES_ARCANINE].types[0] == TYPE_FIRE);
     ASSUME(gSpeciesInfo[SPECIES_ARCANINE].types[1] == TYPE_FIRE);

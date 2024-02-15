@@ -939,7 +939,7 @@ static const u8 *const sBattleDomeOpponentStyleTexts[NUM_BATTLE_STYLES] =
     [DOME_BATTLE_STYLE_UNUSED4]         = BattleDome_Text_StyleSampleMessage4,
 };
 
-// The third line of text on a trainers info card. It that gives information about their party's stat spread (based on their Pokémon's effort values and Nature).
+// The third line of text on a trainers info card. It that gives information about their party's stat spread (based on their Moémon's effort values and Nature).
 static const u8 *const sBattleDomeOpponentStatsTexts[] =
 {
     BattleDome_Text_EmphasizesHPAndAtk,      // DOME_TEXT_TWO_GOOD_STATS and DOME_TEXT_HP start here

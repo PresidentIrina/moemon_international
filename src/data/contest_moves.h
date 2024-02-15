@@ -6074,6 +6074,31 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
     [MOVE_SYRUP_BOMB] = {0}, // TODO
 
     [MOVE_IVY_CUDGEL] = {0}, // TODO
+
+    //Moemon International
+    [MOVE_STRIKE_ORDER] =
+    {
+        .effect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = COMBO_STARTER_STRIKE_ORDER,
+        .comboMoves = {COMBO_STARTER_PATROL_ORDER, COMBO_STARTER_REPAIR_ORDER},
+    },
+
+    [MOVE_PATROL_ORDER] =
+    {
+        .effect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = COMBO_STARTER_PATROL_ORDER,
+        .comboMoves = {COMBO_STARTER_STRIKE_ORDER, COMBO_STARTER_REPAIR_ORDER},
+    },
+
+    [MOVE_REPAIR_ORDER] =
+    {
+        .effect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = COMBO_STARTER_REPAIR_ORDER,
+        .comboMoves = {COMBO_STARTER_STRIKE_ORDER, COMBO_STARTER_PATROL_ORDER},
+    },
 };
 
 const struct ContestEffect gContestEffects[] =
