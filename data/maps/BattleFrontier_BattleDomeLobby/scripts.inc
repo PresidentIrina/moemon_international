@@ -435,7 +435,7 @@ BattleFrontier_BattleDomeLobby_EventScript_ExitRules::
 BattleFrontier_BattleDomeLobby_Text_WelcomeSingleBattle:
 	.string "Where the strategies of TRAINERS\n"
 	.string "are put to the test!\p"
-	.string "Welcome to the BATTLE DOME!\p"
+	.string "Welcome to the Battle Dome!\p"
 	.string "I am your guide to the SINGLE BATTLE\n"
 	.string "Tournament.$"
 
@@ -468,7 +468,7 @@ BattleFrontier_BattleDomeLobby_Text_ExplainSinglesChallenge:
 	.string "you will be disqualified.$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge:
-	.string "Before I show you to the BATTLE DOME,\n"
+	.string "Before I show you to the Battle Dome,\n"
 	.string "I must save the data. Is that okay?$"
 
 BattleFrontier_BattleDomeLobby_Text_WhichLevelMode:
@@ -500,7 +500,7 @@ BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLv50:
 
 BattleFrontier_BattleDomeLobby_Text_ShowYouToBattleDome:
 	.string "I will now show you to\n"
-	.string "the BATTLE DOME.$"
+	.string "the Battle Dome.$"
 
 BattleFrontier_BattleDomeLobby_Text_DidntSaveBeforeQuitting:
 	.string "Excuse me!\p"
@@ -540,13 +540,13 @@ BattleFrontier_BattleDomeLobby_Text_WeveBeenWaitingForYou:
 	.string "We've been waiting for you!$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge2:
-	.string "Before I show you to the BATTLE DOME,\n"
+	.string "Before I show you to the Battle Dome,\n"
 	.string "I must save the data. Is that okay?$"
 
 BattleFrontier_BattleDomeLobby_Text_WelcomeDoubleBattle:
 	.string "Where the strategies of TRAINERS\n"
 	.string "are put to the test!\p"
-	.string "Welcome to the BATTLE DOME!\p"
+	.string "Welcome to the Battle Dome!\p"
 	.string "I am your guide to the DOUBLE BATTLE\n"
 	.string "Tournament.$"
 
@@ -600,12 +600,12 @@ BattleFrontier_BattleDomeLobby_Text_LastWinnerWasTough:
 	.string "on the monitor beside the PC.$"
 
 BattleFrontier_OutsideWest_Text_LongDreamedAboutBattleFrontier:
-	.string "The BATTLE FRONTIER…\n"
+	.string "The Battle Frontier…\n"
 	.string "I've long dreamed about a place like it.$"
 
 @ Functionally unused
 BattleFrontier_OutsideWest_Text_BattleDomeSign2:
-	.string "The BATTLE DOME\n"
+	.string "The Battle Dome\n"
 	.string "Become the Unbeatable Superstar!$"
 
 @ Functionally unused
@@ -615,10 +615,10 @@ BattleFrontier_OutsideWest_Text_QuestionMarkUnderConstruction:
 
 BattleFrontier_BattleDomeLobby_Text_WinnersGainReputation:
 	.string "When a TRAINER chains tournament\n"
-	.string "wins at the BATTLE DOME, he or she\l"
+	.string "wins at the Battle Dome, he or she\l"
 	.string "gains a reputation as a star.\p"
 	.string "Tough TRAINERS are drawn by that\n"
-	.string "reputation to the BATTLE DOME.\p"
+	.string "reputation to the Battle Dome.\p"
 	.string "A true superstar is a TRAINER who\n"
 	.string "can keep winning tournaments.$"
 
@@ -646,7 +646,7 @@ BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints:
 
 BattleFrontier_BattleDomeLobby_Text_RecordLastMatch:
 	.string "Would you like to record your\n"
-	.string "last BATTLE DOME match on your\l"
+	.string "last Battle Dome match on your\l"
 	.string "FRONTIER PASS?$"
 
 BattleFrontier_BattleDomeLobby_Text_RulesAreListed:

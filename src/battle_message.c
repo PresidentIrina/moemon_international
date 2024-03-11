@@ -347,7 +347,7 @@ static const u8 sText_WildFled[] = _("{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} f
 static const u8 sText_TwoWildFled[] = _("{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} and\n{B_LINK_OPPONENT2_NAME} fled!");
 static const u8 sText_NoRunningFromTrainers[] = _("No! There's no running\nfrom a TRAINER battle!\p");
 static const u8 sText_CantEscape[] = _("Can't escape!\p");
-static const u8 sText_DontLeaveBirch[] = _("PROF. BIRCH: Don't leave me like this!\p");
+static const u8 sText_DontLeaveBirch[] = _("Prof. Birch: Don't leave me like this!\p");
 static const u8 sText_ButNothingHappened[] = _("But nothing happened!");
 static const u8 sText_ButItFailed[] = _("But it failed!");
 static const u8 sText_ItHurtConfusion[] = _("It hurt itself in its\nconfusion!");
@@ -491,7 +491,7 @@ static const u8 sText_GiveNicknameCaptured[] = _("Give a nickname to the\ncaptur
 static const u8 sText_PkmnSentToPC[] = _("{B_DEF_NAME} was sent to\n{B_PC_CREATOR_NAME} PC.");
 static const u8 sText_Someones[] = _("someone's");
 static const u8 sText_Lanettes[] = _("LANETTE's");
-static const u8 sText_PkmnDataAddedToDex[] = _("{B_DEF_NAME}'s data was\nadded to the POKéDEX.\p");
+static const u8 sText_PkmnDataAddedToDex[] = _("{B_DEF_NAME}'s data was\nadded to the Moédex.\p");
 static const u8 sText_ItIsRaining[] = _("It is raining.");
 static const u8 sText_SandstormIsRaging[] = _("A sandstorm is raging.");
 static const u8 sText_BoxIsFull[] = _("The BOX is full!\nYou can't catch any more!\p");
@@ -833,6 +833,14 @@ static const u8 sText_HurtByTheSeaOfFire[] = _("{B_ATK_TEAM1} {B_ATK_NAME_WITH_P
 static const u8 sText_TheSeaOfFireDisappeared[] = _("The sea of fire around {B_ATK_TEAM2}\nteam disappeared!");
 static const u8 sText_SwampEnvelopedSide[] = _("A swamp enveloped\n{B_DEF_TEAM2} team!");
 static const u8 sText_TheSwampDisappeared[] = _("The swamp around {B_ATK_TEAM2}\nteam disappeared!");
+static const u8 sText_ArcticCold[] = _("The temperature dropped\nto Arctic levels!");
+static const u8 sText_ArcticColdSubsided[] = _("The Arctic cold subsided.{PAUSE 64}");
+static const u8 sText_MoveSnuffedOutInTheArcticCold[] = _("The Fire-type attack was snuffed\nout in the Arctic cold!");
+static const u8 sText_ArcticColdWasNotLessened[] = _("The Arctic cold\nwas not lessened at all!");
+static const u8 sText_IntenseSandstorm[] = _("An intense sandstorm\nwas kicked up!");
+static const u8 sText_IntenseSandstormDispersed[] = _("The intense sandstorm dispersed.{PAUSE 64}");
+static const u8 sText_MoveAbsorbedByTheIntenseSandstorm[] = _("The Water-type attack was absorbed\nby the intense sandstorm!");
+static const u8 sText_IntenseSandstormNotLessened[] = _("The intense sandstorm\nwas not lessened at all!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1521,6 +1529,14 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ULTRABURSTCOMPLETED - BATTLESTRINGS_TABLE_START] = sText_UltraBurstCompleted,
     [STRINGID_TEAMGAINEDEXP - BATTLESTRINGS_TABLE_START] = sText_TeamGainedEXP,
     [STRINGID_TARGETCOVEREDINSTICKYCANDYSYRUP - BATTLESTRINGS_TABLE_START] = sText_TargetCoveredInStickyCandySyrup,
+    [STRINGID_ARCTICCOLDWASNOTLESSENED - BATTLESTRINGS_TABLE_START] = sText_ArcticColdWasNotLessened,
+    [STRINGID_MOVESNUFFEDOUTINTHEARCTICCOLD - BATTLESTRINGS_TABLE_START] = sText_MoveSnuffedOutInTheArcticCold,
+    [STRINGID_ARCTICCOLDSUBSIDED - BATTLESTRINGS_TABLE_START] = sText_ArcticColdSubsided,
+    [STRINGID_ARCTICCOLD - BATTLESTRINGS_TABLE_START] = sText_ArcticCold,
+    [STRINGID_INTENSESANDSTORMWASNOTLESSENED - BATTLESTRINGS_TABLE_START] = sText_IntenseSandstormNotLessened,
+    [STRINGID_MOVEABSORBEDBYTHEINTENSESANDSTORM - BATTLESTRINGS_TABLE_START] = sText_MoveAbsorbedByTheIntenseSandstorm,
+    [STRINGID_INTENSESANDSTORMDISPERSED - BATTLESTRINGS_TABLE_START] = sText_IntenseSandstormDispersed,
+    [STRINGID_INTENSESANDSTORM - BATTLESTRINGS_TABLE_START] = sText_IntenseSandstorm,
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -2057,7 +2073,7 @@ static const u8 *const sStatNamesTable2[] =
     gText_SpDef, gText_Defense, gText_Speed
 };
 
-const u8 gText_SafariBalls[] = _("{HIGHLIGHT DARK_GRAY}SAFARI BALLS");
+const u8 gText_SafariBalls[] = _("{HIGHLIGHT DARK_GRAY}Safari Balls");
 const u8 gText_SafariBallLeft[] = _("{HIGHLIGHT DARK_GRAY}Left: $" "{HIGHLIGHT DARK_GRAY}");
 const u8 gText_Sleep[] = _("sleep");
 const u8 gText_Poison[] = _("poison");

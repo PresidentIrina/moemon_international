@@ -52,6 +52,7 @@ LilycoveCity_DepartmentStore_3F_Pokemart_Vitamins:
 	.2byte ITEM_ELECTIRIZER
 	.2byte ITEM_MAGMARIZER
 	.2byte ITEM_NEVER_MELT_ICE
+	.2byte ITEM_LINKING_CORD
 	.2byte ITEM_EVERSTONE
 	.2byte ITEM_NONE
 	release

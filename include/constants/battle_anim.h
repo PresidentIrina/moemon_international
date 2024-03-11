@@ -63,7 +63,7 @@
 #define ANIM_TAG_MONSTER_FOOT               (ANIM_SPRITES_START + 51)
 #define ANIM_TAG_HUMANOID_HAND              (ANIM_SPRITES_START + 52) // unused
 #define ANIM_TAG_NOISE_LINE                 (ANIM_SPRITES_START + 53)
-#define ANIM_TAG_YELLOW_UNK                 (ANIM_SPRITES_START + 54) // unused
+#define ANIM_TAG_STRIKE_ORDER               (ANIM_SPRITES_START + 54)
 #define ANIM_TAG_RED_FIST                   (ANIM_SPRITES_START + 55) // unused
 #define ANIM_TAG_SLAM_HIT                   (ANIM_SPRITES_START + 56)
 #define ANIM_TAG_RING                       (ANIM_SPRITES_START + 57) // unused
@@ -405,7 +405,6 @@
 #define ANIM_TAG_SYRUP_SHELL_YELLOW         (ANIM_SPRITES_START + 391)
 #define ANIM_TAG_SYRUP_SPLAT_RED            (ANIM_SPRITES_START + 392)
 #define ANIM_TAG_SYRUP_SPLAT_YELLOW         (ANIM_SPRITES_START + 393)
-#define ANIM_TAG_STRIKE_ORDER               (ANIM_SPRITES_START + 394)
 
 // battlers
 #define ANIM_ATTACKER         0

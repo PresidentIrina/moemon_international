@@ -527,7 +527,7 @@ BattleFrontier_BattlePyramidLobby_EventScript_ExitRules::
 BattleFrontier_BattlePyramidLobby_Text_WelcomeToBattlePyramid:
 	.string "Where the courage of TRAINERS\n"
 	.string "is put to the test!\p"
-	.string "Welcome to the BATTLE PYRAMID!\p"
+	.string "Welcome to the Battle Pyramid!\p"
 	.string "I am your guide to\n"
 	.string "the Battle Quest.$"
 
@@ -548,9 +548,9 @@ BattleFrontier_BattlePyramidLobby_Text_ExplainBattlePyramid:
 	.string "You must enter with three Moémon,\n"
 	.string "none of them holding an item.\p"
 	.string "On your ascent, you will be provided\n"
-	.string "with a BATTLE BAG for items.\p"
+	.string "with a Battle Bag for items.\p"
 	.string "If you fail in your challenge, any item\n"
-	.string "placed in the BATTLE BAG disappears.\p"
+	.string "placed in the Battle Bag disappears.\p"
 	.string "If you want to interrupt your\n"
 	.string "challenge, you must select “REST”\l"
 	.string "and save the game.\p"
@@ -589,12 +589,12 @@ BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLv50:
 	.string "a word with me.$"
 
 BattleFrontier_BattlePyramidLobby_Text_OkayToSaveBeforeChallenge:
-	.string "Before you enter the BATTLE PYRAMID,\n"
+	.string "Before you enter the Battle Pyramid,\n"
 	.string "the game must be saved. Is that okay?$"
 
 BattleFrontier_BattlePyramidLobby_Text_ShowYouIntoPyramid:
 	.string "Very good. I will now show you into\n"
-	.string "the BATTLE PYRAMID.$"
+	.string "the Battle Pyramid.$"
 
 BattleFrontier_BattlePyramidLobby_Text_WeWillHoldBagForSafekeeping:
 	.string "We will hold your BAG for safekeeping,\n"
@@ -606,11 +606,11 @@ BattleFrontier_BattlePyramidLobby_Text_PleaseTakePreviousBattleBag:
 
 BattleFrontier_BattlePyramidLobby_Text_PleaseTakeThisBattleBag:
 	.string "In exchange, please take this\n"
-	.string "BATTLE BAG.$"
+	.string "Battle Bag.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExchangedBagForBattleBag:
 	.string "{PLAYER} exchanged the BAG for\n"
-	.string "the BATTLE BAG.$"
+	.string "the Battle Bag.$"
 
 BattleFrontier_BattlePyramidLobby_Text_StepOnFloorPanel:
 	.string "When you step on this floor panel,\n"
@@ -643,13 +643,13 @@ BattleFrontier_BattlePyramidLobby_Text_MonHoldingItemCannotTake:
 
 BattleFrontier_BattlePyramidLobby_Text_HeldItemsMovedToBag:
 	.string "All items held by your Moémon will be\n"
-	.string "moved to your BATTLE BAG, {PLAYER}.$"
+	.string "moved to your Battle Bag, {PLAYER}.$"
 
 BattleFrontier_BattlePyramidLobby_Text_BagCannotHoldPickItemsToKeep:
-	.string "The BATTLE BAG cannot hold all your\n"
+	.string "The Battle Bag cannot hold all your\n"
 	.string "items, I'm sorry to say.\p"
 	.string "Please pick the items you'll keep in the\n"
-	.string "BATTLE BAG, and with your Moémon.$"
+	.string "Battle Bag, and with your Moémon.$"
 
 BattleFrontier_BattlePyramidLobby_Text_LeastOneMonHoldingItem:
 	.string "At least one Moémon is still\n"
@@ -657,7 +657,7 @@ BattleFrontier_BattlePyramidLobby_Text_LeastOneMonHoldingItem:
 
 BattleFrontier_BattlePyramidLobby_Text_PickItemsToKeep:
 	.string "Please pick the items you'll keep in the\n"
-	.string "BATTLE BAG, and with your Moémon.$"
+	.string "Battle Bag, and with your Moémon.$"
 
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ReturnedEverythingMonsHeld:
@@ -665,9 +665,9 @@ BattleFrontier_BattlePyramidLobby_Text_ReturnedEverythingMonsHeld:
 	.string "the Moémon held.$"
 
 BattleFrontier_BattlePyramidLobby_Text_UsedBattleBagWillBeKept:
-	.string "The BATTLE BAG you used will be kept\n"
+	.string "The Battle Bag you used will be kept\n"
 	.string "in readiness for your next challenge.\p"
-	.string "{PLAYER} turned the BATTLE BAG over\n"
+	.string "{PLAYER} turned the Battle Bag over\n"
 	.string "for the BAG's return.$"
 
 BattleFrontier_BattlePyramidLobby_Text_RecordResultsWait:
@@ -677,7 +677,7 @@ BattleFrontier_BattlePyramidLobby_Text_RecordResultsWait:
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ForConqueringPyramidTakeThis:
 	.string "As a memento for conquering\n"
-	.string "the BATTLE PYRAMID, please take this.$"
+	.string "the Battle Pyramid, please take this.$"
 
 @ Unused
 BattleFrontier_BattlePyramidLobby_Text_ReceivedPrizeItem:
@@ -854,7 +854,7 @@ BattleFrontier_BattlePyramidLobby_Text_YouveDefeatedPyramidKing:
 	.string "Welcome back!\n"
 	.string "You've done the unthinkable!\p"
 	.string "You've defeated the PYRAMID KING\n"
-	.string "and conquered the BATTLE PYRAMID!$"
+	.string "and conquered the Battle Pyramid!$"
 
 BattleFrontier_BattlePyramidLobby_Text_GiveYouTheseBattlePoints:
 	.string "Young explorer!\n"
@@ -891,12 +891,12 @@ BattleFrontier_BattlePyramidLobby_Text_ExplainMazeRules:
 	.string "defeat a wild Moémon or a TRAINER.$"
 
 BattleFrontier_BattlePyramidLobby_Text_ExplainBagRules:
-	.string "The BATTLE BAG serves as your BAG\n"
+	.string "The Battle Bag serves as your BAG\n"
 	.string "while in the PYRAMID.\p"
-	.string "There are two separate BATTLE BAGS--\n"
+	.string "There are two separate Battle Bags--\n"
 	.string "one each for the Level 50 and\l"
 	.string "Open Level adventures.\p"
 	.string "They each can hold up to 99 pieces\n"
 	.string "of ten kinds of items.\p"
-	.string "The contents of the BATTLE BAG are\n"
+	.string "The contents of the Battle Bag are\n"
 	.string "lost if you fail in your quest.$"

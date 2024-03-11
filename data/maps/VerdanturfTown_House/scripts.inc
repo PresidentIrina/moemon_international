@@ -11,14 +11,14 @@ VerdanturfTown_House_EventScript_Woman2::
 
 VerdanturfTown_House_Text_TrainersGatherAtPokemonLeague:
 	.string "Far away, deep in EVER GRANDE CITY,\n"
-	.string "is the Moémon LEAGUE.\p"
+	.string "is the Moémon League.\p"
 	.string "The TRAINERS who gather there are\n"
 	.string "all frighteningly well skilled.$"
 
 VerdanturfTown_House_Text_DefeatEliteFourInARow:
-	.string "In the Moémon LEAGUE, I think the\n"
+	.string "In the Moémon League, I think the\n"
 	.string "rules say that you have to battle the\l"
-	.string "ELITE FOUR all in a row.\p"
+	.string "Elite Four all in a row.\p"
 	.string "If you lose to any of them, you have\n"
 	.string "to begin your challenge again from the\l"
 	.string "first one.$"

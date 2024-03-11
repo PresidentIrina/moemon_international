@@ -23,7 +23,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
+        .abilities = { ABILITY_LEAF_GUARD, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Bulbasaur"),
         .cryId = CRY_BULBASAUR,
@@ -72,7 +72,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_GRASS },
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
+        .abilities = { ABILITY_LEAF_GUARD, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Ivysaur"),
         .cryId = CRY_IVYSAUR,
@@ -131,7 +131,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 100,
         .baseSpDefense = 100,
         .expYield = 236,
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
+        .abilities = { ABILITY_LEAF_GUARD, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .cryId = CRY_VENUSAUR,
         .natDexNum = NATIONAL_DEX_VENUSAUR,
         .height = 18,
@@ -253,7 +253,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_DRAGON },
-        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SOLAR_POWER },
+        .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Charmander"),
         .cryId = CRY_CHARMANDER,
@@ -302,7 +302,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_DRAGON },
-        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SOLAR_POWER },
+        .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Charmeleon"),
         .cryId = CRY_CHARMELEON,
@@ -359,7 +359,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpDefense = 85,
         .types = { TYPE_FIRE, TYPE_FLYING },
         .expYield = 240,
-        .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_SOLAR_POWER },
+        .abilities = { ABILITY_FLASH_FIRE, ABILITY_NONE, ABILITY_SOLAR_POWER },
         .bodyColor = BODY_COLOR_RED,
         .cryId = CRY_CHARIZARD,
         .natDexNum = NATIONAL_DEX_CHARIZARD,
@@ -524,7 +524,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_1 },
-        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_RAIN_DISH },
+        .abilities = { ABILITY_SHELL_ARMOR, ABILITY_NONE, ABILITY_RAIN_DISH },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Squirtle"),
         .cryId = CRY_SQUIRTLE,
@@ -573,7 +573,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_WATER_1 },
-        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_RAIN_DISH },
+        .abilities = { ABILITY_SHELL_ARMOR, ABILITY_NONE, ABILITY_RAIN_DISH },
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Wartortle"),
         .cryId = CRY_WARTORTLE,
@@ -631,7 +631,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 85,
         .baseSpDefense = 105,
         .expYield = 239,
-        .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_RAIN_DISH },
+        .abilities = { ABILITY_SHELL_ARMOR, ABILITY_NONE, ABILITY_RAIN_DISH },
         .cryId = CRY_BLASTOISE,
         .natDexNum = NATIONAL_DEX_BLASTOISE,
         .height = 18,
@@ -6905,7 +6905,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_SHELLDER,
         .natDexNum = NATIONAL_DEX_SHELLDER,
         .categoryName = _("Bivalve"),
-        .height = 3,
+        .height = 9,
         .weight = 40,
         .description = COMPOUND_STRING(
             "Shellder sticks her tongue out at anyone\n"
@@ -6956,7 +6956,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CLOYSTER,
         .natDexNum = NATIONAL_DEX_CLOYSTER,
         .categoryName = _("Bivalve"),
-        .height = 15,
+        .height = 18,
         .weight = 1325,
         .description = COMPOUND_STRING(
             "She's extremely shy and hides her\n"
@@ -7005,7 +7005,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_GASTLY,
         .natDexNum = NATIONAL_DEX_GASTLY,
         .categoryName = _("Gas"),
-        .height = 13,
+        .height = 9,
         .weight = 1,
         .description = COMPOUND_STRING(
             "Gastly loves to pull pranks on other\n"
@@ -7054,7 +7054,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_HAUNTER,
         .natDexNum = NATIONAL_DEX_HAUNTER,
         .categoryName = _("Gas"),
-        .height = 16,
+        .height = 15,
         .weight = 1,
         .description = COMPOUND_STRING(
             "Haunter, like Gastly, enjoys playing\n"
@@ -7117,7 +7117,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .expYield = 225,
         .abilities = GENGAR_ABILITIES,
         .natDexNum = NATIONAL_DEX_GENGAR,
-        .height = 15,
+        .height = 18,
         .weight = 405,
         .description = COMPOUND_STRING(
             "Gengar hides in people's shadows. When\n"
@@ -7154,7 +7154,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_SHADOW_TAG, ABILITY_SHADOW_TAG, ABILITY_SHADOW_TAG },
         .isMegaEvolution = TRUE,
         .natDexNum = NATIONAL_DEX_GENGAR_MEGA,
-        .height = 14,
+        .height = 19,
         .weight = 405,
         .description = COMPOUND_STRING(
             "Gengar's relationships are warped. Her\n"
@@ -7238,7 +7238,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_ONIX,
         .natDexNum = NATIONAL_DEX_ONIX,
         .categoryName = _("Rock Snake"),
-        .height = 88,
+        .height = 18,
         .weight = 2100,
         .description = COMPOUND_STRING(
             "Onix's braid grows an inch every few\n"
@@ -7296,7 +7296,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_ROCK_HEAD, ABILITY_STURDY, ABILITY_SHEER_FORCE },
         .cryId = CRY_STEELIX,
         .natDexNum = NATIONAL_DEX_STEELIX,
-        .height = 92,
+        .height = 19,
         .weight = 4000,
         .description = COMPOUND_STRING(
             "As Onix became more battle hardened,\n"
@@ -7336,7 +7336,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_SAND_FORCE, ABILITY_SAND_FORCE, ABILITY_SAND_FORCE },
         .cryId = CRY_STEELIX_MEGA,
         .natDexNum = NATIONAL_DEX_STEELIX_MEGA,
-        .height = 105,
+        .height = 19,
         .weight = 7400,
         .description = COMPOUND_STRING(
             "To further improve her defenses, Steelix\n"
@@ -7386,7 +7386,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_DROWZEE,
         .natDexNum = NATIONAL_DEX_DROWZEE,
         .categoryName = _("Hypnosis"),
-        .height = 10,
+        .height = 9,
         .weight = 324,
         .description = COMPOUND_STRING(
             "Trainers suffering from night terrors\n"
@@ -7435,7 +7435,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_HYPNO,
         .natDexNum = NATIONAL_DEX_HYPNO,
         .categoryName = _("Hypnosis"),
-        .height = 16,
+        .height = 18,
         .weight = 756,
         .description = COMPOUND_STRING(
             "Her pendulum and looks ensnare the\n"
@@ -7487,7 +7487,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_KRABBY,
         .natDexNum = NATIONAL_DEX_KRABBY,
         .categoryName = _("River Crab"),
-        .height = 4,
+        .height = 9,
         .weight = 65,
         .description = COMPOUND_STRING(
             "Krabby loves to play in the sand.\n"
@@ -7543,7 +7543,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_KINGLER] =
     {
         KINGLER_MISC_INFO,
-        .height = 13,
+        .height = 18,
         .weight = 600,
         .description = COMPOUND_STRING(
             "She hoards parts of the beach to herself\n"
@@ -7617,7 +7617,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Speed = 1,                                 \
         .speciesName = _("Voltorb"),                        \
         .cryId = CRY_VOLTORB,                               \
-        .height = 5,                                        \
+        .height = 9,                                        \
         .pokemonScale = 364,                                \
         .pokemonOffset = -8,                                \
         .trainerScale = 256,                                \
@@ -7638,7 +7638,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .evYield_Speed = 2,                                     \
         .speciesName = _("Electrode"),                          \
         .cryId = CRY_ELECTRODE,                                 \
-        .height = 12,                                           \
+        .height = 18,                                           \
         .pokemonScale = 256,                                    \
         .pokemonOffset = 0,                                     \
         .trainerScale = 256,                                    \
@@ -7775,7 +7775,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_EXEGGCUTE,
         .natDexNum = NATIONAL_DEX_EXEGGCUTE,
         .categoryName = _("Egg"),
-        .height = 4,
+        .height = 9,
         .weight = 25,
         .description = COMPOUND_STRING(
             "Her eggs are her most precious\n"
@@ -7830,7 +7830,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_CHLOROPHYLL, ABILITY_NONE, ABILITY_HARVEST },
         .natDexNum = NATIONAL_DEX_EXEGGUTOR,
         .categoryName = _("Coconut"),
-        .height = 20,
+        .height = 18,
         .weight = 1200,
         .description = COMPOUND_STRING(
             "Exeggutor draws energy from the sun. The\n"
@@ -7867,7 +7867,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .types = { TYPE_GRASS, TYPE_DRAGON },
         .abilities = { ABILITY_FRISK, ABILITY_NONE, ABILITY_HARVEST },
         .natDexNum = NATIONAL_DEX_EXEGGUTOR_ALOLAN,
-        .height = 109,
+        .height = 19,
         .weight = 4156,
         #if NSFW_CONTENT == TRUE
         .categoryName = _("Sunning Tree"),
@@ -7928,7 +7928,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CUBONE,
         .natDexNum = NATIONAL_DEX_CUBONE,
         .categoryName = _("Lonely"),
-        .height = 4,
+        .height = 9,
         .weight = 65,
         .description = COMPOUND_STRING(
             "Her headpiece is a gift from her mother.\n"
@@ -7974,7 +7974,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .speciesName = _("Marowak"),                            \
         .cryId = CRY_MAROWAK,                                   \
         .categoryName = _("Bone Keeper"),                       \
-        .height = 10,                                           \
+        .height = 18,                                           \
         .pokemonScale = 293,                                    \
         .pokemonOffset = 12,                                    \
         .trainerScale = 256,                                    \
@@ -8061,7 +8061,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_TYROGUE,
         .natDexNum = NATIONAL_DEX_TYROGUE,
         .categoryName = _("Scuffle"),
-        .height = 7,
+        .height = 9,
         .weight = 210,
         .description = COMPOUND_STRING(
             "His natural fighting talent is held back\n"
@@ -8112,7 +8112,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_HITMONLEE,
         .natDexNum = NATIONAL_DEX_HITMONLEE,
         .categoryName = _("Kicking"),
-        .height = 15,
+        .height = 18,
         .weight = 498,
         .description = COMPOUND_STRING(
             "Hitmonlee is a naturally skilled\n"
@@ -8159,7 +8159,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_HITMONCHAN,
         .natDexNum = NATIONAL_DEX_HITMONCHAN,
         .categoryName = _("Punching"),
-        .height = 14,
+        .height = 18,
         .weight = 502,
         .description = COMPOUND_STRING(
             "Hitmonchan is a skilled boxer with an\n"
@@ -8207,7 +8207,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_HITMONTOP,
         .natDexNum = NATIONAL_DEX_HITMONTOP,
         .categoryName = _("Handstand"),
-        .height = 14,
+        .height = 18,
         .weight = 480,
         .description = COMPOUND_STRING(
             "In an effort to balance attack and \n"
@@ -8258,7 +8258,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_LICKITUNG,
         .natDexNum = NATIONAL_DEX_LICKITUNG,
         .categoryName = _("Licking"),
-        .height = 12,
+        .height = 15,
         .weight = 655,
         .description = COMPOUND_STRING(
             "Lickitung identifies things by licking\n"
@@ -8308,7 +8308,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_LICKILICKY,
         .natDexNum = NATIONAL_DEX_LICKILICKY,
         .categoryName = _("Licking"),
-        .height = 17,
+        .height = 18,
         .weight = 1400,
         .description = COMPOUND_STRING(
             "Her tongue has become even longer and\n"
@@ -8363,7 +8363,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_KOFFING,
         .natDexNum = NATIONAL_DEX_KOFFING,
         .categoryName = _("Poison Gas"),
-        .height = 6,
+        .height = 9,
         .weight = 10,
         .description = COMPOUND_STRING(
             "She loves pirate roleplay, and frequently\n"
@@ -8424,7 +8424,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         #endif
         .bodyColor = BODY_COLOR_PURPLE,
         .natDexNum = NATIONAL_DEX_WEEZING,
-        .height = 12,
+        .height = 18,
         .weight = 95,
         .description = COMPOUND_STRING(
             "Weezing leads a crew of Koffing pirates.\n"
@@ -8458,7 +8458,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_GRAY,
         .isGalarianForm = TRUE,
         .natDexNum = NATIONAL_DEX_WEEZING_GALARIAN,
-        .height = 30,
+        .height = 18,
         .weight = 160,
         .description = COMPOUND_STRING(
             "A former leader of a Weezing pirate gang,\n"
@@ -8508,7 +8508,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_RHYHORN,
         .natDexNum = NATIONAL_DEX_RHYHORN,
         .categoryName = _("Spikes"),
-        .height = 10,
+        .height = 9,
         .weight = 1150,
         .description = COMPOUND_STRING(
             "Rhyhorn lives for battle and will charge\n"
@@ -8558,7 +8558,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_RHYDON,
         .natDexNum = NATIONAL_DEX_RHYDON,
         .categoryName = _("Drill"),
-        .height = 19,
+        .height = 15,
         .weight = 1200,
         .description = COMPOUND_STRING(
             "Her signature strategy is charging in\n"
@@ -8610,7 +8610,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_RHYPERIOR,
         .natDexNum = NATIONAL_DEX_RHYPERIOR,
         .categoryName = _("Drill"),
-        .height = 24,
+        .height = 18,
         .weight = 2828,
         .description = COMPOUND_STRING(
             "Her armor has become so heavy that\n"
@@ -8715,7 +8715,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_CHANSEY,
         .natDexNum = NATIONAL_DEX_CHANSEY,
         .categoryName = _("Egg"),
-        .height = 11,
+        .height = 15,
         .weight = 346,
         .description = COMPOUND_STRING(
             "A caring healer, Chansey lingers after\n"
@@ -8765,7 +8765,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_BLISSEY,
         .natDexNum = NATIONAL_DEX_BLISSEY,
         .categoryName = _("Happiness"),
-        .height = 15,
+        .height = 18,
         .weight = 468,
         .description = COMPOUND_STRING(
             "This rare Moémon is a compassionate\n"
@@ -8815,7 +8815,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_TANGELA,
         .natDexNum = NATIONAL_DEX_TANGELA,
         .categoryName = _("Vine"),
-        .height = 10,
+        .height = 9,
         .weight = 350,
         .description = COMPOUND_STRING(
             "Tangela's messy hair isn't just for\n"
@@ -8864,7 +8864,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_TANGROWTH,
         .natDexNum = NATIONAL_DEX_TANGROWTH,
         .categoryName = _("Vine"),
-        .height = 20,
+        .height = 18,
         .weight = 1286,
         .description = COMPOUND_STRING(
             "Tangrowth ensnares others by extending her\n"
@@ -8904,7 +8904,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_BROWN,                          \
         .speciesName = _("Kangaskhan"),                         \
         .categoryName = _("Parent"),                            \
-        .height = 22,                                           \
+        .height = 18,                                           \
         .pokemonScale = 256,                                    \
         .pokemonOffset = 0,                                     \
         .trainerScale = 387,                                    \
@@ -9004,7 +9004,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_HORSEA,
         .natDexNum = NATIONAL_DEX_HORSEA,
         .categoryName = _("Dragon"),
-        .height = 4,
+        .height = 9,
         .weight = 80,
         .description = COMPOUND_STRING(
             "Horsea wants to grow up to be a dragon.\n"
@@ -9054,7 +9054,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_SEADRA,
         .natDexNum = NATIONAL_DEX_SEADRA,
         .categoryName = _("Dragon"),
-        .height = 12,
+        .height = 15,
         .weight = 250,
         .description = COMPOUND_STRING(
             "Seadra is very rooted in the traditions\n"
@@ -9158,7 +9158,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_GOLDEEN,
         .natDexNum = NATIONAL_DEX_GOLDEEN,
         .categoryName = _("Goldfish"),
-        .height = 6,
+        .height = 9,
         .weight = 150,
         .description = COMPOUND_STRING(
             "Her graceful swimming causes onlookers\n"
@@ -9209,7 +9209,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_SEAKING,
         .natDexNum = NATIONAL_DEX_SEAKING,
         .categoryName = _("Goldfish"),
-        .height = 13,
+        .height = 18,
         .weight = 390,
         .description = COMPOUND_STRING(
             "Despite being female, she has earned the\n"
@@ -9263,7 +9263,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_STARYU,
         .natDexNum = NATIONAL_DEX_STARYU,
         .categoryName = _("Star Shape"),
-        .height = 8,
+        .height = 9,
         .weight = 345,
         .description = COMPOUND_STRING(
             "The blinking light on her torso is her\n"
@@ -9313,7 +9313,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_STARMIE,
         .natDexNum = NATIONAL_DEX_STARMIE,
         .categoryName = _("Mysterious"),
-        .height = 11,
+        .height = 18,
         .weight = 800,
         .description = COMPOUND_STRING(
             "The light on her core can light up in\n"
@@ -9426,7 +9426,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_PINK,
         .natDexNum = NATIONAL_DEX_MR_MIME,
         .categoryName = _("Barrier"),
-        .height = 13,
+        .height = 18,
         .weight = 545,
         .description = COMPOUND_STRING(
             "Nothing makes Ms. Mime happier than\n"
@@ -9465,7 +9465,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_WHITE,
         .natDexNum = NATIONAL_DEX_MR_MIME_GALARIAN,
         .categoryName = _("Dancing"),
-        .height = 14,
+        .height = 15,
         .weight = 568,
         .description = COMPOUND_STRING(
             "Its talent is tap-dancing. It can radiate\n"
@@ -9513,7 +9513,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_MR_RIME,
         .natDexNum = NATIONAL_DEX_MR_RIME,
         .categoryName = _("Comedian"),
-        .height = 15,
+        .height = 18,
         .weight = 582,
         .description = COMPOUND_STRING(
             "It's highly skilled at tap-dancing. It\n"
@@ -9662,7 +9662,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isMegaEvolution = TRUE,
         .cryId = CRY_SCIZOR_MEGA,
         .natDexNum = NATIONAL_DEX_SCIZOR_MEGA,
-        .height = 20,
+        .height = 19,
         .weight = 1250,
         .description = COMPOUND_STRING(
             "Using the power of Mega Evolution energy,\n"
@@ -9761,7 +9761,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_SMOOCHUM,
         .natDexNum = NATIONAL_DEX_SMOOCHUM,
         .categoryName = _("Kiss"),
-        .height = 4,
+        .height = 6,
         .weight = 60,
         .description = COMPOUND_STRING(
             "A very affectionate Moémon, Smoochum\n"
@@ -9811,7 +9811,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_JYNX,
         .natDexNum = NATIONAL_DEX_JYNX,
         .categoryName = _("Human Shape"),
-        .height = 14,
+        .height = 18,
         .weight = 406,
         .description = COMPOUND_STRING(
             "Jynx loves to stay on top of trends.\n"
@@ -9914,7 +9914,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_ELECTABUZZ,
         .natDexNum = NATIONAL_DEX_ELECTABUZZ,
         .categoryName = _("Electric"),
-        .height = 11,
+        .height = 15,
         .weight = 300,
         .description = COMPOUND_STRING(
             "Electabuzz is the bane of electric\n"
@@ -10018,7 +10018,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_MAGBY,
         .natDexNum = NATIONAL_DEX_MAGBY,
         .categoryName = _("Live Coal"),
-        .height = 7,
+        .height = 6,
         .weight = 214,
         .description = COMPOUND_STRING(
             "Warmth radiates from Magby, even while\n"
@@ -10068,7 +10068,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_MAGMAR,
         .natDexNum = NATIONAL_DEX_MAGMAR,
         .categoryName = _("Spitfire"),
-        .height = 13,
+        .height = 15,
         .weight = 445,
         .description = COMPOUND_STRING(
             "Her temper runs short, but oddly, she\n"
@@ -10120,7 +10120,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_MAGMORTAR,
         .natDexNum = NATIONAL_DEX_MAGMORTAR,
         .categoryName = _("Blast"),
-        .height = 16,
+        .height = 18,
         .weight = 680,
         .description = COMPOUND_STRING(
             "While helping incubate eggs, she has\n"
@@ -10177,7 +10177,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_HYPER_CUTTER, ABILITY_MOLD_BREAKER, ABILITY_MOXIE },
         .cryId = CRY_PINSIR,
         .natDexNum = NATIONAL_DEX_PINSIR,
-        .height = 15,
+        .height = 18,
         .weight = 550,
         .description = COMPOUND_STRING(
             "Pinsir's brutal spear jabs can fell even\n"
@@ -10215,7 +10215,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_AERILATE, ABILITY_AERILATE, ABILITY_AERILATE },
         .cryId = CRY_PINSIR_MEGA,
         .natDexNum = NATIONAL_DEX_PINSIR_MEGA,
-        .height = 17,
+        .height = 19,
         .weight = 590,
         .description = COMPOUND_STRING(
             "She thought that Mega Evolution would\n"
@@ -10259,7 +10259,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .speciesName = _("Tauros"),                         \
         .cryId = CRY_TAUROS,                                \
         .categoryName = _("Wild Bull"),                     \
-        .height = 14,                                       \
+        .height = 18,                                       \
         .pokemonScale = 256,                                \
         .pokemonOffset = 0,                                 \
         .trainerScale = 256,                                \
@@ -10441,7 +10441,6 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_BLUE,                       \
         .speciesName = _("Gyarados"),                       \
         .categoryName = _("Atrocious"),                     \
-        .height = 65,                                       \
         .pokemonScale = 256,                                \
         .pokemonOffset = 6,                                 \
         .trainerScale = 481,                                \
@@ -10465,6 +10464,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_INTIMIDATE, ABILITY_NONE, ABILITY_MOXIE },
         .cryId = CRY_GYARADOS,
         .natDexNum = NATIONAL_DEX_GYARADOS,
+        .height = 18,
         .weight = 2350,
         .description = COMPOUND_STRING(
             "Once a Magikarp, Gyarados managed\n"
@@ -10500,6 +10500,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_MOLD_BREAKER, ABILITY_MOLD_BREAKER, ABILITY_MOLD_BREAKER },
         .cryId = CRY_GYARADOS_MEGA,
         .natDexNum = NATIONAL_DEX_GYARADOS_MEGA,
+        .height = 19,
         .weight = 3050,
         .description = COMPOUND_STRING(
             "Gyarados has become even more powerful,\n"
@@ -10554,7 +10555,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_LAPRAS] =
     {
         LAPRAS_MISC_INFO,
-        .height = 25,
+        .height = 18,
         .weight = 2200,
         .description = COMPOUND_STRING(
             "Her soothing, gentle songs roll across\n"
@@ -10631,7 +10632,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_DITTO,
         .natDexNum = NATIONAL_DEX_DITTO,
         .categoryName = _("Transform"),
-        .height = 3,
+        .height = 15,
         .weight = 40,
         .description = COMPOUND_STRING(
             "Ditto carries a backpack full of masks.\n"
@@ -10687,7 +10688,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_EEVEE] =
     {
         EEVEE_MISC_INFO,
-        .height = 3,
+        .height = 9,
         .weight = 65,
         .description = COMPOUND_STRING(
             "Eevee has great potential, but she hasn't\n"
@@ -10774,7 +10775,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_VAPOREON,
         .natDexNum = NATIONAL_DEX_VAPOREON,
         .categoryName = _("Bubble Jet"),
-        .height = 10,
+        .height = 18,
         .weight = 290,
         .description = COMPOUND_STRING(
             "Vaporeon is very relaxed and calm, but\n"
@@ -10821,7 +10822,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_JOLTEON,
         .natDexNum = NATIONAL_DEX_JOLTEON,
         .categoryName = _("Lightning"),
-        .height = 8,
+        .height = 18,
         .weight = 245,
         .description = COMPOUND_STRING(
             "She overflows with energy, and very\n"
@@ -10868,7 +10869,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_FLAREON,
         .natDexNum = NATIONAL_DEX_FLAREON,
         .categoryName = _("Flame"),
-        .height = 9,
+        .height = 18,
         .weight = 250,
         .description = COMPOUND_STRING(
             "Her fiery spirit energizes others and\n"
@@ -10916,7 +10917,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_ESPEON,
         .natDexNum = NATIONAL_DEX_ESPEON,
         .categoryName = _("Sun"),
-        .height = 9,
+        .height = 18,
         .weight = 265,
         .description = COMPOUND_STRING(
             "Espeon's tail twitches to indicate her\n"
@@ -10963,7 +10964,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_UMBREON,
         .natDexNum = NATIONAL_DEX_UMBREON,
         .categoryName = _("Moonlight"),
-        .height = 10,
+        .height = 18,
         .weight = 270,
         .description = COMPOUND_STRING(
             "Cunning and mischievous, Umbreon\n"
@@ -11012,7 +11013,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_LEAFEON,
         .natDexNum = NATIONAL_DEX_LEAFEON,
         .categoryName = _("Verdant"),
-        .height = 10,
+        .height = 18,
         .weight = 255,
         .description = COMPOUND_STRING(
             "The leaves she finds while foraging are\n"
@@ -11059,7 +11060,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_GLACEON,
         .natDexNum = NATIONAL_DEX_GLACEON,
         .categoryName = _("Fresh Snow"),
-        .height = 8,
+        .height = 18,
         .weight = 259,
         .description = COMPOUND_STRING(
             "Glaceon's figure skating skills impress\n"
@@ -11109,7 +11110,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_SYLVEON,
         .natDexNum = NATIONAL_DEX_SYLVEON,
         .categoryName = _("Intertwine"),
-        .height = 10,
+        .height = 18,
         .weight = 235,
         .description = COMPOUND_STRING(
             "Her ribbons accentuate her graceful yet\n"
@@ -11159,7 +11160,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PORYGON,
         .natDexNum = NATIONAL_DEX_PORYGON,
         .categoryName = _("Virtual"),
-        .height = 8,
+        .height = 9,
         .weight = 365,
         .description = COMPOUND_STRING(
             "Porygon serves as a digital assistant\n"
@@ -11209,7 +11210,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PORYGON2,
         .natDexNum = NATIONAL_DEX_PORYGON2,
         .categoryName = _("Virtual"),
-        .height = 6,
+        .height = 15,
         .weight = 325,
         .description = COMPOUND_STRING(
             "The first official update to Porygon, \n"
@@ -11260,7 +11261,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_PORYGON_Z,
         .natDexNum = NATIONAL_DEX_PORYGON_Z,
         .categoryName = _("Virtual"),
-        .height = 9,
+        .height = 18,
         .weight = 340,
         .description = COMPOUND_STRING(
             "A bootleg update was installed on her to\n"
@@ -11312,7 +11313,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_OMANYTE,
         .natDexNum = NATIONAL_DEX_OMANYTE,
         .categoryName = _("Spiral"),
-        .height = 4,
+        .height = 9,
         .weight = 75,
         .description = COMPOUND_STRING(
             "Omanyte used to be very common in\n"
@@ -11360,7 +11361,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_OMASTAR,
         .natDexNum = NATIONAL_DEX_OMASTAR,
         .categoryName = _("Spiral"),
-        .height = 10,
+        .height = 18,
         .weight = 350,
         .description = COMPOUND_STRING(
             "Her bite can crack even the toughest of\n"
@@ -11409,7 +11410,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_KABUTO,
         .natDexNum = NATIONAL_DEX_KABUTO,
         .categoryName = _("Shellfish"),
-        .height = 5,
+        .height = 9,
         .weight = 115,
         .description = COMPOUND_STRING(
             "The top of Kabuto's head is as hard as a\n"
@@ -11457,7 +11458,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_KABUTOPS,
         .natDexNum = NATIONAL_DEX_KABUTOPS,
         .categoryName = _("Shellfish"),
-        .height = 13,
+        .height = 18,
         .weight = 405,
         .description = COMPOUND_STRING(
             "Her scythe can clear out a dozen opposing\n"
@@ -11551,7 +11552,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS },
         .cryId = CRY_AERODACTYL_MEGA,
         .natDexNum = NATIONAL_DEX_AERODACTYL_MEGA,
-        .height = 21,
+        .height = 19,
         .weight = 790,
         .description = COMPOUND_STRING(
             "The power of Mega Evolution has\n"
@@ -11604,7 +11605,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_MUNCHLAX,
         .natDexNum = NATIONAL_DEX_MUNCHLAX,
         .categoryName = _("Big Eater"),
-        .height = 6,
+        .height = 9,
         .weight = 1050,
         .description = COMPOUND_STRING(
             "Munchlax collects many Berries and keeps\n"
@@ -11662,7 +11663,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_SNORLAX] =
     {
         SNORLAX_MISC_INFO,
-        .height = 21,
+        .height = 18,
         .weight = 4600,
         .description = COMPOUND_STRING(
             "The only thing Snorlax loves more than\n"
@@ -11722,7 +11723,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },\
         .speciesName = _("Articuno"),                                   \
         .cryId = CRY_ARTICUNO,                                          \
-        .height = 17,                                                   \
+        .height = 18,                                                   \
         .pokemonScale = 256,                                            \
         .pokemonOffset = 0,                                             \
         .trainerScale = 309,                                            \
@@ -11816,7 +11817,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .bodyColor = BODY_COLOR_YELLOW,                                 \
         .speciesName = _("Zapdos"),                                     \
         .cryId = CRY_ZAPDOS,                                            \
-        .height = 16,                                                   \
+        .height = 18,                                                   \
         .pokemonScale = 256,                                            \
         .pokemonOffset = 0,                                             \
         .trainerScale = 318,                                            \
@@ -11911,7 +11912,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_FLYING },\
         .speciesName = _("Moltres"),                                    \
         .cryId = CRY_MOLTRES,                                           \
-        .height = 20,                                                   \
+        .height = 18,                                                   \
         .pokemonScale = 270,                                            \
         .pokemonOffset = 0,                                             \
         .trainerScale = 387,                                            \
@@ -12019,7 +12020,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_DRATINI,
         .natDexNum = NATIONAL_DEX_DRATINI,
         .categoryName = _("Dragon"),
-        .height = 18,
+        .height = 9,
         .weight = 33,
         .description = COMPOUND_STRING(
             "Dratini is fearful of the world and would\n"
@@ -12068,7 +12069,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_DRAGONAIR,
         .natDexNum = NATIONAL_DEX_DRAGONAIR,
         .categoryName = _("Dragon"),
-        .height = 40,
+        .height = 15,
         .weight = 165,
         .description = COMPOUND_STRING(
             "Dragonair's pendant has a mysterious\n"
@@ -12117,7 +12118,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_DRAGONITE,
         .natDexNum = NATIONAL_DEX_DRAGONITE,
         .categoryName = _("Dragon"),
-        .height = 22,
+        .height = 18,
         .weight = 2100,
         .description = COMPOUND_STRING(
             "Despite her incredible power, she still\n"
@@ -12174,7 +12175,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_UNNERVE },
         .cryId = CRY_MEWTWO,
         .natDexNum = NATIONAL_DEX_MEWTWO,
-        .height = 20,
+        .height = 19,
         .weight = 1220,
         .description = COMPOUND_STRING(
             "Mewtwo was cloned from the DNA of Mew.\n"
@@ -12214,7 +12215,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isMegaEvolution = TRUE,
         .cryId = CRY_MEWTWO_MEGA_X,
         .natDexNum = NATIONAL_DEX_MEWTWO_MEGA_X,
-        .height = 23,
+        .height = 20,
         .weight = 1270,
         .description = COMPOUND_STRING(
             "Psychic power has augmented its muscles.\n"
@@ -12251,7 +12252,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .isMegaEvolution = TRUE,
         .cryId = CRY_MEWTWO_MEGA_Y,
         .natDexNum = NATIONAL_DEX_MEWTWO_MEGA_Y,
-        .height = 15,
+        .height = 19,
         .weight = 330,
         .description = COMPOUND_STRING(
             "Despite its diminished size, its mental\n"
@@ -12303,7 +12304,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .cryId = CRY_MEW,
         .natDexNum = NATIONAL_DEX_MEW,
         .categoryName = _("New Species"),
-        .height = 4,
+        .height = 9,
         .weight = 40,
         .description = COMPOUND_STRING(
             "She's very shy and elusive. Most Moémon\n"

@@ -6605,6 +6605,20 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u8 gMonIcon_Gigalith[] = INCBIN_U8("graphics/pokemon/gigalith/icon.4bpp");
     #endif
     const u8 gMonFootprint_Gigalith[] = INCBIN_U8("graphics/pokemon/gigalith/footprint.1bpp");
+
+    #if NSFW_CONTENT == TRUE
+    const u32 gMonFrontPic_GigalithMega[] = INCBIN_U32("graphics/pokemon/gigalith/mega/nsfw/anim_front.4bpp.lz");
+    const u32 gMonBackPic_GigalithMega[] = INCBIN_U32("graphics/pokemon/gigalith/mega/nsfw/back.4bpp.lz");
+    const u32 gMonPalette_GigalithMega[] = INCBIN_U32("graphics/pokemon/gigalith/mega/nsfw/normal.gbapal.lz");
+    const u32 gMonShinyPalette_GigalithMega[] = INCBIN_U32("graphics/pokemon/gigalith/mega/nsfw/shiny.gbapal.lz");
+    const u8 gMonIcon_GigalithMega[] = INCBIN_U8("graphics/pokemon/gigalith/mega/nsfw/icon.4bpp");
+    #else
+    const u32 gMonFrontPic_GigalithMega[] = INCBIN_U32("graphics/pokemon/gigalith/mega/anim_front.4bpp.lz");
+    const u32 gMonPalette_GigalithMega[] = INCBIN_U32("graphics/pokemon/gigalith/mega/normal.gbapal.lz");
+    const u32 gMonBackPic_GigalithMega[] = INCBIN_U32("graphics/pokemon/gigalith/mega/back.4bpp.lz");
+    const u32 gMonShinyPalette_GigalithMega[] = INCBIN_U32("graphics/pokemon/gigalith/mega/shiny.gbapal.lz");
+    const u8 gMonIcon_GigalithMega[] = INCBIN_U8("graphics/pokemon/gigalith/mega/icon.4bpp");
+    #endif
 #endif //P_FAMILY_ROGGENROLA
 
 #if P_FAMILY_WOOBAT
@@ -11009,6 +11023,21 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
     const u8 gMonIcon_Duraludon[] = INCBIN_U8("graphics/pokemon/duraludon/icon.4bpp");
     #endif
     const u8 gMonFootprint_Duraludon[] = INCBIN_U8("graphics/pokemon/duraludon/footprint.1bpp");
+
+    #if NSFW_CONTENT == TRUE
+    const u32 gMonFrontPic_Archaludon[] = INCBIN_U32("graphics/pokemon/archaludon/nsfw/front.4bpp.lz");
+    const u32 gMonBackPic_Archaludon[] = INCBIN_U32("graphics/pokemon/archaludon/nsfw/back.4bpp.lz");
+    const u32 gMonPalette_Archaludon[] = INCBIN_U32("graphics/pokemon/archaludon/nsfw/normal.gbapal.lz");
+    const u32 gMonShinyPalette_Archaludon[] = INCBIN_U32("graphics/pokemon/archaludon/nsfw/shiny.gbapal.lz");
+    const u8 gMonIcon_Archaludon[] = INCBIN_U8("graphics/pokemon/archaludon/nsfw/icon.4bpp");
+    #else
+    const u32 gMonFrontPic_Archaludon[] = INCBIN_U32("graphics/pokemon/archaludon/front.4bpp.lz");
+    const u32 gMonPalette_Archaludon[] = INCBIN_U32("graphics/pokemon/archaludon/normal.gbapal.lz");
+    const u32 gMonBackPic_Archaludon[] = INCBIN_U32("graphics/pokemon/archaludon/back.4bpp.lz");
+    const u32 gMonShinyPalette_Archaludon[] = INCBIN_U32("graphics/pokemon/archaludon/shiny.gbapal.lz");
+    const u8 gMonIcon_Archaludon[] = INCBIN_U8("graphics/pokemon/archaludon/icon.4bpp");
+    #endif
+    const u8 gMonFootprint_Archaludon[] = INCBIN_U8("graphics/pokemon/archaludon/footprint.1bpp");
 
 #if P_GIGANTAMAX_FORMS
     const u32 gMonFrontPic_DuraludonGigantamax[] = INCBIN_U32("graphics/pokemon/duraludon/gigantamax/front.4bpp.lz");

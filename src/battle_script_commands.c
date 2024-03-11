@@ -1294,14 +1294,14 @@ static void Cmd_attackcanceler(void)
 
     if (WEATHER_HAS_EFFECT && gBattleMoves[gCurrentMove].power)
     {
-        if (moveType == TYPE_FIRE && (gBattleWeather & B_WEATHER_RAIN_PRIMAL))
+        if (moveType == TYPE_FIRE && ((gBattleWeather & B_WEATHER_SNOW_PRIMAL) || (gBattleWeather & B_WEATHER_HAIL_PRIMAL) || (gBattleWeather & B_WEATHER_RAIN_PRIMAL)))
         {
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PRIMAL_WEATHER_FIZZLED_BY_RAIN;
             BattleScriptPushCursor();
             gBattlescriptCurrInstr = BattleScript_PrimalWeatherBlocksMove;
             return;
         }
-        else if (moveType == TYPE_WATER && (gBattleWeather & B_WEATHER_SUN_PRIMAL))
+        else if (moveType == TYPE_WATER && ((gBattleWeather & B_WEATHER_SANDSTORM_PRIMAL) || (gBattleWeather & B_WEATHER_SUN_PRIMAL)))
         {
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PRIMAL_WEATHER_EVAPORATED_IN_SUN;
             BattleScriptPushCursor();
@@ -10083,6 +10083,9 @@ static void Cmd_various(void)
             u32 ability = GetBattlerAbility(i);
             if (((ability == ABILITY_DESOLATE_LAND && gBattleWeather & B_WEATHER_SUN_PRIMAL)
              || (ability == ABILITY_PRIMORDIAL_SEA && gBattleWeather & B_WEATHER_RAIN_PRIMAL)
+             || (ability == ABILITY_FROZEN_SUMMIT && gBattleWeather & B_WEATHER_SNOW_PRIMAL)
+             || (ability == ABILITY_FROZEN_SUMMIT && gBattleWeather & B_WEATHER_HAIL_PRIMAL)
+             || (ability == ABILITY_DESERT_STORM && gBattleWeather & B_WEATHER_SANDSTORM_PRIMAL)
              || (ability == ABILITY_DELTA_STREAM && gBattleWeather & B_WEATHER_STRONG_WINDS))
              && IsBattlerAlive(i))
                 shouldNotClear = TRUE;
@@ -10103,6 +10106,24 @@ static void Cmd_various(void)
         {
             gBattleWeather &= ~B_WEATHER_STRONG_WINDS;
             PrepareStringBattle(STRINGID_STRONGWINDSDISSIPATED, battler);
+            gBattleCommunication[MSG_DISPLAY] = 1;
+        }
+        else if (gBattleWeather & B_WEATHER_SNOW_PRIMAL && !shouldNotClear)
+        {
+            gBattleWeather &= ~B_WEATHER_SNOW_PRIMAL;
+            PrepareStringBattle(STRINGID_ARCTICCOLDSUBSIDED, battler);
+            gBattleCommunication[MSG_DISPLAY] = 1;
+        }
+        else if (gBattleWeather & B_WEATHER_HAIL_PRIMAL && !shouldNotClear)
+        {
+            gBattleWeather &= ~B_WEATHER_HAIL_PRIMAL;
+            PrepareStringBattle(STRINGID_ARCTICCOLDSUBSIDED, battler);
+            gBattleCommunication[MSG_DISPLAY] = 1;
+        }
+        else if (gBattleWeather & B_WEATHER_SANDSTORM_PRIMAL && !shouldNotClear)
+        {
+            gBattleWeather &= ~B_WEATHER_SANDSTORM_PRIMAL;
+            PrepareStringBattle(STRINGID_INTENSESANDSTORMDISPERSED, battler);
             gBattleCommunication[MSG_DISPLAY] = 1;
         }
         break;

@@ -61,7 +61,7 @@ SurfPichu_Slot5:
 sText_MysteryGiftEgg:
 	.string "Thank you for using the MYSTERY\n"
 	.string "GIFT System.\p"
-	.string "From the Moémon CENTER we\n"
+	.string "From the Moémon Center we\n"
 	.string "have a gift--a Moémon EGG!\p"
 	.string "Please raise it with love and\n"
 	.string "kindness.$"

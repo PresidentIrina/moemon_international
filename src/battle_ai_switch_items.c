@@ -65,7 +65,7 @@ void GetAIPartyIndexes(u32 battler, s32 *firstId, s32 *lastId)
 }
 
 // Note that as many return statements as possible are INTENTIONALLY put after all of the loops;
-// the function can take a max of about 0.06s to run, and this prevents the player from identifying 
+// the function can take a max of about 0.06s to run, and this prevents the player from identifying
 // whether the mon will switch or not by seeing how long the delay is before they select a move
 static bool8 HasBadOdds(u32 battler)
 
@@ -82,7 +82,7 @@ static bool8 HasBadOdds(u32 battler)
         return FALSE;
 
     // Won't bother configuring this for double battles
-    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) 
+    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
         return FALSE;
 	
 	opposingPosition = BATTLE_OPPOSITE(GetBattlerPosition(battler));
@@ -102,7 +102,7 @@ static bool8 HasBadOdds(u32 battler)
         if (aiMove != MOVE_NONE)
         {
             // Check if mon has an "important" status move
-            if (aiMoveEffect == EFFECT_REFLECT || aiMoveEffect == EFFECT_LIGHT_SCREEN 
+            if (aiMoveEffect == EFFECT_REFLECT || aiMoveEffect == EFFECT_LIGHT_SCREEN
             || aiMoveEffect == EFFECT_SPIKES || aiMoveEffect == EFFECT_TOXIC_SPIKES || aiMoveEffect == EFFECT_STEALTH_ROCK || aiMoveEffect == EFFECT_STICKY_WEB || aiMoveEffect == EFFECT_LEECH_SEED
             || aiMoveEffect == EFFECT_EXPLOSION
             || aiMoveEffect == EFFECT_SLEEP || aiMoveEffect == EFFECT_YAWN || aiMoveEffect == EFFECT_TOXIC || aiMoveEffect == EFFECT_WILL_O_WISP || aiMoveEffect == EFFECT_PARALYZE
@@ -168,16 +168,16 @@ static bool8 HasBadOdds(u32 battler)
     }
 
     // If we don't have any other viable options, don't switch out
-    if (AI_DATA->mostSuitableMonId == PARTY_SIZE)
+    if (AI_DATA->mostSuitableMonId[battler] == PARTY_SIZE)
         return FALSE;
 
     // Start assessing whether or not mon has bad odds
     // Jump straight to swtiching out in cases where mon gets OHKO'd
     if (((getsOneShot && gBattleMons[opposingBattler].speed > gBattleMons[battler].speed) // If the player OHKOs and outspeeds OR OHKOs, doesn't outspeed but isn't 2HKO'd
-            || (getsOneShot && gBattleMons[opposingBattler].speed <= gBattleMons[battler].speed && maxDamageDealt < gBattleMons[opposingBattler].hp / 2)) 
+            || (getsOneShot && gBattleMons[opposingBattler].speed <= gBattleMons[battler].speed && maxDamageDealt < gBattleMons[opposingBattler].hp / 2))
         && (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2 // And the current mon has at least 1/2 their HP, or 1/4 HP and Regenerator
-            || (aiAbility == ABILITY_REGENERATOR 
-            && gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 4))) 
+            || (aiAbility == ABILITY_REGENERATOR
+            && gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 4)))
     {
         // 50% chance to stay in regardless
         if (Random() % 2 == 0) 
@@ -593,12 +593,12 @@ static bool8 ShouldSwitchIfAbilityBenefit(u32 battler)
             moduloChance = 4; //25%
             //Attempt to cure bad ailment
             if (gBattleMons[battler].status1 & (STATUS1_SLEEP | STATUS1_FREEZE | STATUS1_TOXIC_POISON)
-                && AI_DATA->mostSuitableMonId != PARTY_SIZE)
+                && AI_DATA->mostSuitableMonId[battler] != PARTY_SIZE)
                 break;
             //Attempt to cure lesser ailment
             if ((gBattleMons[battler].status1 & STATUS1_ANY)
                 && (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2)
-                && AI_DATA->mostSuitableMonId != PARTY_SIZE
+                && AI_DATA->mostSuitableMonId[battler] != PARTY_SIZE
                 && Random() % (moduloChance*chanceReducer) == 0)
                 break;
 
@@ -610,7 +610,7 @@ static bool8 ShouldSwitchIfAbilityBenefit(u32 battler)
             if (gBattleMons[battler].status1 & STATUS1_ANY)
                 return FALSE;
             if ((gBattleMons[battler].hp <= ((gBattleMons[battler].maxHP * 2) / 3))
-                 && AI_DATA->mostSuitableMonId != PARTY_SIZE
+                 && AI_DATA->mostSuitableMonId[battler] != PARTY_SIZE
                  && Random() % (moduloChance*chanceReducer) == 0)
                 break;
 
@@ -846,7 +846,7 @@ static bool32 ShouldSwitchIfEncored(u32 battler)
         return FALSE;
 
     // If not Encored or if no good switchin, don't switch
-    if (gDisableStructs[battler].encoredMove == MOVE_NONE || AI_DATA->mostSuitableMonId == PARTY_SIZE)
+    if (gDisableStructs[battler].encoredMove == MOVE_NONE || AI_DATA->mostSuitableMonId[battler] == PARTY_SIZE)
         return FALSE;
 
     // Otherwise 50% chance to switch out
@@ -879,7 +879,7 @@ static bool8 AreAttackingStatsLowered(u32 battler)
         // 50% chance if attack at -2 and have a good candidate mon
         else if (attackingStage == DEFAULT_STAT_STAGE - 2)
         {
-            if (AI_DATA->mostSuitableMonId != PARTY_SIZE && (Random() & 1))
+            if (AI_DATA->mostSuitableMonId[battler] != PARTY_SIZE && (Random() & 1))
             {
                 *(gBattleStruct->AI_monToSwitchIntoId + battler) = PARTY_SIZE;
                 BtlController_EmitTwoReturnValues(battler, 1, B_ACTION_SWITCH, 0);
@@ -904,7 +904,7 @@ static bool8 AreAttackingStatsLowered(u32 battler)
         // 50% chance if attack at -2 and have a good candidate mon
         else if (spAttackingStage == DEFAULT_STAT_STAGE - 2)
         {
-            if (AI_DATA->mostSuitableMonId != PARTY_SIZE && (Random() & 1))
+            if (AI_DATA->mostSuitableMonId[battler] != PARTY_SIZE && (Random() & 1))
             {
                 *(gBattleStruct->AI_monToSwitchIntoId + battler) = PARTY_SIZE;
                 BtlController_EmitTwoReturnValues(battler, 1, B_ACTION_SWITCH, 0);
@@ -1053,7 +1053,7 @@ void AI_TrySwitchOrUseItem(u32 battler)
         {
             if (*(gBattleStruct->AI_monToSwitchIntoId + battler) == PARTY_SIZE)
             {
-                s32 monToSwitchId = AI_DATA->mostSuitableMonId;
+                s32 monToSwitchId = AI_DATA->mostSuitableMonId[battler];
                 if (monToSwitchId == PARTY_SIZE)
                 {
                     if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))

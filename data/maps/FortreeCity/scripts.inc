@@ -97,7 +97,7 @@ FortreeCity_Text_SawGiganticPokemonInSky:
 	.string "Were you at a volcano or something?$"
 
 FortreeCity_Text_SomethingBlockingGym:
-	.string "I want to go to the Moémon GYM,\n"
+	.string "I want to go to the Moémon Gym,\n"
 	.string "but something's blocking the way.\p"
 	.string "After all the bother I went through\n"
 	.string "training on ROUTE 120…$"
@@ -109,7 +109,7 @@ FortreeCity_Text_ThisTimeIllBeatWinona:
 FortreeCity_Text_TreesGrowByDrinkingRainwater:
 	.string "The ground absorbs rainwater, and\n"
 	.string "trees grow by drinking that water…\p"
-	.string "Our FORTREE CITY exists because\n"
+	.string "Our Fortree City exists because\n"
 	.string "there's both water and soil.$"
 
 FortreeCity_Text_EveryoneHealthyAndLively:
@@ -144,12 +144,12 @@ FortreeCity_Text_UsedDevonScopePokemonFled:
 	.string "The startled Moémon fled!$"
 
 FortreeCity_Text_CitySign:
-	.string "FORTREE CITY\n"
+	.string "Fortree City\n"
 	.string "“The treetop city that frolics with\l"
 	.string "nature.”$"
 
 FortreeCity_Text_GymSign:
-	.string "FORTREE CITY Moémon GYM\n"
+	.string "Fortree City Moémon Gym\n"
 	.string "LEADER: WINONA\p"
 	.string "“The bird user taking flight into\n"
 	.string "the world.”$"

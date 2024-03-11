@@ -696,8 +696,16 @@
 #define STRINGID_SWAMPENVELOPEDSIDE                   694
 #define STRINGID_THESWAMPDISAPPEARED                  695
 #define STRINGID_PKMNTELLCHILLINGRECEPTIONJOKE        696
+#define STRINGID_ARCTICCOLD                           697
+#define STRINGID_ARCTICCOLDSUBSIDED                   698
+#define STRINGID_MOVESNUFFEDOUTINTHEARCTICCOLD        699
+#define STRINGID_ARCTICCOLDWASNOTLESSENED             700
+#define STRINGID_INTENSESANDSTORM                     701
+#define STRINGID_INTENSESANDSTORMDISPERSED            702
+#define STRINGID_MOVEABSORBEDBYTHEINTENSESANDSTORM    703
+#define STRINGID_INTENSESANDSTORMWASNOTLESSENED       704
 
-#define BATTLESTRINGS_COUNT                           697
+#define BATTLESTRINGS_COUNT                           705
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

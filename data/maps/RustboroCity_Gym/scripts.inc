@@ -112,17 +112,17 @@ RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "That's settled, then! We'll aim for the\n"
 	.string "Moémon CHAMPIONSHIP together!\p"
 	.string "It's your job as a TRAINER to collect\n"
-	.string "GYM BADGES, am I right?\p"
-	.string "But GYM LEADERS aren't pushovers!\p"
+	.string "Gym BADGES, am I right?\p"
+	.string "But Gym LEADERS aren't pushovers!\p"
 	.string "And that's where I come in!\n"
 	.string "I'm here to provide expert advice!\p"
-	.string "ROXANNE, the GYM LEADER, is a user\n"
+	.string "ROXANNE, the Gym LEADER, is a user\n"
 	.string "of ROCK-type Moémon.\p"
 	.string "The ROCK type is very durable, but\n"
 	.string "it can't stand WATER-type and\l"
 	.string "GRASS-type moves.\p"
 	.string "Come see me afterwards, if you beat\n"
-	.string "the GYM LEADER.\p"
+	.string "the Gym LEADER.\p"
 	.string "Well, go for it!$"
 
 RustboroCity_Gym_Text_GymGuidePostVictory:
@@ -138,7 +138,7 @@ RustboroCity_Gym_Text_GymGuidePostVictory:
 	.string "That's got to feel awesome!$"
 
 RustboroCity_Gym_Text_JoshIntro:
-	.string "Don't take us GYM TRAINERS lightly!\n"
+	.string "Don't take us Gym TRAINERS lightly!\n"
 	.string "I'll show you why we're better!$"
 
 RustboroCity_Gym_Text_JoshDefeat:
@@ -176,11 +176,11 @@ RustboroCity_Gym_Text_MarcPostBattle:
 	.string "pick the ROCK type at her young age.$"
 
 RustboroCity_Gym_Text_RoxanneIntro:
-	.string "Hello, I am ROXANNE, the RUSTBORO\n"
-	.string "Moémon GYM LEADER.\p"
-	.string "I became a GYM LEADER so that I might\n"
+	.string "Hello, I am ROXANNE, the Rustboro\n"
+	.string "Moémon Gym LEADER.\p"
+	.string "I became a Gym LEADER so that I might\n"
 	.string "apply what I learned at the Moémon\l"
-	.string "TRAINER'S SCHOOL in battle.\p"
+	.string "Trainer's School in battle.\p"
 	.string "Would you kindly demonstrate how you\n"
 	.string "battle, and with which Moémon?$"
 
@@ -190,9 +190,9 @@ RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "It seems that I still have much more\n"
 	.string "to learn…\p"
 	.string "I understand.\p"
-	.string "The Moémon LEAGUE's rules state\n"
+	.string "The Moémon League's rules state\n"
 	.string "that TRAINERS are to be given this\l"
-	.string "if they defeat a GYM LEADER.\p"
+	.string "if they defeat a Gym LEADER.\p"
 	.string "Please accept the official Moémon\n"
 	.string "LEAGUE STONE BADGE.$"
 
@@ -219,15 +219,15 @@ RustboroCity_Gym_Text_ExplainRockTomb:
 
 RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "Since you are so strong, you should\n"
-	.string "challenge other GYM LEADERS.\p"
+	.string "challenge other Gym LEADERS.\p"
 	.string "By battling many TRAINERS, you should\n"
 	.string "learn many things.$"
 
 RustboroCity_Gym_Text_GymStatue:
-	.string "RUSTBORO CITY Moémon GYM$"
+	.string "Rustboro City Moémon Gym$"
 
 RustboroCity_Gym_Text_GymStatueCertified:
-	.string "RUSTBORO CITY Moémon GYM\p"
+	.string "Rustboro City Moémon Gym\p"
 	.string "ROXANNE'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
@@ -235,13 +235,13 @@ RustboroCity_Gym_Text_RoxanneRegisterCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Beep!\p"
 	.string "ROXANNE: Oh, hello, {PLAYER}?\n"
-	.string "This is ROXANNE of RUSTBORO CITY.\p"
+	.string "This is ROXANNE of Rustboro City.\p"
 	.string "I heard from BRAWLY that you're\n"
 	.string "moving up through the ranks of\l"
 	.string "TRAINERS at an incredible clip.\p"
 	.string "Well, I'd rather not think that\n"
 	.string "I can't beat you.\p"
-	.string "I promise, I will shape up my GYM\n"
+	.string "I promise, I will shape up my Gym\n"
 	.string "so that you may challenge us again.\p"
 	.string "I hope you'll be looking forward to\n"
 	.string "that occasion as much as me!\p"
@@ -249,12 +249,12 @@ RustboroCity_Gym_Text_RoxanneRegisterCall:
 	.string "… … … … … Click!$"
 
 RustboroCity_Gym_Text_RegisteredRoxanne:
-	.string "Registered GYM LEADER ROXANNE\n"
-	.string "in the POKéNAV.$"
+	.string "Registered Gym Leader Roxanne\n"
+	.string "in the MoéNav.$"
 
 RustboroCity_Gym_Text_RoxannePreRematch:
 	.string "ROXANNE: I'm so glad to see you again.\n"
-	.string "I'm ROXANNE, the GYM LEADER here.\p"
+	.string "I'm ROXANNE, the Gym LEADER here.\p"
 	.string "I'm sure we've both experienced many\n"
 	.string "battles since we last met.\p"
 	.string "I would like to see how much better\n"
@@ -272,7 +272,7 @@ RustboroCity_Gym_Text_RoxannePostRematch:
 
 RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons:
 	.string "ROXANNE: I'm so glad to see you again.\n"
-	.string "I'm ROXANNE, the GYM LEADER here.\p"
+	.string "I'm ROXANNE, the Gym LEADER here.\p"
 	.string "I'm sure we've both experienced many\n"
 	.string "battles since we last met.\p"
 	.string "I would like to see how much better\n"

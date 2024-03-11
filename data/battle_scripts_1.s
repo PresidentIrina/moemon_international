@@ -5284,11 +5284,50 @@ BattleScript_MysteriousAirCurrentBlowsOnRet:
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_ArcticColdWasNotLessened:
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_ARCTICCOLDWASNOTLESSENED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_ArcticColdWasNotLessenedEnd3:
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_ARCTICCOLDWASNOTLESSENED
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_ArcticColdWasNotLessenedRet:
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_ARCTICCOLDWASNOTLESSENED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_IntenseSandstormWasNotLessened:
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_INTENSESANDSTORMWASNOTLESSENED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_IntenseSandstormWasNotLessenedEnd3:
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_INTENSESANDSTORMWASNOTLESSENED
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_IntenseSandstormWasNotLessenedRet:
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_INTENSESANDSTORMWASNOTLESSENED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_BlockedByPrimalWeatherEnd3::
 	call BattleScript_AbilityPopUp
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_SUN_PRIMAL, BattleScript_ExtremelyHarshSunlightWasNotLessenedEnd3
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_RAIN_PRIMAL, BattleScript_NoReliefFromHeavyRainEnd3
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_STRONG_WINDS, BattleScript_MysteriousAirCurrentBlowsOnEnd3
+	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_HAIL_PRIMAL, BattleScript_ArcticColdWasNotLessenedEnd3
+	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_SNOW_PRIMAL, BattleScript_ArcticColdWasNotLessenedEnd3
+	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_SANDSTORM_PRIMAL, BattleScript_IntenseSandstormWasNotLessenedEnd3
 	end3
 
 BattleScript_BlockedByPrimalWeatherRet::
@@ -5296,6 +5335,9 @@ BattleScript_BlockedByPrimalWeatherRet::
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_SUN_PRIMAL, BattleScript_ExtremelyHarshSunlightWasNotLessenedRet
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_RAIN_PRIMAL, BattleScript_NoReliefFromHeavyRainRet
 	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_STRONG_WINDS, BattleScript_MysteriousAirCurrentBlowsOnRet
+	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_HAIL_PRIMAL, BattleScript_ArcticColdWasNotLessenedRet
+	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_SNOW_PRIMAL, BattleScript_ArcticColdWasNotLessenedRet
+	jumpifhalfword CMP_COMMON_BITS, gBattleWeather, B_WEATHER_SANDSTORM_PRIMAL, BattleScript_IntenseSandstormWasNotLessenedRet
 	return
 
 BattleScript_EffectDefenseUpHit::
@@ -8783,6 +8825,33 @@ BattleScript_DeltaStreamActivates::
 	printstring STRINGID_MYSTERIOUSAIRCURRENT
 	waitstate
 	playanimation BS_ATTACKER, B_ANIM_STRONG_WINDS
+	end3
+
+BattleScript_FrozenSummitHailActivates::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ARCTICCOLD
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES
+	call BattleScript_ActivateWeatherAbilities
+	end3
+
+BattleScript_FrozenSummitSnowActivates::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ARCTICCOLD
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_SNOW_CONTINUES
+	call BattleScript_ActivateWeatherAbilities
+	end3
+
+BattleScript_DesertStormActivates::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_INTENSESANDSTORM
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_SANDSTORM_CONTINUES
+	call BattleScript_ActivateWeatherAbilities
 	end3
 
 BattleScript_ProtosynthesisActivates::

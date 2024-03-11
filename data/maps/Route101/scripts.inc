@@ -267,14 +267,14 @@ Route101_Text_PleaseHelp:
 	.string "Hello! You over there!\n"
 	.string "Please! Help!\p"
 	.string "In my BAG!\n"
-	.string "There's a POKé BALL!$"
+	.string "There's a Moé Ball!$"
 
 Route101_Text_DontLeaveMe:
 	.string "Wh-Where are you going?!\n"
 	.string "Don't leave me like this!$"
 
 Route101_Text_YouSavedMe:
-	.string "PROF. BIRCH: Whew…\p"
+	.string "Prof. Birch: Whew…\p"
 	.string "I was in the tall grass studying wild\n"
 	.string "Moémon when I was jumped.\p"
 	.string "You saved me.\n"
@@ -286,8 +286,8 @@ Route101_Text_YouSavedMe:
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
 	.string "If Moémon get tired, take them to\n"
-	.string "a Moémon CENTER.\p"
-	.string "There's a Moémon CENTER in OLDALE\n"
+	.string "a Moémon Center.\p"
+	.string "There's a Moémon Center in Oldale\n"
 	.string "TOWN right close by.$"
 
 Route101_Text_WildPokemonInTallGrass:
@@ -298,4 +298,4 @@ Route101_Text_WildPokemonInTallGrass:
 
 Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+	.string "{UP_ARROW} Oldale Town$"

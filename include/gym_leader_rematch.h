@@ -75,7 +75,7 @@ enum {
     REMATCH_WINONA,
     REMATCH_TATE_AND_LIZA,
     REMATCH_JUAN,
-    REMATCH_SIDNEY, // Entries from SIDNEY below are considered part of REMATCH_ELITE_FOUR_ENTRIES.
+    REMATCH_SIDNEY, // Entries from Sidney below are considered part of REMATCH_ELITE_FOUR_ENTRIES.
     REMATCH_PHOEBE,
     REMATCH_GLACIA,
     REMATCH_DRAKE,

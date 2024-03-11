@@ -1157,7 +1157,7 @@ static const uq4_12_t sTypeEffectivenessTable[NUMBER_OF_MON_TYPES][NUMBER_OF_MON
     [TYPE_STEEL]    = {______, ______, ______, ______, ______, X(2.0), ______, ______, X(0.5), ______, X(0.5), X(0.5), ______, X(0.5), ______, X(2.0), ______, ______, X(2.0), ______},
     [TYPE_MYSTERY]  = {______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______, ______},
     [TYPE_FIRE]     = {______, ______, ______, ______, ______, X(0.5), X(2.0), ______, X(2.0), ______, X(0.5), X(0.5), X(2.0), ______, ______, X(2.0), X(0.5), ______, ______, ______},
-    [TYPE_WATER]    = {______, ______, ______, ______, X(2.0), X(2.0), ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______, ______},
+    [TYPE_WATER]    = {______, ______, ______, ______, X(2.0), X(2.0), ______, ______, X(0.5), ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), X(0.5), ______, ______, ______},
     [TYPE_GRASS]    = {______, ______, X(0.5), X(0.5), X(2.0), X(2.0), X(0.5), ______, X(0.5), ______, X(0.5), X(2.0), X(0.5), ______, ______, ______, X(0.5), ______, ______, ______},
     [TYPE_ELECTRIC] = {______, ______, X(2.0), ______, X(0.0), ______, ______, ______, ______, ______, ______, X(2.0), X(0.5), X(0.5), ______, ______, X(0.5), ______, ______, ______},
     [TYPE_PSYCHIC]  = {______, X(2.0), ______, X(2.0), ______, ______, ______, ______, X(0.5), ______, ______, ______, ______, ______, X(0.5), ______, ______, X(0.0), ______, ______},
@@ -2198,18 +2198,18 @@ u8 DoFieldEndTurnEffects(void)
                     if (--gWishFutureKnock.weatherDuration == 0)
                     {
                         gBattleWeather &= ~B_WEATHER_RAIN_TEMPORARY;
-                        gBattleWeather &= ~B_WEATHER_RAIN_DOWNPOUR;
+                        //gBattleWeather &= ~B_WEATHER_RAIN_DOWNPOUR;
                         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_RAIN_STOPPED;
                     }
-                    else if (gBattleWeather & B_WEATHER_RAIN_DOWNPOUR)
-                        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOWNPOUR_CONTINUES;
+                    //else if (gBattleWeather & B_WEATHER_RAIN_DOWNPOUR)
+                    //    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOWNPOUR_CONTINUES;
                     else
                         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_RAIN_CONTINUES;
                 }
-                else if (gBattleWeather & B_WEATHER_RAIN_DOWNPOUR)
-                {
-                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOWNPOUR_CONTINUES;
-                }
+                //else if (gBattleWeather & B_WEATHER_RAIN_DOWNPOUR)
+                //{
+                //    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DOWNPOUR_CONTINUES;
+                //}
                 else
                 {
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_RAIN_CONTINUES;
@@ -2223,7 +2223,9 @@ u8 DoFieldEndTurnEffects(void)
         case ENDTURN_SANDSTORM:
             if (gBattleWeather & B_WEATHER_SANDSTORM)
             {
-                if (!(gBattleWeather & B_WEATHER_SANDSTORM_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
+                if (!(gBattleWeather & B_WEATHER_SANDSTORM_PERMANENT)
+                 && !(gBattleWeather & B_WEATHER_SANDSTORM_PRIMAL)
+                 && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_SANDSTORM_TEMPORARY;
                     gBattlescriptCurrInstr = BattleScript_SandStormHailSnowEnds;
@@ -2265,7 +2267,9 @@ u8 DoFieldEndTurnEffects(void)
         case ENDTURN_HAIL:
             if (gBattleWeather & B_WEATHER_HAIL)
             {
-                if (!(gBattleWeather & B_WEATHER_HAIL_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
+                if (!(gBattleWeather & B_WEATHER_HAIL_PERMANENT)
+                 && !(gBattleWeather & B_WEATHER_HAIL_PRIMAL)
+                 && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_HAIL_TEMPORARY;
                     gBattlescriptCurrInstr = BattleScript_SandStormHailSnowEnds;
@@ -2285,7 +2289,9 @@ u8 DoFieldEndTurnEffects(void)
         case ENDTURN_SNOW:
             if (gBattleWeather & B_WEATHER_SNOW)
             {
-                if (!(gBattleWeather & B_WEATHER_SNOW_PERMANENT) && --gWishFutureKnock.weatherDuration == 0)
+                if (!(gBattleWeather & B_WEATHER_SNOW_PERMANENT)
+                 && !(gBattleWeather & B_WEATHER_SNOW_PRIMAL)
+                 && --gWishFutureKnock.weatherDuration == 0)
                 {
                     gBattleWeather &= ~B_WEATHER_SNOW_TEMPORARY;
                     gBattlescriptCurrInstr = BattleScript_SandStormHailSnowEnds;
@@ -4052,6 +4058,9 @@ static const u16 sWeatherFlagsInfo[][3] =
     [ENUM_WEATHER_HAIL] = {B_WEATHER_HAIL_TEMPORARY, B_WEATHER_HAIL_PERMANENT, HOLD_EFFECT_ICY_ROCK},
     [ENUM_WEATHER_STRONG_WINDS] = {B_WEATHER_STRONG_WINDS, B_WEATHER_STRONG_WINDS, HOLD_EFFECT_NONE},
     [ENUM_WEATHER_SNOW] = {B_WEATHER_SNOW_TEMPORARY, B_WEATHER_SNOW_PERMANENT, HOLD_EFFECT_ICY_ROCK},
+    [ENUM_WEATHER_HAIL_PRIMAL] = {B_WEATHER_HAIL_PRIMAL, B_WEATHER_HAIL_PRIMAL, HOLD_EFFECT_ICY_ROCK},
+    [ENUM_WEATHER_SNOW_PRIMAL] = {B_WEATHER_SNOW_PRIMAL, B_WEATHER_SNOW_PRIMAL, HOLD_EFFECT_ICY_ROCK},
+    [ENUM_WEATHER_SANDSTORM_PRIMAL] = {B_WEATHER_SANDSTORM_PRIMAL, B_WEATHER_SANDSTORM_PRIMAL, HOLD_EFFECT_SMOOTH_ROCK},
 };
 
 static void ShouldChangeFormInWeather(u32 battler)
@@ -4075,7 +4084,9 @@ bool32 TryChangeBattleWeather(u32 battler, u32 weatherEnumId, bool32 viaAbility)
     if (gBattleWeather & B_WEATHER_PRIMAL_ANY
         && battlerAbility != ABILITY_DESOLATE_LAND
         && battlerAbility != ABILITY_PRIMORDIAL_SEA
-        && battlerAbility != ABILITY_DELTA_STREAM)
+        && battlerAbility != ABILITY_DELTA_STREAM
+        && battlerAbility != ABILITY_FROZEN_SUMMIT
+        && battlerAbility != ABILITY_DESERT_STORM)
     {
         return FALSE;
     }
@@ -4757,6 +4768,25 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_FROZEN_SUMMIT:
+            if (B_SNOW_WARNING >= GEN_9 && TryChangeBattleWeather(battler, ENUM_WEATHER_SNOW_PRIMAL, TRUE))
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_FrozenSummitSnowActivates);
+                effect++;
+            }
+            else if (B_SNOW_WARNING < GEN_9 && TryChangeBattleWeather(battler, ENUM_WEATHER_HAIL_PRIMAL, TRUE))
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_FrozenSummitHailActivates);
+                effect++;
+            }
+            break;
+        case ABILITY_DESERT_STORM:
+            if (TryChangeBattleWeather(battler, ENUM_WEATHER_SANDSTORM_PRIMAL, TRUE))
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_DesertStormActivates);
+                effect++;
+            }
+            break;
         case ABILITY_VESSEL_OF_RUIN:
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
@@ -5086,10 +5116,15 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             switch (gLastUsedAbility)
             {
             //Moemon International
+            case ABILITY_MUD_SURFER:
+                if ((moveType == TYPE_WATER) || (moveType == TYPE_GROUND))
+                    effect = 2, statId = STAT_SPEED;
+                break;
             case ABILITY_NAVAL_SUPREMACY:
                 if (moveType == TYPE_WATER)
                     effect = 2, statId = STAT_SPEED, statId = STAT_SPATK, statId = STAT_ATK, statId = STAT_SPDEF, statId = STAT_DEF;
                 break;
+            //MoeInt
             case ABILITY_VOLT_ABSORB:
                 if (moveType == TYPE_ELECTRIC)
                     effect = 1;
@@ -9331,19 +9366,19 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_SWARM:
-        if (moveType == TYPE_BUG && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+        if (moveType == TYPE_BUG && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_TORRENT:
-        if (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+        if (moveType == TYPE_WATER && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_BLAZE:
-        if (moveType == TYPE_FIRE && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+        if (moveType == TYPE_FIRE && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_OVERGROW:
-        if (moveType == TYPE_GRASS && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
+        if (moveType == TYPE_GRASS && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 2))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_PLUS:
@@ -10021,7 +10056,8 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
     //Moemon International
     if (defType == TYPE_FLYING && GetBattlerAbility(battlerAtk) == ABILITY_ANTI_AIRCRAFT)
         mod = UQ_4_12(1.5);
-    if (gBattleMoves[move].effect == EFFECT_SCALD && defType == TYPE_ICE)
+    //MoeInt
+    if ((gBattleMoves[move].effect == EFFECT_HYDRO_STEAM || gBattleMoves[move].effect == EFFECT_SCALD) && defType == TYPE_ICE)
         mod = UQ_4_12(2.0);
     if (gBattleMoves[move].effect == EFFECT_ROCK_SMASH && defType == TYPE_ROCK)
         mod = UQ_4_12(1.5);

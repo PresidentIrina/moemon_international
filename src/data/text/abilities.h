@@ -63,10 +63,10 @@ static const u8 sShedSkinDescription[] = _("Heals the body by shedding.");
 static const u8 sGutsDescription[] = _("Ups Attack if suffering.");
 static const u8 sMarvelScaleDescription[] = _("Ups Defense if suffering.");
 static const u8 sLiquidOozeDescription[] = _("Draining causes injury.");
-static const u8 sOvergrowDescription[] = _("Ups Grass moves in a pinch.");
-static const u8 sBlazeDescription[] = _("Ups Fire moves in a pinch.");
-static const u8 sTorrentDescription[] = _("Ups Water moves in a pinch.");
-static const u8 sSwarmDescription[] = _("Ups Bug moves in a pinch.");
+static const u8 sOvergrowDescription[] = _("Ups Grass moves at 1/2 health.");
+static const u8 sBlazeDescription[] = _("Ups Fire moves at 1/2 health.");
+static const u8 sTorrentDescription[] = _("Ups Water moves at 1/2 health.");
+static const u8 sSwarmDescription[] = _("Ups Bug moves at 1/2 health.");
 static const u8 sRockHeadDescription[] = _("Prevents recoil damage.");
 static const u8 sDroughtDescription[] = _("Summons sunlight in battle.");
 static const u8 sArenaTrapDescription[] = _("Prevents fleeing.");
@@ -300,6 +300,9 @@ static const u8 sSupersweetSyrupDescription[] = _("Lowers the foe's Speed.");
 static const u8 sBeyondMachThreeDescription[] = _("Flying moves go first.");
 static const u8 sAntiAircraftDescription[] = _("Hits Flying types harder.");
 static const u8 sNavalSupremacyDescription[] = _("Water boosts all stats.");
+static const u8 sFrozenSummitDescription[] = _("Summons heavy snow.");
+static const u8 sDesertStormDescription[] = _("Summons intense sandstorms.");
+static const u8 sMudSurferDescription[] = _("Water/Ground hits up speed.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -614,6 +617,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_BEYOND_MACH_THREE] = _("Beyond Mach 3"),
     [ABILITY_ANTI_AIRCRAFT] = _("Anti-Aircraft"),
     [ABILITY_NAVAL_SUPREMACY] = _("Naval Supremacy"),
+    [ABILITY_FROZEN_SUMMIT] = _("Frozen Summit"),
+    [ABILITY_DESERT_STORM] = _("Desert Storm"),
+    [ABILITY_MUD_SURFER] = _("Mud Surfer"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -925,6 +931,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_EMBODY_ASPECT_CORNERSTONE] = _("EmbodyAspect"),
     [ABILITY_TOXIC_CHAIN] = _("Toxic Chain"),
     [ABILITY_SUPERSWEET_SYRUP] = _("SuprswtSyrup"),
+    [ABILITY_FROZEN_SUMMIT] = _("FrozenSummit"),
+    [ABILITY_DESERT_STORM] = _("DesertStorm"),
+    [ABILITY_MUD_SURFER] = _("Mud Surfer"),
 };
 #endif
 
@@ -1240,4 +1249,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_BEYOND_MACH_THREE] = sBeyondMachThreeDescription,
     [ABILITY_ANTI_AIRCRAFT] = sAntiAircraftDescription,
     [ABILITY_NAVAL_SUPREMACY] = sNavalSupremacyDescription,
+    [ABILITY_FROZEN_SUMMIT] = sFrozenSummitDescription,
+    [ABILITY_DESERT_STORM] = sDesertStormDescription,
+    [ABILITY_MUD_SURFER] = sMudSurferDescription,
 };

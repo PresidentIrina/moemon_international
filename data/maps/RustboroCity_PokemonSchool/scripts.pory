@@ -292,7 +292,7 @@ RustboroCity_PokemonSchool_Text_PokemonHealItselfWithBerry:
 RustboroCity_PokemonSchool_Text_StudentsNotes:
 	.string "It's this student's notebook…\p"
 	.string "Moémon are to be caught using\n"
-	.string "POKé BALLS.\p"
+	.string "Moé Balls.\p"
 	.string "Up to six Moémon can accompany\n"
 	.string "a TRAINER.\p"
 	.string "A TRAINER is someone who catches\n"
@@ -304,7 +304,7 @@ RustboroCity_PokemonSchool_Text_StudentsNotes:
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut:
 	.string "Hello? Didn't we meet before?\n"
-	.string "I think back in PETALBURG CITY.\p"
+	.string "I think back in Petalburg City.\p"
 	.string "Let me introduce myself.\n"
 	.string "My name's SCOTT.\p"
 	.string "I've been traveling everywhere in\n"
@@ -334,7 +334,7 @@ RustboroCity_PokemonSchool_Text_ScottStoneBadge:
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyStoneBadge:
 	.string "Hello? Didn't we meet before?\n"
-	.string "I think back in PETALBURG CITY.\p"
+	.string "I think back in Petalburg City.\p"
 	.string "Let me introduce myself.\n"
 	.string "My name's SCOTT.\p"
 	.string "I've been traveling everywhere in\n"

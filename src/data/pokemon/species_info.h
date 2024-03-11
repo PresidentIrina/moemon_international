@@ -403,12 +403,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
  //Moemon International
     [SPECIES_VALKYRIE] =
     {
-        .baseHP        = 70, //-->90-->110
-        .baseAttack    = 60, //-->70-->80
-        .baseDefense   = 40, //-->50-->60
-        .baseSpeed     = 90, //-->110-->130
-        .baseSpAttack  = 80, //-->100-->120
-        .baseSpDefense = 60, //-->80-->100
+        .baseHP        = 70, //-->90-->110-->120
+        .baseAttack    = 60, //-->70-->80-->80
+        .baseDefense   = 40, //-->50-->60-->60
+        .baseSpeed     = 90, //-->110-->130-->170
+        .baseSpAttack  = 80, //-->100-->120-->150
+        .baseSpDefense = 60, //-->80-->100-->110
         .types = { TYPE_STEEL, TYPE_FLYING},
         .catchRate = 45,
         .expYield = 270,
@@ -455,12 +455,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_FLAK88] =
     {
-        .baseHP        = 70, //-->90-->110
-        .baseAttack    = 50, //-->60-->70
-        .baseDefense   = 80, //-->100-->120
-        .baseSpeed     = 30, //-->40-->50
-        .baseSpAttack  = 100, //-->120-->140
-        .baseSpDefense = 70, //-->90-->110
+        .baseHP        = 70, //-->90-->110-->110
+        .baseAttack    = 50, //-->60-->70-->70
+        .baseDefense   = 80, //-->100-->120-->140
+        .baseSpeed     = 30, //-->40-->50-->50
+        .baseSpAttack  = 100, //-->120-->140-->200
+        .baseSpDefense = 70, //-->90-->110-->120
         .types = { TYPE_STEEL, TYPE_GROUND},
         .catchRate = 45,
         .expYield = 270,
@@ -507,12 +507,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_RYUUHOU] =
     {
-        .baseHP        = 70, //-->90-->110
-        .baseAttack    = 50, //-->60-->70
-        .baseDefense   = 70, //-->90-->110
-        .baseSpeed     = 60, //-->70-->80
-        .baseSpAttack  = 80, //-->100-->120
-        .baseSpDefense = 70, //-->90-->110
+        .baseHP        = 70, //-->90-->110-->110
+        .baseAttack    = 50, //-->60-->70-->130
+        .baseDefense   = 70, //-->90-->110-->120
+        .baseSpeed     = 60, //-->70-->80-->90
+        .baseSpAttack  = 80, //-->100-->120-->130
+        .baseSpDefense = 70, //-->90-->110-->110
         .types = { TYPE_STEEL, TYPE_WATER},
         .catchRate = 45,
         .expYield = 270,
@@ -574,7 +574,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MINERAL },
-        .abilities = { ABILITY_SNOW_CLOAK, ABILITY_NONE, ABILITY_CURSED_BODY },
+        .abilities = { ABILITY_FROZEN_SUMMIT, ABILITY_NONE, ABILITY_FROZEN_SUMMIT },
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Froslass"),
         .cryId = CRY_FROSLASS,
@@ -603,6 +603,55 @@ const struct SpeciesInfo gSpeciesInfo[] =
         ICON(FroslassMega, 0),
         .footprint = gMonFootprint_Froslass,
         LEARNSETS(FroslassMega),
+    },
+
+    [SPECIES_GIGALITH_MEGA] =
+    {
+        .baseHP        = 95,
+        .baseAttack    = 150,
+        .baseDefense   = 150,
+        .baseSpeed     = 25,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 100,
+        .types = { TYPE_ROCK, TYPE_ROCK },
+        .catchRate = 45,
+        .expYield = 232,
+        .evYield_Attack = 3,
+        .itemCommon = ITEM_EVERSTONE,
+        .itemRare = ITEM_HARD_STONE,
+        .genderRatio = PERCENT_FEMALE(95),
+        .eggCycles = 15,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_HUMAN_LIKE, EGG_GROUP_MINERAL },
+        .abilities = { ABILITY_DESERT_STORM, ABILITY_DESERT_STORM, ABILITY_DESERT_STORM },
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Gigalith"),
+        .cryId = CRY_GIGALITH,
+        .natDexNum = NATIONAL_DEX_GIGALITH_MEGA,
+        .categoryName = _("Desert Queen"),
+        .height = 18,
+        .weight = 2600,
+        .description = COMPOUND_STRING(
+            "Gigalith's abilities have been greatly\n"
+            "enhanced by Mega Evolution energy.\n"
+            "Her powerful energy beams are only\n"
+            "matched by the sandstorms she creates."),
+        .pokemonScale = 259,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 1,
+        FRONT_PIC(GigalithMega, 64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = sAnims_Gigalith,
+        .frontAnimId = ANIM_ROTATE_UP_SLAM_DOWN,
+        BACK_PIC(GigalithMega, 56, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_V_SHAKE_LOW,
+        PALETTES(GigalithMega),
+        ICON(GigalithMega, 0),
+        .footprint = gMonFootprint_Gigalith,
+        LEARNSETS(GigalithMega),
     },
 
     [SPECIES_TENTACRUEL_AQUA] =

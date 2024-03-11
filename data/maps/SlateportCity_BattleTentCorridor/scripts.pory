@@ -171,7 +171,7 @@ SlateportCity_ContestHall_Text_AdviceForContests:
 SlateportCity_ContestHall_Text_MyPapaIsContestJudge:
 	.string "My papa, he's a CONTEST JUDGE.\p"
 	.string "I wonder what I should be when I\n"
-	.string "grow up, a JUDGE or a GYM LEADER?$"
+	.string "grow up, a JUDGE or a Gym LEADER?$"
 
 @ Unused
 SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed:
@@ -210,7 +210,7 @@ SlateportCity_ContestHall_Text_JudgeWouldntDoToMissContest:
 	.string "I see that you're a TRAINER!\p"
 	.string "Then, it just wouldn't do for you\n"
 	.string "to miss a Moémon CONTEST!\p"
-	.string "Get a CONTEST PASS in VERDANTURF\n"
+	.string "Get a Contest Pass in Verdanturf\n"
 	.string "CITY and enter anytime!$"
 
 @ Unused

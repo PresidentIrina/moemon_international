@@ -39306,6 +39306,34 @@ static const u16 sFroslassMegaTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sGigalithMegaTeachableLearnset[] = {
+    MOVE_ATTRACT,
+    MOVE_DOUBLE_TEAM,
+    MOVE_EARTHQUAKE,
+    MOVE_FACADE,
+    MOVE_FRUSTRATION,
+    MOVE_HIDDEN_POWER,
+    MOVE_HYPER_BEAM,
+    MOVE_PROTECT,
+    MOVE_REST,
+    MOVE_RETURN,
+    MOVE_ROCK_SMASH,
+    MOVE_ROCK_TOMB,
+    MOVE_SANDSTORM,
+    MOVE_SECRET_POWER,
+    MOVE_SOLAR_BEAM,
+    MOVE_STRENGTH,
+    MOVE_TOXIC,
+    MOVE_EXPLOSION,
+    MOVE_MUD_SLAP,
+    MOVE_ROCK_SLIDE,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_SUBSTITUTE,
+    MOVE_SWAGGER,
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sEscavalierSummerTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
